@@ -19,6 +19,13 @@ namespace Vinwonders_Management
 
         private void ShowHoaDonVe()
         {
+            // Đổi màu nút khi được chọn
+            btnHoaDonVe.FillColor = Color.FromArgb(255, 128, 0);
+            btnHoaDonVe.ForeColor = Color.White;
+
+            btnLoaiVe.FillColor = Color.White;
+            btnLoaiVe.ForeColor = Color.Black;
+
             // Xóa các control cũ đang có trong Panel (nếu có)
             pnlTabs.Controls.Clear();
 
@@ -38,6 +45,12 @@ namespace Vinwonders_Management
 
         private void ShowLoaiVe()
         {
+            // Đổi màu nút khi được chọn
+            btnLoaiVe.FillColor = Color.FromArgb(255, 128, 0);
+            btnLoaiVe.ForeColor = Color.White;
+
+            btnHoaDonVe.FillColor = Color.White;
+            btnHoaDonVe.ForeColor = Color.Black;
             // Xóa các control cũ đang có trong Panel (nếu có)
             pnlTabs.Controls.Clear();
 
@@ -57,6 +70,7 @@ namespace Vinwonders_Management
         private void GUI_QuanLyVe_Load(object sender, EventArgs e)
         {
             ShowHoaDonVe();
+
         }
 
         private void btnHoaDonVe_Click(object sender, EventArgs e)
