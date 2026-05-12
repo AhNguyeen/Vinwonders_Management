@@ -61,19 +61,37 @@
     <Compile Include="GUI_Dashboard.Designer.cs">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_HoaDonVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_HoaDonVe.Designer.cs">
+      <DependentUpon>GUI_HoaDonVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI_Menu.Designer.cs">
       <DependentUpon>GUI_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyVe.Designer.cs">
+      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_HoaDonVe.resx">
+      <DependentUpon>GUI_HoaDonVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Menu.resx">
       <DependentUpon>GUI_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyVe.resx">
+      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
