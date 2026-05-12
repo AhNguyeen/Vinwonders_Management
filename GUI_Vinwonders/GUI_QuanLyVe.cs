@@ -28,8 +28,7 @@ namespace Vinwonders_Management
             hoaDonVe.TopLevel = false;
             hoaDonVe.FormBorderStyle = FormBorderStyle.None;
 
-            // QUAN TRỌNG NHẤT: Neo Form con lên phía trên cùng
-            // Tuyệt đối không dùng DockStyle.Fill vì nó sẽ bóp méo chiều cao Form con bằng với Panel, làm mất thanh cuộn
+            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
             hoaDonVe.Dock = DockStyle.Fill;
 
             // Thêm Form con vào Panel và hiển thị
@@ -47,8 +46,7 @@ namespace Vinwonders_Management
             // Bắt buộc phải có để nhúng Form vào Panel
             loaiVe.TopLevel = false;
             loaiVe.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con lên phía trên cùng
-            // Tuyệt đối không dùng DockStyle.Fill vì nó sẽ bóp méo chiều cao Form con bằng với Panel, làm mất thanh cuộn
+            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
             loaiVe.Dock = DockStyle.Fill;
 
             // Thêm Form con vào Panel và hiển thị
