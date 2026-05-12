@@ -77,6 +77,20 @@ namespace Vinwonders_Management
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             OpenChildForm(typeof(GUI_Dashboard));
+            lblGUI.Text = "Dashboard";
+        }
+
+        private void btnQuanLyVe_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(typeof(GUI_QuanLyVe));
+            lblGUI.Text = "Quản Lý Vé";
+        }
+
+        private void GUI_Menu_Load(object sender, EventArgs e)
+        {
+            OpenChildForm(typeof(GUI_Dashboard));
+            lblGUI.Text = "Dashboard";
+            lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
         }
     }
 }
