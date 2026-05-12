@@ -102,5 +102,35 @@
   <ItemGroup>
     <None Include="Resources\logo_Vinwonders.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spin show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shops.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

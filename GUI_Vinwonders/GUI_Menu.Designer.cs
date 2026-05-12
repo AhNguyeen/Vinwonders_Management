@@ -30,25 +30,27 @@
         {
             this.pnSidebar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnVeHoaDon = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhuVuiChoi = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCauHinh = new Guna.UI2.WinForms.Guna2Button();
             this.pnLogo = new Guna.UI2.WinForms.Guna2Panel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSubtitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.sepLineLogo = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGUI = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnVeHoaDon = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKhuVuiChoi = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSuKien = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBaoTri = new Guna.UI2.WinForms.Guna2Button();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnSidebar.SuspendLayout();
             this.pnLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSidebar
@@ -59,10 +61,12 @@
             this.pnSidebar.Controls.Add(this.btnDangXuat);
             this.pnSidebar.Controls.Add(this.btnVeHoaDon);
             this.pnSidebar.Controls.Add(this.btnCuaHang);
+            this.pnSidebar.Controls.Add(this.guna2Button2);
             this.pnSidebar.Controls.Add(this.btnKhachHang);
             this.pnSidebar.Controls.Add(this.btnDashboard);
             this.pnSidebar.Controls.Add(this.btnKhuVuiChoi);
-            this.pnSidebar.Controls.Add(this.btnCauHinh);
+            this.pnSidebar.Controls.Add(this.btnSuKien);
+            this.pnSidebar.Controls.Add(this.btnBaoTri);
             this.pnSidebar.Controls.Add(this.pnLogo);
             this.pnSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSidebar.FillColor = System.Drawing.Color.White;
@@ -80,195 +84,6 @@
             this.guna2Separator1.Size = new System.Drawing.Size(250, 10);
             this.guna2Separator1.TabIndex = 2;
             // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDangXuat.BorderRadius = 10;
-            this.btnDangXuat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDangXuat.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnDangXuat.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangXuat.FillColor = System.Drawing.Color.White;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnDangXuat.Location = new System.Drawing.Point(12, 646);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(230, 50);
-            this.btnDangXuat.TabIndex = 1;
-            this.btnDangXuat.Text = "Đăng Xuất";
-            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.TextOffset = new System.Drawing.Point(20, 0);
-            // 
-            // btnVeHoaDon
-            // 
-            this.btnVeHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVeHoaDon.BorderRadius = 10;
-            this.btnVeHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnVeHoaDon.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnVeHoaDon.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnVeHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnVeHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnVeHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnVeHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnVeHoaDon.FillColor = System.Drawing.Color.White;
-            this.btnVeHoaDon.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVeHoaDon.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnVeHoaDon.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnVeHoaDon.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnVeHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnVeHoaDon.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnVeHoaDon.Location = new System.Drawing.Point(12, 230);
-            this.btnVeHoaDon.Name = "btnVeHoaDon";
-            this.btnVeHoaDon.Size = new System.Drawing.Size(230, 45);
-            this.btnVeHoaDon.TabIndex = 1;
-            this.btnVeHoaDon.Text = "Vé Hóa Đơn";
-            this.btnVeHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnVeHoaDon.TextOffset = new System.Drawing.Point(20, 0);
-            // 
-            // btnCuaHang
-            // 
-            this.btnCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCuaHang.BorderRadius = 10;
-            this.btnCuaHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCuaHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnCuaHang.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnCuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCuaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCuaHang.FillColor = System.Drawing.Color.White;
-            this.btnCuaHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuaHang.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnCuaHang.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnCuaHang.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCuaHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCuaHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCuaHang.Location = new System.Drawing.Point(12, 281);
-            this.btnCuaHang.Name = "btnCuaHang";
-            this.btnCuaHang.Size = new System.Drawing.Size(230, 45);
-            this.btnCuaHang.TabIndex = 1;
-            this.btnCuaHang.Text = "Cửa Hàng";
-            this.btnCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCuaHang.TextOffset = new System.Drawing.Point(20, 0);
-            // 
-            // btnKhachHang
-            // 
-            this.btnKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKhachHang.BorderRadius = 10;
-            this.btnKhachHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKhachHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnKhachHang.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnKhachHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhachHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhachHang.FillColor = System.Drawing.Color.White;
-            this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnKhachHang.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnKhachHang.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhachHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhachHang.Location = new System.Drawing.Point(12, 179);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(230, 45);
-            this.btnKhachHang.TabIndex = 1;
-            this.btnKhachHang.Text = "Khách Hàng";
-            this.btnKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhachHang.TextOffset = new System.Drawing.Point(20, 0);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDashboard.BorderRadius = 10;
-            this.btnDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDashboard.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnDashboard.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDashboard.FillColor = System.Drawing.Color.White;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnDashboard.Location = new System.Drawing.Point(12, 128);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(230, 45);
-            this.btnDashboard.TabIndex = 1;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.TextOffset = new System.Drawing.Point(20, 0);
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
-            // 
-            // btnKhuVuiChoi
-            // 
-            this.btnKhuVuiChoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKhuVuiChoi.BorderRadius = 10;
-            this.btnKhuVuiChoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKhuVuiChoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnKhuVuiChoi.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnKhuVuiChoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhuVuiChoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhuVuiChoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhuVuiChoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhuVuiChoi.FillColor = System.Drawing.Color.White;
-            this.btnKhuVuiChoi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhuVuiChoi.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnKhuVuiChoi.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnKhuVuiChoi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKhuVuiChoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhuVuiChoi.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhuVuiChoi.Location = new System.Drawing.Point(12, 332);
-            this.btnKhuVuiChoi.Name = "btnKhuVuiChoi";
-            this.btnKhuVuiChoi.Size = new System.Drawing.Size(230, 45);
-            this.btnKhuVuiChoi.TabIndex = 1;
-            this.btnKhuVuiChoi.Text = "Khu Vui Chơi";
-            this.btnKhuVuiChoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnKhuVuiChoi.TextOffset = new System.Drawing.Point(20, 0);
-            // 
-            // btnCauHinh
-            // 
-            this.btnCauHinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCauHinh.BorderRadius = 10;
-            this.btnCauHinh.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCauHinh.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btnCauHinh.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.btnCauHinh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCauHinh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCauHinh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCauHinh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCauHinh.FillColor = System.Drawing.Color.White;
-            this.btnCauHinh.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCauHinh.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnCauHinh.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.btnCauHinh.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCauHinh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCauHinh.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCauHinh.Location = new System.Drawing.Point(12, 387);
-            this.btnCauHinh.Name = "btnCauHinh";
-            this.btnCauHinh.Size = new System.Drawing.Size(230, 45);
-            this.btnCauHinh.TabIndex = 1;
-            this.btnCauHinh.Text = "Bảo Trì";
-            this.btnCauHinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCauHinh.TextOffset = new System.Drawing.Point(20, 0);
-            // 
             // pnLogo
             // 
             this.pnLogo.Controls.Add(this.picLogo);
@@ -281,20 +96,6 @@
             this.pnLogo.Size = new System.Drawing.Size(250, 120);
             this.pnLogo.TabIndex = 0;
             // 
-            // picLogo
-            // 
-            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picLogo.BorderRadius = 10;
-            this.picLogo.Image = global::Vinwonders_Management.Properties.Resources.logo_Vinwonders;
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(34, 31);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(47, 47);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 0;
-            this.picLogo.TabStop = false;
-            // 
             // lblTitle
             // 
             this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -302,7 +103,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(87, 31);
+            this.lblTitle.Location = new System.Drawing.Point(78, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(118, 30);
             this.lblTitle.TabIndex = 1;
@@ -315,7 +116,7 @@
             this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitle.ForeColor = System.Drawing.Color.Silver;
-            this.lblSubtitle.Location = new System.Drawing.Point(87, 63);
+            this.lblSubtitle.Location = new System.Drawing.Point(78, 63);
             this.lblSubtitle.Name = "lblSubtitle";
             this.lblSubtitle.Size = new System.Drawing.Size(94, 15);
             this.lblSubtitle.TabIndex = 1;
@@ -366,6 +167,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Silver;
             this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Button1.Image = global::Vinwonders_Management.Properties.Resources.setting;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(15, 0);
             this.guna2Button1.Location = new System.Drawing.Point(12, 590);
@@ -375,6 +177,273 @@
             this.guna2Button1.Text = "Cài Đặt";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDangXuat.BorderRadius = 10;
+            this.btnDangXuat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDangXuat.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnDangXuat.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangXuat.FillColor = System.Drawing.Color.White;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDangXuat.Image = global::Vinwonders_Management.Properties.Resources.logout;
+            this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnDangXuat.Location = new System.Drawing.Point(12, 646);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(230, 50);
+            this.btnDangXuat.TabIndex = 1;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnVeHoaDon
+            // 
+            this.btnVeHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVeHoaDon.BorderRadius = 10;
+            this.btnVeHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnVeHoaDon.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnVeHoaDon.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnVeHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnVeHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnVeHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnVeHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnVeHoaDon.FillColor = System.Drawing.Color.White;
+            this.btnVeHoaDon.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVeHoaDon.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnVeHoaDon.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnVeHoaDon.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnVeHoaDon.Image = global::Vinwonders_Management.Properties.Resources.ticket;
+            this.btnVeHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnVeHoaDon.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnVeHoaDon.Location = new System.Drawing.Point(12, 179);
+            this.btnVeHoaDon.Name = "btnVeHoaDon";
+            this.btnVeHoaDon.Size = new System.Drawing.Size(230, 45);
+            this.btnVeHoaDon.TabIndex = 1;
+            this.btnVeHoaDon.Text = "Quản Lý Vé";
+            this.btnVeHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnVeHoaDon.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // btnCuaHang
+            // 
+            this.btnCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCuaHang.BorderRadius = 10;
+            this.btnCuaHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCuaHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnCuaHang.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnCuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCuaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCuaHang.FillColor = System.Drawing.Color.White;
+            this.btnCuaHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuaHang.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnCuaHang.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnCuaHang.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCuaHang.Image = global::Vinwonders_Management.Properties.Resources.shops;
+            this.btnCuaHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCuaHang.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnCuaHang.Location = new System.Drawing.Point(12, 383);
+            this.btnCuaHang.Name = "btnCuaHang";
+            this.btnCuaHang.Size = new System.Drawing.Size(230, 45);
+            this.btnCuaHang.TabIndex = 1;
+            this.btnCuaHang.Text = "Cửa Hàng && SP";
+            this.btnCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCuaHang.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2Button2.Image = global::Vinwonders_Management.Properties.Resources.employees;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.ImageOffset = new System.Drawing.Point(15, 0);
+            this.guna2Button2.Location = new System.Drawing.Point(12, 281);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(230, 45);
+            this.guna2Button2.TabIndex = 1;
+            this.guna2Button2.Text = "Nhân Viên";
+            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKhachHang.BorderRadius = 10;
+            this.btnKhachHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKhachHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnKhachHang.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnKhachHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhachHang.FillColor = System.Drawing.Color.White;
+            this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnKhachHang.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnKhachHang.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnKhachHang.Image = global::Vinwonders_Management.Properties.Resources.customers;
+            this.btnKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhachHang.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnKhachHang.Location = new System.Drawing.Point(12, 230);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(230, 45);
+            this.btnKhachHang.TabIndex = 1;
+            this.btnKhachHang.Text = "Khách Hàng";
+            this.btnKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhachHang.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDashboard.BorderRadius = 10;
+            this.btnDashboard.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDashboard.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnDashboard.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDashboard.FillColor = System.Drawing.Color.White;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDashboard.Image = global::Vinwonders_Management.Properties.Resources.dashboard;
+            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnDashboard.Location = new System.Drawing.Point(12, 128);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(230, 45);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // btnKhuVuiChoi
+            // 
+            this.btnKhuVuiChoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKhuVuiChoi.BorderRadius = 10;
+            this.btnKhuVuiChoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKhuVuiChoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnKhuVuiChoi.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnKhuVuiChoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhuVuiChoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhuVuiChoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhuVuiChoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhuVuiChoi.FillColor = System.Drawing.Color.White;
+            this.btnKhuVuiChoi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhuVuiChoi.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnKhuVuiChoi.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnKhuVuiChoi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnKhuVuiChoi.Image = global::Vinwonders_Management.Properties.Resources.spin_show;
+            this.btnKhuVuiChoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhuVuiChoi.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnKhuVuiChoi.Location = new System.Drawing.Point(12, 332);
+            this.btnKhuVuiChoi.Name = "btnKhuVuiChoi";
+            this.btnKhuVuiChoi.Size = new System.Drawing.Size(230, 45);
+            this.btnKhuVuiChoi.TabIndex = 1;
+            this.btnKhuVuiChoi.Text = "Trò Chơi && Show";
+            this.btnKhuVuiChoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnKhuVuiChoi.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // btnSuKien
+            // 
+            this.btnSuKien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuKien.BorderRadius = 10;
+            this.btnSuKien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSuKien.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnSuKien.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnSuKien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuKien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuKien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuKien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuKien.FillColor = System.Drawing.Color.White;
+            this.btnSuKien.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuKien.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnSuKien.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnSuKien.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSuKien.Image = global::Vinwonders_Management.Properties.Resources._event;
+            this.btnSuKien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSuKien.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnSuKien.Location = new System.Drawing.Point(12, 434);
+            this.btnSuKien.Name = "btnSuKien";
+            this.btnSuKien.Size = new System.Drawing.Size(230, 45);
+            this.btnSuKien.TabIndex = 1;
+            this.btnSuKien.Text = "Sự Kiện";
+            this.btnSuKien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSuKien.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // btnBaoTri
+            // 
+            this.btnBaoTri.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBaoTri.BorderRadius = 10;
+            this.btnBaoTri.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnBaoTri.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnBaoTri.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnBaoTri.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoTri.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoTri.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaoTri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaoTri.FillColor = System.Drawing.Color.White;
+            this.btnBaoTri.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoTri.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnBaoTri.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnBaoTri.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBaoTri.Image = global::Vinwonders_Management.Properties.Resources.maintenance;
+            this.btnBaoTri.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBaoTri.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnBaoTri.Location = new System.Drawing.Point(12, 485);
+            this.btnBaoTri.Name = "btnBaoTri";
+            this.btnBaoTri.Size = new System.Drawing.Size(230, 45);
+            this.btnBaoTri.TabIndex = 1;
+            this.btnBaoTri.Text = "Bảo Trì";
+            this.btnBaoTri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBaoTri.TextOffset = new System.Drawing.Point(20, 0);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picLogo.BorderRadius = 10;
+            this.picLogo.Image = global::Vinwonders_Management.Properties.Resources.logo_Vinwonders;
+            this.picLogo.ImageRotate = 0F;
+            this.picLogo.Location = new System.Drawing.Point(25, 31);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(47, 47);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // GUI_Menu
             // 
@@ -391,9 +460,9 @@
             this.pnSidebar.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
             this.pnLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,11 +481,13 @@
         private Guna.UI2.WinForms.Guna2Button btnCuaHang;
         private Guna.UI2.WinForms.Guna2Button btnKhuVuiChoi;
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
-        private Guna.UI2.WinForms.Guna2Button btnCauHinh;
+        private Guna.UI2.WinForms.Guna2Button btnBaoTri;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGUI;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnSuKien;
     }
 }
 
