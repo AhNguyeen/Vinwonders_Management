@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 836);
+            this.ClientSize = new System.Drawing.Size(1133, 835);
             this.ControlBox = false;
             this.Name = "GUI_Dashboard";
             this.ShowIcon = false;
