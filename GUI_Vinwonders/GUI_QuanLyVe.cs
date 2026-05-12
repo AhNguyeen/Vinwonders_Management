@@ -16,5 +16,59 @@ namespace Vinwonders_Management
         {
             InitializeComponent();
         }
+
+        private void ShowHoaDonVe()
+        {
+            // Xóa các control cũ đang có trong Panel (nếu có)
+            pnlTabs.Controls.Clear();
+
+            // Khởi tạo Form con
+            GUI_HoaDonVe hoaDonVe = new GUI_HoaDonVe();
+            // Bắt buộc phải có để nhúng Form vào Panel
+            hoaDonVe.TopLevel = false;
+            hoaDonVe.FormBorderStyle = FormBorderStyle.None;
+
+            // QUAN TRỌNG NHẤT: Neo Form con lên phía trên cùng
+            // Tuyệt đối không dùng DockStyle.Fill vì nó sẽ bóp méo chiều cao Form con bằng với Panel, làm mất thanh cuộn
+            hoaDonVe.Dock = DockStyle.Fill;
+
+            // Thêm Form con vào Panel và hiển thị
+            pnlTabs.Controls.Add(hoaDonVe);
+            hoaDonVe.Show();
+        }
+
+        private void ShowLoaiVe()
+        {
+            // Xóa các control cũ đang có trong Panel (nếu có)
+            pnlTabs.Controls.Clear();
+
+            // Khởi tạo Form con
+            GUI_LoaiVe loaiVe = new GUI_LoaiVe();
+            // Bắt buộc phải có để nhúng Form vào Panel
+            loaiVe.TopLevel = false;
+            loaiVe.FormBorderStyle = FormBorderStyle.None;
+            // QUAN TRỌNG NHẤT: Neo Form con lên phía trên cùng
+            // Tuyệt đối không dùng DockStyle.Fill vì nó sẽ bóp méo chiều cao Form con bằng với Panel, làm mất thanh cuộn
+            loaiVe.Dock = DockStyle.Fill;
+
+            // Thêm Form con vào Panel và hiển thị
+            pnlTabs.Controls.Add(loaiVe);
+            loaiVe.Show();
+        }
+
+        private void GUI_QuanLyVe_Load(object sender, EventArgs e)
+        {
+            ShowHoaDonVe();
+        }
+
+        private void btnHoaDonVe_Click(object sender, EventArgs e)
+        {
+            ShowHoaDonVe();
+        }
+
+        private void btnLoaiVe_Click(object sender, EventArgs e)
+        {
+            ShowLoaiVe();
+        }
     }
 }
