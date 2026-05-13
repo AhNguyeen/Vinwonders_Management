@@ -30,7 +30,6 @@
         {
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlAction = new Guna.UI2.WinForms.Guna2Panel();
-            this.tbnVeDaPhatHanh = new Guna.UI2.WinForms.Guna2Button();
             this.btnLoaiVe = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoaDonVe = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTabConTent = new Guna.UI2.WinForms.Guna2Panel();
@@ -55,37 +54,16 @@
             // 
             this.pnlAction.BackColor = System.Drawing.Color.Transparent;
             this.pnlAction.BorderColor = System.Drawing.Color.Silver;
-            this.pnlAction.BorderRadius = 12;
+            this.pnlAction.BorderRadius = 15;
             this.pnlAction.BorderThickness = 1;
-            this.pnlAction.Controls.Add(this.tbnVeDaPhatHanh);
             this.pnlAction.Controls.Add(this.btnLoaiVe);
             this.pnlAction.Controls.Add(this.btnHoaDonVe);
             this.pnlAction.FillColor = System.Drawing.Color.White;
             this.pnlAction.Location = new System.Drawing.Point(20, 10);
             this.pnlAction.Margin = new System.Windows.Forms.Padding(10);
             this.pnlAction.Name = "pnlAction";
-            this.pnlAction.Size = new System.Drawing.Size(440, 59);
+            this.pnlAction.Size = new System.Drawing.Size(296, 59);
             this.pnlAction.TabIndex = 0;
-            // 
-            // tbnVeDaPhatHanh
-            // 
-            this.tbnVeDaPhatHanh.BorderRadius = 12;
-            this.tbnVeDaPhatHanh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.tbnVeDaPhatHanh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.tbnVeDaPhatHanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.tbnVeDaPhatHanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.tbnVeDaPhatHanh.FillColor = System.Drawing.Color.White;
-            this.tbnVeDaPhatHanh.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnVeDaPhatHanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbnVeDaPhatHanh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tbnVeDaPhatHanh.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.tbnVeDaPhatHanh.HoverState.ForeColor = System.Drawing.Color.White;
-            this.tbnVeDaPhatHanh.Location = new System.Drawing.Point(297, 10);
-            this.tbnVeDaPhatHanh.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.tbnVeDaPhatHanh.Name = "tbnVeDaPhatHanh";
-            this.tbnVeDaPhatHanh.Size = new System.Drawing.Size(136, 39);
-            this.tbnVeDaPhatHanh.TabIndex = 0;
-            this.tbnVeDaPhatHanh.Text = "Vé Đã Phát Hành";
             // 
             // btnLoaiVe
             // 
@@ -100,7 +78,7 @@
             this.btnLoaiVe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLoaiVe.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnLoaiVe.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnLoaiVe.Location = new System.Drawing.Point(151, 10);
+            this.btnLoaiVe.Location = new System.Drawing.Point(155, 10);
             this.btnLoaiVe.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnLoaiVe.Name = "btnLoaiVe";
             this.btnLoaiVe.Size = new System.Drawing.Size(136, 39);
@@ -190,7 +168,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlNav;
         private Guna.UI2.WinForms.Guna2Panel pnlAction;
         private Guna.UI2.WinForms.Guna2Button btnHoaDonVe;
-        private Guna.UI2.WinForms.Guna2Button tbnVeDaPhatHanh;
         private Guna.UI2.WinForms.Guna2Button btnLoaiVe;
         private Guna.UI2.WinForms.Guna2Panel pnlTabConTent;
         private Guna.UI2.WinForms.Guna2Panel pnlFrame;
