@@ -104,5 +104,17 @@ namespace Vinwonders_Management
             OpenChildForm(typeof(GUI_QuanLyNhanVien));
             lblGUI.Text = "Quản Lý Nhân Viên";
         }
+
+        private void btnKhuVuiChoi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(typeof(GUI_QuanLyTroChoi));
+            lblGUI.Text = "Quản Lý Khu Vui Chơi";
+        }
+
+        private void btnCuaHang_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(typeof(GUI_QuanLyCuaHangSanPham));
+            lblGUI.Text = "Quản Lý Cửa Hàng Sản Phẩm";
+        }
     }
 }
