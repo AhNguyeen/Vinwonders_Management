@@ -394,6 +394,7 @@
             this.btnKhuVuiChoi.Text = "Trò Chơi && Show";
             this.btnKhuVuiChoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhuVuiChoi.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnKhuVuiChoi.Click += new System.EventHandler(this.btnKhuVuiChoi_Click);
             // 
             // btnSuKien
             // 
