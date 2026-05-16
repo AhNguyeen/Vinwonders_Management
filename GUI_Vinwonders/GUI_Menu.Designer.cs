@@ -279,6 +279,7 @@
             this.btnCuaHang.Text = "Cửa Hàng && SP";
             this.btnCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCuaHang.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnCuaHang.Click += new System.EventHandler(this.btnCuaHang_Click);
             // 
             // btnQuanLyNhanVien
             // 
