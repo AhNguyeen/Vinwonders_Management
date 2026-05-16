@@ -70,7 +70,6 @@ namespace Vinwonders_Management
         private void GUI_QuanLyVe_Load(object sender, EventArgs e)
         {
             ShowHoaDonVe();
-
         }
 
         private void btnHoaDonVe_Click(object sender, EventArgs e)

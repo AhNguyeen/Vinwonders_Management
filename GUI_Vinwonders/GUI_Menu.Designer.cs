@@ -30,28 +30,28 @@
         {
             this.pnSidebar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
-            this.btnQuanLyVe = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKhuVuiChoi = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSuKien = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBaoTri = new Guna.UI2.WinForms.Guna2Button();
             this.pnLogo = new Guna.UI2.WinForms.Guna2Panel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSubtitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.sepLineLogo = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDateTimeNow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblGUI = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQuanLyVe = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnQuanLyNhanVien = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKhuVuiChoi = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSuKien = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBaoTri = new Guna.UI2.WinForms.Guna2Button();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnSidebar.SuspendLayout();
             this.pnLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSidebar
@@ -64,7 +64,7 @@
             this.pnSidebar.Controls.Add(this.btnDangXuat);
             this.pnSidebar.Controls.Add(this.btnQuanLyVe);
             this.pnSidebar.Controls.Add(this.btnCuaHang);
-            this.pnSidebar.Controls.Add(this.guna2Button2);
+            this.pnSidebar.Controls.Add(this.btnQuanLyNhanVien);
             this.pnSidebar.Controls.Add(this.btnKhachHang);
             this.pnSidebar.Controls.Add(this.btnDashboard);
             this.pnSidebar.Controls.Add(this.btnKhuVuiChoi);
@@ -86,6 +86,87 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(250, 10);
             this.guna2Separator1.TabIndex = 2;
+            // 
+            // pnLogo
+            // 
+            this.pnLogo.Controls.Add(this.picLogo);
+            this.pnLogo.Controls.Add(this.lblTitle);
+            this.pnLogo.Controls.Add(this.lblSubtitle);
+            this.pnLogo.Controls.Add(this.sepLineLogo);
+            this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnLogo.Name = "pnLogo";
+            this.pnLogo.Size = new System.Drawing.Size(250, 120);
+            this.pnLogo.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(78, 31);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(118, 30);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "VinWonders";
+            // 
+            // lblSubtitle
+            // 
+            this.lblSubtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtitle.ForeColor = System.Drawing.Color.Silver;
+            this.lblSubtitle.Location = new System.Drawing.Point(78, 63);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(94, 15);
+            this.lblSubtitle.TabIndex = 1;
+            this.lblSubtitle.Text = "Quản lý hệ thống";
+            // 
+            // sepLineLogo
+            // 
+            this.sepLineLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sepLineLogo.FillColor = System.Drawing.Color.Black;
+            this.sepLineLogo.Location = new System.Drawing.Point(0, 110);
+            this.sepLineLogo.Name = "sepLineLogo";
+            this.sepLineLogo.Size = new System.Drawing.Size(250, 10);
+            this.sepLineLogo.TabIndex = 2;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.lblDateTimeNow);
+            this.guna2Panel1.Controls.Add(this.lblGUI);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(932, 61);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // lblDateTimeNow
+            // 
+            this.lblDateTimeNow.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTimeNow.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTimeNow.ForeColor = System.Drawing.Color.Gray;
+            this.lblDateTimeNow.Location = new System.Drawing.Point(71, 31);
+            this.lblDateTimeNow.Name = "lblDateTimeNow";
+            this.lblDateTimeNow.Size = new System.Drawing.Size(92, 15);
+            this.lblDateTimeNow.TabIndex = 1;
+            this.lblDateTimeNow.Text = "[ Date Time Now ]";
+            // 
+            // lblGUI
+            // 
+            this.lblGUI.BackColor = System.Drawing.Color.Transparent;
+            this.lblGUI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblGUI.Location = new System.Drawing.Point(71, 7);
+            this.lblGUI.Margin = new System.Windows.Forms.Padding(7);
+            this.lblGUI.Name = "lblGUI";
+            this.lblGUI.Size = new System.Drawing.Size(99, 27);
+            this.lblGUI.TabIndex = 0;
+            this.lblGUI.Text = "[ Ten GUI ]";
             // 
             // guna2Button1
             // 
@@ -199,33 +280,34 @@
             this.btnCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCuaHang.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // guna2Button2
+            // btnQuanLyNhanVien
             // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnQuanLyNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2Button2.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button2.Image = global::Vinwonders_Management.Properties.Resources.employees;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button2.Location = new System.Drawing.Point(12, 281);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(230, 45);
-            this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Nhân Viên";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnQuanLyNhanVien.BorderRadius = 10;
+            this.btnQuanLyNhanVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnQuanLyNhanVien.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnQuanLyNhanVien.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnQuanLyNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLyNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLyNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnQuanLyNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnQuanLyNhanVien.FillColor = System.Drawing.Color.White;
+            this.btnQuanLyNhanVien.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyNhanVien.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnQuanLyNhanVien.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnQuanLyNhanVien.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnQuanLyNhanVien.Image = global::Vinwonders_Management.Properties.Resources.employees;
+            this.btnQuanLyNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQuanLyNhanVien.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(12, 281);
+            this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
+            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(230, 45);
+            this.btnQuanLyNhanVien.TabIndex = 1;
+            this.btnQuanLyNhanVien.Text = "Nhân Viên";
+            this.btnQuanLyNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnQuanLyNhanVien.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnQuanLyNhanVien.Click += new System.EventHandler(this.btnQuanLyNhanVien_Click);
             // 
             // btnKhachHang
             // 
@@ -254,6 +336,7 @@
             this.btnKhachHang.Text = "Khách Hàng";
             this.btnKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhachHang.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnDashboard
             // 
@@ -368,18 +451,6 @@
             this.btnBaoTri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoTri.TextOffset = new System.Drawing.Point(20, 0);
             // 
-            // pnLogo
-            // 
-            this.pnLogo.Controls.Add(this.picLogo);
-            this.pnLogo.Controls.Add(this.lblTitle);
-            this.pnLogo.Controls.Add(this.lblSubtitle);
-            this.pnLogo.Controls.Add(this.sepLineLogo);
-            this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(250, 120);
-            this.pnLogo.TabIndex = 0;
-            // 
             // picLogo
             // 
             this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -393,75 +464,6 @@
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(78, 31);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(118, 30);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "VinWonders";
-            // 
-            // lblSubtitle
-            // 
-            this.lblSubtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitle.ForeColor = System.Drawing.Color.Silver;
-            this.lblSubtitle.Location = new System.Drawing.Point(78, 63);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(94, 15);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "Quản lý hệ thống";
-            // 
-            // sepLineLogo
-            // 
-            this.sepLineLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sepLineLogo.FillColor = System.Drawing.Color.Black;
-            this.sepLineLogo.Location = new System.Drawing.Point(0, 110);
-            this.sepLineLogo.Name = "sepLineLogo";
-            this.sepLineLogo.Size = new System.Drawing.Size(250, 10);
-            this.sepLineLogo.TabIndex = 2;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.lblDateTimeNow);
-            this.guna2Panel1.Controls.Add(this.lblGUI);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(932, 61);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // lblDateTimeNow
-            // 
-            this.lblDateTimeNow.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateTimeNow.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTimeNow.ForeColor = System.Drawing.Color.Gray;
-            this.lblDateTimeNow.Location = new System.Drawing.Point(71, 31);
-            this.lblDateTimeNow.Name = "lblDateTimeNow";
-            this.lblDateTimeNow.Size = new System.Drawing.Size(92, 15);
-            this.lblDateTimeNow.TabIndex = 1;
-            this.lblDateTimeNow.Text = "[ Date Time Now ]";
-            // 
-            // lblGUI
-            // 
-            this.lblGUI.BackColor = System.Drawing.Color.Transparent;
-            this.lblGUI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblGUI.Location = new System.Drawing.Point(71, 7);
-            this.lblGUI.Margin = new System.Windows.Forms.Padding(7);
-            this.lblGUI.Name = "lblGUI";
-            this.lblGUI.Size = new System.Drawing.Size(99, 27);
-            this.lblGUI.TabIndex = 0;
-            this.lblGUI.Text = "[ Ten GUI ]";
             // 
             // GUI_Menu
             // 
@@ -479,9 +481,9 @@
             this.pnSidebar.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
             this.pnLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -505,7 +507,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGUI;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnQuanLyNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnSuKien;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDateTimeNow;
     }

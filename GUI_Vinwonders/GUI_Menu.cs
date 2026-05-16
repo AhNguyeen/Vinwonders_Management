@@ -92,5 +92,17 @@ namespace Vinwonders_Management
             lblGUI.Text = "Dashboard";
             lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
         }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(typeof(GUI_QuanLyKhachHang));
+            lblGUI.Text = "Quản Lý Khách Hàng";
+        }
+
+        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(typeof(GUI_QuanLyNhanVien));
+            lblGUI.Text = "Quản Lý Nhân Viên";
+        }
     }
 }
