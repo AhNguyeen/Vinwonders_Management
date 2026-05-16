@@ -121,12 +121,9 @@
             this.pnlFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFrame.BackColor = System.Drawing.Color.Transparent;
-            this.pnlFrame.BorderColor = System.Drawing.Color.Silver;
+            this.pnlFrame.BackColor = System.Drawing.SystemColors.Control;
             this.pnlFrame.BorderRadius = 10;
-            this.pnlFrame.BorderThickness = 1;
             this.pnlFrame.Controls.Add(this.pnlTabs);
-            this.pnlFrame.FillColor = System.Drawing.Color.White;
             this.pnlFrame.Location = new System.Drawing.Point(20, 23);
             this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
             this.pnlFrame.Name = "pnlFrame";
@@ -138,7 +135,7 @@
             this.pnlTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTabs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlTabs.BackColor = System.Drawing.SystemColors.Control;
             this.pnlTabs.Location = new System.Drawing.Point(2, 14);
             this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTabs.Name = "pnlTabs";
