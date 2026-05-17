@@ -61,35 +61,197 @@
     <Compile Include="GUI_Dashboard.Designer.cs">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyCuaHangSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyCuaHangSanPham.Designer.cs">
+      <DependentUpon>GUI_QuanLyCuaHangSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyNhanVien.Designer.cs">
+      <DependentUpon>GUI_QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyTroChoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyTroChoi.Designer.cs">
+      <DependentUpon>GUI_QuanLyTroChoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_SuKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_SuKien.Designer.cs">
+      <DependentUpon>GUI_SuKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.Designer.cs">
+      <DependentUpon>GUI_CuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_HoaDonCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_HoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_HoaDonCuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_SanPham.Designer.cs">
+      <DependentUpon>GUI_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\GUI_HangThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\GUI_HangThanhVien.Designer.cs">
+      <DependentUpon>GUI_HangThanhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\GUI_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\GUI_KhachHang.Designer.cs">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_CaLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_CaLamViec.Designer.cs">
+      <DependentUpon>GUI_CaLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_LichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_LichLamViec.Designer.cs">
+      <DependentUpon>GUI_LichLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_NhanVien.Designer.cs">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTroChoiVaShow\GUI_KhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTroChoiVaShow\GUI_KhuVuc.Designer.cs">
+      <DependentUpon>GUI_KhuVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTroChoiVaShow\GUI_TroChoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTroChoiVaShow\GUI_TroChoi.Designer.cs">
+      <DependentUpon>GUI_TroChoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_HoaDonVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_HoaDonVe.Designer.cs">
+      <DependentUpon>GUI_HoaDonVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_LoaiVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_LoaiVe.Designer.cs">
+      <DependentUpon>GUI_LoaiVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI_Menu.Designer.cs">
       <DependentUpon>GUI_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyKhachHang.Designer.cs">
+      <DependentUpon>GUI_QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyVe.Designer.cs">
+      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyCuaHangSanPham.resx">
+      <DependentUpon>GUI_QuanLyCuaHangSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyKhachHang.resx">
+      <DependentUpon>GUI_QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyNhanVien.resx">
+      <DependentUpon>GUI_QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyTroChoi.resx">
+      <DependentUpon>GUI_QuanLyTroChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_SuKien.resx">
+      <DependentUpon>GUI_SuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
+      <DependentUpon>GUI_CuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_HoaDonCuaHang.resx">
+      <DependentUpon>GUI_HoaDonCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_SanPham.resx">
+      <DependentUpon>GUI_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKhachHang\GUI_HangThanhVien.resx">
+      <DependentUpon>GUI_HangThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKhachHang\GUI_KhachHang.resx">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\GUI_CaLamViec.resx">
+      <DependentUpon>GUI_CaLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\GUI_LichLamViec.resx">
+      <DependentUpon>GUI_LichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\GUI_NhanVien.resx">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTroChoiVaShow\GUI_KhuVuc.resx">
+      <DependentUpon>GUI_KhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTroChoiVaShow\GUI_TroChoi.resx">
+      <DependentUpon>GUI_TroChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe\GUI_HoaDonVe.resx">
+      <DependentUpon>GUI_HoaDonVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe\GUI_LoaiVe.resx">
+      <DependentUpon>GUI_LoaiVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Menu.resx">
       <DependentUpon>GUI_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="GUI_QuanLyVe.resx">
+      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -101,6 +263,58 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_Vinwonders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spin show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shops.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_Vinwonders\BUS_Vinwonders.csproj">
+      <Project>{43a30c0a-3f84-4df3-b982-17a0801d93d2}</Project>
+      <Name>BUS_Vinwonders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ET_Vinwonders\ET_Vinwonders.csproj">
+      <Project>{b6944d83-c382-4b24-baea-0104453369c4}</Project>
+      <Name>ET_Vinwonders</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
