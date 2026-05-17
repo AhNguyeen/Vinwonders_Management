@@ -45,7 +45,7 @@ namespace Vinwonders_Management
             }
         }
         // Biến toàn cục lưu trữ vết của Form con đang được mở hiện tại trên màn hình
-        private Form activeForm = null;
+        //private Form activeForm = null;
 
         private void OpenChildForm(Type formType)
         {
