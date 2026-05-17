@@ -8,5 +8,6 @@ namespace DAL_Vinwonders
 {
     public class DAL_Dashboard
     {
+
     }
 }
