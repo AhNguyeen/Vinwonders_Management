@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ET_Vinwonders
+namespace DAL_Vinwonders
 {
-    public class Class1
+    public class DAL_Dashboard
     {
     }
 }
