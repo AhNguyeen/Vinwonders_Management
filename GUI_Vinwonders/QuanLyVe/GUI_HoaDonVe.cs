@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS_Vinwonders;
+using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,21 @@ namespace Vinwonders_Management
         {
             InitializeComponent();
         }
+
+        // Tạo instance của BUS_HoaDonVe để lấy dữ liệu
+        BUS_HoaDonVe busHoaDonVe = new BUS_HoaDonVe();
+
+        // Sự kiện Load của Form
+        public void LoadData()
+        {
+            // Gán dữ liệu vào DataGridView
+            dgvHoaDonVe.DataSource = busHoaDonVe.InDanhSach();
+        }
+
+        private void GUI_HoaDonVe_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
     }
 }
