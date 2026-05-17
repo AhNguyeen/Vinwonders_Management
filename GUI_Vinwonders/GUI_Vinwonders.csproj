@@ -79,6 +79,12 @@
     <Compile Include="GUI_QuanLyTroChoi.Designer.cs">
       <DependentUpon>GUI_QuanLyTroChoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_SuKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_SuKien.Designer.cs">
+      <DependentUpon>GUI_SuKien.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyTroChoi.resx">
       <DependentUpon>GUI_QuanLyTroChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_SuKien.resx">
+      <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
