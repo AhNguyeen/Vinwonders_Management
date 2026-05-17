@@ -41,7 +41,9 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dgvHoaDonVe = new Guna.UI2.WinForms.Guna2DataGridView();
             this.colMaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -187,19 +189,20 @@
             this.dgvHoaDonVe.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.dgvHoaDonVe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHoaDonVe.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(135)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHoaDonVe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDonVe.ColumnHeadersHeight = 30;
             this.dgvHoaDonVe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaHD,
+            this.colMaKhachHang,
             this.colKhachHang,
+            this.colTenNhanVien,
             this.colNgayMua,
             this.colSoVe,
             this.colTongTien,
@@ -211,8 +214,8 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHoaDonVe.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHoaDonVe.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -230,9 +233,9 @@
             this.dgvHoaDonVe.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvHoaDonVe.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvHoaDonVe.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvHoaDonVe.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvHoaDonVe.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dgvHoaDonVe.ThemeStyle.GridColor = System.Drawing.Color.White;
-            this.dgvHoaDonVe.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(135)))));
+            this.dgvHoaDonVe.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
             this.dgvHoaDonVe.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvHoaDonVe.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvHoaDonVe.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -244,8 +247,8 @@
             this.dgvHoaDonVe.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvHoaDonVe.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvHoaDonVe.ThemeStyle.RowsStyle.Height = 22;
-            this.dgvHoaDonVe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
-            this.dgvHoaDonVe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvHoaDonVe.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvHoaDonVe.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // colMaHD
             // 
@@ -253,13 +256,32 @@
             this.colMaHD.HeaderText = "Mã HD";
             this.colMaHD.Name = "colMaHD";
             this.colMaHD.ReadOnly = true;
+            this.colMaHD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colMaKhachHang
+            // 
+            this.colMaKhachHang.DataPropertyName = "MaKhachHang";
+            this.colMaKhachHang.HeaderText = "Mã KH";
+            this.colMaKhachHang.Name = "colMaKhachHang";
+            this.colMaKhachHang.ReadOnly = true;
+            this.colMaKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colMaKhachHang.Visible = false;
             // 
             // colKhachHang
             // 
-            this.colKhachHang.DataPropertyName = "MaKhachHang";
+            this.colKhachHang.DataPropertyName = "TenKhachHang";
             this.colKhachHang.HeaderText = "Khách hàng";
             this.colKhachHang.Name = "colKhachHang";
             this.colKhachHang.ReadOnly = true;
+            this.colKhachHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colTenNhanVien
+            // 
+            this.colTenNhanVien.DataPropertyName = "TenNhanVien";
+            this.colTenNhanVien.HeaderText = "Tên nhân viên";
+            this.colTenNhanVien.Name = "colTenNhanVien";
+            this.colTenNhanVien.ReadOnly = true;
+            this.colTenNhanVien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // colNgayMua
             // 
@@ -267,6 +289,7 @@
             this.colNgayMua.HeaderText = "Ngày mua";
             this.colNgayMua.Name = "colNgayMua";
             this.colNgayMua.ReadOnly = true;
+            this.colNgayMua.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // colSoVe
             // 
@@ -274,6 +297,8 @@
             this.colSoVe.HeaderText = "Số vé";
             this.colSoVe.Name = "colSoVe";
             this.colSoVe.ReadOnly = true;
+            this.colSoVe.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colSoVe.Visible = false;
             // 
             // colTongTien
             // 
@@ -281,6 +306,7 @@
             this.colTongTien.HeaderText = "Tổng tiền";
             this.colTongTien.Name = "colTongTien";
             this.colTongTien.ReadOnly = true;
+            this.colTongTien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // colThanhToan
             // 
@@ -288,13 +314,16 @@
             this.colThanhToan.HeaderText = "Thanh toán";
             this.colThanhToan.Name = "colThanhToan";
             this.colThanhToan.ReadOnly = true;
+            this.colThanhToan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // colSuKien
             // 
-            this.colSuKien.DataPropertyName = "MaSuKien";
+            this.colSuKien.DataPropertyName = "TenSuKien";
             this.colSuKien.HeaderText = "Sự kiện";
             this.colSuKien.Name = "colSuKien";
             this.colSuKien.ReadOnly = true;
+            this.colSuKien.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colSuKien.Visible = false;
             // 
             // colTrangThai
             // 
@@ -302,6 +331,7 @@
             this.colTrangThai.HeaderText = "Trạng thái";
             this.colTrangThai.Name = "colTrangThai";
             this.colTrangThai.ReadOnly = true;
+            this.colTrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // colThaoTac
             // 
@@ -309,7 +339,8 @@
             this.colThaoTac.Name = "colThaoTac";
             this.colThaoTac.ReadOnly = true;
             this.colThaoTac.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colThaoTac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colThaoTac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.colThaoTac.Text = "Delete";
             // 
             // GUI_HoaDonVe
             // 
@@ -321,6 +352,7 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "GUI_HoaDonVe";
+            this.Load += new System.EventHandler(this.GUI_HoaDonVe_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -342,7 +374,9 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayMua;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoVe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTongTien;

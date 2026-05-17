@@ -17,7 +17,7 @@ namespace DAL_Vinwonders
             DataTable dt = new DataTable();
             try
             {
-                string sql = "sp_Read_HoaDonVe";
+                string sql = "sp_GetAll_HoaDonVe";
                 dt = connectDB.ReadData(sql);
             }
             catch (Exception ex)
