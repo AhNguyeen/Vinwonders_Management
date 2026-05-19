@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Vinwonders_Management
 {
-    public partial class GUI_QuanLyVe : Form
+    public partial class GUI_QuanLyVe : UserControl
     {
         public GUI_QuanLyVe()
         {

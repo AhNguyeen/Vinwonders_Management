@@ -2,12 +2,12 @@
 {
     partial class GUI_QuanLyNhanVien
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -33,9 +33,9 @@
             this.pnlTabs = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlAction = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCaLamViec = new Guna.UI2.WinForms.Guna2Button();
             this.btnLichLamViec = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCaLamViec = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTabConTent.SuspendLayout();
             this.pnlFrame.SuspendLayout();
             this.pnlNav.SuspendLayout();
@@ -48,8 +48,8 @@
             this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
             this.pnlTabConTent.Name = "pnlTabConTent";
-            this.pnlTabConTent.Size = new System.Drawing.Size(800, 371);
-            this.pnlTabConTent.TabIndex = 5;
+            this.pnlTabConTent.Size = new System.Drawing.Size(766, 411);
+            this.pnlTabConTent.TabIndex = 9;
             // 
             // pnlFrame
             // 
@@ -63,7 +63,7 @@
             this.pnlFrame.Location = new System.Drawing.Point(20, 23);
             this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
             this.pnlFrame.Name = "pnlFrame";
-            this.pnlFrame.Size = new System.Drawing.Size(760, 328);
+            this.pnlFrame.Size = new System.Drawing.Size(726, 368);
             this.pnlFrame.TabIndex = 0;
             // 
             // pnlTabs
@@ -75,7 +75,7 @@
             this.pnlTabs.Location = new System.Drawing.Point(2, 14);
             this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(756, 302);
+            this.pnlTabs.Size = new System.Drawing.Size(722, 342);
             this.pnlTabs.TabIndex = 0;
             // 
             // pnlNav
@@ -84,8 +84,8 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(800, 79);
-            this.pnlNav.TabIndex = 4;
+            this.pnlNav.Size = new System.Drawing.Size(766, 79);
+            this.pnlNav.TabIndex = 8;
             // 
             // pnlAction
             // 
@@ -102,48 +102,6 @@
             this.pnlAction.Name = "pnlAction";
             this.pnlAction.Size = new System.Drawing.Size(438, 59);
             this.pnlAction.TabIndex = 0;
-            // 
-            // btnLichLamViec
-            // 
-            this.btnLichLamViec.BorderRadius = 12;
-            this.btnLichLamViec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLichLamViec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLichLamViec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLichLamViec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLichLamViec.FillColor = System.Drawing.Color.White;
-            this.btnLichLamViec.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLichLamViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLichLamViec.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnLichLamViec.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLichLamViec.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnLichLamViec.Location = new System.Drawing.Point(151, 10);
-            this.btnLichLamViec.Margin = new System.Windows.Forms.Padding(5);
-            this.btnLichLamViec.Name = "btnLichLamViec";
-            this.btnLichLamViec.Size = new System.Drawing.Size(136, 39);
-            this.btnLichLamViec.TabIndex = 0;
-            this.btnLichLamViec.Text = "Lịch làm việc";
-            this.btnLichLamViec.Click += new System.EventHandler(this.btnLichLamViec_Click);
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.BorderRadius = 12;
-            this.btnNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNhanVien.FillColor = System.Drawing.Color.White;
-            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNhanVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnNhanVien.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnNhanVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.Location = new System.Drawing.Point(5, 10);
-            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(5);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(136, 39);
-            this.btnNhanVien.TabIndex = 0;
-            this.btnNhanVien.Text = "Nhân viên";
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnCaLamViec
             // 
@@ -164,18 +122,55 @@
             this.btnCaLamViec.Size = new System.Drawing.Size(136, 39);
             this.btnCaLamViec.TabIndex = 0;
             this.btnCaLamViec.Text = "Ca làm việc";
-            this.btnCaLamViec.Click += new System.EventHandler(this.btnCaLamViec_Click);
             // 
-            // GUI_QuanLyNhanVien
+            // btnLichLamViec
+            // 
+            this.btnLichLamViec.BorderRadius = 12;
+            this.btnLichLamViec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichLamViec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichLamViec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichLamViec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLichLamViec.FillColor = System.Drawing.Color.White;
+            this.btnLichLamViec.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichLamViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLichLamViec.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLichLamViec.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLichLamViec.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLichLamViec.Location = new System.Drawing.Point(151, 10);
+            this.btnLichLamViec.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLichLamViec.Name = "btnLichLamViec";
+            this.btnLichLamViec.Size = new System.Drawing.Size(136, 39);
+            this.btnLichLamViec.TabIndex = 0;
+            this.btnLichLamViec.Text = "Lịch làm việc";
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.BorderRadius = 12;
+            this.btnNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNhanVien.FillColor = System.Drawing.Color.White;
+            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNhanVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNhanVien.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnNhanVien.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnNhanVien.Location = new System.Drawing.Point(5, 10);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(5);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(136, 39);
+            this.btnNhanVien.TabIndex = 0;
+            this.btnNhanVien.Text = "Nhân viên";
+            // 
+            // GUI_QLNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_QuanLyNhanVien";
-            this.Load += new System.EventHandler(this.GUI_QuanLyNhanVien_Load);
+            this.Name = "GUI_QLNV";
+            this.Size = new System.Drawing.Size(766, 490);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);
@@ -191,8 +186,8 @@
         private Guna.UI2.WinForms.Guna2Panel pnlTabs;
         private Guna.UI2.WinForms.Guna2Panel pnlNav;
         private Guna.UI2.WinForms.Guna2Panel pnlAction;
+        private Guna.UI2.WinForms.Guna2Button btnCaLamViec;
         private Guna.UI2.WinForms.Guna2Button btnLichLamViec;
         private Guna.UI2.WinForms.Guna2Button btnNhanVien;
-        private Guna.UI2.WinForms.Guna2Button btnCaLamViec;
     }
 }

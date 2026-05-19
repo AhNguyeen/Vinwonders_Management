@@ -56,37 +56,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GUI_Dashboard.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI_Dashboard.Designer.cs">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="gui_DÁ.cs">
+    <Compile Include="GUI_QuanLyVe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="gui_DÁ.Designer.cs">
-      <DependentUpon>gui_DÁ.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI_QuanLyCuaHangSanPham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_QuanLyCuaHangSanPham.Designer.cs">
-      <DependentUpon>GUI_QuanLyCuaHangSanPham.cs</DependentUpon>
+    <Compile Include="GUI_QuanLyVe.Designer.cs">
+      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QuanLyNhanVien.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI_QuanLyNhanVien.Designer.cs">
       <DependentUpon>GUI_QuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QuanLyTroChoi.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI_QuanLyTroChoi.Designer.cs">
       <DependentUpon>GUI_QuanLyTroChoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QuanLyCuaHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyCuaHang.Designer.cs">
+      <DependentUpon>GUI_QuanLyCuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QuanLyKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QuanLyKhachHang.Designer.cs">
+      <DependentUpon>GUI_QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_SuKien.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
@@ -169,37 +175,25 @@
     <Compile Include="GUI_Menu.Designer.cs">
       <DependentUpon>GUI_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI_QuanLyKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_QuanLyKhachHang.Designer.cs">
-      <DependentUpon>GUI_QuanLyKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI_QuanLyVe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI_QuanLyVe.Designer.cs">
-      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_DÁ.resx">
-      <DependentUpon>gui_DÁ.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyCuaHangSanPham.resx">
-      <DependentUpon>GUI_QuanLyCuaHangSanPham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyKhachHang.resx">
-      <DependentUpon>GUI_QuanLyKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="GUI_QuanLyVe.resx">
+      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyNhanVien.resx">
       <DependentUpon>GUI_QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyTroChoi.resx">
       <DependentUpon>GUI_QuanLyTroChoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyCuaHang.resx">
+      <DependentUpon>GUI_QuanLyCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QuanLyKhachHang.resx">
+      <DependentUpon>GUI_QuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
@@ -242,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Menu.resx">
       <DependentUpon>GUI_Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI_QuanLyVe.resx">
-      <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

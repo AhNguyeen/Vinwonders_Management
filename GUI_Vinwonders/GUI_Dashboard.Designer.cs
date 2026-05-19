@@ -2,12 +2,12 @@
 {
     partial class GUI_Dashboard
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -61,7 +61,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnMainContent = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -100,7 +100,7 @@
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.pnMainContent.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -117,22 +117,22 @@
             this.guna2Panel12.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // pnMainContent
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1112, 885);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.pnMainContent.ColumnCount = 1;
+            this.pnMainContent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnMainContent.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.pnMainContent.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.pnMainContent.Controls.Add(this.tableLayoutPanel4, 0, 2);
+            this.pnMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMainContent.Location = new System.Drawing.Point(0, 0);
+            this.pnMainContent.Name = "pnMainContent";
+            this.pnMainContent.RowCount = 3;
+            this.pnMainContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnMainContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.pnMainContent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.pnMainContent.Size = new System.Drawing.Size(1291, 820);
+            this.pnMainContent.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -150,7 +150,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1106, 177);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1285, 158);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // guna2Panel4
@@ -166,14 +166,16 @@
             this.guna2Panel4.Controls.Add(this.lblDoanhThuCuaHang);
             this.guna2Panel4.Controls.Add(this.guna2Panel8);
             this.guna2Panel4.FillColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(838, 10);
+            this.guna2Panel4.Location = new System.Drawing.Point(973, 10);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(258, 157);
+            this.guna2Panel4.Size = new System.Drawing.Size(302, 138);
             this.guna2Panel4.TabIndex = 3;
             // 
             // guna2HtmlLabel8
             // 
+            this.guna2HtmlLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -185,6 +187,8 @@
             // 
             // lblDoanhThuCuaHang
             // 
+            this.lblDoanhThuCuaHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDoanhThuCuaHang.BackColor = System.Drawing.Color.Transparent;
             this.lblDoanhThuCuaHang.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoanhThuCuaHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
@@ -201,7 +205,7 @@
             this.guna2Panel8.BorderRadius = 10;
             this.guna2Panel8.BorderThickness = 1;
             this.guna2Panel8.FillColor = System.Drawing.Color.White;
-            this.guna2Panel8.Location = new System.Drawing.Point(13, 16);
+            this.guna2Panel8.Location = new System.Drawing.Point(13, 24);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel8.TabIndex = 1;
@@ -219,14 +223,16 @@
             this.guna2Panel3.Controls.Add(this.lblDanhThu);
             this.guna2Panel3.Controls.Add(this.guna2Panel7);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(562, 10);
+            this.guna2Panel3.Location = new System.Drawing.Point(652, 10);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(256, 157);
+            this.guna2Panel3.Size = new System.Drawing.Size(301, 138);
             this.guna2Panel3.TabIndex = 2;
             // 
             // guna2HtmlLabel7
             // 
+            this.guna2HtmlLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -238,6 +244,8 @@
             // 
             // lblDanhThu
             // 
+            this.lblDanhThu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDanhThu.BackColor = System.Drawing.Color.Transparent;
             this.lblDanhThu.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
@@ -254,7 +262,7 @@
             this.guna2Panel7.BorderRadius = 10;
             this.guna2Panel7.BorderThickness = 1;
             this.guna2Panel7.FillColor = System.Drawing.Color.White;
-            this.guna2Panel7.Location = new System.Drawing.Point(13, 16);
+            this.guna2Panel7.Location = new System.Drawing.Point(13, 24);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel7.TabIndex = 1;
@@ -272,14 +280,16 @@
             this.guna2Panel2.Controls.Add(this.lblKhachHang);
             this.guna2Panel2.Controls.Add(this.guna2Panel6);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(286, 10);
+            this.guna2Panel2.Location = new System.Drawing.Point(331, 10);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(256, 157);
+            this.guna2Panel2.Size = new System.Drawing.Size(301, 138);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2HtmlLabel6
             // 
+            this.guna2HtmlLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -291,6 +301,8 @@
             // 
             // lblKhachHang
             // 
+            this.lblKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblKhachHang.BackColor = System.Drawing.Color.Transparent;
             this.lblKhachHang.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
@@ -307,7 +319,7 @@
             this.guna2Panel6.BorderRadius = 10;
             this.guna2Panel6.BorderThickness = 1;
             this.guna2Panel6.FillColor = System.Drawing.Color.White;
-            this.guna2Panel6.Location = new System.Drawing.Point(13, 16);
+            this.guna2Panel6.Location = new System.Drawing.Point(13, 24);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel6.TabIndex = 1;
@@ -328,11 +340,13 @@
             this.guna2Panel1.Location = new System.Drawing.Point(10, 10);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(256, 157);
+            this.guna2Panel1.Size = new System.Drawing.Size(301, 138);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2HtmlLabel5
             // 
+            this.guna2HtmlLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -344,6 +358,8 @@
             // 
             // lblTongVeBan
             // 
+            this.lblTongVeBan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTongVeBan.BackColor = System.Drawing.Color.Transparent;
             this.lblTongVeBan.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongVeBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(0)))));
@@ -360,7 +376,7 @@
             this.guna2Panel5.BorderRadius = 10;
             this.guna2Panel5.BorderThickness = 1;
             this.guna2Panel5.FillColor = System.Drawing.Color.White;
-            this.guna2Panel5.Location = new System.Drawing.Point(13, 16);
+            this.guna2Panel5.Location = new System.Drawing.Point(13, 24);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(50, 50);
             this.guna2Panel5.TabIndex = 0;
@@ -373,11 +389,11 @@
             this.tableLayoutPanel3.Controls.Add(this.guna2Panel10, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Panel9, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 186);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 167);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1106, 361);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1285, 322);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // guna2Panel10
@@ -391,10 +407,10 @@
             this.guna2Panel10.Controls.Add(this.gunaChart2);
             this.guna2Panel10.Controls.Add(this.guna2HtmlLabel10);
             this.guna2Panel10.FillColor = System.Drawing.Color.White;
-            this.guna2Panel10.Location = new System.Drawing.Point(728, 10);
+            this.guna2Panel10.Location = new System.Drawing.Point(845, 10);
             this.guna2Panel10.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(368, 341);
+            this.guna2Panel10.Size = new System.Drawing.Size(430, 302);
             this.guna2Panel10.TabIndex = 1;
             // 
             // gunaChart2
@@ -406,7 +422,7 @@
             this.gunaChart2.Legend.LabelFont = chartFont17;
             this.gunaChart2.Location = new System.Drawing.Point(12, 39);
             this.gunaChart2.Name = "gunaChart2";
-            this.gunaChart2.Size = new System.Drawing.Size(344, 292);
+            this.gunaChart2.Size = new System.Drawing.Size(406, 252);
             this.gunaChart2.TabIndex = 2;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
@@ -460,7 +476,7 @@
             this.guna2Panel9.Location = new System.Drawing.Point(10, 10);
             this.guna2Panel9.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(698, 341);
+            this.guna2Panel9.Size = new System.Drawing.Size(815, 302);
             this.guna2Panel9.TabIndex = 0;
             // 
             // gunaChart1
@@ -473,7 +489,7 @@
             this.gunaChart1.Location = new System.Drawing.Point(10, 39);
             this.gunaChart1.Margin = new System.Windows.Forms.Padding(10);
             this.gunaChart1.Name = "gunaChart1";
-            this.gunaChart1.Size = new System.Drawing.Size(678, 292);
+            this.gunaChart1.Size = new System.Drawing.Size(795, 252);
             this.gunaChart1.TabIndex = 2;
             chartFont26.FontName = "Arial";
             chartFont26.Size = 12;
@@ -521,11 +537,11 @@
             this.tableLayoutPanel4.Controls.Add(this.guna2Panel11, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 553);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 495);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1106, 329);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1285, 322);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // guna2Panel11
@@ -542,7 +558,7 @@
             this.guna2Panel11.Location = new System.Drawing.Point(10, 10);
             this.guna2Panel11.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel11.Name = "guna2Panel11";
-            this.guna2Panel11.Size = new System.Drawing.Size(698, 309);
+            this.guna2Panel11.Size = new System.Drawing.Size(815, 302);
             this.guna2Panel11.TabIndex = 0;
             // 
             // guna2DataGridView1
@@ -584,7 +600,8 @@
             this.guna2DataGridView1.Location = new System.Drawing.Point(10, 39);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(678, 259);
+            this.guna2DataGridView1.RowHeadersWidth = 51;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(795, 253);
             this.guna2DataGridView1.TabIndex = 2;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -611,26 +628,31 @@
             // colMaHD
             // 
             this.colMaHD.HeaderText = "Mã HĐ";
+            this.colMaHD.MinimumWidth = 6;
             this.colMaHD.Name = "colMaHD";
             // 
             // colKhachHang
             // 
             this.colKhachHang.HeaderText = "Khách hàng";
+            this.colKhachHang.MinimumWidth = 6;
             this.colKhachHang.Name = "colKhachHang";
             // 
             // colSoVe
             // 
             this.colSoVe.HeaderText = "Số vé";
+            this.colSoVe.MinimumWidth = 6;
             this.colSoVe.Name = "colSoVe";
             // 
             // colTongTien
             // 
             this.colTongTien.HeaderText = "Tổng tiền";
+            this.colTongTien.MinimumWidth = 6;
             this.colTongTien.Name = "colTongTien";
             // 
             // colTrangThai
             // 
             this.colTrangThai.HeaderText = "Trạng thái";
+            this.colTrangThai.MinimumWidth = 6;
             this.colTrangThai.Name = "colTrangThai";
             // 
             // guna2HtmlLabel11
@@ -652,12 +674,12 @@
             this.tableLayoutPanel5.Controls.Add(this.guna2Panel13, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.guna2Panel12, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(721, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(838, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(382, 323);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(444, 316);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // guna2Panel13
@@ -671,10 +693,10 @@
             this.guna2Panel13.BorderThickness = 1;
             this.guna2Panel13.Controls.Add(this.guna2HtmlLabel13);
             this.guna2Panel13.FillColor = System.Drawing.Color.White;
-            this.guna2Panel13.Location = new System.Drawing.Point(10, 171);
+            this.guna2Panel13.Location = new System.Drawing.Point(10, 168);
             this.guna2Panel13.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Size = new System.Drawing.Size(362, 142);
+            this.guna2Panel13.Size = new System.Drawing.Size(424, 138);
             this.guna2Panel13.TabIndex = 1;
             // 
             // guna2HtmlLabel13
@@ -703,7 +725,7 @@
             this.guna2Panel12.Location = new System.Drawing.Point(10, 10);
             this.guna2Panel12.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Size = new System.Drawing.Size(362, 141);
+            this.guna2Panel12.Size = new System.Drawing.Size(424, 138);
             this.guna2Panel12.TabIndex = 0;
             // 
             // guna2HtmlLabel12
@@ -722,15 +744,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 885);
-            this.ControlBox = false;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pnMainContent);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_Dashboard";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.GUI_Dashboard_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1291, 820);
+            this.pnMainContent.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
@@ -760,44 +778,44 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel pnMainContent;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDoanhThuCuaHang;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDanhThu;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblKhachHang;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTongVeBan;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDoanhThuCuaHang;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDanhThu;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblKhachHang;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTongVeBan;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.Charts.WinForms.GunaChart gunaChart1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.Charts.WinForms.GunaChart gunaChart2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
+        private Guna.Charts.WinForms.GunaChart gunaChart1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoVe;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
     }
 }

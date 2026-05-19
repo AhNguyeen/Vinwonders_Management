@@ -102,7 +102,7 @@ namespace Vinwonders_Management
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(typeof(gui_db));
+            OpenChildUserControl(typeof(GUI_Dashboard));
             lblGUI.Text = "Dashboard";
         }
 
@@ -114,7 +114,7 @@ namespace Vinwonders_Management
 
         private void GUI_Menu_Load(object sender, EventArgs e)
         {
-            OpenChildUserControl(typeof(gui_db));
+            OpenChildUserControl(typeof(GUI_Dashboard));
             lblGUI.Text = "Dashboard";
             lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
         }
@@ -139,7 +139,7 @@ namespace Vinwonders_Management
 
         private void btnCuaHang_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(typeof(GUI_QuanLyCuaHangSanPham));
+            OpenChildUserControl(typeof(GUI_QuanLyCuaHang));
             lblGUI.Text = "Quản Lý Cửa Hàng Sản Phẩm";
         }
 
