@@ -45,6 +45,7 @@
     <Compile Include="Connection\ConnectData.cs" />
     <Compile Include="DAL_HoaDonVe.cs" />
     <Compile Include="DAL_KhachHang.cs" />
+    <Compile Include="DAL_KhuVuc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

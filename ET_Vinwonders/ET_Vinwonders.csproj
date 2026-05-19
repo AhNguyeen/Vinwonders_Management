@@ -44,6 +44,7 @@
     <Compile Include="ET_DangKyThanhVien.cs" />
     <Compile Include="ET_HoaDonVe.cs" />
     <Compile Include="ET_KhachHang.cs" />
+    <Compile Include="ET_KhuVuc.cs" />
     <Compile Include="ET_TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
