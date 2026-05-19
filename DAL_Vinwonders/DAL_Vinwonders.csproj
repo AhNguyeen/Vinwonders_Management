@@ -51,6 +51,7 @@
     <Compile Include="DAL_SanPham.cs" />
     <Compile Include="DAL_SuKien.cs" />
     <Compile Include="DAL_TroChoi.cs" />
+    <Compile Include="DAL_Ve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

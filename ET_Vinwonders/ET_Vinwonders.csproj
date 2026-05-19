@@ -51,6 +51,7 @@
     <Compile Include="ET_SuKien.cs" />
     <Compile Include="ET_TaiKhoan.cs" />
     <Compile Include="ET_TroChoi.cs" />
+    <Compile Include="ET_Ve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
