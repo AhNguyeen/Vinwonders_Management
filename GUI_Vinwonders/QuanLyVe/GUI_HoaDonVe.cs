@@ -31,6 +31,7 @@ namespace Vinwonders_Management
 
         private void GUI_HoaDonVe_Load(object sender, EventArgs e)
         {
+            
             LoadData();
         }
 
