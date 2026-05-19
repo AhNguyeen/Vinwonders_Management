@@ -1,13 +1,13 @@
 ﻿namespace Vinwonders_Management
 {
-    partial class GUI_QuanLyCuaHangSanPham
+    partial class GUI_QuanLyCuaHang
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -33,9 +33,9 @@
             this.pnlTabs = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlButton = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHoaDonCH = new Guna.UI2.WinForms.Guna2Button();
             this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHoaDonCH = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTabConTent.SuspendLayout();
             this.pnlFrame.SuspendLayout();
             this.pnlNav.SuspendLayout();
@@ -48,8 +48,8 @@
             this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
             this.pnlTabConTent.Name = "pnlTabConTent";
-            this.pnlTabConTent.Size = new System.Drawing.Size(800, 371);
-            this.pnlTabConTent.TabIndex = 9;
+            this.pnlTabConTent.Size = new System.Drawing.Size(911, 468);
+            this.pnlTabConTent.TabIndex = 11;
             // 
             // pnlFrame
             // 
@@ -63,7 +63,7 @@
             this.pnlFrame.Location = new System.Drawing.Point(20, 23);
             this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
             this.pnlFrame.Name = "pnlFrame";
-            this.pnlFrame.Size = new System.Drawing.Size(760, 328);
+            this.pnlFrame.Size = new System.Drawing.Size(871, 425);
             this.pnlFrame.TabIndex = 0;
             // 
             // pnlTabs
@@ -75,7 +75,7 @@
             this.pnlTabs.Location = new System.Drawing.Point(2, 14);
             this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(756, 302);
+            this.pnlTabs.Size = new System.Drawing.Size(867, 399);
             this.pnlTabs.TabIndex = 0;
             // 
             // pnlNav
@@ -84,8 +84,8 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(800, 79);
-            this.pnlNav.TabIndex = 8;
+            this.pnlNav.Size = new System.Drawing.Size(911, 79);
+            this.pnlNav.TabIndex = 10;
             // 
             // pnlButton
             // 
@@ -102,48 +102,6 @@
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(439, 59);
             this.pnlButton.TabIndex = 0;
-            // 
-            // btnSanPham
-            // 
-            this.btnSanPham.BorderRadius = 12;
-            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSanPham.FillColor = System.Drawing.Color.White;
-            this.btnSanPham.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSanPham.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSanPham.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnSanPham.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSanPham.Location = new System.Drawing.Point(151, 10);
-            this.btnSanPham.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSanPham.Name = "btnSanPham";
-            this.btnSanPham.Size = new System.Drawing.Size(136, 39);
-            this.btnSanPham.TabIndex = 0;
-            this.btnSanPham.Text = "Sản phẩm";
-            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-            // 
-            // btnCuaHang
-            // 
-            this.btnCuaHang.BorderRadius = 12;
-            this.btnCuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCuaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCuaHang.FillColor = System.Drawing.Color.White;
-            this.btnCuaHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuaHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCuaHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCuaHang.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCuaHang.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCuaHang.Location = new System.Drawing.Point(5, 10);
-            this.btnCuaHang.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCuaHang.Name = "btnCuaHang";
-            this.btnCuaHang.Size = new System.Drawing.Size(136, 39);
-            this.btnCuaHang.TabIndex = 0;
-            this.btnCuaHang.Text = "Cửa hàng";
-            this.btnCuaHang.Click += new System.EventHandler(this.btnCuaHang_Click);
             // 
             // btnHoaDonCH
             // 
@@ -164,18 +122,55 @@
             this.btnHoaDonCH.Size = new System.Drawing.Size(136, 39);
             this.btnHoaDonCH.TabIndex = 0;
             this.btnHoaDonCH.Text = "Hóa đơn CH";
-            this.btnHoaDonCH.Click += new System.EventHandler(this.btnHoaDonCH_Click);
             // 
-            // GUI_QuanLyCuaHangSanPham
+            // btnSanPham
+            // 
+            this.btnSanPham.BorderRadius = 12;
+            this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSanPham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSanPham.FillColor = System.Drawing.Color.White;
+            this.btnSanPham.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSanPham.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSanPham.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSanPham.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSanPham.Location = new System.Drawing.Point(151, 10);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.Size = new System.Drawing.Size(136, 39);
+            this.btnSanPham.TabIndex = 0;
+            this.btnSanPham.Text = "Sản phẩm";
+            // 
+            // btnCuaHang
+            // 
+            this.btnCuaHang.BorderRadius = 12;
+            this.btnCuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCuaHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCuaHang.FillColor = System.Drawing.Color.White;
+            this.btnCuaHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuaHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCuaHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCuaHang.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCuaHang.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCuaHang.Location = new System.Drawing.Point(5, 10);
+            this.btnCuaHang.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCuaHang.Name = "btnCuaHang";
+            this.btnCuaHang.Size = new System.Drawing.Size(136, 39);
+            this.btnCuaHang.TabIndex = 0;
+            this.btnCuaHang.Text = "Cửa hàng";
+            // 
+            // GUI_QuanLyCuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_QuanLyCuaHangSanPham";
-            this.Load += new System.EventHandler(this.GUI_QuanLyCuaHangSanPham_Load);
+            this.Name = "GUI_QuanLyCuaHang";
+            this.Size = new System.Drawing.Size(911, 547);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);
@@ -191,8 +186,8 @@
         private Guna.UI2.WinForms.Guna2Panel pnlTabs;
         private Guna.UI2.WinForms.Guna2Panel pnlNav;
         private Guna.UI2.WinForms.Guna2Panel pnlButton;
+        private Guna.UI2.WinForms.Guna2Button btnHoaDonCH;
         private Guna.UI2.WinForms.Guna2Button btnSanPham;
         private Guna.UI2.WinForms.Guna2Button btnCuaHang;
-        private Guna.UI2.WinForms.Guna2Button btnHoaDonCH;
     }
 }

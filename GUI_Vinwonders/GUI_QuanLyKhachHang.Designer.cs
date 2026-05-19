@@ -2,12 +2,12 @@
 {
     partial class GUI_QuanLyKhachHang
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,10 +20,10 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
@@ -47,8 +47,8 @@
             this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
             this.pnlTabConTent.Name = "pnlTabConTent";
-            this.pnlTabConTent.Size = new System.Drawing.Size(800, 371);
-            this.pnlTabConTent.TabIndex = 3;
+            this.pnlTabConTent.Size = new System.Drawing.Size(857, 439);
+            this.pnlTabConTent.TabIndex = 5;
             // 
             // pnlFrame
             // 
@@ -62,7 +62,7 @@
             this.pnlFrame.Location = new System.Drawing.Point(20, 23);
             this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
             this.pnlFrame.Name = "pnlFrame";
-            this.pnlFrame.Size = new System.Drawing.Size(760, 328);
+            this.pnlFrame.Size = new System.Drawing.Size(817, 396);
             this.pnlFrame.TabIndex = 0;
             // 
             // pnlTabs
@@ -74,7 +74,7 @@
             this.pnlTabs.Location = new System.Drawing.Point(2, 14);
             this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(756, 302);
+            this.pnlTabs.Size = new System.Drawing.Size(813, 370);
             this.pnlTabs.TabIndex = 0;
             // 
             // pnlNav
@@ -83,8 +83,8 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(800, 79);
-            this.pnlNav.TabIndex = 2;
+            this.pnlNav.Size = new System.Drawing.Size(857, 79);
+            this.pnlNav.TabIndex = 4;
             // 
             // pnlAction
             // 
@@ -120,7 +120,6 @@
             this.btnHangThanhVien.Size = new System.Drawing.Size(136, 39);
             this.btnHangThanhVien.TabIndex = 0;
             this.btnHangThanhVien.Text = "Hạng Thành Viên";
-            this.btnHangThanhVien.Click += new System.EventHandler(this.btnHangThanhVien_Click);
             // 
             // btnKhachHang
             // 
@@ -141,18 +140,15 @@
             this.btnKhachHang.Size = new System.Drawing.Size(136, 39);
             this.btnKhachHang.TabIndex = 0;
             this.btnKhachHang.Text = "Khách Hàng";
-            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // GUI_QuanLyKhachHang
+            // GUI_QuanLyKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_QuanLyKhachHang";
-            this.Load += new System.EventHandler(this.GUI_QuanLyKhachHang_Load);
+            this.Name = "GUI_QuanLyKH";
+            this.Size = new System.Drawing.Size(857, 518);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vinwonders_Management
 {
-    public partial class gui_db : UserControl
+    public partial class GUI_QuanLyCuaHang : UserControl
     {
-        public gui_db()
+        public GUI_QuanLyCuaHang()
         {
             InitializeComponent();
         }

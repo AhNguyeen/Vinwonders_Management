@@ -2,12 +2,12 @@
 {
     partial class GUI_QuanLyVe
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,26 +20,61 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.pnlTabConTent = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlFrame = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlTabs = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlAction = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLoaiVe = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoaDonVe = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlTabConTent = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlFrame = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlTabs = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlNav.SuspendLayout();
-            this.pnlAction.SuspendLayout();
             this.pnlTabConTent.SuspendLayout();
             this.pnlFrame.SuspendLayout();
+            this.pnlNav.SuspendLayout();
+            this.pnlAction.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pnlTabConTent
+            // 
+            this.pnlTabConTent.Controls.Add(this.pnlFrame);
+            this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
+            this.pnlTabConTent.Name = "pnlTabConTent";
+            this.pnlTabConTent.Size = new System.Drawing.Size(818, 393);
+            this.pnlTabConTent.TabIndex = 3;
+            // 
+            // pnlFrame
+            // 
+            this.pnlFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFrame.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlFrame.BorderRadius = 10;
+            this.pnlFrame.Controls.Add(this.pnlTabs);
+            this.pnlFrame.Location = new System.Drawing.Point(20, 23);
+            this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
+            this.pnlFrame.Name = "pnlFrame";
+            this.pnlFrame.Size = new System.Drawing.Size(778, 350);
+            this.pnlFrame.TabIndex = 0;
+            // 
+            // pnlTabs
+            // 
+            this.pnlTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTabs.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlTabs.Location = new System.Drawing.Point(2, 14);
+            this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlTabs.Name = "pnlTabs";
+            this.pnlTabs.Size = new System.Drawing.Size(774, 324);
+            this.pnlTabs.TabIndex = 0;
             // 
             // pnlNav
             // 
@@ -47,11 +82,12 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(1060, 79);
-            this.pnlNav.TabIndex = 0;
+            this.pnlNav.Size = new System.Drawing.Size(818, 79);
+            this.pnlNav.TabIndex = 2;
             // 
             // pnlAction
             // 
+            this.pnlAction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pnlAction.BackColor = System.Drawing.Color.Transparent;
             this.pnlAction.BorderColor = System.Drawing.Color.Silver;
             this.pnlAction.BorderRadius = 15;
@@ -107,67 +143,31 @@
             this.btnHoaDonVe.Text = "Hóa Đơn Vé";
             this.btnHoaDonVe.Click += new System.EventHandler(this.btnHoaDonVe_Click);
             // 
-            // pnlTabConTent
-            // 
-            this.pnlTabConTent.Controls.Add(this.pnlFrame);
-            this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
-            this.pnlTabConTent.Name = "pnlTabConTent";
-            this.pnlTabConTent.Size = new System.Drawing.Size(1060, 652);
-            this.pnlTabConTent.TabIndex = 1;
-            // 
-            // pnlFrame
-            // 
-            this.pnlFrame.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFrame.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlFrame.BorderRadius = 10;
-            this.pnlFrame.Controls.Add(this.pnlTabs);
-            this.pnlFrame.Location = new System.Drawing.Point(20, 23);
-            this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
-            this.pnlFrame.Name = "pnlFrame";
-            this.pnlFrame.Size = new System.Drawing.Size(1020, 609);
-            this.pnlFrame.TabIndex = 0;
-            // 
-            // pnlTabs
-            // 
-            this.pnlTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTabs.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlTabs.Location = new System.Drawing.Point(2, 14);
-            this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(1016, 583);
-            this.pnlTabs.TabIndex = 0;
-            // 
             // GUI_QuanLyVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 731);
-            this.ControlBox = false;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
             this.Name = "GUI_QuanLyVe";
+            this.Size = new System.Drawing.Size(818, 472);
             this.Load += new System.EventHandler(this.GUI_QuanLyVe_Load);
-            this.pnlNav.ResumeLayout(false);
-            this.pnlAction.ResumeLayout(false);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
+            this.pnlNav.ResumeLayout(false);
+            this.pnlAction.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel pnlNav;
-        private Guna.UI2.WinForms.Guna2Panel pnlAction;
-        private Guna.UI2.WinForms.Guna2Button btnHoaDonVe;
-        private Guna.UI2.WinForms.Guna2Button btnLoaiVe;
         private Guna.UI2.WinForms.Guna2Panel pnlTabConTent;
         private Guna.UI2.WinForms.Guna2Panel pnlFrame;
         private Guna.UI2.WinForms.Guna2Panel pnlTabs;
+        private Guna.UI2.WinForms.Guna2Panel pnlNav;
+        private Guna.UI2.WinForms.Guna2Panel pnlAction;
+        private Guna.UI2.WinForms.Guna2Button btnLoaiVe;
+        private Guna.UI2.WinForms.Guna2Button btnHoaDonVe;
     }
 }
