@@ -47,6 +47,7 @@
     <Compile Include="ET_KhachHang.cs" />
     <Compile Include="ET_KhuVuc.cs" />
     <Compile Include="ET_NhanVien.cs" />
+    <Compile Include="ET_SanPham.cs" />
     <Compile Include="ET_SuKien.cs" />
     <Compile Include="ET_TaiKhoan.cs" />
     <Compile Include="ET_TroChoi.cs" />
