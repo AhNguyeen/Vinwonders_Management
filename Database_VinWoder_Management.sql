@@ -12,9 +12,9 @@ GO
 -- =================================================================
 CREATE TABLE TaiKhoan (
     MaTaiKhoan NVARCHAR(10) PRIMARY KEY,
-    TenDangNhap VARCHAR(50) NOT NULL UNIQUE,
-    MatKhau VARCHAR(255) NOT NULL,
-    QuyenTruyCap VARCHAR(20) NOT NULL, -- Admin, QuanLy, ThuNgan
+    TenDangNhap NVARCHAR(50) NOT NULL UNIQUE,
+    MatKhau NVARCHAR(255) NOT NULL,
+    QuyenTruyCap NVARCHAR(20) NOT NULL, -- Admin, QuanLy, ThuNgan
     TrangThai BIT DEFAULT 1, 
     NgayTao DATETIME DEFAULT GETDATE()
 );
@@ -34,15 +34,15 @@ CREATE TABLE HangThanhVien (
 
 CREATE TABLE KhuVuc (
     MaKhuVuc NVARCHAR(10) PRIMARY KEY,
-    TenKhuVuc VARCHAR(100) NOT NULL,
-    MoTa VARCHAR(500),
+    TenKhuVuc NVARCHAR(100) NOT NULL,
+    MoTa NVARCHAR(500),
     GioMoCua TIME,
     GioDongCua TIME
 );
 
 CREATE TABLE CaLamViec (
     MaCa NVARCHAR(10) PRIMARY KEY,
-    TenCa VARCHAR(50) NOT NULL,
+    TenCa NVARCHAR(50) NOT NULL,
     GioBatDau TIME NOT NULL,
     GioKetThuc TIME NOT NULL
 );
@@ -53,7 +53,7 @@ CREATE TABLE SuKien (
     MoTa NVARCHAR(500),
     NgayBatDau DATETIME NOT NULL,
     NgayKetThuc DATETIME NOT NULL,
-    MaGiamGia VARCHAR(20) UNIQUE, 
+    MaGiamGia NVARCHAR(20) UNIQUE, 
     PhanTramGiam DECIMAL(5,2), 
     GiamToiDa DECIMAL(18,2), 
     TrangThai BIT DEFAULT 1 
@@ -67,12 +67,12 @@ CREATE TABLE KhachHang (
     MaKhachHang NVARCHAR(10) PRIMARY KEY,
     MaDangKy NVARCHAR(10) NULL,
     MaHang NVARCHAR(10) NULL,
-    HoTen VARCHAR(100) NOT NULL,
+    HoTen NVARCHAR(100) NOT NULL,
     LoaiKhach NVARCHAR(50) DEFAULT N'Cá nhân', -- 'Cá nhân' hoặc 'Khách đoàn'
     NgaySinh DATE,
-    DiaChi VARCHAR(255),
-    SoDienThoai VARCHAR(15),
-    Email VARCHAR(100),
+    DiaChi NVARCHAR(255),
+    SoDienThoai NVARCHAR(15),
+    Email NVARCHAR(100),
     DiemTichLuy INT DEFAULT 0,
     FOREIGN KEY (MaDangKy) REFERENCES DangKyThanhVien(MaDangKy),
     FOREIGN KEY (MaHang) REFERENCES HangThanhVien(MaHang)
@@ -81,13 +81,13 @@ CREATE TABLE KhachHang (
 CREATE TABLE NhanVien (
     MaNhanVien NVARCHAR(10) PRIMARY KEY,
     MaTaiKhoan NVARCHAR(10) UNIQUE NULL, -- Liên kết 1-1 với Tài Khoản
-    HoTen VARCHAR(50) NOT NULL,
+    HoTen NVARCHAR(50) NOT NULL,
     GioTinh NVARCHAR(3),
     NgaySinh DATE,
-    SoDienThoai VARCHAR(15),
+    SoDienThoai NVARCHAR(15),
     Email NVARCHAR(50),
-    CCCD VARCHAR(12),
-    ViTri VARCHAR(50), 
+    CCCD NVARCHAR(12),
+    ViTri NVARCHAR(50), 
     Luong DECIMAL(18,2),
     NgayVaoLam DATE,
     FOREIGN KEY (MaTaiKhoan) REFERENCES TaiKhoan(MaTaiKhoan)
@@ -96,31 +96,31 @@ CREATE TABLE NhanVien (
 CREATE TABLE TroChoi (
     MaTroChoi NVARCHAR(10) PRIMARY KEY,
     MaKhuVuc NVARCHAR(10) NOT NULL,
-    TenTroChoi VARCHAR(100) NOT NULL,
-    PhanLoai VARCHAR(50),
+    TenTroChoi NVARCHAR(100) NOT NULL,
+    PhanLoai NVARCHAR(50),
     ChieuCaoToiThieu INT, 
     DoTuoiToiThieu INT, 
     SucChua INT,
-    TrangThai VARCHAR(50), 
+    TrangThai NVARCHAR(50), 
     FOREIGN KEY (MaKhuVuc) REFERENCES KhuVuc(MaKhuVuc)
 );
 
 CREATE TABLE CuaHang (
     MaCuaHang NVARCHAR(10) PRIMARY KEY,
     MaKhuVuc NVARCHAR(10) NOT NULL,
-    TenCuaHang VARCHAR(100) NOT NULL,
+    TenCuaHang NVARCHAR(100) NOT NULL,
     LoaiCuaHang NVARCHAR(50), -- VD: Quầy Fastfood, Nhà hàng Buffet, Quầy Lưu niệm
-    TrangThai VARCHAR(50) DEFAULT N'Đang hoạt động',
+    TrangThai NVARCHAR(50) DEFAULT N'Đang hoạt động',
     FOREIGN KEY (MaKhuVuc) REFERENCES KhuVuc(MaKhuVuc)
 );
 
 CREATE TABLE LoaiVe (
     MaLoaiVe NVARCHAR(10) PRIMARY KEY,
-    TenLoaiVe VARCHAR(100) NOT NULL,
+    TenLoaiVe NVARCHAR(100) NOT NULL,
     PhanLoai NVARCHAR(50), -- Vé vào cổng, Vé trọn gói, Combo ăn trưa
     GiaVe DECIMAL(18,2) NOT NULL,
     BaoGomAnUong BIT DEFAULT 0, 
-    MoTa VARCHAR(255)
+    MoTa NVARCHAR(255)
 );
 
 -- =================================================================
@@ -138,7 +138,7 @@ CREATE TABLE QuyenLoiVe_TroChoi (
 CREATE TABLE SanPham (
     MaSanPham NVARCHAR(10) PRIMARY KEY,
     MaCuaHang NVARCHAR(10) NOT NULL,
-    TenSanPham VARCHAR(100) NOT NULL,
+    TenSanPham NVARCHAR(100) NOT NULL,
     LoaiSanPham NVARCHAR(50), -- VD: Món chính, Đồ uống, Lưu niệm
     GiaBan DECIMAL(18,2) NOT NULL,
     TrangThaiBan NVARCHAR(50) DEFAULT N'Còn hàng', -- Khắc phục lỗi logic "Tồn kho"
@@ -157,31 +157,26 @@ CREATE TABLE HoaDonVe (
     NgayMua DATETIME DEFAULT GETDATE(),
     ChietKhauDoan DECIMAL(18,2) DEFAULT 0, 
     TongTien DECIMAL(18,2) NOT NULL,
-    PhuongThucThanhToan VARCHAR(50),
-    TrangThai VARCHAR(50),
+    PhuongThucThanhToan NVARCHAR(50),
+    TrangThai NVARCHAR(50),
     FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
     FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien),
     FOREIGN KEY (MaSuKien) REFERENCES SuKien(MaSuKien)
 );
 
------ BỎ
-CREATE TABLE ChiTietHoaDonVe (
-    MaChiTietHD NVARCHAR(10) PRIMARY KEY,
-    MaHoaDon NVARCHAR(10) NOT NULL,
-    MaLoaiVe NVARCHAR(10) NOT NULL,
-    SoLuong INT NOT NULL,
-    DonGia DECIMAL(18,2) NOT NULL,
+CREATE TABLE Ve (
+    MaVe NVARCHAR(10) PRIMARY KEY,
+    MaHoaDon NVARCHAR(10) NOT NULL, -- Liên kết trực tiếp để biết vé này thuộc hóa đơn nào
+    MaLoaiVe NVARCHAR(10) NOT NULL, -- Cần biết vé này là loại vé gì (người lớn, trẻ em, combo...)
+    DonGia DECIMAL(18,2) NOT NULL,  -- QUAN TRỌNG: Lưu lại giá vé tại thời điểm bán để đối soát doanh thu
+    NgaySuDung DATE,
+    DaSuDung BIT DEFAULT 0, 
     FOREIGN KEY (MaHoaDon) REFERENCES HoaDonVe(MaHoaDon),
     FOREIGN KEY (MaLoaiVe) REFERENCES LoaiVe(MaLoaiVe)
 );
 
-CREATE TABLE Ve (
-    MaVe NVARCHAR(10) PRIMARY KEY,
-    MaChiTietHD NVARCHAR(10) NOT NULL,
-    NgaySuDung DATE,
-    DaSuDung BIT DEFAULT 0, 
-    FOREIGN KEY (MaChiTietHD) REFERENCES ChiTietHoaDonVe(MaChiTietHD)
-);
+--ALTER TABLE Ve ADD CONSTRAINT FK_Ve_HoaDon FOREIGN KEY (MaHoaDon) REFERENCES HoaDonVe(MaHoaDon);
+--ALTER TABLE Ve ADD CONSTRAINT FK_Ve_LoaiVe FOREIGN KEY (MaLoaiVe) REFERENCES LoaiVe(MaLoaiVe);
 
 CREATE TABLE HoaDonCuaHang (
     MaHDCH NVARCHAR(10) PRIMARY KEY,
@@ -214,9 +209,19 @@ CREATE TABLE LichLamViec (
     MaNhanVien NVARCHAR(10) NOT NULL,
     MaCa NVARCHAR(10) NOT NULL,
     NgayLamViec DATE NOT NULL,
-    ViTriPhanCong VARCHAR(100),
+    ViTriPhanCong NVARCHAR(100),
     FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien),
     FOREIGN KEY (MaCa) REFERENCES CaLamViec(MaCa)
+);
+
+CREATE TABLE KhenThuongKyLuat (
+    MaKTKL NVARCHAR(10) PRIMARY KEY,
+    MaNhanVien NVARCHAR(10) NOT NULL,
+    Loai NVARCHAR(50) NOT NULL, -- Điền: 'Khen thưởng' hoặc 'Kỷ luật'
+    LyDo NVARCHAR(500) NOT NULL,
+    SoTien DECIMAL(18,2) DEFAULT 0, -- Có thể cộng thêm (thưởng) hoặc trừ đi (phạt) vào lương
+    NgayQuyetDinh DATE DEFAULT GETDATE(),
+    FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
 );
 
 CREATE TABLE BaoTriTroChoi (
