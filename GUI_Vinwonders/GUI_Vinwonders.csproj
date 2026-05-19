@@ -61,6 +61,12 @@
     <Compile Include="GUI_Dashboard.Designer.cs">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="gui_DÁ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_DÁ.Designer.cs">
+      <DependentUpon>gui_DÁ.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QuanLyCuaHangSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_DÁ.resx">
+      <DependentUpon>gui_DÁ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyCuaHangSanPham.resx">
       <DependentUpon>GUI_QuanLyCuaHangSanPham.cs</DependentUpon>
