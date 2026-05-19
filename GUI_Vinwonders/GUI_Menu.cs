@@ -47,80 +47,111 @@ namespace Vinwonders_Management
         // Biến toàn cục lưu trữ vết của Form con đang được mở hiện tại trên màn hình
         //private Form activeForm = null;
 
-        private void OpenChildForm(Type formType)
+        //private void OpenChildForm(Type formType)
+        //{
+        //    // BƯỚC 1: KHỞI TẠO VÀ CÀI ĐẶT FORM MỚI TRƯỚC
+        //    Form newForm = (Form)Activator.CreateInstance(formType);
+        //    newForm.MdiParent = this;
+        //    newForm.ControlBox = false;
+        //    newForm.ShowIcon = false;
+        //    newForm.Text = "";
+        //    newForm.FormBorderStyle = FormBorderStyle.None;
+        //    newForm.Dock = DockStyle.Fill;
+
+        //    // BƯỚC 2: HIỂN THỊ FORM MỚI ĐỂ CHE ĐI FORM CŨ
+        //    newForm.Show();
+
+        //    // BƯỚC 3: SAU KHI FORM MỚI ĐÃ LÊN HÌNH, MỚI ĐÓNG CÁC FORM CŨ ĐI
+        //    foreach (Form childForm in this.MdiChildren)
+        //    {
+        //        // Kiểm tra: Nếu không phải là cái form vừa tạo thì mới Close
+        //        if (childForm != newForm)
+        //        {
+        //            childForm.Close();
+        //            childForm.Dispose(); // Ép dọn rác RAM ngay lập tức
+        //        }
+        //    }
+        //}
+        private void OpenChildUserControl(Type controlType)
         {
-            // BƯỚC 1: KHỞI TẠO VÀ CÀI ĐẶT FORM MỚI TRƯỚC
-            Form newForm = (Form)Activator.CreateInstance(formType);
-            newForm.MdiParent = this;
-            newForm.ControlBox = false;
-            newForm.ShowIcon = false;
-            newForm.Text = "";
-            newForm.FormBorderStyle = FormBorderStyle.None;
-            newForm.Dock = DockStyle.Fill;
+            // BƯỚC 1: KHỞI TẠO USER CONTROL MỚI
+            // Ép kiểu về UserControl thay vì Form
+            UserControl newControl = (UserControl)Activator.CreateInstance(controlType);
+            newControl.Dock = DockStyle.Fill;
 
-            // BƯỚC 2: HIỂN THỊ FORM MỚI ĐỂ CHE ĐI FORM CŨ
-            newForm.Show();
+            // BƯỚC 2: HIỂN THỊ VÀ ĐẨY LÊN TRÊN CÙNG
+            // Thêm UserControl mới vào Panel chứa
+            pnMainContent.Controls.Add(newControl);
+            // Đẩy nó lên mặt trên cùng để che hết các cái cũ đi
+            newControl.BringToFront();
 
-            // BƯỚC 3: SAU KHI FORM MỚI ĐÃ LÊN HÌNH, MỚI ĐÓNG CÁC FORM CŨ ĐI
-            foreach (Form childForm in this.MdiChildren)
+            // BƯỚC 3: DỌN DẸP CÁC CONTROL CŨ ĐỂ CHỐNG TRÀN RAM
+            // Phải lặp ngược từ dưới lên (Count - 1 về 0) để khi Remove không bị lỗi index
+            for (int i = pnMainContent.Controls.Count - 1; i >= 0; i--)
             {
-                // Kiểm tra: Nếu không phải là cái form vừa tạo thì mới Close
-                if (childForm != newForm)
+                Control oldControl = pnMainContent.Controls[i];
+
+                // Kiểm tra: Nếu không phải là cái UserControl vừa tạo thì mới xóa
+                if (oldControl != newControl)
                 {
-                    childForm.Close();
-                    childForm.Dispose(); // Ép dọn rác RAM ngay lập tức
+                    pnMainContent.Controls.Remove(oldControl); // Gỡ khỏi giao diện
+                    oldControl.Dispose(); // Ép hệ thống dọn rác RAM ngay lập tức
                 }
             }
         }
 
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_Dashboard));
+            OpenChildUserControl(typeof(gui_db));
             lblGUI.Text = "Dashboard";
         }
 
         private void btnQuanLyVe_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_QuanLyVe));
+            OpenChildUserControl(typeof(GUI_QuanLyVe));
             lblGUI.Text = "Quản Lý Vé";
         }
 
         private void GUI_Menu_Load(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_Dashboard));
+            OpenChildUserControl(typeof(gui_db));
             lblGUI.Text = "Dashboard";
             lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_QuanLyKhachHang));
+            OpenChildUserControl(typeof(GUI_QuanLyKhachHang));
             lblGUI.Text = "Quản Lý Khách Hàng";
         }
 
         private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_QuanLyNhanVien));
+            OpenChildUserControl(typeof(GUI_QuanLyNhanVien));
             lblGUI.Text = "Quản Lý Nhân Viên";
         }
 
         private void btnKhuVuiChoi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_QuanLyTroChoi));
+            OpenChildUserControl(typeof(GUI_QuanLyTroChoi));
             lblGUI.Text = "Quản Lý Khu Vui Chơi";
         }
 
         private void btnCuaHang_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_QuanLyCuaHangSanPham));
+            OpenChildUserControl(typeof(GUI_QuanLyCuaHangSanPham));
             lblGUI.Text = "Quản Lý Cửa Hàng Sản Phẩm";
         }
 
         private void btnSuKien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(typeof(GUI_SuKien));
+            OpenChildUserControl(typeof(GUI_SuKien));
             lblGUI.Text = "Quản Lý Sự Kiện";
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
