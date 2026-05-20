@@ -120,6 +120,7 @@
             this.btnKhuVuc.Size = new System.Drawing.Size(136, 39);
             this.btnKhuVuc.TabIndex = 0;
             this.btnKhuVuc.Text = "Khu vực";
+            this.btnKhuVuc.Click += new System.EventHandler(this.btnKhuVuc_Click);
             // 
             // btnTroChoi
             // 
@@ -140,15 +141,17 @@
             this.btnTroChoi.Size = new System.Drawing.Size(136, 39);
             this.btnTroChoi.TabIndex = 0;
             this.btnTroChoi.Text = "Trò chơi";
+            this.btnTroChoi.Click += new System.EventHandler(this.btnTroChoi_Click);
             // 
-            // GUI_QLTroChoi
+            // GUI_QuanLyTroChoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_QLTroChoi";
+            this.Name = "GUI_QuanLyTroChoi";
             this.Size = new System.Drawing.Size(759, 444);
+            this.Load += new System.EventHandler(this.GUI_QuanLyTroChoiVaShow_Load);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);

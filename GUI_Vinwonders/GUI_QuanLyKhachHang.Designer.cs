@@ -120,6 +120,7 @@
             this.btnHangThanhVien.Size = new System.Drawing.Size(136, 39);
             this.btnHangThanhVien.TabIndex = 0;
             this.btnHangThanhVien.Text = "Hạng Thành Viên";
+            this.btnHangThanhVien.Click += new System.EventHandler(this.btnHangThanhVien_Click);
             // 
             // btnKhachHang
             // 
@@ -140,15 +141,17 @@
             this.btnKhachHang.Size = new System.Drawing.Size(136, 39);
             this.btnKhachHang.TabIndex = 0;
             this.btnKhachHang.Text = "Khách Hàng";
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
-            // GUI_QuanLyKH
+            // GUI_QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_QuanLyKH";
+            this.Name = "GUI_QuanLyKhachHang";
             this.Size = new System.Drawing.Size(857, 518);
+            this.Load += new System.EventHandler(this.GUI_QuanLyKhachHang_Load);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);

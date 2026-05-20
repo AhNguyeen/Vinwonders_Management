@@ -122,6 +122,7 @@
             this.btnCaLamViec.Size = new System.Drawing.Size(136, 39);
             this.btnCaLamViec.TabIndex = 0;
             this.btnCaLamViec.Text = "Ca làm việc";
+            this.btnCaLamViec.Click += new System.EventHandler(this.btnCaLamViec_Click);
             // 
             // btnLichLamViec
             // 
@@ -142,6 +143,7 @@
             this.btnLichLamViec.Size = new System.Drawing.Size(136, 39);
             this.btnLichLamViec.TabIndex = 0;
             this.btnLichLamViec.Text = "Lịch làm việc";
+            this.btnLichLamViec.Click += new System.EventHandler(this.btnLichLamViec_Click);
             // 
             // btnNhanVien
             // 
@@ -162,15 +164,17 @@
             this.btnNhanVien.Size = new System.Drawing.Size(136, 39);
             this.btnNhanVien.TabIndex = 0;
             this.btnNhanVien.Text = "Nhân viên";
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
-            // GUI_QLNV
+            // GUI_QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_QLNV";
+            this.Name = "GUI_QuanLyNhanVien";
             this.Size = new System.Drawing.Size(766, 490);
+            this.Load += new System.EventHandler(this.GUI_QuanLyNhanVien_Load);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);
