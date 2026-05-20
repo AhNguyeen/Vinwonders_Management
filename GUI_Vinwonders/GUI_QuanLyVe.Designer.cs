@@ -45,9 +45,9 @@
             // 
             this.pnlTabConTent.Controls.Add(this.pnlFrame);
             this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
+            this.pnlTabConTent.Location = new System.Drawing.Point(0, 95);
             this.pnlTabConTent.Name = "pnlTabConTent";
-            this.pnlTabConTent.Size = new System.Drawing.Size(818, 393);
+            this.pnlTabConTent.Size = new System.Drawing.Size(857, 423);
             this.pnlTabConTent.TabIndex = 3;
             // 
             // pnlFrame
@@ -58,10 +58,10 @@
             this.pnlFrame.BackColor = System.Drawing.SystemColors.Control;
             this.pnlFrame.BorderRadius = 10;
             this.pnlFrame.Controls.Add(this.pnlTabs);
-            this.pnlFrame.Location = new System.Drawing.Point(20, 23);
+            this.pnlFrame.Location = new System.Drawing.Point(20, 7);
             this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
             this.pnlFrame.Name = "pnlFrame";
-            this.pnlFrame.Size = new System.Drawing.Size(778, 350);
+            this.pnlFrame.Size = new System.Drawing.Size(817, 396);
             this.pnlFrame.TabIndex = 0;
             // 
             // pnlTabs
@@ -73,7 +73,7 @@
             this.pnlTabs.Location = new System.Drawing.Point(2, 14);
             this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
             this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(774, 324);
+            this.pnlTabs.Size = new System.Drawing.Size(813, 370);
             this.pnlTabs.TabIndex = 0;
             // 
             // pnlNav
@@ -82,7 +82,7 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(818, 79);
+            this.pnlNav.Size = new System.Drawing.Size(857, 95);
             this.pnlNav.TabIndex = 2;
             // 
             // pnlAction
@@ -95,7 +95,7 @@
             this.pnlAction.Controls.Add(this.btnLoaiVe);
             this.pnlAction.Controls.Add(this.btnHoaDonVe);
             this.pnlAction.FillColor = System.Drawing.Color.White;
-            this.pnlAction.Location = new System.Drawing.Point(20, 10);
+            this.pnlAction.Location = new System.Drawing.Point(22, 23);
             this.pnlAction.Margin = new System.Windows.Forms.Padding(10);
             this.pnlAction.Name = "pnlAction";
             this.pnlAction.Size = new System.Drawing.Size(296, 59);
@@ -150,7 +150,7 @@
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
             this.Name = "GUI_QuanLyVe";
-            this.Size = new System.Drawing.Size(818, 472);
+            this.Size = new System.Drawing.Size(857, 518);
             this.Load += new System.EventHandler(this.GUI_QuanLyVe_Load);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);

@@ -71,7 +71,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 227);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(831, 262);
+            this.guna2Panel1.Size = new System.Drawing.Size(857, 291);
             this.guna2Panel1.TabIndex = 15;
             // 
             // guna2Panel6
@@ -86,7 +86,7 @@
             this.guna2Panel6.Location = new System.Drawing.Point(10, 13);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(811, 239);
+            this.guna2Panel6.Size = new System.Drawing.Size(837, 268);
             this.guna2Panel6.TabIndex = 0;
             // 
             // guna2DataGridView1
@@ -120,7 +120,7 @@
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(10);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(791, 219);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(817, 248);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -150,7 +150,7 @@
             this.pnlTabConTent.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTabConTent.Location = new System.Drawing.Point(0, 79);
             this.pnlTabConTent.Name = "pnlTabConTent";
-            this.pnlTabConTent.Size = new System.Drawing.Size(831, 148);
+            this.pnlTabConTent.Size = new System.Drawing.Size(857, 148);
             this.pnlTabConTent.TabIndex = 14;
             // 
             // tableLayoutPanel1
@@ -169,7 +169,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(831, 148);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(857, 148);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // guna2Panel5
@@ -183,10 +183,10 @@
             this.guna2Panel5.Controls.Add(this.label5);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(631, 10);
+            this.guna2Panel5.Location = new System.Drawing.Point(652, 10);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(190, 128);
+            this.guna2Panel5.Size = new System.Drawing.Size(195, 128);
             this.guna2Panel5.TabIndex = 3;
             // 
             // label5
@@ -194,7 +194,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(57, 70);
+            this.label5.Location = new System.Drawing.Point(59, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 26);
             this.label5.TabIndex = 3;
@@ -207,7 +207,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Blue;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(36, 45);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(38, 45);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(118, 22);
             this.guna2HtmlLabel5.TabIndex = 1;
@@ -225,10 +225,10 @@
             this.guna2Panel4.Controls.Add(this.label4);
             this.guna2Panel4.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(424, 10);
+            this.guna2Panel4.Location = new System.Drawing.Point(438, 10);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(187, 128);
+            this.guna2Panel4.Size = new System.Drawing.Size(194, 128);
             this.guna2Panel4.TabIndex = 2;
             // 
             // label4
@@ -236,7 +236,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(65, 70);
+            this.label4.Location = new System.Drawing.Point(69, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 26);
             this.label4.TabIndex = 3;
@@ -249,7 +249,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(40, 45);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(44, 45);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(108, 22);
             this.guna2HtmlLabel4.TabIndex = 1;
@@ -267,10 +267,10 @@
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(217, 10);
+            this.guna2Panel3.Location = new System.Drawing.Point(224, 10);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(187, 128);
+            this.guna2Panel3.Size = new System.Drawing.Size(194, 128);
             this.guna2Panel3.TabIndex = 1;
             // 
             // label3
@@ -278,7 +278,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(56, 70);
+            this.label3.Location = new System.Drawing.Point(60, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 26);
             this.label3.TabIndex = 3;
@@ -291,7 +291,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Green;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(30, 45);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(34, 45);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(118, 22);
             this.guna2HtmlLabel3.TabIndex = 1;
@@ -313,7 +313,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(10, 10);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(187, 128);
+            this.guna2Panel2.Size = new System.Drawing.Size(194, 128);
             this.guna2Panel2.TabIndex = 0;
             // 
             // label2
@@ -321,7 +321,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(55, 70);
+            this.label2.Location = new System.Drawing.Point(59, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 26);
             this.label2.TabIndex = 3;
@@ -334,7 +334,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(90)))), ((int)(((byte)(0)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(36, 45);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(40, 45);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(115, 22);
             this.guna2HtmlLabel2.TabIndex = 1;
@@ -350,7 +350,7 @@
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(831, 79);
+            this.pnlNav.Size = new System.Drawing.Size(857, 79);
             this.pnlNav.TabIndex = 13;
             // 
             // guna2Button1
@@ -364,7 +364,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(696, 24);
+            this.guna2Button1.Location = new System.Drawing.Point(722, 24);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(123, 30);
             this.guna2Button1.TabIndex = 6;
@@ -405,7 +405,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = global::Vinwonders_Management.Properties.Resources.Search;
-            this.guna2TextBox1.Location = new System.Drawing.Point(490, 24);
+            this.guna2TextBox1.Location = new System.Drawing.Point(516, 24);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox1.PlaceholderText = "Tìm kiếm....";
@@ -413,15 +413,15 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(200, 30);
             this.guna2TextBox1.TabIndex = 5;
             // 
-            // GUI_SK
+            // GUI_SuKien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlTabConTent);
             this.Controls.Add(this.pnlNav);
-            this.Name = "GUI_SK";
-            this.Size = new System.Drawing.Size(831, 489);
+            this.Name = "GUI_SuKien";
+            this.Size = new System.Drawing.Size(857, 518);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
