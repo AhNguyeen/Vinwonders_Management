@@ -122,6 +122,7 @@
             this.btnHoaDonCH.Size = new System.Drawing.Size(136, 39);
             this.btnHoaDonCH.TabIndex = 0;
             this.btnHoaDonCH.Text = "Hóa đơn CH";
+            this.btnHoaDonCH.Click += new System.EventHandler(this.btnHoaDonCH_Click);
             // 
             // btnSanPham
             // 
@@ -142,6 +143,7 @@
             this.btnSanPham.Size = new System.Drawing.Size(136, 39);
             this.btnSanPham.TabIndex = 0;
             this.btnSanPham.Text = "Sản phẩm";
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnCuaHang
             // 
@@ -162,6 +164,7 @@
             this.btnCuaHang.Size = new System.Drawing.Size(136, 39);
             this.btnCuaHang.TabIndex = 0;
             this.btnCuaHang.Text = "Cửa hàng";
+            this.btnCuaHang.Click += new System.EventHandler(this.btnCuaHang_Click);
             // 
             // GUI_QuanLyCuaHang
             // 
@@ -171,6 +174,7 @@
             this.Controls.Add(this.pnlNav);
             this.Name = "GUI_QuanLyCuaHang";
             this.Size = new System.Drawing.Size(911, 547);
+            this.Load += new System.EventHandler(this.GUI_QuanLyCuaHangSanPham_Load);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);
