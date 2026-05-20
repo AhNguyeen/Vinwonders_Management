@@ -17,69 +17,48 @@ namespace Vinwonders_Management
             InitializeComponent();
         }
 
-        private void ShowHoaDonVe()
+        // Gọi hàm này mỗi khi bấm vào một nút menu nào đó để mở UserControl tương ứng
+        private void OpenChildUserControl(Type controlType)
         {
-            // Đổi màu nút khi được chọn
-            btnHoaDonVe.FillColor = Color.FromArgb(255, 128, 0);
-            btnHoaDonVe.ForeColor = Color.White;
+            // BƯỚC 1: KHỞI TẠO USER CONTROL MỚI
+            // Ép kiểu về UserControl thay vì Form
+            UserControl newControl = (UserControl)Activator.CreateInstance(controlType);
+            newControl.Dock = DockStyle.Fill;
 
-            btnLoaiVe.FillColor = Color.White;
-            btnLoaiVe.ForeColor = Color.Black;
+            // BƯỚC 2: HIỂN THỊ VÀ ĐẨY LÊN TRÊN CÙNG
+            // Thêm UserControl mới vào Panel chứa
+            pnMainContent.Controls.Add(newControl);
+            // Đẩy nó lên mặt trên cùng để che hết các cái cũ đi
+            newControl.BringToFront();
 
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
+            // BƯỚC 3: DỌN DẸP CÁC CONTROL CŨ ĐỂ CHỐNG TRÀN RAM
+            // Phải lặp ngược từ dưới lên (Count - 1 về 0) để khi Remove không bị lỗi index
+            for (int i = pnMainContent.Controls.Count - 1; i >= 0; i--)
+            {
+                Control oldControl = pnMainContent.Controls[i];
 
-            // Khởi tạo Form con
-            GUI_HoaDonVe hoaDonVe = new GUI_HoaDonVe();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            hoaDonVe.TopLevel = false;
-            hoaDonVe.FormBorderStyle = FormBorderStyle.None;
-
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            hoaDonVe.Dock = DockStyle.Fill;
-
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(hoaDonVe);
-            hoaDonVe.Show();
-        }
-
-        private void ShowLoaiVe()
-        {
-            // Đổi màu nút khi được chọn
-            btnLoaiVe.FillColor = Color.FromArgb(255, 128, 0);
-            btnLoaiVe.ForeColor = Color.White;
-
-            btnHoaDonVe.FillColor = Color.White;
-            btnHoaDonVe.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-
-            // Khởi tạo Form con
-            GUI_LoaiVe loaiVe = new GUI_LoaiVe();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            loaiVe.TopLevel = false;
-            loaiVe.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            loaiVe.Dock = DockStyle.Fill;
-
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(loaiVe);
-            loaiVe.Show();
+                // Kiểm tra: Nếu không phải là cái UserControl vừa tạo thì mới xóa
+                if (oldControl != newControl)
+                {
+                    pnMainContent.Controls.Remove(oldControl); // Gỡ khỏi giao diện
+                    oldControl.Dispose(); // Ép hệ thống dọn rác RAM ngay lập tức
+                }
+            }
         }
 
         private void GUI_QuanLyVe_Load(object sender, EventArgs e)
         {
-            ShowHoaDonVe();
+            OpenChildUserControl(typeof(QuanLyVe.GUI_HoaDonVe));
         }
 
         private void btnHoaDonVe_Click(object sender, EventArgs e)
         {
-            ShowHoaDonVe();
+            OpenChildUserControl(typeof(QuanLyVe.GUI_HoaDonVe));
         }
 
         private void btnLoaiVe_Click(object sender, EventArgs e)
         {
-            ShowLoaiVe();
+            OpenChildUserControl(typeof(QuanLyVe.GUI_LoaiVe));
         }
     }
 }
