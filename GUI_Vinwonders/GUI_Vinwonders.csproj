@@ -99,7 +99,7 @@
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.Designer.cs">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
@@ -146,16 +146,16 @@
     <Compile Include="QuanLyNhanVien\GUI_NhanVien.Designer.cs">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyTroChoiVaShow\GUI_KhuVuc.cs">
-      <SubType>Form</SubType>
+    <Compile Include="QuanLyTroChoi\GUI_KhuVuc.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QuanLyTroChoiVaShow\GUI_KhuVuc.Designer.cs">
+    <Compile Include="QuanLyTroChoi\GUI_KhuVuc.Designer.cs">
       <DependentUpon>GUI_KhuVuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyTroChoiVaShow\GUI_TroChoi.cs">
-      <SubType>Form</SubType>
+    <Compile Include="QuanLyTroChoi\GUI_TroChoi.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="QuanLyTroChoiVaShow\GUI_TroChoi.Designer.cs">
+    <Compile Include="QuanLyTroChoi\GUI_TroChoi.Designer.cs">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyVe\GUI_HoaDonVe.cs">
@@ -223,10 +223,10 @@
     <EmbeddedResource Include="QuanLyNhanVien\GUI_NhanVien.resx">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyTroChoiVaShow\GUI_KhuVuc.resx">
+    <EmbeddedResource Include="QuanLyTroChoi\GUI_KhuVuc.resx">
       <DependentUpon>GUI_KhuVuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyTroChoiVaShow\GUI_TroChoi.resx">
+    <EmbeddedResource Include="QuanLyTroChoi\GUI_TroChoi.resx">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_HoaDonVe.resx">

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vinwonders_Management.QuanLyTroChoiVaShow
+namespace Vinwonders_Management.QuanLyTroChoi
 {
-    public partial class GUI_TroChoi : Form
+    public partial class GUI_KhuVuc : UserControl
     {
-        public GUI_TroChoi()
+        public GUI_KhuVuc()
         {
             InitializeComponent();
         }

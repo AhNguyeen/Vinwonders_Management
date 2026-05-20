@@ -17,65 +17,49 @@ namespace Vinwonders_Management
         {
             InitializeComponent();
         }
-        private void ShowKhachHang()
+
+        // Gọi hàm này mỗi khi bấm vào một nút menu nào đó để mở UserControl tương ứng
+        private void OpenChildUserControl(Type controlType)
         {
-            // Đổi màu nút khi được chọn
-            btnKhachHang.FillColor = Color.FromArgb(255, 128, 0);
-            btnKhachHang.ForeColor = Color.White;
+            // BƯỚC 1: KHỞI TẠO USER CONTROL MỚI
+            // Ép kiểu về UserControl thay vì Form
+            UserControl newControl = (UserControl)Activator.CreateInstance(controlType);
+            newControl.Dock = DockStyle.Fill;
 
-            btnHangThanhVien.FillColor = Color.White;
-            btnHangThanhVien.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
+            // BƯỚC 2: HIỂN THỊ VÀ ĐẨY LÊN TRÊN CÙNG
+            // Thêm UserControl mới vào Panel chứa
+            pnMainContent.Controls.Add(newControl);
+            // Đẩy nó lên mặt trên cùng để che hết các cái cũ đi
+            newControl.BringToFront();
 
-            // Khởi tạo Form con
-            GUI_KhachHang khachHang = new GUI_KhachHang();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            khachHang.TopLevel = false;
-            khachHang.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            khachHang.Dock = DockStyle.Fill;
+            // BƯỚC 3: DỌN DẸP CÁC CONTROL CŨ ĐỂ CHỐNG TRÀN RAM
+            // Phải lặp ngược từ dưới lên (Count - 1 về 0) để khi Remove không bị lỗi index
+            for (int i = pnMainContent.Controls.Count - 1; i >= 0; i--)
+            {
+                Control oldControl = pnMainContent.Controls[i];
 
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(khachHang);
-            khachHang.Show();
+                // Kiểm tra: Nếu không phải là cái UserControl vừa tạo thì mới xóa
+                if (oldControl != newControl)
+                {
+                    pnMainContent.Controls.Remove(oldControl); // Gỡ khỏi giao diện
+                    oldControl.Dispose(); // Ép hệ thống dọn rác RAM ngay lập tức
+                }
+            }
         }
-        private void ShowHangThanhVien()
-        {
-            // Đổi màu nút khi được chọn
-            btnHangThanhVien.FillColor = Color.FromArgb(255, 128, 0);
-            btnHangThanhVien.ForeColor = Color.White;
 
-            btnKhachHang.FillColor = Color.White;
-            btnKhachHang.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-
-            // Khởi tạo Form con
-            GUI_HangThanhVien hangThanhVien = new GUI_HangThanhVien();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            hangThanhVien.TopLevel = false;
-            hangThanhVien.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            hangThanhVien.Dock = DockStyle.Fill;
-
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(hangThanhVien);
-            hangThanhVien.Show();
-        }
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            ShowKhachHang();
+            OpenChildUserControl(typeof(QuanLyKhachHang.GUI_KhachHang));
         }
 
         private void GUI_QuanLyKhachHang_Load(object sender, EventArgs e)
         {
-            ShowKhachHang();
+            OpenChildUserControl(typeof(QuanLyKhachHang.GUI_KhachHang));
         }
 
         private void btnHangThanhVien_Click(object sender, EventArgs e)
         {
-            ShowHangThanhVien();
+            OpenChildUserControl(typeof(QuanLyKhachHang.GUI_HangThanhVien));
         }
     }
 }
