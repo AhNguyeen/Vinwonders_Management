@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS_Vinwonders;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace Vinwonders_Management.QuanLyNhanVien
         public GUI_NhanVien()
         {
             InitializeComponent();
+        }
+
+        BUS_NhanVien BUS_NhanVien = new BUS_NhanVien();
+
+        private void GUI_NhanVien_Load(object sender, EventArgs e)
+        {
+            dgvNhanVien.DataSource = BUS_NhanVien.InDanhSachNhanVien();
+        }
+
+        private void btnThemNhanVien_Click(object sender, EventArgs e)
+        {
+            GUI_ThemNhanVien themNhanVien = new GUI_ThemNhanVien();
+            themNhanVien.ShowDialog();
+
         }
     }
 }

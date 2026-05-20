@@ -17,101 +17,53 @@ namespace Vinwonders_Management
         {
             InitializeComponent();
         }
-        // Hàm này sẽ được gọi mỗi khi bấm vào nút "Cửa Hàng" hoặc khi Load Form lần đầu để hiển thị tab Cửa Hàng mặc định
-        private void ShowTabCuaHang()
+        // Gọi hàm này mỗi khi bấm vào một nút menu nào đó để mở UserControl tương ứng
+        private void OpenChildUserControl(Type controlType)
         {
-            // Đổi màu nút khi được chọn
-            btnCuaHang.FillColor = Color.FromArgb(255, 128, 0);
-            btnCuaHang.ForeColor = Color.White;
-            // Reset màu các nút khác về mặc định
-            btnHoaDonCH.FillColor = Color.White;
-            btnHoaDonCH.ForeColor = Color.Black;
-            btnSanPham.FillColor = Color.White;
-            btnSanPham.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-            // Khởi tạo Form con
-            GUI_CuaHang cuaHang = new GUI_CuaHang();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            cuaHang.TopLevel = false;
-            cuaHang.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            cuaHang.Dock = DockStyle.Fill;
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(cuaHang);
-            cuaHang.Show();
-        }
+            // BƯỚC 1: KHỞI TẠO USER CONTROL MỚI
+            // Ép kiểu về UserControl thay vì Form
+            UserControl newControl = (UserControl)Activator.CreateInstance(controlType);
+            newControl.Dock = DockStyle.Fill;
 
-        // Ham này sẽ được gọi mỗi khi bấm vào nút "Hóa Đơn Cửa Hàng"
-        private void ShowTabHoaDonCuaHang()
-        {
-            // Đổi màu nút khi được chọn
-            btnHoaDonCH.FillColor = Color.FromArgb(255, 128, 0);
-            btnHoaDonCH.ForeColor = Color.White;
-            // Reset màu các nút khác về mặc định
-            btnCuaHang.FillColor = Color.White;
-            btnCuaHang.ForeColor = Color.Black;
-            btnSanPham.FillColor = Color.White;
-            btnSanPham.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-            // Khởi tạo Form con
-            GUI_HoaDonCuaHang hoaDonCH = new GUI_HoaDonCuaHang();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            hoaDonCH.TopLevel = false;
-            hoaDonCH.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            hoaDonCH.Dock = DockStyle.Fill;
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(hoaDonCH);
-            hoaDonCH.Show();
-        }
+            // BƯỚC 2: HIỂN THỊ VÀ ĐẨY LÊN TRÊN CÙNG
+            // Thêm UserControl mới vào Panel chứa
+            pnMainContent.Controls.Add(newControl);
+            // Đẩy nó lên mặt trên cùng để che hết các cái cũ đi
+            newControl.BringToFront();
 
-        // Hàm này sẽ được gọi mỗi khi bấm vào nút "Sản Phẩm"
-        private void ShowTabSanPham()
-        {
-            // Đổi màu nút khi được chọn
-            btnSanPham.FillColor = Color.FromArgb(255, 128, 0);
-            btnSanPham.ForeColor = Color.White;
-            // Reset màu các nút khác về mặc định
-            btnCuaHang.FillColor = Color.White;
-            btnCuaHang.ForeColor = Color.Black;
-            btnHoaDonCH.FillColor = Color.White;
-            btnHoaDonCH.ForeColor = Color.Black;
-            btnSanPham.FillColor = Color.White;
-            btnSanPham.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-            // Khởi tạo Form con
-            GUI_SanPham sanPham = new GUI_SanPham();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            sanPham.TopLevel = false;
-            sanPham.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            sanPham.Dock = DockStyle.Fill;
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(sanPham);
-            sanPham.Show();
+            // BƯỚC 3: DỌN DẸP CÁC CONTROL CŨ ĐỂ CHỐNG TRÀN RAM
+            // Phải lặp ngược từ dưới lên (Count - 1 về 0) để khi Remove không bị lỗi index
+            for (int i = pnMainContent.Controls.Count - 1; i >= 0; i--)
+            {
+                Control oldControl = pnMainContent.Controls[i];
+
+                // Kiểm tra: Nếu không phải là cái UserControl vừa tạo thì mới xóa
+                if (oldControl != newControl)
+                {
+                    pnMainContent.Controls.Remove(oldControl); // Gỡ khỏi giao diện
+                    oldControl.Dispose(); // Ép hệ thống dọn rác RAM ngay lập tức
+                }
+            }
         }
 
         private void btnCuaHang_Click(object sender, EventArgs e)
         {
-            ShowTabCuaHang();
+            OpenChildUserControl(typeof(GUI_CuaHang));
         }
 
         private void GUI_QuanLyCuaHangSanPham_Load(object sender, EventArgs e)
         {
-            ShowTabCuaHang();
+            OpenChildUserControl(typeof(GUI_CuaHang));
         }
 
         private void btnHoaDonCH_Click(object sender, EventArgs e)
         {
-            ShowTabHoaDonCuaHang();
+            OpenChildUserControl(typeof(GUI_HoaDonCuaHang));
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-            ShowTabSanPham();
+            OpenChildUserControl(typeof(GUI_SanPham));
         }
     }
 }

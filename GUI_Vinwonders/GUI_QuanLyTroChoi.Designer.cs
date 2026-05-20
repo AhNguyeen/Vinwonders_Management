@@ -30,7 +30,7 @@
         {
             this.pnlTabConTent = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlFrame = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlTabs = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnMainContent = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlAction = new Guna.UI2.WinForms.Guna2Panel();
             this.btnKhuVuc = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFrame.BackColor = System.Drawing.Color.Transparent;
             this.pnlFrame.BorderRadius = 10;
-            this.pnlFrame.Controls.Add(this.pnlTabs);
+            this.pnlFrame.Controls.Add(this.pnMainContent);
             this.pnlFrame.FillColor = System.Drawing.SystemColors.Control;
             this.pnlFrame.Location = new System.Drawing.Point(20, 23);
             this.pnlFrame.Margin = new System.Windows.Forms.Padding(20);
@@ -65,17 +65,17 @@
             this.pnlFrame.Size = new System.Drawing.Size(817, 380);
             this.pnlFrame.TabIndex = 0;
             // 
-            // pnlTabs
+            // pnMainContent
             // 
-            this.pnlTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlTabs.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlTabs.Location = new System.Drawing.Point(2, 14);
-            this.pnlTabs.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(813, 354);
-            this.pnlTabs.TabIndex = 0;
+            this.pnMainContent.BackColor = System.Drawing.SystemColors.Control;
+            this.pnMainContent.Location = new System.Drawing.Point(2, 14);
+            this.pnMainContent.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMainContent.Name = "pnMainContent";
+            this.pnMainContent.Size = new System.Drawing.Size(813, 354);
+            this.pnMainContent.TabIndex = 0;
             // 
             // pnlNav
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.pnlNav);
             this.Name = "GUI_QuanLyTroChoi";
             this.Size = new System.Drawing.Size(857, 518);
-            this.Load += new System.EventHandler(this.GUI_QuanLyTroChoiVaShow_Load);
+            this.Load += new System.EventHandler(this.GUI_QuanLyTroChoi_Load);
             this.pnlTabConTent.ResumeLayout(false);
             this.pnlFrame.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);
@@ -165,7 +165,7 @@
 
         private Guna.UI2.WinForms.Guna2Panel pnlTabConTent;
         private Guna.UI2.WinForms.Guna2Panel pnlFrame;
-        private Guna.UI2.WinForms.Guna2Panel pnlTabs;
+        private Guna.UI2.WinForms.Guna2Panel pnMainContent;
         private Guna.UI2.WinForms.Guna2Panel pnlNav;
         private Guna.UI2.WinForms.Guna2Panel pnlAction;
         private Guna.UI2.WinForms.Guna2Button btnKhuVuc;
