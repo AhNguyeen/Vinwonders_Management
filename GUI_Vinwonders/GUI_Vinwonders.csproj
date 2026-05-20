@@ -129,13 +129,13 @@
       <DependentUpon>GUI_KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyNhanVien\GUI_CaLamViec.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyNhanVien\GUI_CaLamViec.Designer.cs">
       <DependentUpon>GUI_CaLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyNhanVien\GUI_LichLamViec.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyNhanVien\GUI_LichLamViec.Designer.cs">
       <DependentUpon>GUI_LichLamViec.cs</DependentUpon>

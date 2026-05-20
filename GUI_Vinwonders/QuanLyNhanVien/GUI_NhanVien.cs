@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Vinwonders_Management.QuanLyNhanVien
 {
-    public partial class GUI_NhanVien : Form
+    public partial class GUI_NhanVien : UserControl
     {
         public GUI_NhanVien()
         {
