@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Vinwonders_Management.QuanLyNhanVien
 {
-    public partial class GUI_LichLamViec : Form
+    public partial class GUI_LichLamViec : UserControl
     {
         public GUI_LichLamViec()
         {
