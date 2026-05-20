@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Vinwonders_Management.QuanLyKhachHang
 {
-    public partial class GUI_KhachHang : Form
+    public partial class GUI_KhachHang : UserControl
     {
         public GUI_KhachHang()
         {
