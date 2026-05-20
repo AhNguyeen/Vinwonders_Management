@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Vinwonders_Management.QuanLyCuaHangSanPham
 {
-    public partial class GUI_SanPham : Form
+    public partial class GUI_SanPham : UserControl
     {
         public GUI_SanPham()
         {

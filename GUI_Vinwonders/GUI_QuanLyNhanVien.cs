@@ -17,106 +17,55 @@ namespace Vinwonders_Management
         {
             InitializeComponent();
         }
-        // Hàm này sẽ được gọi mỗi khi bấm vào nút "Nhân Viên" hoặc khi Load Form lần đầu để hiển thị tab Nhân Viên mặc định
-        private void ShowNhanVien()
+
+        // Gọi hàm này mỗi khi bấm vào một nút menu nào đó để mở UserControl tương ứng
+        private void OpenChildUserControl(Type controlType)
         {
-            // Đổi màu nút khi được chọn
-            btnNhanVien.FillColor = Color.FromArgb(255, 128, 0);
-            btnNhanVien.ForeColor = Color.White;
+            // BƯỚC 1: KHỞI TẠO USER CONTROL MỚI
+            // Ép kiểu về UserControl thay vì Form
+            UserControl newControl = (UserControl)Activator.CreateInstance(controlType);
+            newControl.Dock = DockStyle.Fill;
 
-            // Reset màu các nút khác về mặc định
-            btnLichLamViec.FillColor = Color.White;
-            btnLichLamViec.ForeColor = Color.Black;
+            // BƯỚC 2: HIỂN THỊ VÀ ĐẨY LÊN TRÊN CÙNG
+            // Thêm UserControl mới vào Panel chứa
+            pnMainContent.Controls.Add(newControl);
+            // Đẩy nó lên mặt trên cùng để che hết các cái cũ đi
+            newControl.BringToFront();
 
-            // Reset màu các nút khác về mặc định
-            btnCaLamViec.FillColor = Color.White;
-            btnCaLamViec.ForeColor = Color.Black;
+            // BƯỚC 3: DỌN DẸP CÁC CONTROL CŨ ĐỂ CHỐNG TRÀN RAM
+            // Phải lặp ngược từ dưới lên (Count - 1 về 0) để khi Remove không bị lỗi index
+            for (int i = pnMainContent.Controls.Count - 1; i >= 0; i--)
+            {
+                Control oldControl = pnMainContent.Controls[i];
 
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-            // Khởi tạo Form con
-            GUI_NhanVien nhanVien = new GUI_NhanVien();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            nhanVien.TopLevel = false;
-            nhanVien.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            nhanVien.Dock = DockStyle.Fill;
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(nhanVien);
-            nhanVien.Show();
-        }
-
-        // Hàm này sẽ được gọi mỗi khi bấm vào nút "Lịch Làm Việc"
-        private void ShowLichLamViec()
-        {
-            // Đổi màu nút khi được chọn
-            btnLichLamViec.FillColor = Color.FromArgb(255, 128, 0);
-            btnLichLamViec.ForeColor = Color.White;
-            // Reset màu các nút khác về mặc định
-            btnNhanVien.FillColor = Color.White;
-            btnNhanVien.ForeColor = Color.Black;
-            // Reset màu các nút khác về mặc định
-            btnCaLamViec.FillColor = Color.White;
-            btnCaLamViec.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-            // Khởi tạo Form con
-            GUI_LichLamViec lichLamViec = new GUI_LichLamViec();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            lichLamViec.TopLevel = false;
-            lichLamViec.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            lichLamViec.Dock = DockStyle.Fill;
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(lichLamViec);
-            lichLamViec.Show();
-        }
-
-        // Hàm này sẽ được gọi mỗi khi bấm vào nút "Ca Làm Việc"
-        private void ShowCaLamViec()
-        {
-            // Đổi màu nút khi được chọn
-            btnCaLamViec.FillColor = Color.FromArgb(255, 128, 0);
-            btnCaLamViec.ForeColor = Color.White;
-            // Reset màu các nút khác về mặc định
-            btnNhanVien.FillColor = Color.White;
-            btnNhanVien.ForeColor = Color.Black;
-            // Reset màu các nút khác về mặc định
-            btnLichLamViec.FillColor = Color.White;
-            btnLichLamViec.ForeColor = Color.Black;
-            // Xóa các control cũ đang có trong Panel (nếu có)
-            pnlTabs.Controls.Clear();
-            // Khởi tạo Form con
-            GUI_CaLamViec caLamViec = new GUI_CaLamViec();
-            // Bắt buộc phải có để nhúng Form vào Panel
-            caLamViec.TopLevel = false;
-            caLamViec.FormBorderStyle = FormBorderStyle.None;
-            // QUAN TRỌNG NHẤT: Neo Form con full vào Panel để nó tự động điều chỉnh kích thước theo Panel
-            caLamViec.Dock = DockStyle.Fill;
-            // Thêm Form con vào Panel và hiển thị
-            pnlTabs.Controls.Add(caLamViec);
-            caLamViec.Show();
+                // Kiểm tra: Nếu không phải là cái UserControl vừa tạo thì mới xóa
+                if (oldControl != newControl)
+                {
+                    pnMainContent.Controls.Remove(oldControl); // Gỡ khỏi giao diện
+                    oldControl.Dispose(); // Ép hệ thống dọn rác RAM ngay lập tức
+                }
+            }
         }
 
         // Hàm này sẽ được gọi mỗi khi bấm vào nút "Nhân Viên"
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            ShowNhanVien();
+            OpenChildUserControl(typeof(QuanLyNhanVien.GUI_NhanVien));
         }
 
         private void GUI_QuanLyNhanVien_Load(object sender, EventArgs e)
         {
-            ShowNhanVien();
+            OpenChildUserControl(typeof(QuanLyNhanVien.GUI_NhanVien));
         }
 
         private void btnLichLamViec_Click(object sender, EventArgs e)
         {
-            ShowLichLamViec();
+            OpenChildUserControl(typeof(QuanLyNhanVien.GUI_LichLamViec));
         }
 
         private void btnCaLamViec_Click(object sender, EventArgs e)
         {
-            ShowCaLamViec();
+            OpenChildUserControl(typeof(QuanLyNhanVien.GUI_CaLamViec));
         }
     }
 }
