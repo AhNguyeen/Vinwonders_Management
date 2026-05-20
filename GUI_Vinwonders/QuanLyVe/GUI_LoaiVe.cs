@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vinwonders_Management
+namespace Vinwonders_Management.QuanLyVe
 {
-    public partial class GUI_LoaiVe : Form
+    public partial class GUI_LoaiVe : UserControl
     {
         public GUI_LoaiVe()
         {

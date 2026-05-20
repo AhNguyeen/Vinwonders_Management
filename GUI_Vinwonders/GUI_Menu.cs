@@ -44,34 +44,7 @@ namespace Vinwonders_Management
                 e.Cancel = true;
             }
         }
-        // Biến toàn cục lưu trữ vết của Form con đang được mở hiện tại trên màn hình
-        //private Form activeForm = null;
-
-        //private void OpenChildForm(Type formType)
-        //{
-        //    // BƯỚC 1: KHỞI TẠO VÀ CÀI ĐẶT FORM MỚI TRƯỚC
-        //    Form newForm = (Form)Activator.CreateInstance(formType);
-        //    newForm.MdiParent = this;
-        //    newForm.ControlBox = false;
-        //    newForm.ShowIcon = false;
-        //    newForm.Text = "";
-        //    newForm.FormBorderStyle = FormBorderStyle.None;
-        //    newForm.Dock = DockStyle.Fill;
-
-        //    // BƯỚC 2: HIỂN THỊ FORM MỚI ĐỂ CHE ĐI FORM CŨ
-        //    newForm.Show();
-
-        //    // BƯỚC 3: SAU KHI FORM MỚI ĐÃ LÊN HÌNH, MỚI ĐÓNG CÁC FORM CŨ ĐI
-        //    foreach (Form childForm in this.MdiChildren)
-        //    {
-        //        // Kiểm tra: Nếu không phải là cái form vừa tạo thì mới Close
-        //        if (childForm != newForm)
-        //        {
-        //            childForm.Close();
-        //            childForm.Dispose(); // Ép dọn rác RAM ngay lập tức
-        //        }
-        //    }
-        //}
+        // Gọi hàm này mỗi khi bấm vào một nút menu nào đó để mở UserControl tương ứng
         private void OpenChildUserControl(Type controlType)
         {
             // BƯỚC 1: KHỞI TẠO USER CONTROL MỚI

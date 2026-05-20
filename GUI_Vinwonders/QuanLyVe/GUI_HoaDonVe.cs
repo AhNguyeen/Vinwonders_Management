@@ -1,5 +1,4 @@
 ﻿using BUS_Vinwonders;
-using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,15 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vinwonders_Management
+namespace Vinwonders_Management.QuanLyVe
 {
-    public partial class GUI_HoaDonVe : Form
+    public partial class GUI_HoaDonVe : UserControl
     {
-        public GUI_HoaDonVe()
-        {
-            InitializeComponent();
-        }
-
         // Tạo instance của BUS_HoaDonVe để lấy dữ liệu
         BUS_HoaDonVe busHoaDonVe = new BUS_HoaDonVe();
 
@@ -29,11 +23,14 @@ namespace Vinwonders_Management
             // Gán dữ liệu vào DataGridView
             dgvHoaDonVe.DataSource = busHoaDonVe.InDanhSach();
         }
+        public GUI_HoaDonVe()
+        {
+            InitializeComponent();
+        }
 
-        private void GUI_HoaDonVe_Load(object sender, EventArgs e)
+        private void GUI_HoaDoVe_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-
     }
 }
