@@ -1,0 +1,141 @@
+﻿using ET_Vinwonders;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL_Vinwonders
+{
+    public class DAL_KhuVuc
+    {
+        Connection.ConnectData connectDB = new Connection.ConnectData();
+
+        public DataTable InDanhSachKhuVuc()
+        {
+            connectDB.OpenConnect();
+            DataTable dt = new DataTable();
+            try
+            {
+                string sql = "sp_GetAll_KhuVuc";
+                dt = connectDB.ReadData(sql);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu cần
+                throw ex;
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return dt;
+        }
+
+        public bool TaoKhuVuc(ET_KhuVuc et)
+        {
+            bool kt = false;
+            try
+            {
+                connectDB.OpenConnect();
+                string sql = "sp_Insert_KhuVuc";
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@",et.MaKhuVuc),
+                    new SqlParameter("@",et.TenKhuVuc),
+                    new SqlParameter("@",et.MoTa),
+                    new SqlParameter("@",et.GioMoCua),                    
+                    new SqlParameter("@",et.GioDongCua),                    
+                };
+                kt = connectDB.ChangeData(sql, sp);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return kt;
+        }
+
+        public bool XoaKhuVuc(string ma)
+        {
+            bool kt = false;
+            try
+            {
+                connectDB.OpenConnect();
+                string sql = "sp_Delete_KhuVuc"; //Chua co store delete
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@",ma),
+                };
+                kt = connectDB.ChangeData(sql, sp);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return kt;
+        }
+
+        public bool SuaKhuVuc(ET_KhuVuc et)
+        {
+            bool kt = false;
+            try
+            {
+                connectDB.OpenConnect();
+                string sql = "sp_Update_KhuVuc";//Chua co store update
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@",et.MaKhuVuc),
+                    new SqlParameter("@",et.TenKhuVuc),
+                    new SqlParameter("@",et.MoTa),
+                    new SqlParameter("@",et.GioMoCua),
+                    new SqlParameter("@",et.GioDongCua),
+                };
+                kt = connectDB.ChangeData(sql, sp);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return kt;
+        }
+
+        public DataTable TimKhuVuc(string tenKH = null)
+        {
+            DataTable kt = new DataTable();
+            try
+            {
+                connectDB.OpenConnect();
+                string sql = "sp_GetAll_KhuVuc"; //Chua co store delete
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@",tenKH),
+                };
+                kt = connectDB.ReadData(sql, sp);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return kt;
+        }
+    }
+}
