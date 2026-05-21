@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ET_CuaHang.cs" />
     <Compile Include="ET_DangKyThanhVien.cs" />
+    <Compile Include="ET_HangThanhVien.cs" />
     <Compile Include="ET_HoaDonVe.cs" />
     <Compile Include="ET_KhachHang.cs" />
     <Compile Include="ET_KhuVuc.cs" />
