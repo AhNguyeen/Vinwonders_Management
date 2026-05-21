@@ -43,10 +43,10 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_CaLamViec";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaCa),
-                    new SqlParameter("@", et.TenCa),
-                    new SqlParameter("@", et.GioBatDau),
-                    new SqlParameter("@", et.GioKetThuc),
+                    new SqlParameter("@MaCa", et.MaCa),
+                    new SqlParameter("@TenCa", et.TenCa),
+                    new SqlParameter("@GioBatDau", et.GioBatDau),
+                    new SqlParameter("@GioKetThuc", et.GioKetThuc),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -94,10 +94,10 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_CaLamViec";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaCa),
-                    new SqlParameter("@", et.TenCa),
-                    new SqlParameter("@", et.GioBatDau),
-                    new SqlParameter("@", et.GioKetThuc),
+                    new SqlParameter("@MaCa", et.MaCa),
+                    new SqlParameter("@TenCa", et.TenCa),
+                    new SqlParameter("@GioBatDau", et.GioBatDau),
+                    new SqlParameter("@GioKetThuc", et.GioKetThuc),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }

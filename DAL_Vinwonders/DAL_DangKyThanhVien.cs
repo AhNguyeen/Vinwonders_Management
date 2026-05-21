@@ -43,9 +43,9 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_DangKyThanhVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaDangKy),
-                    new SqlParameter("@", et.NgayDangKy),
-                    new SqlParameter("@", et.DiaDiemDangKy),
+                    new SqlParameter("@MaDangKy", et.MaDangKy),
+                    new SqlParameter("@NgayDangKy", et.NgayDangKy),
+                    new SqlParameter("@DiaDiemDangKy", et.DiaDiemDangKy),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -93,9 +93,9 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_DangKyThanhVien";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaDangKy),
-                    new SqlParameter("@", et.NgayDangKy),
-                    new SqlParameter("@", et.DiaDiemDangKy),
+                    new SqlParameter("@MaDangKy", et.MaDangKy),
+                    new SqlParameter("@NgayDangKy", et.NgayDangKy),
+                    new SqlParameter("@DiaDiemDangKy", et.DiaDiemDangKy),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }

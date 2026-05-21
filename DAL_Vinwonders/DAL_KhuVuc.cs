@@ -43,11 +43,11 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_KhuVuc";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",et.MaKhuVuc),
-                    new SqlParameter("@",et.TenKhuVuc),
-                    new SqlParameter("@",et.MoTa),
-                    new SqlParameter("@",et.GioMoCua),                    
-                    new SqlParameter("@",et.GioDongCua),                    
+                    new SqlParameter("@MaKhuVuc", et.MaKhuVuc),
+                    new SqlParameter("@TenKhuVuc", et.TenKhuVuc),
+                    new SqlParameter("@MoTa", et.MoTa),
+                    new SqlParameter("@GioMoCua", et.GioMoCua),
+                    new SqlParameter("@GioDongCua", et.GioDongCua),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -95,11 +95,11 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_KhuVuc";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",et.MaKhuVuc),
-                    new SqlParameter("@",et.TenKhuVuc),
-                    new SqlParameter("@",et.MoTa),
-                    new SqlParameter("@",et.GioMoCua),
-                    new SqlParameter("@",et.GioDongCua),
+                    new SqlParameter("@MaKhuVuc", et.MaKhuVuc),
+                    new SqlParameter("@TenKhuVuc", et.TenKhuVuc),
+                    new SqlParameter("@MoTa", et.MoTa),
+                    new SqlParameter("@GioMoCua", et.GioMoCua),
+                    new SqlParameter("@GioDongCua", et.GioDongCua),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }

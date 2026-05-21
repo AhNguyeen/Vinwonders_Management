@@ -43,11 +43,11 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_LichLamViec";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaLich),
-                    new SqlParameter("@", et.MaNhanVien),
-                    new SqlParameter("@", et.MaCa),
-                    new SqlParameter("@", et.NgayLamViec),
-                    new SqlParameter("@", et.ViTriPhanCong),
+                    new SqlParameter("@MaLich", et.MaLich),
+                    new SqlParameter("@MaNhanVien", et.MaNhanVien),
+                    new SqlParameter("@MaCa", et.MaCa),
+                    new SqlParameter("@NgayLamViec", et.NgayLamViec),
+                    new SqlParameter("@ViTriPhanCong", et.ViTriPhanCong),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -95,11 +95,11 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_LichLamViec";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaLich),
-                    new SqlParameter("@", et.MaNhanVien),
-                    new SqlParameter("@", et.MaCa),
-                    new SqlParameter("@", et.NgayLamViec),
-                    new SqlParameter("@", et.ViTriPhanCong),
+                    new SqlParameter("@MaLich", et.MaLich),
+                    new SqlParameter("@MaNhanVien", et.MaNhanVien),
+                    new SqlParameter("@MaCa", et.MaCa),
+                    new SqlParameter("@NgayLamViec", et.NgayLamViec),
+                    new SqlParameter("@ViTriPhanCong", et.ViTriPhanCong),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
