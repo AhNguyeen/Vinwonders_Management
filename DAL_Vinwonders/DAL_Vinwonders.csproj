@@ -43,12 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\ConnectData.cs" />
+    <Compile Include="DAL_CaLamViec.cs" />
     <Compile Include="DAL_CuaHang.cs" />
     <Compile Include="DAL_DangKyThanhVien.cs" />
     <Compile Include="DAL_HangThanhVien.cs" />
     <Compile Include="DAL_HoaDonVe.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_KhuVuc.cs" />
+    <Compile Include="DAL_LichLamViec.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_SanPham.cs" />
     <Compile Include="DAL_SuKien.cs" />

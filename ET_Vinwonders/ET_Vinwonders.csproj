@@ -41,12 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ET_CaLamViec.cs" />
     <Compile Include="ET_CuaHang.cs" />
     <Compile Include="ET_DangKyThanhVien.cs" />
     <Compile Include="ET_HangThanhVien.cs" />
     <Compile Include="ET_HoaDonVe.cs" />
     <Compile Include="ET_KhachHang.cs" />
     <Compile Include="ET_KhuVuc.cs" />
+    <Compile Include="ET_LichLamViec.cs" />
     <Compile Include="ET_NhanVien.cs" />
     <Compile Include="ET_SanPham.cs" />
     <Compile Include="ET_SuKien.cs" />
