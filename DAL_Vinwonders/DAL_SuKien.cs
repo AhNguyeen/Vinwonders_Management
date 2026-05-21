@@ -43,15 +43,15 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_SuKien";    //Chua co store Insert
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",et.MaSuKien),
-                    new SqlParameter("@",et.TenSuKien),
-                    new SqlParameter("@",et.MoTa),
-                    new SqlParameter("@",et.NgayBatDau),
-                    new SqlParameter("@",et.NgayKetThuc),
-                    new SqlParameter("@",et.MaGiamGia),
-                    new SqlParameter("@",et.PhanTramGiam),
-                    new SqlParameter("@",et.GiamToiDa),
-                    new SqlParameter("@",et.TrangThai),
+                    new SqlParameter("@MaSuKien", et.MaSuKien),
+                    new SqlParameter("@TenSuKien", et.TenSuKien),
+                    new SqlParameter("@MoTa", et.MoTa),
+                    new SqlParameter("@NgayBatDau", et.NgayBatDau),
+                    new SqlParameter("@NgayKetThuc", et.NgayKetThuc),
+                    new SqlParameter("@MaGiamGia", et.MaGiamGia),
+                    new SqlParameter("@PhanTramGiam", et.PhanTramGiam),
+                    new SqlParameter("@GiamToiDa", et.GiamToiDa),
+                    new SqlParameter("@TrangThai", et.TrangThai),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -99,15 +99,15 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_SuKien";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",et.MaSuKien),
-                    new SqlParameter("@",et.TenSuKien),
-                    new SqlParameter("@",et.MoTa),
-                    new SqlParameter("@",et.NgayBatDau),
-                    new SqlParameter("@",et.NgayKetThuc),
-                    new SqlParameter("@",et.MaGiamGia),
-                    new SqlParameter("@",et.PhanTramGiam),
-                    new SqlParameter("@",et.GiamToiDa),
-                    new SqlParameter("@",et.TrangThai),
+                    new SqlParameter("@MaSuKien", et.MaSuKien),
+                    new SqlParameter("@TenSuKien", et.TenSuKien),
+                    new SqlParameter("@MoTa", et.MoTa),
+                    new SqlParameter("@NgayBatDau", et.NgayBatDau),
+                    new SqlParameter("@NgayKetThuc", et.NgayKetThuc),
+                    new SqlParameter("@MaGiamGia", et.MaGiamGia),
+                    new SqlParameter("@PhanTramGiam", et.PhanTramGiam),
+                    new SqlParameter("@GiamToiDa", et.GiamToiDa),
+                    new SqlParameter("@TrangThai", et.TrangThai),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }

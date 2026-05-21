@@ -8,42 +8,27 @@ namespace ET_Vinwonders
 {
     public class ET_CuaHang
     {
-        private string maKhachHang;
-        private string maDangKy;
-        private string maHang;
-        private string hoTen;
-        private string loaiKhach;
-        private DateTime ngaySinh;
-        private string diaChi;
-        private string soDienThoai;
-        private string email;
-        private int diemTichLuy;
-
-        public ET_CuaHang(string maKhachHang, string maDangKy, string maHang, string hoTen, string loaiKhach, DateTime ngaySinh, string diaChi, string soDienThoai, string email, int diemTichLuy)
-        {
-            this.maKhachHang = maKhachHang;
-            this.maDangKy = maDangKy;
-            this.maHang = maHang;
-            this.hoTen = hoTen;
-            this.loaiKhach = loaiKhach;
-            this.ngaySinh = ngaySinh;
-            this.diaChi = diaChi;
-            this.soDienThoai = soDienThoai;
-            this.email = email;
-            this.diemTichLuy = diemTichLuy;
-        }
+        private string maCuaHang;
+        private string maKhuVuc;
+        private string tenCuaHang;
+        private string loaiCuaHang;
+        private string trangThai;
 
         public ET_CuaHang() { }
 
-        public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
-        public string MaDangKy { get => maDangKy; set => maDangKy = value; }
-        public string MaHang { get => maHang; set => maHang = value; }
-        public string HoTen { get => hoTen; set => hoTen = value; }
-        public string LoaiKhach { get => loaiKhach; set => loaiKhach = value; }
-        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
-        public string DiaChi { get => diaChi; set => diaChi = value; }
-        public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
-        public string Email { get => email; set => email = value; }
-        public int DiemTichLuy { get => diemTichLuy; set => diemTichLuy = value; }
+        public ET_CuaHang(string maCuaHang, string maKhuVuc, string tenCuaHang, string loaiCuaHang, string trangThai)
+        {
+            this.maCuaHang=maCuaHang;
+            this.maKhuVuc=maKhuVuc;
+            this.tenCuaHang=tenCuaHang;
+            this.loaiCuaHang=loaiCuaHang;
+            this.trangThai=trangThai;
+        }
+
+        public string MaCuaHang { get => maCuaHang; set => maCuaHang=value; }
+        public string MaKhuVuc { get => maKhuVuc; set => maKhuVuc=value; }
+        public string TenCuaHang { get => tenCuaHang; set => tenCuaHang=value; }
+        public string LoaiCuaHang { get => loaiCuaHang; set => loaiCuaHang=value; }
+        public string TrangThai { get => trangThai; set => trangThai=value; }
     }
 }

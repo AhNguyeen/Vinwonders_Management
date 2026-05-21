@@ -43,12 +43,12 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_SanPham";    //Chua co store Insert
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaSanPham),
-                    new SqlParameter("@", et.MaCuaHang),
-                    new SqlParameter("@", et.TenSanPham),
-                    new SqlParameter("@", et.LoaiSanPham),
-                    new SqlParameter("@", et.GiaBan),
-                    new SqlParameter("@", et.TrangThaiBan),
+                    new SqlParameter("@MaSanPham", et.MaSanPham),
+                    new SqlParameter("@MaCuaHang", et.MaCuaHang),
+                    new SqlParameter("@TenSanPham", et.TenSanPham),
+                    new SqlParameter("@LoaiSanPham", et.LoaiSanPham),
+                    new SqlParameter("@GiaBan", et.GiaBan),
+                    new SqlParameter("@TrangThaiBan", et.TrangThaiBan),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -96,12 +96,12 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_SanPham";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaSanPham),
-                    new SqlParameter("@", et.MaCuaHang),
-                    new SqlParameter("@", et.TenSanPham),
-                    new SqlParameter("@", et.LoaiSanPham),
-                    new SqlParameter("@", et.GiaBan),
-                    new SqlParameter("@", et.TrangThaiBan),
+                    new SqlParameter("@MaSanPham", et.MaSanPham),
+                    new SqlParameter("@MaCuaHang", et.MaCuaHang),
+                    new SqlParameter("@TenSanPham", et.TenSanPham),
+                    new SqlParameter("@LoaiSanPham", et.LoaiSanPham),
+                    new SqlParameter("@GiaBan", et.GiaBan),
+                    new SqlParameter("@TrangThaiBan", et.TrangThaiBan),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
