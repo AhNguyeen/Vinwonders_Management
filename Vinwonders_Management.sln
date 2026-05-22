@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET_Vinwonders", "ET_Vinwond
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_Vinwonders", "DAL_Vinwonders\DAL_Vinwonders.csproj", "{54985E15-97C5-4DAB-8DAD-8199A54A5730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS_Vinwonders", "BUS_Vinwonders\BUS_Vinwonders.csproj", "{43A30C0A-3F84-4DF3-B982-17A0801D93D2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{54985E15-97C5-4DAB-8DAD-8199A54A5730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54985E15-97C5-4DAB-8DAD-8199A54A5730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54985E15-97C5-4DAB-8DAD-8199A54A5730}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43A30C0A-3F84-4DF3-B982-17A0801D93D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43A30C0A-3F84-4DF3-B982-17A0801D93D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43A30C0A-3F84-4DF3-B982-17A0801D93D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43A30C0A-3F84-4DF3-B982-17A0801D93D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
