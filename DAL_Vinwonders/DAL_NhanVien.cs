@@ -19,13 +19,12 @@ namespace DAL_Vinwonders
             DataTable dt = new DataTable();
             try
             {
-                string sql = "sp_GetAll_NhanVien"; //Chua co store GetAll
+                string sql = "sp_GetAll_NhanVien";
                 dt = connectDB.ReadData(sql);
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu cần
-                throw ex;
+                throw new Exception("Không thể load danh sách nhân viên!!", ex);
             }
             finally
             {
@@ -34,7 +33,7 @@ namespace DAL_Vinwonders
             return dt;
         }
 
-        public bool TaoNhanVien(ET_NhanVien et)
+        public bool ThemNhanVien(ET_NhanVien et)
         {
             bool kt = false;
             try

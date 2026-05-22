@@ -128,6 +128,12 @@
     <Compile Include="QuanLyKhachHang\GUI_KhachHang.Designer.cs">
       <DependentUpon>GUI_KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_ThemNhanVien.Designer.cs">
+      <DependentUpon>GUI_ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNhanVien\GUI_CaLamViec.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKhachHang\GUI_KhachHang.resx">
       <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\GUI_ThemNhanVien.resx">
+      <DependentUpon>GUI_ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien\GUI_CaLamViec.resx">
       <DependentUpon>GUI_CaLamViec.cs</DependentUpon>
@@ -308,10 +317,6 @@
     <None Include="Resources\plus_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS_Vinwonders\BUS_Vinwonders.csproj">
-      <Project>{43a30c0a-3f84-4df3-b982-17a0801d93d2}</Project>
-      <Name>BUS_Vinwonders</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ET_Vinwonders\ET_Vinwonders.csproj">
       <Project>{b6944d83-c382-4b24-baea-0104453369c4}</Project>
       <Name>ET_Vinwonders</Name>

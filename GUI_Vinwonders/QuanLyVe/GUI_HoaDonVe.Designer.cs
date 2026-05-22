@@ -68,10 +68,12 @@
             this.dgvHoaDonVe.AllowUserToResizeRows = false;
             this.dgvHoaDonVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHoaDonVe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            this.dgvHoaDonVe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvHoaDonVe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvHoaDonVe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHoaDonVe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -105,6 +107,7 @@
             this.dgvHoaDonVe.MultiSelect = false;
             this.dgvHoaDonVe.Name = "dgvHoaDonVe";
             this.dgvHoaDonVe.ReadOnly = true;
+            this.dgvHoaDonVe.RowHeadersVisible = false;
             this.dgvHoaDonVe.RowHeadersWidth = 51;
             this.dgvHoaDonVe.RowTemplate.Height = 24;
             this.dgvHoaDonVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -399,14 +402,14 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(200, 30);
             this.guna2TextBox1.TabIndex = 1;
             // 
-            // GUI_HoaDoVe
+            // GUI_HoaDonVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvHoaDonVe);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Name = "GUI_HoaDoVe";
+            this.Name = "GUI_HoaDonVe";
             this.Size = new System.Drawing.Size(857, 518);
             this.Load += new System.EventHandler(this.GUI_HoaDoVe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDonVe)).EndInit();
