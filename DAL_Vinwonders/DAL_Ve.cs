@@ -43,12 +43,12 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_Ve";    //Chua co store Insert
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaVe),
-                    new SqlParameter("@", et.MaHoaDon),
-                    new SqlParameter("@", et.MaLoaiVe),
-                    new SqlParameter("@", et.DonGia),
-                    new SqlParameter("@", et.NgaySuDung),
-                    new SqlParameter("@", et.DaSuDung),
+                    new SqlParameter("@MaVe", et.MaVe),
+                    new SqlParameter("@MaHoaDon", et.MaHoaDon),
+                    new SqlParameter("@MaLoaiVe", et.MaLoaiVe),
+                    new SqlParameter("@DonGia", et.DonGia),
+                    new SqlParameter("@NgaySuDung", et.NgaySuDung),
+                    new SqlParameter("@DaSuDung", et.DaSuDung),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -96,12 +96,12 @@ namespace DAL_Vinwonders
                 string sql = "sp_Update_Ve";//Chua co store update
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@", et.MaVe),
-                    new SqlParameter("@", et.MaHoaDon),
-                    new SqlParameter("@", et.MaLoaiVe),
-                    new SqlParameter("@", et.DonGia),
-                    new SqlParameter("@", et.NgaySuDung),
-                    new SqlParameter("@", et.DaSuDung),
+                    new SqlParameter("@MaVe", et.MaVe),
+                    new SqlParameter("@MaHoaDon", et.MaHoaDon),
+                    new SqlParameter("@MaLoaiVe", et.MaLoaiVe),
+                    new SqlParameter("@DonGia", et.DonGia),
+                    new SqlParameter("@NgaySuDung", et.NgaySuDung),
+                    new SqlParameter("@DaSuDung", et.DaSuDung),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
