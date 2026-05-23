@@ -73,23 +73,27 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 this.ngayVaoLam
             );
 
-            // Kết nối với BUS để truyền xuống DAL xử lý
-            try
+            DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn cập nhật thông tin nhân viên {hoTen} không?", "Xác nhận cập nhật", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
-                bool isSuccess = busNhanVien.SuaNhanVien(etNhanVien);
-                if (isSuccess)
+                // Kết nối với BUS để truyền xuống DAL xử lý
+                try
                 {
-                    MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Đóng form sau khi thêm thành công
+                    bool isSuccess = busNhanVien.SuaNhanVien(etNhanVien);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Cập nhật nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close(); // Đóng form sau khi thêm thành công
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật nhân viên thất bại. Vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Cập nhật nhân viên thất bại. Vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

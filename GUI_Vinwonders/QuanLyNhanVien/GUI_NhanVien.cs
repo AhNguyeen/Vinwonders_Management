@@ -1,4 +1,5 @@
 using BUS_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,7 +46,7 @@ namespace Vinwonders_Management.QuanLyNhanVien
             {
                 DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
                 
-                ET_Vinwonders.ET_NhanVien nv = new ET_Vinwonders.ET_NhanVien();
+                ET_NhanVien nv = new ET_NhanVien();
                 nv.MaNhanVien = row.Cells["colMaNhanVien"].Value?.ToString() ?? "";
                 nv.MaTaiKhoan = row.Cells["colMaTaiKhoan"].Value?.ToString() ?? "";
                 nv.HoTen = row.Cells["colHoTen"].Value?.ToString() ?? "";
@@ -61,6 +62,33 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 GUI_CapNhatNhanVien capNhatNhanVien = new GUI_CapNhatNhanVien(nv);
                 capNhatNhanVien.ShowDialog();
                 LoadDanhSach();
+            }
+            else if (e.RowIndex >= 0 && dgvNhanVien.Columns[e.ColumnIndex].Name == "colXoaNhanVien")
+            {
+                DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
+                string maNhanVien = row.Cells["colMaNhanVien"].Value?.ToString() ?? "";
+                string hoTen = row.Cells["colHoTen"].Value?.ToString() ?? "";
+                
+                DialogResult dialogResult = MessageBox.Show($"Bạn có chắc chắn muốn xóa nhân viên {hoTen} ({maNhanVien}) không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    try
+                    {
+                        if (BUS_NhanVien.XoaNhanVien(maNhanVien))
+                        {
+                            MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDanhSach();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Xóa nhân viên thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }
