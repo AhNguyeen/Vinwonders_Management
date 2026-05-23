@@ -22,7 +22,7 @@ namespace Vinwonders_Management.QuanLyNhanVien
 
         private void GUI_NhanVien_Load(object sender, EventArgs e)
         {
-            dgvNhanVien.DataSource = BUS_NhanVien.InDanhSachNhanVien();
+            dgvNhanVien.DataSource = BUS_NhanVien.InDanhSach();
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
