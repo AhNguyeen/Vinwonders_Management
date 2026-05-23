@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -43,7 +43,7 @@ namespace DAL_Vinwonders
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaTaiKhoan", et.MaTaiKhoan),
+                    new SqlParameter("@MaTaiKhoan", string.IsNullOrEmpty(et.MaTaiKhoan) ? (object)DBNull.Value : et.MaTaiKhoan),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@GioTinh", et.GioTinh),
                     new SqlParameter("@NgaySinh", et.NgaySinh),
@@ -101,7 +101,7 @@ namespace DAL_Vinwonders
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaTaiKhoan", et.MaTaiKhoan),
+                    new SqlParameter("@MaTaiKhoan", string.IsNullOrEmpty(et.MaTaiKhoan) ? (object)DBNull.Value : et.MaTaiKhoan),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@GioTinh", et.GioTinh),
                     new SqlParameter("@NgaySinh", et.NgaySinh),
