@@ -971,12 +971,13 @@ CREATE PROCEDURE sp_Insert_ChiTietHDCH
     @MaHDCH NVARCHAR(10),
     @MaSanPham NVARCHAR(10),
     @SoLuong INT,
-    @DonGia DECIMAL(18,2)
+    @DonGia DECIMAL(18,2),
+    @ThanhTien DECIMAL(18,2)
 AS
 BEGIN
     SET NOCOUNT ON;
     INSERT INTO ChiTietHDCH (MaCTHDCH, MaHDCH, MaSanPham, SoLuong, GiaBan)
-    VALUES (@MaCTHDCH, @MaHDCH, @MaSanPham, @SoLuong, @DonGia);
+    VALUES (@MaCTHDCH, @MaHDCH, @MaSanPham, @SoLuong, @DonGia, @ThanhTien);
 END;
 GO
 
