@@ -38,7 +38,6 @@ namespace DAL_Vinwonders
             bool kt = false;
             try
             {
-                connectDB.OpenConnect();
                 string sql = "sp_Insert_NhanVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
@@ -59,10 +58,6 @@ namespace DAL_Vinwonders
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                connectDB.CloseConnect();
             }
             return kt;
         }

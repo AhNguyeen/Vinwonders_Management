@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -114,13 +114,13 @@ namespace DAL_Vinwonders.Connection
                 CloseConnect();
                 sqlCmd.Dispose();
 
-                // Trả về true nếu có ít nhất 1 dòng bị thay đổi dữ liệu
-                return rowsAffected > 0;
+                // Trả về true nếu có ít nhất 1 dòng bị thay đổi dữ liệu, hoặc -1 nếu Stored Procedure dùng SET NOCOUNT ON
+                return rowsAffected > 0 || rowsAffected == -1;
             }
             catch (Exception)
             {
                 CloseConnect(); // Đảm bảo luôn đóng kết nối khi lỗi để chống rò rỉ bộ nhớ
-                return false;
+                throw; // Ném lỗi ra ngoài để tầng DAL/GUI bắt và hiển thị lỗi chính xác
             }
         }
 
@@ -155,8 +155,8 @@ namespace DAL_Vinwonders.Connection
             }
             catch (Exception)
             {
-                CloseConnect(); // Giữ nguyên vị trí code cũ (Đoạn này không chạy tới được do bị chặn bởi return)
-                return null; // Nếu bị lỗi, trả về null báo hiệu thất bại
+                CloseConnect(); 
+                throw; // Ném lỗi ra ngoài
             }
         }
     }
