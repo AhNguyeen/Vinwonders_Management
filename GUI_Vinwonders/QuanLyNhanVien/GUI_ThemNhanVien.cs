@@ -90,11 +90,28 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 MessageBox.Show("Vui lòng nhập họ tên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtHoTen.Focus();
                 return false;
+            } else if (txtHoTen.Text.Length < 6 || txtHoTen.Text.Length > 50)
+            {
+                MessageBox.Show("Họ tên phải từ 6 đến 50 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoTen.Focus();
+                return false;
+            } 
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txtHoTen.Text, @"^[\p{L}\s]+$"))
+            {
+                MessageBox.Show("Họ tên không được chứa số hoặc ký tự đặc biệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoTen.Focus();
+                return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtCCCD.Text))
             {
                 MessageBox.Show("Vui lòng nhập CCCD!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCCCD.Focus();
+                return false;
+            }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txtCCCD.Text, @"^\d{1,12}$"))
+            {
+                MessageBox.Show("CCCD chỉ được nhập số và tối đa 12 số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCCCD.Focus();
                 return false;
             }
@@ -105,10 +122,22 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 txtSDT.Focus();
                 return false;
             }
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txtSDT.Text, @"^\d{1,10}$"))
+            {
+                MessageBox.Show("Số điện thoại chỉ được nhập số và tối đa 10 số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSDT.Focus();
+                return false;
+            }
 
             if (string.IsNullOrWhiteSpace(txtEmail.Text))
             {
                 MessageBox.Show("Vui lòng nhập email!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return false;
+            }
+            else if (!txtEmail.Text.Trim().EndsWith("@gmail.com"))
+            {
+                MessageBox.Show("Email phải có đuôi @gmail.com!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEmail.Focus();
                 return false;
             }
@@ -117,6 +146,23 @@ namespace Vinwonders_Management.QuanLyNhanVien
             {
                 MessageBox.Show("Vui lòng nhập vị trí/chức vụ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtChucVu.Focus();
+                return false;
+            }else if (txtChucVu.Text.Length < 2 || txtChucVu.Text.Length > 30)
+            {
+                MessageBox.Show("Vị trí/chức vụ phải từ 2 đến 30 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtChucVu.Focus();
+                return false;
+            } else if (System.Text.RegularExpressions.Regex.IsMatch(txtChucVu.Text, @"[^\w\s]"))
+            {
+                MessageBox.Show("Vị trí/chức vụ không được chứa ký tự đặc biệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtChucVu.Focus();
+                return false;
+            }
+
+            if (dtpNgaySinh.Value > DateTime.Now.AddYears(-18))
+            {
+                MessageBox.Show("Nhân viên phải từ đủ 18 tuổi trở lên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpNgaySinh.Focus();
                 return false;
             }
 
@@ -128,9 +174,9 @@ namespace Vinwonders_Management.QuanLyNhanVien
             }
 
             decimal luong;
-            if (!decimal.TryParse(txtLuong.Text, out luong))
+            if (!decimal.TryParse(txtLuong.Text, out luong) || luong < 0)
             {
-                MessageBox.Show("Lương phải là một số hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Lương phải là một số hợp lệ (không chứa ký tự và lớn hơn hoặc bằng 0)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtLuong.Focus();
                 return false;
             }

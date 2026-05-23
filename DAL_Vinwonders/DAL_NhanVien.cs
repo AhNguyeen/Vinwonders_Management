@@ -96,7 +96,6 @@ namespace DAL_Vinwonders
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaTaiKhoan", string.IsNullOrEmpty(et.MaTaiKhoan) ? (object)DBNull.Value : et.MaTaiKhoan),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@GioTinh", et.GioTinh),
                     new SqlParameter("@NgaySinh", et.NgaySinh),
