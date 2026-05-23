@@ -39,11 +39,11 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Insert_NhanVien";    //Chua co store Insert
+                string sql = "sp_Insert_NhanVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaTaiKhoan", et.MaTaiKhoan),
+                    new SqlParameter("@MaTaiKhoan", string.IsNullOrEmpty(et.MaTaiKhoan) ? (object)DBNull.Value : et.MaTaiKhoan),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@GioTinh", et.GioTinh),
                     new SqlParameter("@NgaySinh", et.NgaySinh),
@@ -58,7 +58,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -73,7 +73,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_NhanVien"; //Chua co store delete
+                string sql = "sp_Delete_NhanVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@",ma),
@@ -82,7 +82,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -97,11 +97,11 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Update_NhanVien";//Chua co store update
+                string sql = "sp_Update_NhanVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaTaiKhoan", et.MaTaiKhoan),
+                    new SqlParameter("@MaTaiKhoan", string.IsNullOrEmpty(et.MaTaiKhoan) ? (object)DBNull.Value : et.MaTaiKhoan),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@GioTinh", et.GioTinh),
                     new SqlParameter("@NgaySinh", et.NgaySinh),
@@ -116,7 +116,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -131,7 +131,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_NhanVien"; //Chua co store delete
+                string sql = "sp_GetAll_NhanVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@",tenKH),
@@ -140,7 +140,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
