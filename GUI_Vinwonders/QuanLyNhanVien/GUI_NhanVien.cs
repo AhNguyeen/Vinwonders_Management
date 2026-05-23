@@ -38,5 +38,30 @@ namespace Vinwonders_Management.QuanLyNhanVien
             // Tải lại danh sách sau khi form thêm nhân viên đóng
             LoadDanhSach();
         }
+
+        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgvNhanVien.Columns[e.ColumnIndex].Name == "colSuaNhanVien")
+            {
+                DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
+                
+                ET_Vinwonders.ET_NhanVien nv = new ET_Vinwonders.ET_NhanVien();
+                nv.MaNhanVien = row.Cells["colMaNhanVien"].Value?.ToString() ?? "";
+                nv.MaTaiKhoan = row.Cells["colMaTaiKhoan"].Value?.ToString() ?? "";
+                nv.HoTen = row.Cells["colHoTen"].Value?.ToString() ?? "";
+                nv.GioTinh = row.Cells["colGioTinh"].Value?.ToString() ?? "";
+                nv.NgaySinh = Convert.ToDateTime(row.Cells["colNgaySinh"].Value);
+                nv.SoDienThoai = row.Cells["colSoDienThoai"].Value?.ToString() ?? "";
+                nv.Email = row.Cells["colEmail"].Value?.ToString() ?? "";
+                nv.CCCD = row.Cells["colCCCD"].Value?.ToString() ?? "";
+                nv.ViTri = row.Cells["colViTri"].Value?.ToString() ?? "";
+                nv.Luong = Convert.ToDecimal(row.Cells["colLuong"].Value);
+                nv.NgayVaoLam = Convert.ToDateTime(row.Cells["colNgayVaoLam"].Value);
+
+                GUI_CapNhatNhanVien capNhatNhanVien = new GUI_CapNhatNhanVien(nv);
+                capNhatNhanVien.ShowDialog();
+                LoadDanhSach();
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyNhanVien
+namespace Vinwonders_Management.QuanLyNhanVien
 {
     partial class GUI_NhanVien
     {
@@ -195,6 +195,7 @@
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 0);
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
+            this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellContentClick);
             this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersVisible = false;
             this.dgvNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
