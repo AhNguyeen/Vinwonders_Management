@@ -80,7 +80,7 @@ CREATE TABLE KhachHang (
 
 CREATE TABLE NhanVien (
     MaNhanVien NVARCHAR(10) PRIMARY KEY,
-    MaTaiKhoan NVARCHAR(10) UNIQUE NULL, -- Liên kết 1-1 với Tài Khoản
+    MaTaiKhoan NVARCHAR(10) NULL, -- Liên kết 1-1 với Tài Khoản
     HoTen NVARCHAR(50) NOT NULL,
     GioTinh NVARCHAR(3),
     NgaySinh DATE,
@@ -236,4 +236,17 @@ CREATE TABLE BaoTriTroChoi (
     FOREIGN KEY (MaTroChoi) REFERENCES TroChoi(MaTroChoi),
     FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
 );
+GO
+
+
+
+-- 1. Xóa ràng buộc UNIQUE cũ của cột MaTaiKhoan trong bảng NhanVien
+-- (Bạn tìm tên Constraint cũ trong thư mục Keys của bảng NhanVien và thay vào chữ màu_đỏ nhé)
+ALTER TABLE NhanVien DROP CONSTRAINT FK__NhanVien__MaTaiK__6383C8BA;
+GO
+
+-- 2. Tạo một UNIQUE INDEX có điều kiện (Filtered Index) - ĐÂY LÀ CHÌA KHÓA!
+CREATE UNIQUE NONCLUSTERED INDEX UQ_NhanVien_MaTaiKhoan
+ON NhanVien(MaTaiKhoan)
+WHERE MaTaiKhoan IS NOT NULL; -- Chỉ báo lỗi trùng khi giá trị khác NULL
 GO
