@@ -469,6 +469,17 @@ BEGIN
     ORDER BY ktkl.NgayQuyetDinh DESC;
 END;
 GO
+-- Xóa Quyết định Khen Thưởng / Kỷ Luật
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_KhenThuongKyLuat') DROP PROCEDURE sp_Delete_KhenThuongKyLuat;
+GO
+CREATE PROCEDURE sp_Delete_KhenThuongKyLuat
+    @MaKTKL NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM KhenThuongKyLuat WHERE MaKTKL = @MaKTKL;
+END;
+GO
 -- =================================================================
 -- 8. STORED PROCEDURES: QUẢN LÝ KHU VỰC
 -- =================================================================
@@ -882,4 +893,208 @@ BEGIN
     INNER JOIN CaLamViec clv ON llv.MaCa = clv.MaCa;
 END;
 GO
+-- =================================================================
+-- 15 STORED PROCEDURES: QUẢN LÝ HÓA ĐƠN CỬA HÀNG
+-- =================================================================
 
+-- Thêm Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_HoaDonCuaHang') DROP PROCEDURE sp_Insert_HoaDonCuaHang;
+GO
+CREATE PROCEDURE sp_Insert_HoaDonCuaHang
+    @MaHDCH NVARCHAR(10),
+    @MaKhachHang NVARCHAR(10),
+    @MaNhanVien NVARCHAR(10),
+    @TongTien DECIMAL(18,2),
+    @PhuongThucThanhToan NVARCHAR(50),
+    @TrangThai NVARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    INSERT INTO HoaDonCuaHang (MaHDCH, MaKhachHang, MaNhanVien, TongTien)
+    VALUES (@MaHDCH, @MaKhachHang, @MaNhanVien, @TongTien);
+END;
+GO
+
+-- Cập nhật Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_HoaDonCuaHang') DROP PROCEDURE sp_Update_HoaDonCuaHang;
+GO
+CREATE PROCEDURE sp_Update_HoaDonCuaHang
+    @MaHDCH NVARCHAR(10),
+    @MaKhachHang NVARCHAR(10),
+    @MaNhanVien NVARCHAR(10),
+    @TongTien DECIMAL(18,2),
+    @PhuongThucThanhToan NVARCHAR(50),
+    @TrangThai NVARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE HoaDonCuaHang
+    SET MaKhachHang = @MaKhachHang, MaNhanVien = @MaNhanVien, TongTien = @TongTien
+    WHERE MaHDCH = @MaHDCH;
+END;
+GO
+
+-- Xóa Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_HoaDonCuaHang') DROP PROCEDURE sp_Delete_HoaDonCuaHang;
+GO
+CREATE PROCEDURE sp_Delete_HoaDonCuaHang
+    @MaHDCH NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM HoaDonCuaHang WHERE MaHDCH = @MaHDCH;
+END;
+GO
+
+-- Lấy danh sách Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_HoaDonCuaHang') DROP PROCEDURE sp_GetAll_HoaDonCuaHang;
+GO
+CREATE PROCEDURE sp_GetAll_HoaDonCuaHang
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT hd.*, kh.HoTen AS TenKhachHang, nv.HoTen AS TenNhanVien
+    FROM HoaDonCuaHang hd
+    INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
+    INNER JOIN NhanVien nv ON hd.MaNhanVien = nv.MaNhanVien
+END;
+GO
+-- =================================================================
+-- 16 STORED PROCEDURES: CHI TIẾT HÓA ĐƠN CỬA HÀNG
+-- =================================================================
+
+-- Thêm Chi Tiết Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_ChiTietHDCH') DROP PROCEDURE sp_Insert_ChiTietHDCH;
+GO
+CREATE PROCEDURE sp_Insert_ChiTietHDCH
+    @MaCTHDCH NVARCHAR(10),
+    @MaHDCH NVARCHAR(10),
+    @MaSanPham NVARCHAR(10),
+    @SoLuong INT,
+    @DonGia DECIMAL(18,2),
+    @ThanhTien DECIMAL(18,2)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    INSERT INTO ChiTietHDCH (MaCTHDCH, MaHDCH, MaSanPham, SoLuong, GiaBan)
+    VALUES (@MaCTHDCH, @MaHDCH, @MaSanPham, @SoLuong, @DonGia, @ThanhTien);
+END;
+GO
+
+-- Cập nhật Chi Tiết Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_ChiTietHDCH') DROP PROCEDURE sp_Update_ChiTietHDCH;
+GO
+CREATE PROCEDURE sp_Update_ChiTietHDCH
+    @MaCTHDCH NVARCHAR(10),
+    @MaHDCH NVARCHAR(10),
+    @MaSanPham NVARCHAR(10),
+    @SoLuong INT,
+    @GiaBan DECIMAL(18,2),
+    @ThanhTien DECIMAL(18,2)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE ChiTietHDCH
+    SET MaHDCH = @MaHDCH, MaSanPham = @MaSanPham, SoLuong = @SoLuong, GiaBan = @GiaBan
+    WHERE MaCTHDCH = @MaCTHDCH;
+END;
+GO
+
+-- Xóa Chi Tiết Hóa Đơn Cửa Hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_ChiTietHDCH') DROP PROCEDURE sp_Delete_ChiTietHDCH;
+GO
+CREATE PROCEDURE sp_Delete_ChiTietHDCH
+    @MaCTHDCH NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM ChiTietHDCH WHERE MaCTHDCH = @MaCTHDCH;
+END;
+GO
+
+-- Lấy chi tiết sản phẩm theo mã hóa đơn cửa hàng
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetChiTiet_ByHDCH') DROP PROCEDURE sp_GetChiTiet_ByHDCH;
+GO
+CREATE PROCEDURE sp_GetChiTiet_ByHDCH
+    @MaHDCH NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT ct.*, sp.TenSanPham, sp.LoaiSanPham
+    FROM ChiTietHDCH ct
+    INNER JOIN SanPham sp ON ct.MaSanPham = sp.MaSanPham
+    WHERE ct.MaHDCH = @MaHDCH;
+END;
+GO
+-- =================================================================
+-- 17 STORED PROCEDURES: QUẢN LÝ BẢO TRÌ TRÒ CHƠI
+-- =================================================================
+
+-- Thêm Bảo Trì Trò Chơi
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_BaoTriTroChoi') DROP PROCEDURE sp_Insert_BaoTriTroChoi;
+GO
+CREATE PROCEDURE sp_Insert_BaoTriTroChoi
+    @MaBaoTri NVARCHAR(10),
+    @MaTroChoi NVARCHAR(10),
+    @MaNhanVien NVARCHAR(10),
+    @NgayBatDau DATE,
+    @NgayDuKienXong DATE = NULL,
+    @MoTaLoi NVARCHAR(500) = NULL,
+    @ChiPhiBaoTri DECIMAL(18,2) = NULL,
+    @TrangThai NVARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    INSERT INTO BaoTriTroChoi (MaBaoTri, MaTroChoi, MaNhanVien, NgayBatDau, NgayDuKienXong, MoTaLoi, ChiPhiBaoTri, TrangThai)
+    VALUES (@MaBaoTri, @MaTroChoi, @MaNhanVien, @NgayBatDau, @NgayDuKienXong, @MoTaLoi, @ChiPhiBaoTri, @TrangThai);
+END;
+GO
+
+-- Cập nhật Bảo Trì Trò Chơi
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_BaoTriTroChoi') DROP PROCEDURE sp_Update_BaoTriTroChoi;
+GO
+CREATE PROCEDURE sp_Update_BaoTriTroChoi
+    @MaBaoTri NVARCHAR(10),
+    @MaTroChoi NVARCHAR(10),
+    @MaNhanVien NVARCHAR(10),
+    @NgayBatDau DATE,
+    @NgayDuKienXong DATE = NULL,
+    @MoTaLoi NVARCHAR(500) = NULL,
+    @ChiPhiBaoTri DECIMAL(18,2) = NULL,
+    @TrangThai NVARCHAR(50)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE BaoTriTroChoi
+    SET MaTroChoi = @MaTroChoi, MaNhanVien = @MaNhanVien, NgayBatDau = @NgayBatDau, 
+        NgayDuKienXong = @NgayDuKienXong, MoTaLoi = @MoTaLoi, ChiPhiBaoTri = @ChiPhiBaoTri, TrangThai = @TrangThai
+    WHERE MaBaoTri = @MaBaoTri;
+END;
+GO
+
+-- Xóa Bảo Trì Trò Chơi
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_BaoTriTroChoi') DROP PROCEDURE sp_Delete_BaoTriTroChoi;
+GO
+CREATE PROCEDURE sp_Delete_BaoTriTroChoi
+    @MaBaoTri NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DELETE FROM BaoTriTroChoi WHERE MaBaoTri = @MaBaoTri;
+END;
+GO
+
+-- Lấy danh sách Bảo Trì Trò Chơi (Kèm tên trò chơi và tên nhân viên để hiển thị lên GridView)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_BaoTriTroChoi') DROP PROCEDURE sp_GetAll_BaoTriTroChoi;
+GO
+CREATE PROCEDURE sp_GetAll_BaoTriTroChoi
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT bt.*, tc.TenTroChoi, nv.HoTen AS TenNhanVien
+    FROM BaoTriTroChoi bt
+    INNER JOIN TroChoi tc ON bt.MaTroChoi = tc.MaTroChoi
+    INNER JOIN NhanVien nv ON bt.MaNhanVien = nv.MaNhanVien
+    ORDER BY bt.NgayBatDau DESC;
+END;
+GO
