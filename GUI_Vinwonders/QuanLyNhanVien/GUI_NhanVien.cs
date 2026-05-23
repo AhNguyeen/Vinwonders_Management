@@ -1,4 +1,4 @@
-﻿using BUS_Vinwonders;
+using BUS_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,16 +20,23 @@ namespace Vinwonders_Management.QuanLyNhanVien
 
         BUS_NhanVien BUS_NhanVien = new BUS_NhanVien();
 
-        private void GUI_NhanVien_Load(object sender, EventArgs e)
+        public void LoadDanhSach()
         {
             dgvNhanVien.DataSource = BUS_NhanVien.InDanhSach();
+        }
+
+        private void GUI_NhanVien_Load(object sender, EventArgs e)
+        {
+            LoadDanhSach();
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
             GUI_ThemNhanVien themNhanVien = new GUI_ThemNhanVien();
             themNhanVien.ShowDialog();
-
+            
+            // Tải lại danh sách sau khi form thêm nhân viên đóng
+            LoadDanhSach();
         }
     }
 }
