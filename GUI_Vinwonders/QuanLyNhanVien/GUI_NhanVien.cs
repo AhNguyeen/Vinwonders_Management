@@ -91,5 +91,22 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 }
             }
         }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (dgvNhanVien.DataSource is DataTable dt)
+            {
+                string searchValue = txtTimKiem.Text.Trim().Replace("'", "''");
+                if (string.IsNullOrEmpty(searchValue))
+                {
+                    dt.DefaultView.RowFilter = "";
+                }
+                else
+                {
+                    // Lọc theo Họ tên, Mã nhân viên hoặc Số điện thoại
+                    dt.DefaultView.RowFilter = $"HoTen LIKE '%{searchValue}%' OR MaNhanVien LIKE '%{searchValue}%' OR SoDienThoai LIKE '%{searchValue}%'";
+                }
+            }
+        }
     }
 }
