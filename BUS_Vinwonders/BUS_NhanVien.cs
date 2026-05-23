@@ -1,4 +1,4 @@
-﻿using DAL_Vinwonders;
+using DAL_Vinwonders;
 using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace BUS_Vinwonders
         }
         public bool ThemNhanVien(ET_NhanVien et)
         {
-            return dalNhanVien.TaoNhanVien(et);
+            return dalNhanVien.ThemNhanVien(et);
         }
         public bool XoaNhanVien(string ma)
         {

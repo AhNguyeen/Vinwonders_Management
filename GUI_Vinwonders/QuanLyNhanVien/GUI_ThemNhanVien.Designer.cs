@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyNhanVien
+namespace Vinwonders_Management.QuanLyNhanVien
 {
     partial class GUI_ThemNhanVien
     {
@@ -381,6 +381,7 @@
             this.btnThem.Size = new System.Drawing.Size(110, 45);
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // GUI_ThemNhanVien
             // 
