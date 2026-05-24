@@ -1,4 +1,4 @@
-﻿using DAL_Vinwonders;
+using DAL_Vinwonders;
 using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
@@ -17,21 +17,10 @@ namespace BUS_Vinwonders
         {
             return dalLichLamViec.InDanhSachLichLamViec();
         }
-        public DataTable TimLichLamViec(string ten)
+
+        public DataTable LayLichLamViecTheoTuan(DateTime startOfWeek, DateTime endOfWeek)
         {
-            return dalLichLamViec.TimLichLamViec(ten);
-        }
-        public bool ThemLichLamViec(ET_LichLamViec et)
-        {
-            return dalLichLamViec.TaoLichLamViec(et);
-        }
-        public bool XoaLichLamViec(string ma)
-        {
-            return dalLichLamViec.XoaLichLamViec(ma);
-        }
-        public bool SuaLichLamViec(ET_LichLamViec et)
-        {
-            return dalLichLamViec.SuaLichLamViec(et);
+            return dalLichLamViec.LayLichLamViecTheoTuan(startOfWeek, endOfWeek);
         }
     }
 }
