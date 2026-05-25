@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -44,7 +44,6 @@ namespace DAL_Vinwonders
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaKhachHang", et.MaKhachHang),
-                    new SqlParameter("@MaDangKy", et.MaDangKy),
                     new SqlParameter("@MaHang", et.MaHang),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@LoaiKhach", et.LoaiKhach),
@@ -73,10 +72,10 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_KhachHang"; //Chua co store delete
+                string sql = "sp_Delete_KhachHang";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaKhachHang", ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -101,7 +100,6 @@ namespace DAL_Vinwonders
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaKhachHang", et.MaKhachHang),
-                    new SqlParameter("@MaDangKy", et.MaDangKy),
                     new SqlParameter("@MaHang", et.MaHang),
                     new SqlParameter("@HoTen", et.HoTen),
                     new SqlParameter("@LoaiKhach", et.LoaiKhach),
@@ -130,12 +128,8 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_KhachHang"; //Chua co store delete
-                SqlParameter[] sp = new SqlParameter[]
-                {
-                    new SqlParameter("@",tenKH),
-                };
-                kt = connectDB.ReadData(sql, sp);
+                string sql = "sp_GetAll_KhachHang";
+                kt = connectDB.ReadData(sql);
             }
             catch (Exception ex)
             {

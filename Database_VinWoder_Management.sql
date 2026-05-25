@@ -19,12 +19,6 @@ CREATE TABLE TaiKhoan (
     NgayTao DATETIME DEFAULT GETDATE()
 );
 
-CREATE TABLE DangKyThanhVien(
-    MaDangKy NVARCHAR(10) PRIMARY KEY,
-    NgayDangKy DATE DEFAULT GETDATE(),
-    DiaDiemDangKy NVARCHAR(100)
-);
-
 CREATE TABLE HangThanhVien (
     MaHang NVARCHAR(10) PRIMARY KEY,
     TenHang NVARCHAR(50) NOT NULL, 
@@ -65,7 +59,6 @@ CREATE TABLE SuKien (
 
 CREATE TABLE KhachHang (
     MaKhachHang NVARCHAR(10) PRIMARY KEY,
-    MaDangKy NVARCHAR(10) NULL,
     MaHang NVARCHAR(10) NOT NULL,
     HoTen NVARCHAR(100) NOT NULL,
     LoaiKhach NVARCHAR(50) DEFAULT N'Cá nhân', -- 'Cá nhân' hoặc 'Khách đoàn'
@@ -74,7 +67,6 @@ CREATE TABLE KhachHang (
     SoDienThoai NVARCHAR(15),
     Email NVARCHAR(100),
     DiemTichLuy INT DEFAULT 0,
-    FOREIGN KEY (MaDangKy) REFERENCES DangKyThanhVien(MaDangKy),
     FOREIGN KEY (MaHang) REFERENCES HangThanhVien(MaHang)
 );
 
@@ -238,14 +230,7 @@ CREATE TABLE BaoTriTroChoi (
 );
 GO
 
-
-
--- 1. Xóa ràng buộc UNIQUE cũ của cột MaTaiKhoan trong bảng NhanVien
--- (Bạn tìm tên Constraint cũ trong thư mục Keys của bảng NhanVien và thay vào chữ màu_đỏ nhé)
-ALTER TABLE NhanVien DROP CONSTRAINT FK__NhanVien__MaTaiK__6383C8BA;
-GO
-
--- 2. Tạo một UNIQUE INDEX có điều kiện (Filtered Index) - ĐÂY LÀ CHÌA KHÓA!
+-- Tạo một UNIQUE INDEX có điều kiện (Filtered Index) - ĐÂY LÀ CHÌA KHÓA!
 CREATE UNIQUE NONCLUSTERED INDEX UQ_NhanVien_MaTaiKhoan
 ON NhanVien(MaTaiKhoan)
 WHERE MaTaiKhoan IS NOT NULL; -- Chỉ báo lỗi trùng khi giá trị khác NULL

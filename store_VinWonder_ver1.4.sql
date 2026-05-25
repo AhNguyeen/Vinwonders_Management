@@ -107,7 +107,6 @@ IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_Khac
 GO
 CREATE PROCEDURE sp_Insert_KhachHang
     @MaKhachHang NVARCHAR(10),
-    @MaDangKy NVARCHAR(10) = NULL,
     @MaHang NVARCHAR(10) = NULL,
     @HoTen NVARCHAR(100),       -- Đồng bộ NVARCHAR
     @LoaiKhach NVARCHAR(50),     -- 'Cá nhân' hoặc 'Khách đoàn'
@@ -119,8 +118,8 @@ CREATE PROCEDURE sp_Insert_KhachHang
 AS
 BEGIN
     SET NOCOUNT ON;
-    INSERT INTO KhachHang (MaKhachHang, MaDangKy, MaHang, HoTen, LoaiKhach, NgaySinh, DiaChi, SoDienThoai, Email, DiemTichLuy)
-    VALUES (@MaKhachHang, @MaDangKy, @MaHang, @HoTen, @LoaiKhach, @NgaySinh, @DiaChi, @SoDienThoai, @Email, @DiemTichLuy);
+    INSERT INTO KhachHang (MaKhachHang, MaHang, HoTen, LoaiKhach, NgaySinh, DiaChi, SoDienThoai, Email, DiemTichLuy)
+    VALUES (@MaKhachHang, @MaHang, @HoTen, @LoaiKhach, @NgaySinh, @DiaChi, @SoDienThoai, @Email, @DiemTichLuy);
 END;
 GO
 
@@ -984,13 +983,12 @@ CREATE PROCEDURE sp_Insert_ChiTietHDCH
     @MaHDCH NVARCHAR(10),
     @MaSanPham NVARCHAR(10),
     @SoLuong INT,
-    @DonGia DECIMAL(18,2),
-    @ThanhTien DECIMAL(18,2)
+    @DonGia DECIMAL(18,2)
 AS
 BEGIN
     SET NOCOUNT ON;
     INSERT INTO ChiTietHDCH (MaCTHDCH, MaHDCH, MaSanPham, SoLuong, GiaBan)
-    VALUES (@MaCTHDCH, @MaHDCH, @MaSanPham, @SoLuong, @DonGia, @ThanhTien);
+    VALUES (@MaCTHDCH, @MaHDCH, @MaSanPham, @SoLuong, @DonGia);
 END;
 GO
 
