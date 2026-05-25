@@ -1,6 +1,6 @@
 namespace Vinwonders_Management.QuanLyKhachHang
 {
-    partial class GUI_SuaHangThanhVien
+    partial class GUI_CapNhatHangThanhVien
     {
         /// <summary>
         /// Required designer variable.
@@ -46,9 +46,9 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 19);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(10);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(221, 32);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(272, 32);
             this.guna2HtmlLabel1.TabIndex = 4;
-            this.guna2HtmlLabel1.Text = "Sửa Hạng Thành Viên";
+            this.guna2HtmlLabel1.Text = "Cập Nhật Hạng Thành Viên";
             // 
             // btnThoat
             // 
@@ -187,7 +187,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
-            // GUI_SuaHangThanhVien
+            // GUI_CapNhatHangThanhVien
             // 
             this.AcceptButton = this.btnSua;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,7 +208,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(475, 380);
             this.MinimumSize = new System.Drawing.Size(475, 380);
-            this.Name = "GUI_SuaHangThanhVien";
+            this.Name = "GUI_CapNhatHangThanhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();

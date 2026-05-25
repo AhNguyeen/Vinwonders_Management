@@ -48,7 +48,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
                     int diemToiThieu = Convert.ToInt32(dgvHangThanhVien.Rows[e.RowIndex].Cells["colDiemToiThieu"].Value);
                     decimal tiLeGiamGia = Convert.ToDecimal(dgvHangThanhVien.Rows[e.RowIndex].Cells["colTiLeGiamGia"].Value);
 
-                    GUI_SuaHangThanhVien suaHang = new GUI_SuaHangThanhVien(maHang, tenHang, diemToiThieu, tiLeGiamGia);
+                    GUI_CapNhatHangThanhVien suaHang = new GUI_CapNhatHangThanhVien(maHang, tenHang, diemToiThieu, tiLeGiamGia);
                     suaHang.ShowDialog();
                     LoadHangThanhVien();
                 }

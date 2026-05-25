@@ -13,12 +13,12 @@ using System.Text.RegularExpressions;
 
 namespace Vinwonders_Management.QuanLyKhachHang
 {
-    public partial class GUI_SuaHangThanhVien : Form
+    public partial class GUI_CapNhatHangThanhVien : Form
     {
         private BUS_HangThanhVien busHangThanhVien = new BUS_HangThanhVien();
         private string maHang;
 
-        public GUI_SuaHangThanhVien(string maHang, string tenHang, int diemToiThieu, decimal tiLeGiamGia)
+        public GUI_CapNhatHangThanhVien(string maHang, string tenHang, int diemToiThieu, decimal tiLeGiamGia)
         {
             InitializeComponent();      
             
