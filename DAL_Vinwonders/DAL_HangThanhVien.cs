@@ -66,21 +66,16 @@ namespace DAL_Vinwonders
             bool kt = false;
             try
             {
-                connectDB.OpenConnect();
-                string sql = "sp_Delete_HangThanhVien"; //Chua co store delete
+                string sql = "sp_Delete_HangThanhVien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaHang",ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
             catch (Exception ex)
             {
-
-            }
-            finally
-            {
-                connectDB.CloseConnect();
+                throw ex;
             }
             return kt;
         }

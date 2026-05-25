@@ -9,7 +9,6 @@ namespace ET_Vinwonders
     public class ET_KhachHang
     {
         private string maKhachHang;
-        private string maDangKy;
         private string maHang;
         private string hoTen;
         private string loaiKhach;
@@ -19,10 +18,9 @@ namespace ET_Vinwonders
         private string email;
         private int diemTichLuy;
 
-        public ET_KhachHang(string maKhachHang, string maDangKy, string maHang, string hoTen, string loaiKhach, DateTime ngaySinh, string diaChi, string soDienThoai, string email, int diemTichLuy)
+        public ET_KhachHang(string maKhachHang, string maHang, string hoTen, string loaiKhach, DateTime ngaySinh, string diaChi, string soDienThoai, string email, int diemTichLuy)
         {
             this.maKhachHang = maKhachHang;
-            this.maDangKy = maDangKy;
             this.maHang = maHang;
             this.hoTen = hoTen;
             this.loaiKhach = loaiKhach;
@@ -34,7 +32,6 @@ namespace ET_Vinwonders
         }
 
         public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
-        public string MaDangKy { get => maDangKy; set => maDangKy = value; }
         public string MaHang { get => maHang; set => maHang = value; }
         public string HoTen { get => hoTen; set => hoTen = value; }
         public string LoaiKhach { get => loaiKhach; set => loaiKhach = value; }

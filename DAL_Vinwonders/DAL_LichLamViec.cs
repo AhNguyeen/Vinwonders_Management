@@ -52,6 +52,30 @@ namespace DAL_Vinwonders
             return dtTuan;
         }
 
+        public DataTable GetLichLamViecMatrix(DateTime ngayDauTuan)
+        {
+            connectDB.OpenConnect();
+            DataTable dt = new DataTable();
+            try
+            {
+                string sql = "sp_GetLichLamViecMatrix";
+                SqlParameter[] parameters = new SqlParameter[]
+                {
+                    new SqlParameter("@NgayDauTuan", ngayDauTuan)
+                };
+                dt = connectDB.ReadData(sql, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return dt;
+        }
+
 
     }
 }
