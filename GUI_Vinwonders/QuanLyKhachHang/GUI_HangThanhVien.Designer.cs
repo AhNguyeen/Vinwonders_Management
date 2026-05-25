@@ -28,22 +28,22 @@ namespace Vinwonders_Management.QuanLyKhachHang
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvHangThanhVien = new System.Windows.Forms.DataGridView();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.colMaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiemToiThieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTiLeGiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBtnSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colBtnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangThanhVien)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -72,14 +72,14 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.dgvHangThanhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHangThanhVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvHangThanhVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHangThanhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHangThanhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHangThanhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHangThanhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaHang,
@@ -88,14 +88,14 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.colTiLeGiamGia,
             this.colBtnSua,
             this.colBtnXoa});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHangThanhVien.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHangThanhVien.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHangThanhVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHangThanhVien.EnableHeadersVisualStyles = false;
             this.dgvHangThanhVien.Location = new System.Drawing.Point(0, 0);
@@ -106,6 +106,55 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.dgvHangThanhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHangThanhVien.Size = new System.Drawing.Size(857, 405);
             this.dgvHangThanhVien.TabIndex = 10;
+            // 
+            // colMaHang
+            // 
+            this.colMaHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colMaHang.DataPropertyName = "MaHang";
+            this.colMaHang.HeaderText = "Mã hạng";
+            this.colMaHang.Name = "colMaHang";
+            this.colMaHang.ReadOnly = true;
+            // 
+            // colTenHang
+            // 
+            this.colTenHang.DataPropertyName = "TenHang";
+            this.colTenHang.HeaderText = "Tên hạng";
+            this.colTenHang.Name = "colTenHang";
+            this.colTenHang.ReadOnly = true;
+            // 
+            // colDiemToiThieu
+            // 
+            this.colDiemToiThieu.DataPropertyName = "DiemToiThieu";
+            this.colDiemToiThieu.HeaderText = "Điểm tối thiểu";
+            this.colDiemToiThieu.Name = "colDiemToiThieu";
+            this.colDiemToiThieu.ReadOnly = true;
+            // 
+            // colTiLeGiamGia
+            // 
+            this.colTiLeGiamGia.DataPropertyName = "TiLeGiamGia";
+            this.colTiLeGiamGia.HeaderText = "Tỉ lệ giảm giá";
+            this.colTiLeGiamGia.Name = "colTiLeGiamGia";
+            this.colTiLeGiamGia.ReadOnly = true;
+            // 
+            // colBtnSua
+            // 
+            this.colBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colBtnSua.HeaderText = "Sửa";
+            this.colBtnSua.Name = "colBtnSua";
+            this.colBtnSua.ReadOnly = true;
+            this.colBtnSua.Text = "Sửa";
+            this.colBtnSua.UseColumnTextForButtonValue = true;
+            this.colBtnSua.Width = 80;
+            // 
+            // colBtnXoa
+            // 
+            this.colBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colBtnXoa.HeaderText = "Xóa";
+            this.colBtnXoa.Name = "colBtnXoa";
+            this.colBtnXoa.ReadOnly = true;
+            this.colBtnXoa.Text = "Xóa";
+            this.colBtnXoa.UseColumnTextForButtonValue = true;
+            this.colBtnXoa.Width = 80;
             // 
             // guna2Panel3
             // 
@@ -162,7 +211,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = global::Vinwonders_Management.Properties.Resources.Search;
-            this.guna2TextBox1.Location = new System.Drawing.Point(455, 19);
+            this.guna2TextBox1.Location = new System.Drawing.Point(452, 19);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(10);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -185,7 +234,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThem.ImageOffset = new System.Drawing.Point(15, 0);
             this.btnThem.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnThem.Location = new System.Drawing.Point(663, 19);
+            this.btnThem.Location = new System.Drawing.Point(672, 19);
             this.btnThem.Margin = new System.Windows.Forms.Padding(10);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(175, 30);
@@ -205,55 +254,6 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(166, 30);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Hạng thành viên";
-            // 
-            // colMaHang
-            // 
-            this.colMaHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colMaHang.DataPropertyName = "MaHang";
-            this.colMaHang.HeaderText = "Mã hạng";
-            this.colMaHang.Name = "colMaHang";
-            this.colMaHang.ReadOnly = true;
-            // 
-            // colTenHang
-            // 
-            this.colTenHang.DataPropertyName = "TenHang";
-            this.colTenHang.HeaderText = "Tên hạng";
-            this.colTenHang.Name = "colTenHang";
-            this.colTenHang.ReadOnly = true;
-            // 
-            // colDiemToiThieu
-            // 
-            this.colDiemToiThieu.DataPropertyName = "DiemToiThieu";
-            this.colDiemToiThieu.HeaderText = "Điểm tối thiểu";
-            this.colDiemToiThieu.Name = "colDiemToiThieu";
-            this.colDiemToiThieu.ReadOnly = true;
-            // 
-            // colTiLeGiamGia
-            // 
-            this.colTiLeGiamGia.DataPropertyName = "TiLeGiamGia";
-            this.colTiLeGiamGia.HeaderText = "Tỉ lệ giảm giá";
-            this.colTiLeGiamGia.Name = "colTiLeGiamGia";
-            this.colTiLeGiamGia.ReadOnly = true;
-            // 
-            // colBtnSua
-            // 
-            this.colBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colBtnSua.HeaderText = "Sửa";
-            this.colBtnSua.Name = "colBtnSua";
-            this.colBtnSua.ReadOnly = true;
-            this.colBtnSua.Text = "Sửa";
-            this.colBtnSua.UseColumnTextForButtonValue = true;
-            this.colBtnSua.Width = 80;
-            // 
-            // colBtnXoa
-            // 
-            this.colBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colBtnXoa.HeaderText = "Xóa";
-            this.colBtnXoa.Name = "colBtnXoa";
-            this.colBtnXoa.ReadOnly = true;
-            this.colBtnXoa.Text = "Xóa";
-            this.colBtnXoa.UseColumnTextForButtonValue = true;
-            this.colBtnXoa.Width = 80;
             // 
             // GUI_HangThanhVien
             // 
