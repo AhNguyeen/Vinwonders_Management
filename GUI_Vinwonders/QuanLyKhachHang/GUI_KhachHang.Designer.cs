@@ -38,20 +38,19 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.btnThemKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.colBtnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colBtnSua = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colTile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiemTichLuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHangThanhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLoaiKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoaiKhach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHangThanhVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiemTichLuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBtnSua = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colBtnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -91,7 +90,6 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaKhachHang,
-            this.colMaDangKy,
             this.colMaHang,
             this.colHoTen,
             this.colLoaiKhach,
@@ -222,15 +220,94 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.guna2TextBox1.Size = new System.Drawing.Size(200, 30);
             this.guna2TextBox1.TabIndex = 4;
             // 
-            // colBtnXoa
+            // colMaKhachHang
             // 
-            this.colBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colBtnXoa.HeaderText = "Xóa";
-            this.colBtnXoa.Name = "colBtnXoa";
-            this.colBtnXoa.ReadOnly = true;
-            this.colBtnXoa.Text = "Xóa";
-            this.colBtnXoa.UseColumnTextForButtonValue = true;
-            this.colBtnXoa.Width = 80;
+            this.colMaKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colMaKhachHang.DataPropertyName = "MaKhachHang";
+            this.colMaKhachHang.HeaderText = "Mã KH";
+            this.colMaKhachHang.Name = "colMaKhachHang";
+            this.colMaKhachHang.ReadOnly = true;
+            this.colMaKhachHang.Width = 80;
+            // 
+            // colMaHang
+            // 
+            this.colMaHang.DataPropertyName = "MaHang";
+            this.colMaHang.HeaderText = "Mã hạng";
+            this.colMaHang.Name = "colMaHang";
+            this.colMaHang.ReadOnly = true;
+            this.colMaHang.Visible = false;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ tên";
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.ReadOnly = true;
+            // 
+            // colLoaiKhach
+            // 
+            this.colLoaiKhach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colLoaiKhach.DataPropertyName = "LoaiKhach";
+            this.colLoaiKhach.HeaderText = "Loại khách";
+            this.colLoaiKhach.Name = "colLoaiKhach";
+            this.colLoaiKhach.ReadOnly = true;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.ReadOnly = true;
+            // 
+            // colDiaChi
+            // 
+            this.colDiaChi.DataPropertyName = "DiaChi";
+            this.colDiaChi.HeaderText = "Địa chỉ";
+            this.colDiaChi.Name = "colDiaChi";
+            this.colDiaChi.ReadOnly = true;
+            this.colDiaChi.Visible = false;
+            // 
+            // colSoDienThoai
+            // 
+            this.colSoDienThoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colSoDienThoai.DataPropertyName = "SoDienThoai";
+            this.colSoDienThoai.HeaderText = "SĐT";
+            this.colSoDienThoai.Name = "colSoDienThoai";
+            this.colSoDienThoai.ReadOnly = true;
+            // 
+            // colEmail
+            // 
+            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colEmail.DataPropertyName = "Email";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            // 
+            // colHangThanhVien
+            // 
+            this.colHangThanhVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colHangThanhVien.DataPropertyName = "TenHang";
+            this.colHangThanhVien.HeaderText = "Hạng Thành Viên";
+            this.colHangThanhVien.Name = "colHangThanhVien";
+            this.colHangThanhVien.ReadOnly = true;
+            // 
+            // colDiemTichLuy
+            // 
+            this.colDiemTichLuy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDiemTichLuy.DataPropertyName = "DiemTichLuy";
+            this.colDiemTichLuy.HeaderText = "Điểm TL";
+            this.colDiemTichLuy.Name = "colDiemTichLuy";
+            this.colDiemTichLuy.ReadOnly = true;
+            // 
+            // colTile
+            // 
+            this.colTile.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTile.DataPropertyName = "TiLeGiamGia";
+            this.colTile.HeaderText = "Tỉ lệ";
+            this.colTile.Name = "colTile";
+            this.colTile.ReadOnly = true;
             // 
             // colBtnSua
             // 
@@ -242,94 +319,15 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.colBtnSua.UseColumnTextForButtonValue = true;
             this.colBtnSua.Width = 80;
             // 
-            // colTile
+            // colBtnXoa
             // 
-            this.colTile.DataPropertyName = "TiLeGiamGia";
-            this.colTile.HeaderText = "Tỉ lệ";
-            this.colTile.Name = "colTile";
-            this.colTile.ReadOnly = true;
-            // 
-            // colDiemTichLuy
-            // 
-            this.colDiemTichLuy.DataPropertyName = "DiemTichLuy";
-            this.colDiemTichLuy.HeaderText = "Điểm TL";
-            this.colDiemTichLuy.Name = "colDiemTichLuy";
-            this.colDiemTichLuy.ReadOnly = true;
-            // 
-            // colHangThanhVien
-            // 
-            this.colHangThanhVien.DataPropertyName = "TenHang";
-            this.colHangThanhVien.HeaderText = "Hạng Thành Viên";
-            this.colHangThanhVien.Name = "colHangThanhVien";
-            this.colHangThanhVien.ReadOnly = true;
-            // 
-            // colEmail
-            // 
-            this.colEmail.DataPropertyName = "Email";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
-            // 
-            // colSoDienThoai
-            // 
-            this.colSoDienThoai.DataPropertyName = "SoDienThoai";
-            this.colSoDienThoai.HeaderText = "SĐT";
-            this.colSoDienThoai.Name = "colSoDienThoai";
-            this.colSoDienThoai.ReadOnly = true;
-            // 
-            // colDiaChi
-            // 
-            this.colDiaChi.DataPropertyName = "DiaChi";
-            this.colDiaChi.HeaderText = "Địa chỉ";
-            this.colDiaChi.Name = "colDiaChi";
-            this.colDiaChi.ReadOnly = true;
-            this.colDiaChi.Visible = false;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.DataPropertyName = "NgaySinh";
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.ReadOnly = true;
-            // 
-            // colLoaiKhach
-            // 
-            this.colLoaiKhach.DataPropertyName = "LoaiKhach";
-            this.colLoaiKhach.HeaderText = "Loại khách";
-            this.colLoaiKhach.Name = "colLoaiKhach";
-            this.colLoaiKhach.ReadOnly = true;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ tên";
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.ReadOnly = true;
-            // 
-            // colMaHang
-            // 
-            this.colMaHang.DataPropertyName = "MaHang";
-            this.colMaHang.HeaderText = "Mã hạng";
-            this.colMaHang.Name = "colMaHang";
-            this.colMaHang.ReadOnly = true;
-            this.colMaHang.Visible = false;
-            // 
-            // colMaDangKy
-            // 
-            this.colMaDangKy.DataPropertyName = "MaDangKy";
-            this.colMaDangKy.HeaderText = "Mã ĐK";
-            this.colMaDangKy.Name = "colMaDangKy";
-            this.colMaDangKy.ReadOnly = true;
-            this.colMaDangKy.Visible = false;
-            // 
-            // colMaKhachHang
-            // 
-            this.colMaKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colMaKhachHang.DataPropertyName = "MaKhachHang";
-            this.colMaKhachHang.HeaderText = "Mã KH";
-            this.colMaKhachHang.Name = "colMaKhachHang";
-            this.colMaKhachHang.ReadOnly = true;
-            this.colMaKhachHang.Width = 80;
+            this.colBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colBtnXoa.HeaderText = "Xóa";
+            this.colBtnXoa.Name = "colBtnXoa";
+            this.colBtnXoa.ReadOnly = true;
+            this.colBtnXoa.Text = "Xóa";
+            this.colBtnXoa.UseColumnTextForButtonValue = true;
+            this.colBtnXoa.Width = 80;
             // 
             // GUI_KhachHang
             // 
@@ -361,7 +359,6 @@ namespace Vinwonders_Management.QuanLyKhachHang
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhachHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaDangKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiKhach;
