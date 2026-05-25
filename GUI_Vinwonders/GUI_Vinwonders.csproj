@@ -194,11 +194,23 @@
     <Compile Include="QuanLyNhanVien\GUI_NhanVien.Designer.cs">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyTroChoi\GUI_CapNhatKhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTroChoi\GUI_CapNhatKhuVuc.Designer.cs">
+      <DependentUpon>GUI_CapNhatKhuVuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTroChoi\GUI_KhuVuc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyTroChoi\GUI_KhuVuc.Designer.cs">
       <DependentUpon>GUI_KhuVuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTroChoi\GUI_ThemKhuVuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTroChoi\GUI_ThemKhuVuc.Designer.cs">
+      <DependentUpon>GUI_ThemKhuVuc.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyTroChoi\GUI_TroChoi.cs">
       <SubType>UserControl</SubType>
@@ -295,8 +307,14 @@
     <EmbeddedResource Include="QuanLyNhanVien\GUI_NhanVien.resx">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTroChoi\GUI_CapNhatKhuVuc.resx">
+      <DependentUpon>GUI_CapNhatKhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTroChoi\GUI_KhuVuc.resx">
       <DependentUpon>GUI_KhuVuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTroChoi\GUI_ThemKhuVuc.resx">
+      <DependentUpon>GUI_ThemKhuVuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTroChoi\GUI_TroChoi.resx">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
