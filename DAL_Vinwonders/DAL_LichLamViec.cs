@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -34,108 +34,24 @@ namespace DAL_Vinwonders
             return dt;
         }
 
-        public bool TaoLichLamViec(ET_LichLamViec et)
+        public DataTable LayLichLamViecTheoTuan(DateTime startOfWeek, DateTime endOfWeek)
         {
-            bool kt = false;
-            try
+            DataTable dtAll = InDanhSachLichLamViec();
+            DataTable dtTuan = dtAll.Clone();
+            foreach (DataRow row in dtAll.Rows)
             {
-                connectDB.OpenConnect();
-                string sql = "sp_Insert_LichLamViec";
-                SqlParameter[] sp = new SqlParameter[]
+                if (row["NgayLamViec"] != DBNull.Value)
                 {
-                    new SqlParameter("@MaLich", et.MaLich),
-                    new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaCa", et.MaCa),
-                    new SqlParameter("@NgayLamViec", et.NgayLamViec),
-                    new SqlParameter("@ViTriPhanCong", et.ViTriPhanCong),
-                };
-                kt = connectDB.ChangeData(sql, sp);
+                    DateTime ngay = Convert.ToDateTime(row["NgayLamViec"]);
+                    if (ngay.Date >= startOfWeek.Date && ngay.Date <= endOfWeek.Date)
+                    {
+                        dtTuan.ImportRow(row);
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                connectDB.CloseConnect();
-            }
-            return kt;
+            return dtTuan;
         }
 
-        public bool XoaLichLamViec(string ma)
-        {
-            bool kt = false;
-            try
-            {
-                connectDB.OpenConnect();
-                string sql = "sp_Delete_LichLamViec"; //Chua co store delete
-                SqlParameter[] sp = new SqlParameter[]
-                {
-                    new SqlParameter("@",ma),
-                };
-                kt = connectDB.ChangeData(sql, sp);
-            }
-            catch (Exception ex)
-            {
 
-            }
-            finally
-            {
-                connectDB.CloseConnect();
-            }
-            return kt;
-        }
-
-        public bool SuaLichLamViec(ET_LichLamViec et)
-        {
-            bool kt = false;
-            try
-            {
-                connectDB.OpenConnect();
-                string sql = "sp_Update_LichLamViec";//Chua co store update
-                SqlParameter[] sp = new SqlParameter[]
-                {
-                    new SqlParameter("@MaLich", et.MaLich),
-                    new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@MaCa", et.MaCa),
-                    new SqlParameter("@NgayLamViec", et.NgayLamViec),
-                    new SqlParameter("@ViTriPhanCong", et.ViTriPhanCong),
-                };
-                kt = connectDB.ChangeData(sql, sp);
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                connectDB.CloseConnect();
-            }
-            return kt;
-        }
-
-        public DataTable TimLichLamViec(string tenKH = null)
-        {
-            DataTable kt = new DataTable();
-            try
-            {
-                connectDB.OpenConnect();
-                string sql = "sp_GetAll_LichLamViec"; //Chua co store delete
-                SqlParameter[] sp = new SqlParameter[]
-                {
-                    new SqlParameter("@",tenKH),
-                };
-                kt = connectDB.ReadData(sql, sp);
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                connectDB.CloseConnect();
-            }
-            return kt;
-        }
     }
 }

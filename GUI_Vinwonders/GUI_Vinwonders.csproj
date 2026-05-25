@@ -134,6 +134,18 @@
     <Compile Include="QuanLyNhanVien\GUI_CapNhatNhanVien.Designer.cs">
       <DependentUpon>GUI_CapNhatNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_CapNhatCaLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_CapNhatCaLamViec.Designer.cs">
+      <DependentUpon>GUI_CapNhatCaLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_ThemCaLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\GUI_ThemCaLamViec.Designer.cs">
+      <DependentUpon>GUI_ThemCaLamViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNhanVien\GUI_ThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien\GUI_CapNhatNhanVien.resx">
       <DependentUpon>GUI_CapNhatNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\GUI_CapNhatCaLamViec.resx">
+      <DependentUpon>GUI_CapNhatCaLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\GUI_ThemCaLamViec.resx">
+      <DependentUpon>GUI_ThemCaLamViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien\GUI_ThemNhanVien.resx">
       <DependentUpon>GUI_ThemNhanVien.cs</DependentUpon>

@@ -881,16 +881,29 @@ BEGIN
 END;
 GO
 
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_LichLamViec') DROP PROCEDURE sp_GetAll_LichLamViec;
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_LichLamViec')
+    DROP PROCEDURE sp_GetAll_LichLamViec;
 GO
+
 CREATE PROCEDURE sp_GetAll_LichLamViec
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT llv.*, nv.HoTen, clv.TenCa
-    FROM LichLamViec llv
-    INNER JOIN NhanVien nv ON llv.MaNhanVien = nv.MaNhanVien
-    INNER JOIN CaLamViec clv ON llv.MaCa = clv.MaCa;
+    SELECT 
+        l.MaLich,
+        l.MaNhanVien,
+        nv.HoTen AS TenNhanVien,
+        nv.ViTri AS ChucVuGoc,
+        l.MaCa,
+        c.TenCa,
+        -- Ghép giờ làm việc hiển thị cho gọn (Ví dụ: 07:30 - 15:30)
+        (LEFT(CONVERT(VARCHAR, c.GioBatDau, 108), 5) + ' - ' + LEFT(CONVERT(VARCHAR, c.GioKetThuc, 108), 5)) AS KhungGio,
+        l.NgayLamViec,
+        l.ViTriPhanCong
+    FROM LichLamViec l
+    INNER JOIN NhanVien nv ON l.MaNhanVien = nv.MaNhanVien
+    INNER JOIN CaLamViec c ON l.MaCa = c.MaCa
+    ORDER BY l.NgayLamViec DESC, c.GioBatDau ASC; -- Lịch mới nhất hiện lên đầu
 END;
 GO
 -- =================================================================
