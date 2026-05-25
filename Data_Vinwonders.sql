@@ -124,15 +124,21 @@ INSERT INTO Ve (MaVe, MaHoaDon, MaLoaiVe, DonGia, NgaySuDung, DaSuDung) VALUES
 -- ==========================================================
 -- 5. THÊM LỊCH LÀM VIỆC (Test giao diện DataGridView Lịch làm việc)
 -- ==========================================================
--- Lưu ý: Bạn có thể đổi ngày '2024-05-25' thành ngày hiện tại để test dễ hơn
+-- Lưu ý: Bạn có thể đổi ngày '2026-05-25' thành ngày hiện tại để test dễ hơn
 INSERT INTO LichLamViec (MaLich, MaNhanVien, MaCa, NgayLamViec, ViTriPhanCong) VALUES
-('LLV001', 'NV02', 'CA01', '2024-05-25', N'Quầy vé Cổng chính'),
-('LLV002', 'NV04', 'CA02', '2024-05-25', N'Quầy vé Cổng chính'),
-('LLV003', 'NV05', 'CA04', '2024-05-25', N'Văn phòng Quản lý Khu 2'),
-('LLV004', 'NV06', 'CA03', '2024-05-25', N'Tuần tra Cổng phụ'),
-('LLV005', 'NV07', 'CA01', '2024-05-25', N'Vệ sinh khu nhà hàng'),
-('LLV006', 'NV08', 'CA02', '2024-05-25', N'Trực Tàu lượn siêu tốc'),
+('LLV001', 'NV02', 'CA01', '2026-05-25', N'Quầy vé Cổng chính'),
+('LLV002', 'NV04', 'CA02', '2026-05-25', N'Quầy vé Cổng chính'),
+('LLV003', 'NV05', 'CA04', '2026-05-25', N'Văn phòng Quản lý Khu 2'),
+('LLV004', 'NV06', 'CA03', '2026-05-25', N'Tuần tra Cổng phụ'),
+('LLV005', 'NV07', 'CA01', '2026-05-25', N'Vệ sinh khu nhà hàng'),
+('LLV006', 'NV08', 'CA02', '2026-05-25', N'Trực Tàu lượn siêu tốc'),
 
-('LLV007', 'NV02', 'CA02', '2024-05-26', N'Quầy vé Cổng chính'),
-('LLV008', 'NV04', 'CA01', '2024-05-26', N'Quầy vé Cổng chính'),
-('LLV009', 'NV08', 'CA01', '2024-05-26', N'Trực Đu quay dây văng');
+('LLV007', 'NV02', 'CA02', '2026-05-26', N'Quầy vé Cổng chính'),
+('LLV008', 'NV04', 'CA01', '2026-05-26', N'Quầy vé Cổng chính'),
+('LLV009', 'NV08', 'CA01', '2026-05-26', N'Trực Đu quay dây văng'),
+
+('LLV010', 'NV02', 'CA01', '2026-05-27', N'Quầy vé Cổng chính'),
+('LLV011', 'NV06', 'CA04', '2026-05-28', N'Tuần tra Cổng chính'),
+('LLV012', 'NV07', 'CA02', '2026-05-29', N'Vệ sinh khu vui chơi'),
+('LLV013', 'NV08', 'CA02', '2026-05-30', N'Trực Tàu lượn siêu tốc'),
+('LLV014', 'NV05', 'CA04', '2026-05-31', N'Giám sát chung');
