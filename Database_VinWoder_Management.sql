@@ -66,7 +66,7 @@ CREATE TABLE SuKien (
 CREATE TABLE KhachHang (
     MaKhachHang NVARCHAR(10) PRIMARY KEY,
     MaDangKy NVARCHAR(10) NULL,
-    MaHang NVARCHAR(10) NULL,
+    MaHang NVARCHAR(10) NOT NULL,
     HoTen NVARCHAR(100) NOT NULL,
     LoaiKhach NVARCHAR(50) DEFAULT N'Cá nhân', -- 'Cá nhân' hoặc 'Khách đoàn'
     NgaySinh DATE,
