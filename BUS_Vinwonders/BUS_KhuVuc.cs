@@ -17,10 +17,6 @@ namespace BUS_Vinwonders
         {
             return dalKhuVuc.InDanhSachKhuVuc();
         }
-        public DataTable TimKhuVuc(string ten)
-        {
-            return dalKhuVuc.TimKhuVuc(ten);
-        }
         public bool ThemKhuVuc(ET_KhuVuc et)
         {
             return dalKhuVuc.TaoKhuVuc(et);

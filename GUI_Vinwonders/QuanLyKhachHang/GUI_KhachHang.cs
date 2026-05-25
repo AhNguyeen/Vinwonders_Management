@@ -29,6 +29,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
 
         private void LoadKhachHang()
         {
+            dgvKhachHang.AutoGenerateColumns = false;
             dgvKhachHang.DataSource = busKhachHang.InDanhSach();
             
             // Đẩy cột Sửa và Xóa xuống cuối cùng (để sau các cột được AutoGenerate nếu có)

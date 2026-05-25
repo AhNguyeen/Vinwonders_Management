@@ -530,14 +530,21 @@ BEGIN
 END;
 GO
 
--- Lấy danh sách Khu Vực
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_KhuVuc') DROP PROCEDURE sp_GetAll_KhuVuc;
+-- Lấy danh sách khu vực
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_KhuVuc') 
+    DROP PROCEDURE sp_GetAll_KhuVuc;
 GO
+
 CREATE PROCEDURE sp_GetAll_KhuVuc
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT * FROM KhuVuc;
+    
+    SELECT 
+        k.*, 
+        -- Đếm tổng số trò chơi có mã khu vực khớp với mã khu vực hiện tại
+        (SELECT COUNT(MaTroChoi) FROM TroChoi t WHERE t.MaKhuVuc = k.MaKhuVuc) AS TongSoTroChoi
+    FROM KhuVuc k;
 END;
 GO
 -- =================================================================

@@ -24,7 +24,6 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu cần
                 throw ex;
             }
             finally
@@ -53,7 +52,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -68,16 +67,16 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_KhuVuc"; //Chua co store delete
+                string sql = "sp_Delete_KhuVuc";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaKhuVuc",ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -92,7 +91,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Update_KhuVuc";//Chua co store update
+                string sql = "sp_Update_KhuVuc";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaKhuVuc", et.MaKhuVuc),
@@ -105,31 +104,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
-            }
-            finally
-            {
-                connectDB.CloseConnect();
-            }
-            return kt;
-        }
-
-        public DataTable TimKhuVuc(string tenKH = null)
-        {
-            DataTable kt = new DataTable();
-            try
-            {
-                connectDB.OpenConnect();
-                string sql = "sp_GetAll_KhuVuc"; //Chua co store delete
-                SqlParameter[] sp = new SqlParameter[]
-                {
-                    new SqlParameter("@",tenKH),
-                };
-                kt = connectDB.ReadData(sql, sp);
-            }
-            catch (Exception ex)
-            {
-
+                throw ex;
             }
             finally
             {

@@ -36,14 +36,10 @@
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,14 +58,10 @@
             this.pnlContent.Controls.Add(this.txtDiaChi);
             this.pnlContent.Controls.Add(this.txtEmail);
             this.pnlContent.Controls.Add(this.txtHoTen);
-            this.pnlContent.Controls.Add(this.guna2HtmlLabel13);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel5);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel7);
-            this.pnlContent.Controls.Add(this.guna2HtmlLabel12);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel8);
-            this.pnlContent.Controls.Add(this.guna2HtmlLabel11);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel3);
-            this.pnlContent.Controls.Add(this.guna2HtmlLabel10);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel6);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel2);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel1);
@@ -215,17 +207,6 @@
             this.txtHoTen.Size = new System.Drawing.Size(300, 36);
             this.txtHoTen.TabIndex = 68;
             // 
-            // guna2HtmlLabel13
-            // 
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(19, 255);
-            this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(83, 19);
-            this.guna2HtmlLabel13.TabIndex = 58;
-            this.guna2HtmlLabel13.Text = "Số điện thoại";
-            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -247,37 +228,15 @@
             this.guna2HtmlLabel7.TabIndex = 56;
             this.guna2HtmlLabel7.Text = "Loại khách";
             // 
-            // guna2HtmlLabel12
-            // 
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(19, 181);
-            this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(65, 19);
-            this.guna2HtmlLabel12.TabIndex = 54;
-            this.guna2HtmlLabel12.Text = "Ngày Sinh";
-            // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(329, 181);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(338, 181);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(43, 19);
             this.guna2HtmlLabel8.TabIndex = 55;
             this.guna2HtmlLabel8.Text = "Địa chỉ";
-            // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(329, 255);
-            this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(35, 19);
-            this.guna2HtmlLabel11.TabIndex = 52;
-            this.guna2HtmlLabel11.Text = "Email";
             // 
             // guna2HtmlLabel3
             // 
@@ -289,16 +248,6 @@
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(65, 19);
             this.guna2HtmlLabel3.TabIndex = 53;
             this.guna2HtmlLabel3.Text = "Ngày Sinh";
-            // 
-            // guna2HtmlLabel10
-            // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(19, 107);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(45, 19);
-            this.guna2HtmlLabel10.TabIndex = 50;
-            this.guna2HtmlLabel10.Text = "Họ tên";
             // 
             // guna2HtmlLabel6
             // 
@@ -381,14 +330,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtHoTen;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
