@@ -37,14 +37,14 @@ namespace Vinwonders_Management.QuanLyNhanVien
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvLichLamViec = new System.Windows.Forms.DataGridView();
-            this.colMaLich = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChucVuGoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenCa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKhungGio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayLamViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colViTriPhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChuNhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -136,14 +136,14 @@ namespace Vinwonders_Management.QuanLyNhanVien
             this.dgvLichLamViec.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLichLamViec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLichLamViec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaLich,
-            this.colMaNhanVien,
-            this.colTenNhanVien,
-            this.colChucVuGoc,
-            this.colTenCa,
-            this.colKhungGio,
-            this.colNgayLamViec,
-            this.colViTriPhanCong});
+            this.colTenNV,
+            this.colThu2,
+            this.colThu3,
+            this.colThu4,
+            this.colThu5,
+            this.colThu6,
+            this.colThu7,
+            this.colChuNhat});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,67 +163,61 @@ namespace Vinwonders_Management.QuanLyNhanVien
             this.dgvLichLamViec.Size = new System.Drawing.Size(857, 405);
             this.dgvLichLamViec.TabIndex = 9;
             // 
-            // colMaLich
+            // colTenNV
             // 
-            this.colMaLich.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colMaLich.DataPropertyName = "MaLich";
-            this.colMaLich.HeaderText = "Mã Lịch";
-            this.colMaLich.Name = "colMaLich";
-            this.colMaLich.ReadOnly = true;
-            this.colMaLich.Width = 80;
+            this.colTenNV.DataPropertyName = "Tên NV";
+            this.colTenNV.HeaderText = "Tên Nhân Viên";
+            this.colTenNV.Name = "colTenNV";
+            this.colTenNV.ReadOnly = true;
             // 
-            // colMaNhanVien
+            // colThu2
             // 
-            this.colMaNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colMaNhanVien.DataPropertyName = "MaNhanVien";
-            this.colMaNhanVien.HeaderText = "Mã NV";
-            this.colMaNhanVien.Name = "colMaNhanVien";
-            this.colMaNhanVien.ReadOnly = true;
-            this.colMaNhanVien.Width = 80;
+            this.colThu2.DataPropertyName = "Thứ 2";
+            this.colThu2.HeaderText = "Thứ 2";
+            this.colThu2.Name = "colThu2";
+            this.colThu2.ReadOnly = true;
             // 
-            // colTenNhanVien
+            // colThu3
             // 
-            this.colTenNhanVien.DataPropertyName = "TenNhanVien";
-            this.colTenNhanVien.HeaderText = "Họ và Tên";
-            this.colTenNhanVien.Name = "colTenNhanVien";
-            this.colTenNhanVien.ReadOnly = true;
+            this.colThu3.DataPropertyName = "Thứ 3";
+            this.colThu3.HeaderText = "Thứ 3";
+            this.colThu3.Name = "colThu3";
+            this.colThu3.ReadOnly = true;
             // 
-            // colChucVuGoc
+            // colThu4
             // 
-            this.colChucVuGoc.DataPropertyName = "ChucVuGoc";
-            this.colChucVuGoc.HeaderText = "Chức Vụ";
-            this.colChucVuGoc.Name = "colChucVuGoc";
-            this.colChucVuGoc.ReadOnly = true;
+            this.colThu4.DataPropertyName = "Thứ 4";
+            this.colThu4.HeaderText = "Thứ 4";
+            this.colThu4.Name = "colThu4";
+            this.colThu4.ReadOnly = true;
             // 
-            // colTenCa
+            // colThu5
             // 
-            this.colTenCa.DataPropertyName = "TenCa";
-            this.colTenCa.HeaderText = "Ca Làm Việc";
-            this.colTenCa.Name = "colTenCa";
-            this.colTenCa.ReadOnly = true;
+            this.colThu5.DataPropertyName = "Thứ 5";
+            this.colThu5.HeaderText = "Thứ 5";
+            this.colThu5.Name = "colThu5";
+            this.colThu5.ReadOnly = true;
             // 
-            // colKhungGio
+            // colThu6
             // 
-            this.colKhungGio.DataPropertyName = "KhungGio";
-            this.colKhungGio.HeaderText = "Khung Giờ";
-            this.colKhungGio.Name = "colKhungGio";
-            this.colKhungGio.ReadOnly = true;
+            this.colThu6.DataPropertyName = "Thứ 6";
+            this.colThu6.HeaderText = "Thứ 6";
+            this.colThu6.Name = "colThu6";
+            this.colThu6.ReadOnly = true;
             // 
-            // colNgayLamViec
+            // colThu7
             // 
-            this.colNgayLamViec.DataPropertyName = "NgayLamViec";
-            dataGridViewCellStyle8.Format = "dd/MM/yyyy";
-            this.colNgayLamViec.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colNgayLamViec.HeaderText = "Ngày Làm Việc";
-            this.colNgayLamViec.Name = "colNgayLamViec";
-            this.colNgayLamViec.ReadOnly = true;
+            this.colThu7.DataPropertyName = "Thứ 7";
+            this.colThu7.HeaderText = "Thứ 7";
+            this.colThu7.Name = "colThu7";
+            this.colThu7.ReadOnly = true;
             // 
-            // colViTriPhanCong
+            // colChuNhat
             // 
-            this.colViTriPhanCong.DataPropertyName = "ViTriPhanCong";
-            this.colViTriPhanCong.HeaderText = "Vị Trí Phân Công";
-            this.colViTriPhanCong.Name = "colViTriPhanCong";
-            this.colViTriPhanCong.ReadOnly = true;
+            this.colChuNhat.DataPropertyName = "Chủ Nhật";
+            this.colChuNhat.HeaderText = "Chủ Nhật";
+            this.colChuNhat.Name = "colChuNhat";
+            this.colChuNhat.ReadOnly = true;
             // 
             // txtTimKiem
             // 
@@ -246,6 +240,7 @@ namespace Vinwonders_Management.QuanLyNhanVien
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.Size = new System.Drawing.Size(200, 30);
             this.txtTimKiem.TabIndex = 5;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // GUI_LichLamViec
             // 
@@ -256,6 +251,7 @@ namespace Vinwonders_Management.QuanLyNhanVien
             this.Controls.Add(this.guna2Panel1);
             this.Name = "GUI_LichLamViec";
             this.Size = new System.Drawing.Size(857, 518);
+            this.Load += new System.EventHandler(this.GUI_LichLamViec_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -273,14 +269,14 @@ namespace Vinwonders_Management.QuanLyNhanVien
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.DataGridView dgvLichLamViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaLich;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colChucVuGoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTenCa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colKhungGio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayLamViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colViTriPhanCong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colChuNhat;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
     }
 }

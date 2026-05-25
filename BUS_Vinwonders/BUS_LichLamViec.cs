@@ -22,5 +22,10 @@ namespace BUS_Vinwonders
         {
             return dalLichLamViec.LayLichLamViecTheoTuan(startOfWeek, endOfWeek);
         }
+
+        public DataTable GetLichLamViecMatrix(DateTime ngayDauTuan)
+        {
+            return dalLichLamViec.GetLichLamViecMatrix(ngayDauTuan);
+        }
     }
 }
