@@ -27,11 +27,11 @@ namespace Vinwonders_Management.QuanLyVe
             _maLoaiVe = maLoaiVe;
 
             // Nạp dữ liệu lên form
-            txtHoTen.Text = tenLoaiVe;
-            txtCCCD.Text = phanLoai;
-            guna2TextBox1.Text = giaVe.ToString();
-            txtChucVu.Text = baoGomAnUong ? "1" : "0";
-            richTextBox1.Text = moTa ?? "";
+            txtTenVe.Text = tenLoaiVe;
+            cboPhanLoai.SelectedItem = phanLoai;
+            txtGiaVe.Text = giaVe.ToString();
+            txtAnUong.Text = baoGomAnUong ? "1" : "0";
+            rtxtMoTa.Text = moTa ?? "";
         }
 
         /// <summary>
@@ -50,60 +50,60 @@ namespace Vinwonders_Management.QuanLyVe
         private bool KiemTraDuLieu()
         {
             // 1. Kiểm tra Tên vé
-            string tenVe = txtHoTen.Text.Trim();
+            string tenVe = txtTenVe.Text.Trim();
             if (string.IsNullOrEmpty(tenVe))
             {
                 MessageBox.Show("Vui lòng nhập Tên loại vé!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtHoTen.Focus();
+                txtTenVe.Focus();
                 return false;
             }
             if (tenVe.Length > 100)
             {
                 MessageBox.Show("Tên loại vé không được vượt quá 100 ký tự!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtHoTen.Focus();
+                txtTenVe.Focus();
                 return false;
             }
             if (!KiemTraKyTuHopLe(tenVe))
             {
                 MessageBox.Show("Tên loại vé không được chứa ký tự đặc biệt!\nChỉ cho phép chữ cái (bao gồm tiếng Việt), số và khoảng trắng.",
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtHoTen.Focus();
+                txtTenVe.Focus();
                 return false;
             }
 
             // 2. Kiểm tra Phân loại
-            string phanLoai = txtCCCD.Text.Trim();
+            string phanLoai = cboPhanLoai.SelectedItem?.ToString().Trim();
             if (string.IsNullOrEmpty(phanLoai))
             {
-                MessageBox.Show("Vui lòng nhập Phân loại vé!", "Thông báo",
+                MessageBox.Show("Vui lòng chọn Phân loại vé!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCCCD.Focus();
+                cboPhanLoai.Focus();
                 return false;
             }
             if (phanLoai.Length > 50)
             {
                 MessageBox.Show("Phân loại vé không được vượt quá 50 ký tự!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCCCD.Focus();
+                cboPhanLoai.Focus();
                 return false;
             }
             if (!KiemTraKyTuHopLe(phanLoai))
             {
                 MessageBox.Show("Phân loại vé không được chứa ký tự đặc biệt!\nChỉ cho phép chữ cái (bao gồm tiếng Việt), số và khoảng trắng.",
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCCCD.Focus();
+                cboPhanLoai.Focus();
                 return false;
             }
 
             // 3. Kiểm tra Giá vé
-            string giaVeStr = guna2TextBox1.Text.Trim();
+            string giaVeStr = txtGiaVe.Text.Trim();
             if (string.IsNullOrEmpty(giaVeStr))
             {
                 MessageBox.Show("Vui lòng nhập Giá vé!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                guna2TextBox1.Focus();
+                txtGiaVe.Focus();
                 return false;
             }
             decimal giaVe;
@@ -111,41 +111,41 @@ namespace Vinwonders_Management.QuanLyVe
             {
                 MessageBox.Show("Giá vé phải là một số hợp lệ và không được âm!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                guna2TextBox1.Focus();
+                txtGiaVe.Focus();
                 return false;
             }
 
             // 4. Kiểm tra Bao gồm ăn uống
-            string baoGomStr = txtChucVu.Text.Trim();
+            string baoGomStr = txtAnUong.Text.Trim();
             if (string.IsNullOrEmpty(baoGomStr))
             {
                 MessageBox.Show("Vui lòng nhập trường Bao gồm ăn uống (0 = Không, 1 = Có)!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtChucVu.Focus();
+                txtAnUong.Focus();
                 return false;
             }
             if (baoGomStr != "0" && baoGomStr != "1")
             {
                 MessageBox.Show("Bao gồm ăn uống chỉ nhận giá trị 0 (Không) hoặc 1 (Có)!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtChucVu.Focus();
+                txtAnUong.Focus();
                 return false;
             }
 
             // 5. Kiểm tra Mô tả
-            string moTa = richTextBox1.Text.Trim();
+            string moTa = rtxtMoTa.Text.Trim();
             if (moTa.Length > 255)
             {
                 MessageBox.Show("Mô tả không được vượt quá 255 ký tự!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                richTextBox1.Focus();
+                rtxtMoTa.Focus();
                 return false;
             }
             if (!string.IsNullOrEmpty(moTa) && !KiemTraKyTuHopLe(moTa))
             {
                 MessageBox.Show("Mô tả không được chứa ký tự đặc biệt!\nChỉ cho phép chữ cái (bao gồm tiếng Việt), số và khoảng trắng.",
                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                richTextBox1.Focus();
+                rtxtMoTa.Focus();
                 return false;
             }
 
@@ -166,11 +166,11 @@ namespace Vinwonders_Management.QuanLyVe
 
             try
             {
-                string tenLoaiVe = txtHoTen.Text.Trim();
-                string phanLoai = txtCCCD.Text.Trim();
-                decimal giaVe = decimal.Parse(guna2TextBox1.Text.Trim());
-                bool baoGomAnUong = txtChucVu.Text.Trim() == "1";
-                string moTa = richTextBox1.Text.Trim();
+                string tenLoaiVe = txtTenVe.Text.Trim();
+                string phanLoai = cboPhanLoai.SelectedItem?.ToString().Trim();
+                decimal giaVe = decimal.Parse(txtGiaVe.Text.Trim());
+                bool baoGomAnUong = txtAnUong.Text.Trim() == "1";
+                string moTa = rtxtMoTa.Text.Trim();
 
                 ET_LoaiVe et = new ET_LoaiVe(_maLoaiVe, tenLoaiVe, phanLoai, giaVe, baoGomAnUong, moTa);
 
