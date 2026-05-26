@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyVe
+namespace Vinwonders_Management.QuanLyVe
 {
     partial class GUI_ThemLoaiVe
     {
@@ -34,7 +34,6 @@
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.txtChucVu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCCCD = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -43,6 +42,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
+            this.cboPhanLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,11 +52,11 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.cboPhanLoai);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.btnThem);
             this.guna2Panel1.Controls.Add(this.txtChucVu);
             this.guna2Panel1.Controls.Add(this.guna2TextBox1);
-            this.guna2Panel1.Controls.Add(this.txtCCCD);
             this.guna2Panel1.Controls.Add(this.txtHoTen);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel7);
@@ -115,6 +115,7 @@
             this.btnThem.Size = new System.Drawing.Size(110, 45);
             this.btnThem.TabIndex = 27;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtChucVu
             // 
@@ -157,27 +158,6 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(300, 36);
             this.guna2TextBox1.TabIndex = 20;
-            // 
-            // txtCCCD
-            // 
-            this.txtCCCD.BorderRadius = 10;
-            this.txtCCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCCCD.DefaultText = "";
-            this.txtCCCD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCCCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCCCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCCCD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCCCD.FillColor = System.Drawing.SystemColors.Control;
-            this.txtCCCD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtCCCD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCCCD.Location = new System.Drawing.Point(329, 130);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.PlaceholderText = "";
-            this.txtCCCD.SelectedText = "";
-            this.txtCCCD.Size = new System.Drawing.Size(300, 36);
-            this.txtCCCD.TabIndex = 20;
             // 
             // txtHoTen
             // 
@@ -282,6 +262,23 @@
             this.btnThoat.Size = new System.Drawing.Size(34, 32);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "x";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // cboPhanLoai
+            // 
+            this.cboPhanLoai.BackColor = System.Drawing.Color.Transparent;
+            this.cboPhanLoai.BorderRadius = 10;
+            this.cboPhanLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboPhanLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPhanLoai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboPhanLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboPhanLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboPhanLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboPhanLoai.ItemHeight = 30;
+            this.cboPhanLoai.Location = new System.Drawing.Point(329, 130);
+            this.cboPhanLoai.Name = "cboPhanLoai";
+            this.cboPhanLoai.Size = new System.Drawing.Size(300, 36);
+            this.cboPhanLoai.TabIndex = 30;
             // 
             // GUI_ThemLoaiVe
             // 
@@ -294,6 +291,7 @@
             this.MaximumSize = new System.Drawing.Size(650, 500);
             this.MinimumSize = new System.Drawing.Size(650, 500);
             this.Name = "GUI_ThemLoaiVe";
+            this.Load += new System.EventHandler(this.GUI_ThemLoaiVe_Load);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -310,7 +308,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2TextBox txtChucVu;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox txtCCCD;
         private Guna.UI2.WinForms.Guna2TextBox txtHoTen;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -319,5 +316,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnThoat;
+        private Guna.UI2.WinForms.Guna2ComboBox cboPhanLoai;
     }
 }

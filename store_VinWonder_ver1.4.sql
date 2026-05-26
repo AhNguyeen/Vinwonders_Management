@@ -208,6 +208,26 @@ GO
 CREATE PROCEDURE sp_Delete_LoaiVe @MaLoaiVe NVARCHAR(10)
 AS BEGIN SET NOCOUNT ON; DELETE FROM LoaiVe WHERE MaLoaiVe = @MaLoaiVe; END;
 GO
+-- 3.4. Cập nhật Loại Vé
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_LoaiVe')
+    DROP PROCEDURE sp_Update_LoaiVe;
+GO
+CREATE PROCEDURE sp_Update_LoaiVe
+    @MaLoaiVe NVARCHAR(10),
+    @TenLoaiVe NVARCHAR(100),
+    @PhanLoai NVARCHAR(50),
+    @GiaVe DECIMAL(18,2),
+    @BaoGomAnUong BIT,
+    @MoTa NVARCHAR(255)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    UPDATE LoaiVe
+    SET TenLoaiVe = @TenLoaiVe, PhanLoai = @PhanLoai, GiaVe = @GiaVe,
+        BaoGomAnUong = @BaoGomAnUong, MoTa = @MoTa
+    WHERE MaLoaiVe = @MaLoaiVe;
+END;
+GO
 -- =================================================================
 -- 4. STORED PROCEDURES: NGHIỆP VỤ HÓA ĐƠN VÀ PHÁT HÀNH VÉ
 -- =================================================================

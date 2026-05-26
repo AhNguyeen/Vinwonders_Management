@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyVe
+namespace Vinwonders_Management.QuanLyVe
 {
     partial class GUI_CapNhatLoaiVe
     {
@@ -88,6 +88,7 @@
             this.btnThem.Size = new System.Drawing.Size(110, 45);
             this.btnThem.TabIndex = 27;
             this.btnThem.Text = "Cập nhật";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtChucVu
             // 
@@ -234,6 +235,7 @@
             this.btnThoat.Size = new System.Drawing.Size(34, 32);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "x";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // richTextBox1
             // 

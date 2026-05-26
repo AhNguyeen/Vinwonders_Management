@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyVe
+namespace Vinwonders_Management.QuanLyVe
 {
     partial class GUI_LoaiVe
     {
@@ -174,6 +174,7 @@
             this.dgvLoaiVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLoaiVe.Size = new System.Drawing.Size(857, 397);
             this.dgvLoaiVe.TabIndex = 19;
+            this.dgvLoaiVe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiVe_CellContentClick);
             // 
             // colMaLoaiVe
             // 
