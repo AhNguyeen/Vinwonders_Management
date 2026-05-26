@@ -19,7 +19,7 @@ namespace DAL_Vinwonders
             DataTable dt = new DataTable();
             try
             {
-                string sql = "sp_GetAll_CuaHang"; //Chua co store GetAll
+                string sql = "sp_GetAll_CuaHang";
                 dt = connectDB.ReadData(sql);
             }
             catch (Exception ex)
@@ -40,7 +40,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Insert_CuaHang";    //Chua co store Insert
+                string sql = "sp_Insert_CuaHang";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaCuaHang", et.MaCuaHang),
@@ -53,7 +53,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -68,16 +68,16 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_CuaHang"; //Chua co store delete
+                string sql = "sp_Delete_CuaHang";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaCuaHang",ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -92,7 +92,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Update_CuaHang";//Chua co store update
+                string sql = "sp_Update_CuaHang";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaCuaHang", et.MaCuaHang),
@@ -105,7 +105,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -120,16 +120,16 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_CuaHang"; //Chua co store delete
+                string sql = "sp_GetAll_CuaHang";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",tenKH),
+                    new SqlParameter("@TenCuaHang",tenKH),
                 };
                 kt = connectDB.ReadData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {

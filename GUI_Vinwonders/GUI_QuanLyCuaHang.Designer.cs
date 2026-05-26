@@ -107,6 +107,10 @@
             // btnHoaDonCH
             // 
             this.btnHoaDonCH.BorderRadius = 12;
+            this.btnHoaDonCH.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHoaDonCH.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHoaDonCH.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnHoaDonCH.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnHoaDonCH.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHoaDonCH.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHoaDonCH.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -114,9 +118,9 @@
             this.btnHoaDonCH.FillColor = System.Drawing.Color.White;
             this.btnHoaDonCH.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDonCH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHoaDonCH.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHoaDonCH.HoverState.FillColor = System.Drawing.SystemColors.Control;
             this.btnHoaDonCH.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnHoaDonCH.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHoaDonCH.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnHoaDonCH.Location = new System.Drawing.Point(297, 10);
             this.btnHoaDonCH.Margin = new System.Windows.Forms.Padding(5);
             this.btnHoaDonCH.Name = "btnHoaDonCH";
@@ -128,6 +132,10 @@
             // btnSanPham
             // 
             this.btnSanPham.BorderRadius = 12;
+            this.btnSanPham.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSanPham.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSanPham.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnSanPham.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnSanPham.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSanPham.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSanPham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -135,9 +143,9 @@
             this.btnSanPham.FillColor = System.Drawing.Color.White;
             this.btnSanPham.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSanPham.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSanPham.HoverState.FillColor = System.Drawing.SystemColors.Control;
             this.btnSanPham.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnSanPham.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSanPham.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnSanPham.Location = new System.Drawing.Point(151, 10);
             this.btnSanPham.Margin = new System.Windows.Forms.Padding(5);
             this.btnSanPham.Name = "btnSanPham";
@@ -149,6 +157,10 @@
             // btnCuaHang
             // 
             this.btnCuaHang.BorderRadius = 12;
+            this.btnCuaHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCuaHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCuaHang.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCuaHang.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnCuaHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCuaHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCuaHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -156,9 +168,9 @@
             this.btnCuaHang.FillColor = System.Drawing.Color.White;
             this.btnCuaHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCuaHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCuaHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCuaHang.HoverState.FillColor = System.Drawing.SystemColors.Control;
             this.btnCuaHang.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCuaHang.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCuaHang.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnCuaHang.Location = new System.Drawing.Point(5, 10);
             this.btnCuaHang.Margin = new System.Windows.Forms.Padding(5);
             this.btnCuaHang.Name = "btnCuaHang";

@@ -543,7 +543,8 @@ BEGIN
     SELECT 
         k.*, 
         -- Đếm tổng số trò chơi có mã khu vực khớp với mã khu vực hiện tại
-        (SELECT COUNT(MaTroChoi) FROM TroChoi t WHERE t.MaKhuVuc = k.MaKhuVuc) AS TongSoTroChoi
+        (SELECT COUNT(MaTroChoi) FROM TroChoi t WHERE t.MaKhuVuc = k.MaKhuVuc) AS TongSoTroChoi,
+        (SELECT COUNT(MaCuaHang) FROM CuaHang ch WHERE ch.MaKhuVuc = k.MaKhuVuc) AS TongSoCuaHang
     FROM KhuVuc k;
 END;
 GO
@@ -605,7 +606,8 @@ CREATE PROCEDURE sp_GetAll_CuaHang
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT ch.*, kv.TenKhuVuc
+    SELECT ch.*, kv.TenKhuVuc,
+    (SELECT COUNT(MaCuaHang) FROM SanPham sp WHERE sp.MaCuaHang = ch.MaCuaHang) AS TongSoSanPham
     FROM CuaHang ch
     INNER JOIN KhuVuc kv ON ch.MaKhuVuc = kv.MaKhuVuc;
 END;
@@ -972,7 +974,7 @@ CREATE PROCEDURE sp_GetAll_HoaDonCuaHang
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT hd.*, kh.HoTen AS TenKhachHang, nv.HoTen AS TenNhanVien
+    SELECT hd.*, kh.HoTen AS TenKhachHang, nv.HoTen AS TenNhanVien,
     FROM HoaDonCuaHang hd
     INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
     INNER JOIN NhanVien nv ON hd.MaNhanVien = nv.MaNhanVien
