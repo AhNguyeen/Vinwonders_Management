@@ -104,6 +104,12 @@
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.Designer.cs">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.Designer.cs">
+      <DependentUpon>GUI_CapNhatSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.resx">
+      <DependentUpon>GUI_CapNhatSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
