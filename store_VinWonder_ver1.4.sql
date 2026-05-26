@@ -421,7 +421,7 @@ CREATE PROCEDURE sp_GetAll_SanPham
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT sp.*, ch.TenCuaHang, ch.LoaiCuaHang
+    SELECT sp.*, ch.TenCuaHang
     FROM SanPham sp
     INNER JOIN CuaHang ch ON sp.MaCuaHang = ch.MaCuaHang;
 END;
@@ -737,55 +737,55 @@ GO
 -- 12. STORED PROCEDURES: ĐĂNG KÝ THÀNH VIÊN
 -- =================================================================
 
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_DangKyThanhVien') DROP PROCEDURE sp_Insert_DangKyThanhVien;
-GO
-CREATE PROCEDURE sp_Insert_DangKyThanhVien
-    @MaDangKy NVARCHAR(10),
-    @NgayDangKy DATE,
-    @DiaDiemDangKy NVARCHAR(100)
-AS
-BEGIN
-    SET NOCOUNT ON;
-    INSERT INTO DangKyThanhVien (MaDangKy, NgayDangKy, DiaDiemDangKy)
-    VALUES (@MaDangKy, @NgayDangKy, @DiaDiemDangKy);
-END;
-GO
+--IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_DangKyThanhVien') DROP PROCEDURE sp_Insert_DangKyThanhVien;
+--GO
+--CREATE PROCEDURE sp_Insert_DangKyThanhVien
+--    @MaDangKy NVARCHAR(10),
+--    @NgayDangKy DATE,
+--    @DiaDiemDangKy NVARCHAR(100)
+--AS
+--BEGIN
+--    SET NOCOUNT ON;
+--    INSERT INTO DangKyThanhVien (MaDangKy, NgayDangKy, DiaDiemDangKy)
+--    VALUES (@MaDangKy, @NgayDangKy, @DiaDiemDangKy);
+--END;
+--GO
 
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_DangKyThanhVien') DROP PROCEDURE sp_Update_DangKyThanhVien;
-GO
-CREATE PROCEDURE sp_Update_DangKyThanhVien
-    @MaDangKy NVARCHAR(10),
-    @NgayDangKy DATE,
-    @DiaDiemDangKy NVARCHAR(100)
-AS
-BEGIN
-    SET NOCOUNT ON;
-    UPDATE DangKyThanhVien
-    SET NgayDangKy = @NgayDangKy, DiaDiemDangKy = @DiaDiemDangKy
-    WHERE MaDangKy = @MaDangKy;
-END;
-GO
+--IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_DangKyThanhVien') DROP PROCEDURE sp_Update_DangKyThanhVien;
+--GO
+--CREATE PROCEDURE sp_Update_DangKyThanhVien
+--    @MaDangKy NVARCHAR(10),
+--    @NgayDangKy DATE,
+--    @DiaDiemDangKy NVARCHAR(100)
+--AS
+--BEGIN
+--    SET NOCOUNT ON;
+--    UPDATE DangKyThanhVien
+--    SET NgayDangKy = @NgayDangKy, DiaDiemDangKy = @DiaDiemDangKy
+--    WHERE MaDangKy = @MaDangKy;
+--END;
+--GO
 
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_DangKyThanhVien') DROP PROCEDURE sp_Delete_DangKyThanhVien;
-GO
-CREATE PROCEDURE sp_Delete_DangKyThanhVien
-    @MaDangKy NVARCHAR(10)
-AS
-BEGIN
-    SET NOCOUNT ON;
-    DELETE FROM DangKyThanhVien WHERE MaDangKy = @MaDangKy;
-END;
-GO
+--IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_DangKyThanhVien') DROP PROCEDURE sp_Delete_DangKyThanhVien;
+--GO
+--CREATE PROCEDURE sp_Delete_DangKyThanhVien
+--    @MaDangKy NVARCHAR(10)
+--AS
+--BEGIN
+--    SET NOCOUNT ON;
+--    DELETE FROM DangKyThanhVien WHERE MaDangKy = @MaDangKy;
+--END;
+--GO
 
-IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_DangKyThanhVien') DROP PROCEDURE sp_GetAll_DangKyThanhVien;
-GO
-CREATE PROCEDURE sp_GetAll_DangKyThanhVien
-AS
-BEGIN
-    SET NOCOUNT ON;
-    SELECT * FROM DangKyThanhVien;
-END;
-GO
+--IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_DangKyThanhVien') DROP PROCEDURE sp_GetAll_DangKyThanhVien;
+--GO
+--CREATE PROCEDURE sp_GetAll_DangKyThanhVien
+--AS
+--BEGIN
+--    SET NOCOUNT ON;
+--    SELECT * FROM DangKyThanhVien;
+--END;
+--GO
 -- =================================================================
 -- 13. STORED PROCEDURES: QUẢN LÝ CA LÀM VIỆC
 -- =================================================================
@@ -923,34 +923,29 @@ IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_HoaD
 GO
 CREATE PROCEDURE sp_Insert_HoaDonCuaHang
     @MaHDCH NVARCHAR(10),
+    @MaCuaHang NVARCHAR(10),
     @MaKhachHang NVARCHAR(10),
     @MaNhanVien NVARCHAR(10),
-    @TongTien DECIMAL(18,2),
-    @PhuongThucThanhToan NVARCHAR(50),
-    @TrangThai NVARCHAR(50)
-AS
-BEGIN
-    SET NOCOUNT ON;
-    INSERT INTO HoaDonCuaHang (MaHDCH, MaKhachHang, MaNhanVien, TongTien)
-    VALUES (@MaHDCH, @MaKhachHang, @MaNhanVien, @TongTien);
+    @TongTien DECIMAL(18,2)
+AS BEGIN
+    INSERT INTO HoaDonCuaHang (MaHDCH, MaCuaHang, MaKhachHang, MaNhanVien, TongTien)
+    VALUES (@MaHDCH, @MaCuaHang, @MaKhachHang, @MaNhanVien, @TongTien);
 END;
-GO
 
 -- Cập nhật Hóa Đơn Cửa Hàng
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_HoaDonCuaHang') DROP PROCEDURE sp_Update_HoaDonCuaHang;
 GO
 CREATE PROCEDURE sp_Update_HoaDonCuaHang
     @MaHDCH NVARCHAR(10),
+    @MaCuaHang NVARCHAR(10),
     @MaKhachHang NVARCHAR(10),
     @MaNhanVien NVARCHAR(10),
-    @TongTien DECIMAL(18,2),
-    @PhuongThucThanhToan NVARCHAR(50),
-    @TrangThai NVARCHAR(50)
+    @TongTien DECIMAL(18,2)
 AS
 BEGIN
     SET NOCOUNT ON;
     UPDATE HoaDonCuaHang
-    SET MaKhachHang = @MaKhachHang, MaNhanVien = @MaNhanVien, TongTien = @TongTien
+    SET MaCuaHang = @MaCuaHang, MaKhachHang = @MaKhachHang, MaNhanVien = @MaNhanVien, TongTien = @TongTien
     WHERE MaHDCH = @MaHDCH;
 END;
 GO

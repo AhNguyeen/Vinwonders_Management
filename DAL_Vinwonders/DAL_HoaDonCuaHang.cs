@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -40,18 +40,16 @@ namespace DAL_Vinwonders
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaHDCH", et.MaHDCH),
+                    new SqlParameter("@MaCuaHang", et.MaCuaHang),
                     new SqlParameter("@MaKhachHang", et.MaKhachHang),
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
-                    new SqlParameter("@NgayMua", et.NgayMua),
                     new SqlParameter("@TongTien", et.TongTien),
-                    new SqlParameter("@PhuongThucThanhToan", et.PhuongThucThanhToan),
-                    new SqlParameter("@TrangThai", et.TrangThai),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -75,7 +73,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -97,15 +95,13 @@ namespace DAL_Vinwonders
                     new SqlParameter("@MaKhachHang", et.MaKhachHang),
                     new SqlParameter("@MaNhanVien", et.MaNhanVien),
                     new SqlParameter("@NgayMua", et.NgayMua),
-                    new SqlParameter("@TongTien", et.TongTien),
-                    new SqlParameter("@PhuongThucThanhToan", et.PhuongThucThanhToan),
-                    new SqlParameter("@TrangThai", et.TrangThai),
+                    new SqlParameter("@TongTien", et.TongTien)
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -129,7 +125,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
