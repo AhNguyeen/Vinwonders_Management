@@ -53,6 +53,7 @@
     <Compile Include="BUS_KhenThuongKyLuat.cs" />
     <Compile Include="BUS_KhuVuc.cs" />
     <Compile Include="BUS_LichLamViec.cs" />
+    <Compile Include="BUS_LoaiVe.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_SanPham.cs" />
     <Compile Include="BUS_TroChoi.cs" />
