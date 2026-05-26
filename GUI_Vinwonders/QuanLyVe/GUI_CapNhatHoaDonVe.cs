@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vinwonders_Management.QuanLyCuaHangSanPham
+namespace Vinwonders_Management.QuanLyVe
 {
-    public partial class GUI_HoaDonCuaHang : UserControl
+    public partial class GUI_CapNhatHoaDonVe : Form
     {
-        public GUI_HoaDonCuaHang()
+        public GUI_CapNhatHoaDonVe()
         {
             InitializeComponent();
         }

@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -39,12 +39,11 @@ namespace DAL_Vinwonders
                 string sql = "sp_Insert_ChiTietHDCH";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@MaChiTiet", et.MaChiTiet),
+                    new SqlParameter("@MaCTHDCH", et.MaChiTiet),
                     new SqlParameter("@MaHDCH", et.MaHDCH),
                     new SqlParameter("@MaSanPham", et.MaSanPham),
                     new SqlParameter("@SoLuong", et.SoLuong),
-                    new SqlParameter("@DonGia", et.DonGia),
-                    new SqlParameter("@ThanhTien", et.ThanhTien),
+                    new SqlParameter("@DonGia", et.DonGia)
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }

@@ -181,7 +181,7 @@ CREATE TABLE HoaDonCuaHang (
     FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
     FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
 );
-
+    
 CREATE TABLE ChiTietHDCH (
     MaCTHDCH NVARCHAR(10) PRIMARY KEY,
     MaHDCH NVARCHAR(10) NOT NULL,

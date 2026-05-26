@@ -58,7 +58,7 @@ namespace Vinwonders_Management
 
         private void btnHoaDonCH_Click(object sender, EventArgs e)
         {
-            OpenChildUserControl(typeof(GUI_HoaDonCuaHang));
+            OpenChildUserControl(typeof(GUI_ThanhToanHoaDonCuaHang));
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
