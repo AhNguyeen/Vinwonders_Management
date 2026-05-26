@@ -32,20 +32,21 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dgvCuaHang = new System.Windows.Forms.DataGridView();
             this.colMaCuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenCuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTongSoSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaKhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenKhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLoaiCuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colXoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -80,6 +81,30 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.guna2Panel2.Size = new System.Drawing.Size(857, 67);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.BorderRadius = 6;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::Vinwonders_Management.Properties.Resources.plus_white;
+            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThem.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnThem.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnThem.Location = new System.Drawing.Point(672, 19);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(10);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(175, 30);
+            this.btnThem.TabIndex = 3;
+            this.btnThem.Text = "Thêm cửa hàng";
+            this.btnThem.TextOffset = new System.Drawing.Point(5, 0);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -90,6 +115,29 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(199, 30);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Danh sách cửa hàng";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox1.BorderRadius = 6;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeft = global::Vinwonders_Management.Properties.Resources.Search;
+            this.guna2TextBox1.Location = new System.Drawing.Point(452, 19);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(10);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.guna2TextBox1.PlaceholderText = "Tìm kiếm....";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(200, 30);
+            this.guna2TextBox1.TabIndex = 1;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -129,6 +177,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.dgvCuaHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaCuaHang,
             this.colTenCuaHang,
+            this.colTongSoSanPham,
             this.colMaKhuVuc,
             this.colTenKhuVuc,
             this.colLoaiCuaHang,
@@ -171,6 +220,14 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.colTenCuaHang.HeaderText = "Tên Cửa Hàng";
             this.colTenCuaHang.Name = "colTenCuaHang";
             this.colTenCuaHang.ReadOnly = true;
+            // 
+            // colTongSoSanPham
+            // 
+            this.colTongSoSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTongSoSanPham.DataPropertyName = "TongSoSanPham";
+            this.colTongSoSanPham.HeaderText = "Tổng Số Sản Phẩm";
+            this.colTongSoSanPham.Name = "colTongSoSanPham";
+            this.colTongSoSanPham.ReadOnly = true;
             // 
             // colMaKhuVuc
             // 
@@ -225,53 +282,6 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.colXoa.UseColumnTextForButtonValue = true;
             this.colXoa.Width = 80;
             // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.BorderRadius = 6;
-            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = global::Vinwonders_Management.Properties.Resources.plus_white;
-            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThem.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnThem.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnThem.Location = new System.Drawing.Point(672, 19);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(10);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(175, 30);
-            this.btnThem.TabIndex = 3;
-            this.btnThem.Text = "Thêm cửa hàng";
-            this.btnThem.TextOffset = new System.Drawing.Point(5, 0);
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox1.BorderRadius = 6;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::Vinwonders_Management.Properties.Resources.Search;
-            this.guna2TextBox1.Location = new System.Drawing.Point(452, 19);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Tìm kiếm....";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(200, 30);
-            this.guna2TextBox1.TabIndex = 1;
-            // 
             // GUI_CuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,6 +313,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
         private System.Windows.Forms.DataGridView dgvCuaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaCuaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenCuaHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTongSoSanPham;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhuVuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhuVuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiCuaHang;
