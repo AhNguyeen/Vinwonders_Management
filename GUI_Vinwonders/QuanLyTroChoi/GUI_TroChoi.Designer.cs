@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyTroChoi
+namespace Vinwonders_Management.QuanLyTroChoi
 {
     partial class GUI_TroChoi
     {
@@ -159,6 +159,7 @@
             this.dgvTroChoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTroChoi.Size = new System.Drawing.Size(857, 397);
             this.dgvTroChoi.TabIndex = 12;
+            this.dgvTroChoi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTroChoi_CellClick);
             // 
             // btnThem
             // 

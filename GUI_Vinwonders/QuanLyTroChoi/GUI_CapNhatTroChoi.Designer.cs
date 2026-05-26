@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyTroChoi
+namespace Vinwonders_Management.QuanLyTroChoi
 {
     partial class GUI_CapNhatTroChoi
     {
@@ -44,6 +44,8 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
+            this.cbokhuVuc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@
             this.pnlContent.BackColor = System.Drawing.Color.White;
             this.pnlContent.BorderColor = System.Drawing.Color.Silver;
             this.pnlContent.BorderThickness = 1;
+            this.pnlContent.Controls.Add(this.cbokhuVuc);
+            this.pnlContent.Controls.Add(this.guna2HtmlLabel4);
             this.pnlContent.Controls.Add(this.cboPhanLoai);
             this.pnlContent.Controls.Add(this.btnCapNhat);
             this.pnlContent.Controls.Add(this.txtChieuCao);
@@ -107,6 +111,7 @@
             this.btnCapNhat.Size = new System.Drawing.Size(110, 45);
             this.btnCapNhat.TabIndex = 73;
             this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // txtChieuCao
             // 
@@ -308,6 +313,33 @@
             this.btnThoat.Text = "x";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // cbokhuVuc
+            // 
+            this.cbokhuVuc.BackColor = System.Drawing.Color.Transparent;
+            this.cbokhuVuc.BorderRadius = 10;
+            this.cbokhuVuc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbokhuVuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbokhuVuc.FillColor = System.Drawing.SystemColors.Control;
+            this.cbokhuVuc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbokhuVuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbokhuVuc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbokhuVuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbokhuVuc.ItemHeight = 30;
+            this.cbokhuVuc.Location = new System.Drawing.Point(19, 355);
+            this.cbokhuVuc.Name = "cbokhuVuc";
+            this.cbokhuVuc.Size = new System.Drawing.Size(300, 36);
+            this.cbokhuVuc.TabIndex = 76;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(19, 330);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(52, 19);
+            this.guna2HtmlLabel4.TabIndex = 75;
+            this.guna2HtmlLabel4.Text = "Khu vực";
+            // 
             // GUI_CapNhatTroChoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,5 +376,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnThoat;
+        private Guna.UI2.WinForms.Guna2ComboBox cbokhuVuc;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

@@ -543,7 +543,8 @@ BEGIN
     SELECT 
         k.*, 
         -- Đếm tổng số trò chơi có mã khu vực khớp với mã khu vực hiện tại
-        (SELECT COUNT(MaTroChoi) FROM TroChoi t WHERE t.MaKhuVuc = k.MaKhuVuc) AS TongSoTroChoi
+        (SELECT COUNT(MaTroChoi) FROM TroChoi t WHERE t.MaKhuVuc = k.MaKhuVuc) AS TongSoTroChoi,
+        (SELECT COUNT(MaCuaHang) FROM CuaHang ch WHERE ch.MaKhuVuc = k.MaKhuVuc) AS TongSoCuaHang
     FROM KhuVuc k;
 END;
 GO
