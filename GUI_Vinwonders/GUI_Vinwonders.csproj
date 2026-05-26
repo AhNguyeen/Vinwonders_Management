@@ -104,6 +104,12 @@
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.Designer.cs">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatHoaDonCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_CapNhatHoaDonCuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_ThemCuaHang.Designer.cs">
       <DependentUpon>GUI_ThemCuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ThemHoaDonCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ThemHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_ThemHoaDonCuaHang.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_ThemSanPham.cs">
       <SubType>Form</SubType>
@@ -298,6 +310,9 @@
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatHoaDonCuaHang.resx">
+      <DependentUpon>GUI_CapNhatHoaDonCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.resx">
       <DependentUpon>GUI_CapNhatSanPham.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThemCuaHang.resx">
       <DependentUpon>GUI_ThemCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThemHoaDonCuaHang.resx">
+      <DependentUpon>GUI_ThemHoaDonCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThemSanPham.resx">
       <DependentUpon>GUI_ThemSanPham.cs</DependentUpon>
