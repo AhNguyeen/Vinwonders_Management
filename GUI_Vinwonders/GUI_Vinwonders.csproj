@@ -98,6 +98,12 @@
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.Designer.cs">
+      <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,18 @@
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_SanPham.Designer.cs">
       <DependentUpon>GUI_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ThemCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ThemCuaHang.Designer.cs">
+      <DependentUpon>GUI_ThemCuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ThemSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ThemSanPham.Designer.cs">
+      <DependentUpon>GUI_ThemSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyKhachHang\GUI_CapNhatKhachHang.cs">
       <SubType>Form</SubType>
@@ -271,6 +289,9 @@
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
+      <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_SanPham.resx">
       <DependentUpon>GUI_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThemCuaHang.resx">
+      <DependentUpon>GUI_ThemCuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThemSanPham.resx">
+      <DependentUpon>GUI_ThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKhachHang\GUI_CapNhatKhachHang.resx">
       <DependentUpon>GUI_CapNhatKhachHang.cs</DependentUpon>

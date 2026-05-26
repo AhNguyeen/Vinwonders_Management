@@ -41,6 +41,7 @@
             this.colMaKhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenKhuVuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTongTroChoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTongSoCuaHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGioMoCua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGioDongCua = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -177,6 +178,7 @@
             this.colMaKhuVuc,
             this.colTenKhuVuc,
             this.colTongTroChoi,
+            this.colTongSoCuaHang,
             this.colMoTa,
             this.colGioMoCua,
             this.colGioDongCua,
@@ -226,6 +228,14 @@
             this.colTongTroChoi.HeaderText = "Tổng Trò Chơi";
             this.colTongTroChoi.Name = "colTongTroChoi";
             this.colTongTroChoi.ReadOnly = true;
+            // 
+            // colTongSoCuaHang
+            // 
+            this.colTongSoCuaHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTongSoCuaHang.DataPropertyName = "TongSoCuaHang";
+            this.colTongSoCuaHang.HeaderText = "Tổng Số Cửa Hàng";
+            this.colTongSoCuaHang.Name = "colTongSoCuaHang";
+            this.colTongSoCuaHang.ReadOnly = true;
             // 
             // colMoTa
             // 
@@ -304,6 +314,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaKhuVuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenKhuVuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTongTroChoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTongSoCuaHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGioMoCua;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGioDongCua;
