@@ -38,5 +38,12 @@ namespace Vinwonders_Management.QuanLyVe
         {
             LoadDanhSachLoaiVe();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            GUI_ThemLoaiVe themLoaiVe = new GUI_ThemLoaiVe();
+            themLoaiVe.ShowDialog();
+            LoadDanhSachLoaiVe();
+        }
     }
 }
