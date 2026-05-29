@@ -1,4 +1,5 @@
 using BUS_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,6 +53,20 @@ namespace Vinwonders_Management.QuanLyVe
         {
             LoadDanhSachLoaiVe();
             LoadComboBoxPhanLoai();
+
+            // Thiết lập cboThanhToan
+            cboThanhToan.Items.Clear();
+            cboThanhToan.Items.Add("Tiền mặt");
+            cboThanhToan.Items.Add("Quét mã");
+            if (cboThanhToan.Items.Count > 0)
+                cboThanhToan.SelectedIndex = 0;
+
+            // Đặt ô chiết khấu chỉ đọc (không cho nhập)
+            txtChietKhau.ReadOnly = true;
+
+            // Gán sự kiện cho nút Thanh Toán
+            btnThanhToan.Click -= btnThanhToan_Click; // Đảm bảo không gán trùng
+            btnThanhToan.Click += btnThanhToan_Click;
         }
 
         #endregion
@@ -201,16 +216,16 @@ namespace Vinwonders_Management.QuanLyVe
             foreach (DataGridViewRow row in dgvVoHang.Rows)
             {
                 // So sánh theo tên vé
-                if (row.Cells["dataGridViewTextBoxColumn1"].Value != null &&
-                    row.Cells["dataGridViewTextBoxColumn1"].Value.ToString() == tenVe)
+                if (row.Cells["colTenVe"].Value != null &&
+                    row.Cells["colTenVe"].Value.ToString() == tenVe)
                 {
                     // Tăng số lượng lên 1
-                    int soLuongHienTai = Convert.ToInt32(row.Cells["dataGridViewTextBoxColumn2"].Value);
+                    int soLuongHienTai = Convert.ToInt32(row.Cells["colSoLuong"].Value);
                     soLuongHienTai++;
-                    row.Cells["dataGridViewTextBoxColumn2"].Value = soLuongHienTai;
+                    row.Cells["colSoLuong"].Value = soLuongHienTai;
 
                     // Cập nhật tổng tiền cho dòng này
-                    row.Cells["dataGridViewTextBoxColumn3"].Value = (giaVe * soLuongHienTai).ToString("#,##0");
+                    row.Cells["colTongTien"].Value = (giaVe * soLuongHienTai).ToString("#,##0");
 
                     // Lưu giá vé gốc vào Tag của dòng
                     row.Tag = giaVe;
@@ -245,7 +260,7 @@ namespace Vinwonders_Management.QuanLyVe
 
             try
             {
-                int soLuongMoi = Convert.ToInt32(row.Cells["dataGridViewTextBoxColumn2"].Value);
+                int soLuongMoi = Convert.ToInt32(row.Cells["colSoLuong"].Value);
 
                 if (soLuongMoi <= 0)
                 {
@@ -258,7 +273,7 @@ namespace Vinwonders_Management.QuanLyVe
                     decimal giaVe = row.Tag != null ? Convert.ToDecimal(row.Tag) : 0;
 
                     // Cập nhật tổng tiền cho dòng
-                    row.Cells["dataGridViewTextBoxColumn3"].Value = (giaVe * soLuongMoi).ToString("#,##0");
+                    row.Cells["colTongTien"].Value = (giaVe * soLuongMoi).ToString("#,##0");
                 }
             }
             catch
@@ -266,10 +281,10 @@ namespace Vinwonders_Management.QuanLyVe
                 // Nếu nhập không hợp lệ => đặt lại số lượng = 1
                 MessageBox.Show("Vui lòng nhập số lượng hợp lệ (số nguyên dương)!", "Thông báo",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                row.Cells["dataGridViewTextBoxColumn2"].Value = 1;
+                row.Cells["colSoLuong"].Value = 1;
 
                 decimal giaVe = row.Tag != null ? Convert.ToDecimal(row.Tag) : 0;
-                row.Cells["dataGridViewTextBoxColumn3"].Value = giaVe.ToString("#,##0");
+                row.Cells["colTongTien"].Value = giaVe.ToString("#,##0");
             }
 
             // Cập nhật tổng tiền hóa đơn
@@ -304,19 +319,80 @@ namespace Vinwonders_Management.QuanLyVe
         /// </summary>
         private void CapNhatTongTien()
         {
-            decimal tongTien = 0;
+            if (dgvVoHang == null) return;
+            
+            decimal tongTienTruocGiam = 0;
 
             foreach (DataGridViewRow row in dgvVoHang.Rows)
             {
-                if (row.Tag != null && row.Cells["dataGridViewTextBoxColumn2"].Value != null)
+                if (row.Tag != null && row.Cells["colSoLuong"].Value != null)
                 {
                     decimal giaVe = Convert.ToDecimal(row.Tag);
-                    int soLuong = Convert.ToInt32(row.Cells["dataGridViewTextBoxColumn2"].Value);
-                    tongTien += giaVe * soLuong;
+                    int soLuong = Convert.ToInt32(row.Cells["colSoLuong"].Value);
+                    tongTienTruocGiam += giaVe * soLuong;
                 }
             }
 
-            lblTongTien.Text = tongTien.ToString("#,##0") + " đ";
+            decimal tienGiamThanhVien = 0;
+            decimal tienGiamSuKien = 0;
+            decimal tienGiamDoan = 0;
+
+            // 1. Giảm giá thành viên
+            if (lblGiamGiaThanhVien.Text != "---" && lblGiamGiaThanhVien.Text != "0%")
+            {
+                string phanTram = lblGiamGiaThanhVien.Text.Replace("%", "");
+                if (decimal.TryParse(phanTram, out decimal tyLe))
+                {
+                    tienGiamThanhVien = tongTienTruocGiam * (tyLe / 100m);
+                }
+            }
+
+            // 2. Giảm giá sự kiện
+            if (lblGiamToiDa.Text != "---")
+            {
+                try
+                {
+                    string text = lblGiamToiDa.Text;
+                    string phanTramStr = text.Substring(0, text.IndexOf("%"));
+                    string maxStr = text.Substring(text.IndexOf("Tối đa: ") + 8);
+                    maxStr = maxStr.Replace("đ)", "").Replace(",", "").Trim();
+                    
+                    if (decimal.TryParse(phanTramStr, out decimal tyLe) && decimal.TryParse(maxStr, out decimal maxGiam))
+                    {
+                        tienGiamSuKien = tongTienTruocGiam * (tyLe / 100m);
+                        if (tienGiamSuKien > maxGiam)
+                        {
+                            tienGiamSuKien = maxGiam;
+                        }
+                    }
+                }
+                catch { }
+            }
+
+            // 3. Chiết khấu đoàn (Số lượng lớn)
+            int tongSoLuongVe = 0;
+            foreach (DataGridViewRow row in dgvVoHang.Rows)
+            {
+                if (row.Cells["colSoLuong"].Value != null)
+                {
+                    tongSoLuongVe += Convert.ToInt32(row.Cells["colSoLuong"].Value);
+                }
+            }
+            // Khách đoàn mua từ 10 vé trở lên sẽ được giảm 5%
+            if (tongSoLuongVe >= 10) 
+            {
+                tienGiamDoan = tongTienTruocGiam * 0.05m;
+            }
+
+            decimal tongGiam = tienGiamThanhVien + tienGiamSuKien + tienGiamDoan;
+            
+            if (txtChietKhau != null)
+                txtChietKhau.Text = tongGiam.ToString("#,##0");
+
+            decimal tongTienSauGiam = tongTienTruocGiam - tongGiam;
+            if (tongTienSauGiam < 0) tongTienSauGiam = 0;
+
+            lblTongTien.Text = tongTienSauGiam.ToString("#,##0") + " đ";
         }
 
         #endregion
@@ -394,6 +470,7 @@ namespace Vinwonders_Management.QuanLyVe
                                     // Hiển thị thông tin hạng thành viên
                                     lblHangThanhVien.Text = tenHang;
                                     lblGiamGiaThanhVien.Text = tiLeGiam.ToString("0.##") + "%";
+                                    CapNhatTongTien();
                                     return;
                                 }
                             }
@@ -402,6 +479,7 @@ namespace Vinwonders_Management.QuanLyVe
                         // Khách hàng tìm thấy nhưng không có hạng thành viên
                         lblHangThanhVien.Text = "Chưa có hạng";
                         lblGiamGiaThanhVien.Text = "0%";
+                        CapNhatTongTien();
                     }
                     else
                     {
@@ -429,6 +507,7 @@ namespace Vinwonders_Management.QuanLyVe
         {
             lblHangThanhVien.Text = "---";
             lblGiamGiaThanhVien.Text = "---";
+            CapNhatTongTien();
         }
 
         #endregion
@@ -487,6 +566,7 @@ namespace Vinwonders_Management.QuanLyVe
                         lblGiamToiDa.Text = phanTramGiam.ToString("0.##") + "% (Tối đa: " + giamToiDa.ToString("#,##0") + "đ)";
                         lblNgayBatDau.Text = ngayBatDau.ToString("dd/MM/yyyy");
                         lblNgayKetThuc.Text = ngayKetThuc.ToString("dd/MM/yyyy");
+                        CapNhatTongTien();
                     }
                     else
                     {
@@ -519,6 +599,7 @@ namespace Vinwonders_Management.QuanLyVe
             lblGiamToiDa.Text = "---";
             lblNgayBatDau.Text = "---";
             lblNgayKetThuc.Text = "---";
+            CapNhatTongTien();
         }
 
         #endregion
@@ -532,6 +613,116 @@ namespace Vinwonders_Management.QuanLyVe
         private void btnThem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            if (dgvVoHang.Rows.Count == 0)
+            {
+                MessageBox.Show("Giỏ hàng đang trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!chkBoxKhachVangLai.Checked && string.IsNullOrEmpty(txtTenHoacSDT.Text.Trim()))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin khách hàng hoặc chọn 'Khách vãng lai'!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                string maKhachHang = "KH000"; // Mặc định khách vãng lai
+                if (!chkBoxKhachVangLai.Checked)
+                {
+                    DataTable dtKH = busKhachHang.TimKhachHang(txtTenHoacSDT.Text.Trim());
+                    if (dtKH != null && dtKH.Rows.Count > 0)
+                    {
+                        DataRow[] kq = dtKH.Select("HoTen = '" + txtTenHoacSDT.Text.Trim().Replace("'", "''") + "' OR SoDienThoai = '" + txtTenHoacSDT.Text.Trim().Replace("'", "''") + "'");
+                        if (kq.Length > 0) maKhachHang = kq[0]["MaKhachHang"].ToString();
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy khách hàng khớp chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy khách hàng trong hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                string maSuKien = null;
+                if (lblTenSuKien.Text != "---" && !string.IsNullOrEmpty(txtMaSuKien.Text))
+                {
+                    DataTable dtSK = busSuKien.InDanhSach();
+                    DataRow[] rows = dtSK.Select("MaSuKien = '" + txtMaSuKien.Text.Trim().Replace("'", "''") + "' OR MaGiamGia = '" + txtMaSuKien.Text.Trim().Replace("'", "''") + "'");
+                    if (rows.Length > 0) maSuKien = rows[0]["MaSuKien"].ToString();
+                }
+
+                string maNhanVien = "NV01"; // Cần 1 mã NV cố định hoặc từ login
+                string maHoaDon = "HDV" + DateTime.Now.ToString("HHmmss");
+
+                // Lấy chiết khấu đoàn để lưu vào DB (nếu cần thiết lưu riêng số % hoặc tiền giảm)
+                int tongSoLuongVe = 0;
+                foreach (DataGridViewRow row in dgvVoHang.Rows)
+                {
+                    if (row.Cells["colSoLuong"].Value != null)
+                        tongSoLuongVe += Convert.ToInt32(row.Cells["colSoLuong"].Value);
+                }
+                decimal chietKhauDoan = 0;
+                if (tongSoLuongVe >= 10) chietKhauDoan = 5; // Lưu 5%
+
+                decimal tongTien = 0;
+                if (decimal.TryParse(lblTongTien.Text.Replace(" đ", "").Replace(",", "").Trim(), out decimal tien))
+                {
+                    tongTien = tien;
+                }
+
+                string phuongThuc = cboThanhToan.SelectedItem?.ToString() ?? "Tiền mặt";
+
+                ET_HoaDonVe hoaDon = new ET_HoaDonVe(maHoaDon, maKhachHang, maNhanVien, maSuKien, DateTime.Now, chietKhauDoan, tongTien, phuongThuc, "Đã thanh toán");
+
+                if (busHoaDonVe.ThemHoaDonVe(hoaDon))
+                {
+                    BUS_Ve busVe = new BUS_Ve();
+                    foreach (DataGridViewRow row in dgvVoHang.Rows)
+                    {
+                        string tenVe = row.Cells["colTenVe"].Value?.ToString();
+                        int soLuong = Convert.ToInt32(row.Cells["colSoLuong"].Value);
+                        decimal giaVe = row.Tag != null ? Convert.ToDecimal(row.Tag) : 0;
+                        
+                        string maLoaiVe = "";
+                        DataRow[] lvs = dtTatCaLoaiVe.Select("TenLoaiVe = '" + tenVe.Replace("'", "''") + "'");
+                        if (lvs.Length > 0) maLoaiVe = lvs[0]["MaLoaiVe"].ToString();
+
+                        for (int i = 0; i < soLuong; i++)
+                        {
+                            string maVe = "V" + Guid.NewGuid().ToString("N").Substring(0, 8).ToUpper();
+                            ET_Ve ve = new ET_Ve(maVe, maHoaDon, maLoaiVe, giaVe, DateTime.Now, false);
+                            busVe.ThemVe(ve);
+                        }
+                    }
+
+                    MessageBox.Show("Thanh toán thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    dgvVoHang.Rows.Clear();
+                    txtTenHoacSDT.Text = "";
+                    txtMaSuKien.Text = "";
+                    chkBoxKhachVangLai.Checked = true;
+                    ResetThongTinThanhVien();
+                    ResetThongTinSuKien();
+                    CapNhatTongTien();
+                }
+                else
+                {
+                    MessageBox.Show("Thanh toán thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi trong quá trình thanh toán: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion

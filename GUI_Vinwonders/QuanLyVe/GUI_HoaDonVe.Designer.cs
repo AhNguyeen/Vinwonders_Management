@@ -28,8 +28,8 @@ namespace Vinwonders_Management.QuanLyVe
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,18 +65,18 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlChiTietHoaDon = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtChietKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgvVoHang = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlHeaderChiTiet = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooterChiTiet = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlHeaderChiTiet = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
+            this.txtChietKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
+            this.colTenVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -85,8 +85,8 @@ namespace Vinwonders_Management.QuanLyVe
             this.pnlKhachHang.SuspendLayout();
             this.pnlChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoHang)).BeginInit();
-            this.pnlFooterChiTiet.SuspendLayout();
             this.pnlHeaderChiTiet.SuspendLayout();
+            this.pnlFooterChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -237,14 +237,14 @@ namespace Vinwonders_Management.QuanLyVe
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLoaiVe.BackgroundColor = System.Drawing.Color.White;
             this.dgvLoaiVe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLoaiVe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLoaiVe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLoaiVe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoaiVe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaLoaiVe,
@@ -598,26 +598,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.pnlChiTietHoaDon.Size = new System.Drawing.Size(450, 483);
             this.pnlChiTietHoaDon.TabIndex = 8;
             // 
-            // txtChietKhau
-            // 
-            this.txtChietKhau.BackColor = System.Drawing.Color.Transparent;
-            this.txtChietKhau.BorderRadius = 10;
-            this.txtChietKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtChietKhau.DefaultText = "";
-            this.txtChietKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtChietKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtChietKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtChietKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtChietKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtChietKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtChietKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtChietKhau.Location = new System.Drawing.Point(19, 12);
-            this.txtChietKhau.Name = "txtChietKhau";
-            this.txtChietKhau.PlaceholderText = "Chiết khấu / Giảm giá";
-            this.txtChietKhau.SelectedText = "";
-            this.txtChietKhau.Size = new System.Drawing.Size(200, 36);
-            this.txtChietKhau.TabIndex = 12;
-            // 
             // dgvVoHang
             // 
             this.dgvVoHang.AllowUserToAddRows = false;
@@ -626,47 +606,38 @@ namespace Vinwonders_Management.QuanLyVe
             this.dgvVoHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVoHang.BackgroundColor = System.Drawing.Color.White;
             this.dgvVoHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVoHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVoHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvVoHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVoHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.colTenVe,
+            this.colSoLuong,
+            this.colTongTien});
             this.dgvVoHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVoHang.EnableHeadersVisualStyles = false;
             this.dgvVoHang.Location = new System.Drawing.Point(0, 77);
             this.dgvVoHang.MultiSelect = false;
             this.dgvVoHang.Name = "dgvVoHang";
-            this.dgvVoHang.ReadOnly = false;
             this.dgvVoHang.RowHeadersVisible = false;
             this.dgvVoHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVoHang.Size = new System.Drawing.Size(450, 278);
             this.dgvVoHang.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
+            // pnlHeaderChiTiet
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tên Vé";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Số Lượng";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tổng Tiền";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.pnlHeaderChiTiet.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeaderChiTiet.Controls.Add(this.guna2HtmlLabel1);
+            this.pnlHeaderChiTiet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeaderChiTiet.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeaderChiTiet.Name = "pnlHeaderChiTiet";
+            this.pnlHeaderChiTiet.Size = new System.Drawing.Size(450, 77);
+            this.pnlHeaderChiTiet.TabIndex = 15;
             // 
             // guna2HtmlLabel1
             // 
@@ -693,15 +664,41 @@ namespace Vinwonders_Management.QuanLyVe
             this.pnlFooterChiTiet.Size = new System.Drawing.Size(450, 128);
             this.pnlFooterChiTiet.TabIndex = 14;
             // 
-            // pnlHeaderChiTiet
+            // btnThanhToan
             // 
-            this.pnlHeaderChiTiet.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHeaderChiTiet.Controls.Add(this.guna2HtmlLabel1);
-            this.pnlHeaderChiTiet.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeaderChiTiet.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeaderChiTiet.Name = "pnlHeaderChiTiet";
-            this.pnlHeaderChiTiet.Size = new System.Drawing.Size(450, 77);
-            this.pnlHeaderChiTiet.TabIndex = 15;
+            this.btnThanhToan.BorderRadius = 10;
+            this.btnThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThanhToan.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(232, 61);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(200, 45);
+            this.btnThanhToan.TabIndex = 13;
+            this.btnThanhToan.Text = "✅ Thanh Toán && In Vé";
+            // 
+            // txtChietKhau
+            // 
+            this.txtChietKhau.BackColor = System.Drawing.Color.Transparent;
+            this.txtChietKhau.BorderRadius = 10;
+            this.txtChietKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtChietKhau.DefaultText = "";
+            this.txtChietKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtChietKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtChietKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtChietKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtChietKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtChietKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtChietKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtChietKhau.Location = new System.Drawing.Point(19, 12);
+            this.txtChietKhau.Name = "txtChietKhau";
+            this.txtChietKhau.PlaceholderText = "Chiết khấu / Giảm giá";
+            this.txtChietKhau.SelectedText = "";
+            this.txtChietKhau.Size = new System.Drawing.Size(200, 36);
+            this.txtChietKhau.TabIndex = 12;
             // 
             // cboThanhToan
             // 
@@ -742,21 +739,22 @@ namespace Vinwonders_Management.QuanLyVe
             this.lblTongTien.TabIndex = 2;
             this.lblTongTien.Text = "[ Tong Tien ]";
             // 
-            // btnThanhToan
+            // colTenVe
             // 
-            this.btnThanhToan.BorderRadius = 10;
-            this.btnThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThanhToan.FillColor = System.Drawing.Color.LimeGreen;
-            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(232, 61);
-            this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(200, 45);
-            this.btnThanhToan.TabIndex = 13;
-            this.btnThanhToan.Text = "✅ Thanh Toán && In Vé";
+            this.colTenVe.HeaderText = "Tên Vé";
+            this.colTenVe.Name = "colTenVe";
+            this.colTenVe.ReadOnly = true;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // colTongTien
+            // 
+            this.colTongTien.HeaderText = "Tổng Tiền";
+            this.colTongTien.Name = "colTongTien";
+            this.colTongTien.ReadOnly = true;
             // 
             // GUI_HoaDonVe
             // 
@@ -778,10 +776,10 @@ namespace Vinwonders_Management.QuanLyVe
             this.pnlKhachHang.PerformLayout();
             this.pnlChiTietHoaDon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVoHang)).EndInit();
-            this.pnlFooterChiTiet.ResumeLayout(false);
-            this.pnlFooterChiTiet.PerformLayout();
             this.pnlHeaderChiTiet.ResumeLayout(false);
             this.pnlHeaderChiTiet.PerformLayout();
+            this.pnlFooterChiTiet.ResumeLayout(false);
+            this.pnlFooterChiTiet.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -805,9 +803,6 @@ namespace Vinwonders_Management.QuanLyVe
         private Guna.UI2.WinForms.Guna2Panel pnlChiTietHoaDon;
         private Guna.UI2.WinForms.Guna2TextBox txtChietKhau;
         private System.Windows.Forms.DataGridView dgvVoHang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel pnlKhachHang;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGiamToiDa;
@@ -834,5 +829,8 @@ namespace Vinwonders_Management.QuanLyVe
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTongTien;
         private Guna.UI2.WinForms.Guna2Button btnThanhToan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenVe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTongTien;
     }
 }

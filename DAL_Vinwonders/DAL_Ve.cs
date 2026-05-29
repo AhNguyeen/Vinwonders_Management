@@ -40,7 +40,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Insert_Ve";    //Chua co store Insert
+                string sql = "sp_Insert_Ve";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaVe", et.MaVe),
