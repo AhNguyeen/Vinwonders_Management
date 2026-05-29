@@ -13,7 +13,7 @@ namespace Vinwonders_Management.QuanLyVe
 {
     public partial class GUI_HoaDonVe : UserControl
     {
-        // Tạo instance của BUS_HoaDonVe để lấy dữ liệu
+        // Khai báo các đối tượng BUS để xử lý nghiệp vụ
         BUS_HoaDonVe busHoaDonVe = new BUS_HoaDonVe();
         BUS_KhachHang busKhachHang = new BUS_KhachHang();
         BUS_HangThanhVien busHangThanhVien = new BUS_HangThanhVien();
@@ -23,13 +23,11 @@ namespace Vinwonders_Management.QuanLyVe
         // Cache danh sách tất cả loại vé
         private DataTable dtTatCaLoaiVe;
 
-        // Sự kiện Load của Form
-        public void LoadData()
-        {
-            LoadDanhSachLoaiVe();
-            LoadComboBoxPhanLoai();
-        }
+        #region Khởi tạo và Load dữ liệu
 
+        /// <summary>
+        /// Hàm khởi tạo giao diện Hóa Đơn Vé.
+        /// </summary>
         public GUI_HoaDonVe()
         {
             InitializeComponent();
@@ -39,12 +37,26 @@ namespace Vinwonders_Management.QuanLyVe
             ResetThongTinSuKien();
         }
 
+        /// <summary>
+        /// Sự kiện Load của Form - gọi khi form được hiển thị.
+        /// </summary>
         private void GUI_HoaDoVe_Load(object sender, EventArgs e)
         {
             LoadData();
         }
 
-        #region Xử lý pnlDanhMucVe - Danh mục loại vé & Giỏ hàng
+        /// <summary>
+        /// Tải toàn bộ dữ liệu cần thiết cho giao diện.
+        /// </summary>
+        public void LoadData()
+        {
+            LoadDanhSachLoaiVe();
+            LoadComboBoxPhanLoai();
+        }
+
+        #endregion
+
+        #region Xử lý pnlDanhMucVe - Danh mục loại vé
 
         /// <summary>
         /// Lấy toàn bộ danh sách loại vé từ BUS và cache lại.
@@ -64,6 +76,7 @@ namespace Vinwonders_Management.QuanLyVe
 
         /// <summary>
         /// Nạp danh sách phân loại vé (distinct) vào ComboBox cboPhanLoaiVe.
+        /// Đồng thời gán các sự kiện cho DataGridView và ComboBox.
         /// </summary>
         private void LoadComboBoxPhanLoai()
         {
@@ -88,16 +101,16 @@ namespace Vinwonders_Management.QuanLyVe
 
                 cboPhanLoaiVe.SelectedIndex = 0;
 
-                // Gắn sự kiện khi chọn phân loại
+                // Gán sự kiện khi chọn phân loại
                 cboPhanLoaiVe.SelectedIndexChanged += cboPhanLoaiVe_SelectedIndexChanged;
 
-                // Gắn sự kiện double-click trên dgvLoaiVe
+                // Gán sự kiện double-click trên dgvLoaiVe (thêm vé vào giỏ)
                 dgvLoaiVe.CellDoubleClick += dgvLoaiVe_CellDoubleClick;
 
-                // Gắn sự kiện khi chỉnh sửa số lượng trên dgvVoHang
+                // Gán sự kiện khi chỉnh sửa số lượng trên dgvVoHang
                 dgvVoHang.CellEndEdit += dgvVoHang_CellEndEdit;
 
-                // Gắn sự kiện KeyDown trên dgvVoHang để xóa dòng bằng phím Delete
+                // Gán sự kiện KeyDown trên dgvVoHang để xóa dòng bằng phím Delete
                 dgvVoHang.KeyDown += dgvVoHang_KeyDown;
 
                 // Hiển thị tất cả loại vé ban đầu
@@ -124,6 +137,7 @@ namespace Vinwonders_Management.QuanLyVe
 
         /// <summary>
         /// Hiển thị loại vé lên dgvLoaiVe theo phân loại được chọn.
+        /// Nếu chọn "Tất cả" thì hiển thị toàn bộ.
         /// </summary>
         private void HienThiLoaiVeTheoPhanLoai(string phanLoai)
         {
@@ -151,6 +165,10 @@ namespace Vinwonders_Management.QuanLyVe
                 dgvLoaiVe.Rows.Add(maLoaiVe, tenLoaiVe, giaVe, baoGomAnUong);
             }
         }
+
+        #endregion
+
+        #region Xử lý giỏ hàng (dgvVoHang) - Thêm, sửa, xóa vé trong giỏ
 
         /// <summary>
         /// Khi nhấn đúp (double-click) vào một dòng trên dgvLoaiVe => thêm loại vé vào giỏ hàng (dgvVoHang).
@@ -215,6 +233,7 @@ namespace Vinwonders_Management.QuanLyVe
 
         /// <summary>
         /// Khi người dùng chỉnh sửa cột "Số Lượng" trên dgvVoHang => cập nhật lại tổng tiền.
+        /// Nếu số lượng <= 0 thì xóa dòng. Nếu nhập sai => đặt lại = 1.
         /// </summary>
         private void dgvVoHang_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -259,6 +278,7 @@ namespace Vinwonders_Management.QuanLyVe
 
         /// <summary>
         /// Xử lý phím Delete trên dgvVoHang => xóa dòng được chọn khỏi giỏ hàng.
+        /// Hiện hộp thoại xác nhận trước khi xóa.
         /// </summary>
         private void dgvVoHang_KeyDown(object sender, KeyEventArgs e)
         {
@@ -280,6 +300,7 @@ namespace Vinwonders_Management.QuanLyVe
 
         /// <summary>
         /// Tính và cập nhật tổng tiền hóa đơn từ giỏ hàng.
+        /// Duyệt toàn bộ các dòng trong dgvVoHang, lấy giá gốc * số lượng.
         /// </summary>
         private void CapNhatTongTien()
         {
@@ -300,11 +321,11 @@ namespace Vinwonders_Management.QuanLyVe
 
         #endregion
 
-        #region Xử lý Checkbox Khách Vãng Lai
+        #region Xử lý tìm kiếm Khách Hàng (Tên/SDT và Vãng Lai)
 
         /// <summary>
         /// Khi tick "Khách vãng lai": disable textbox tên/SDT, xóa nội dung, reset thông tin thành viên.
-        /// Khi bỏ tick: enable lại textbox tên/SDT.
+        /// Khi bỏ tick: enable lại textbox tên/SDT để cho phép nhập.
         /// </summary>
         private void chkBoxKhachVangLai_CheckedChanged(object sender, EventArgs e)
         {
@@ -324,10 +345,6 @@ namespace Vinwonders_Management.QuanLyVe
                 txtTenHoacSDT.Focus();
             }
         }
-
-        #endregion
-
-        #region Xử lý tìm kiếm Khách hàng & Hiển thị Hạng Thành Viên
 
         /// <summary>
         /// Khi rời khỏi textbox Tên/SDT: tìm khách hàng theo tên hoặc SDT.
@@ -351,7 +368,7 @@ namespace Vinwonders_Management.QuanLyVe
 
                 if (dtKhachHang != null && dtKhachHang.Rows.Count > 0)
                 {
-                    // Lọc kết quả: tìm chính xác theo Tên hoặc SĐT
+                    // Lọc kết quả: tìm chính xác theo Tên hoặc SDT
                     DataRow[] ketQua = dtKhachHang.Select(
                         "HoTen LIKE '%" + tuKhoa.Replace("'", "''") + "%' OR SoDienThoai = '" + tuKhoa.Replace("'", "''") + "'");
 
@@ -421,6 +438,7 @@ namespace Vinwonders_Management.QuanLyVe
         /// <summary>
         /// Khi rời khỏi textbox Mã sự kiện: kiểm tra mã sự kiện.
         /// Nếu đúng => hiển thị tên sự kiện, giảm giá tối đa, ngày bắt đầu, ngày kết thúc.
+        /// Nếu sự kiện đã hết hạn hoặc không tồn tại => thông báo cho người dùng.
         /// </summary>
         private void txtMaSuKien_Leave(object sender, EventArgs e)
         {
@@ -505,27 +523,17 @@ namespace Vinwonders_Management.QuanLyVe
 
         #endregion
 
+        #region Xử lý nút Thêm hóa đơn
+
+        /// <summary>
+        /// Sự kiện click nút Thêm - tạo hóa đơn vé mới.
+        /// (Chưa triển khai)
+        /// </summary>
         private void btnThem_Click(object sender, EventArgs e)
         {
 
         }
+
+        #endregion
     }
 }
-//�n về trạng thái mặc định.
-//        /// </summary>
-//        private void ResetThongTinSuKien()
-//        {
-//            lblTenSuKien.Text = "---";
-//            lblGiamToiDa.Text = "---";
-//            lblNgayBatDau.Text = "---";
-//            lblNgayKetThuc.Text = "---";
-//        }
-
-//        #endregion
-
-//        private void btnThem_Click(object sender, EventArgs e)
-//        {
-
-//        }
-//    }
-//}
