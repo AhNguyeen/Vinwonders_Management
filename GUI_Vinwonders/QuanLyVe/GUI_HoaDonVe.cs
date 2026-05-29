@@ -528,7 +528,7 @@ namespace Vinwonders_Management.QuanLyVe
         /// <summary>
         /// Sự kiện click nút Thêm - tạo hóa đơn vé mới.
         /// (Chưa triển khai)
-        /// </summary>
+        /// </summary>Remove-Item -Path "d:\Ki_4\CN.NET\DoAn\Vinwonders_Management\GUI_Vinwonders\QuanLyVe\test.txt" -Force; Remove-Item -Path "d:\Ki_4\CN.NET\DoAn\Vinwonders_Management\GUI_Vinwonders\QuanLyVe\test_encoding.txt" -Force; Remove-Item -Path "d:\Ki_4\CN.NET\DoAn\Vinwonders_Management\GUI_Vinwonders\QuanLyVe\GUI_HoaDonVe.cs.bak" -Force; Remove-Item -Path "d:\Ki_4\CN.NET\DoAn\Vinwonders_Management\GUI_Vinwonders\QuanLyVe\temp.cs" -ErrorAction SilentlyContinue -Force
         private void btnThem_Click(object sender, EventArgs e)
         {
 
