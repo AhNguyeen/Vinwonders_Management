@@ -105,6 +105,9 @@
             // btnHangThanhVien
             // 
             this.btnHangThanhVien.BorderRadius = 12;
+            this.btnHangThanhVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHangThanhVien.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(194)))));
+            this.btnHangThanhVien.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnHangThanhVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHangThanhVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHangThanhVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -112,9 +115,9 @@
             this.btnHangThanhVien.FillColor = System.Drawing.Color.White;
             this.btnHangThanhVien.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHangThanhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHangThanhVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHangThanhVien.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnHangThanhVien.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnHangThanhVien.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHangThanhVien.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnHangThanhVien.Location = new System.Drawing.Point(155, 10);
             this.btnHangThanhVien.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnHangThanhVien.Name = "btnHangThanhVien";
@@ -126,6 +129,9 @@
             // btnKhachHang
             // 
             this.btnKhachHang.BorderRadius = 12;
+            this.btnKhachHang.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKhachHang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(194)))));
+            this.btnKhachHang.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnKhachHang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKhachHang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -133,9 +139,9 @@
             this.btnKhachHang.FillColor = System.Drawing.Color.White;
             this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKhachHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnKhachHang.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnKhachHang.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnKhachHang.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnKhachHang.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnKhachHang.Location = new System.Drawing.Point(5, 10);
             this.btnKhachHang.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnKhachHang.Name = "btnKhachHang";

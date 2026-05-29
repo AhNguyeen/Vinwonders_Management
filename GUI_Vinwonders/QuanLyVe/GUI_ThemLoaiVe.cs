@@ -26,9 +26,9 @@ namespace Vinwonders_Management.QuanLyVe
         {
             // Nạp danh sách phân loại vào ComboBox
             cboPhanLoai.Items.Clear();
-            cboPhanLoai.Items.Add("Vé vào cổng");
-            cboPhanLoai.Items.Add("Vé trọn gói");
-            cboPhanLoai.Items.Add("Combo ăn trưa");
+            cboPhanLoai.Items.Add("Người cao tuổi");
+            cboPhanLoai.Items.Add("Người lớn");
+            cboPhanLoai.Items.Add("Trẻ em");
             cboPhanLoai.SelectedIndex = 0;
 
             // Tự sinh mã loại vé mới

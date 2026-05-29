@@ -198,5 +198,15 @@ namespace Vinwonders_Management.QuanLyVe
         {
             this.Close();
         }
+
+        private void GUI_CapNhatLoaiVe_Load(object sender, EventArgs e)
+        {
+            // Nạp danh sách phân loại vào ComboBox
+            cboPhanLoai.Items.Clear();
+            cboPhanLoai.Items.Add("Người cao tuổi");
+            cboPhanLoai.Items.Add("Người lớn");
+            cboPhanLoai.Items.Add("Trẻ em");
+            cboPhanLoai.SelectedIndex = 0;
+        }
     }
 }

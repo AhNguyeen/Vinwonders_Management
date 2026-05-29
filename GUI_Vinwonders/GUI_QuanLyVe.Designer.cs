@@ -104,6 +104,9 @@
             // btnLoaiVe
             // 
             this.btnLoaiVe.BorderRadius = 12;
+            this.btnLoaiVe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnLoaiVe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnLoaiVe.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnLoaiVe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLoaiVe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLoaiVe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -111,9 +114,9 @@
             this.btnLoaiVe.FillColor = System.Drawing.Color.White;
             this.btnLoaiVe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaiVe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLoaiVe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLoaiVe.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnLoaiVe.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLoaiVe.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLoaiVe.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLoaiVe.Location = new System.Drawing.Point(155, 10);
             this.btnLoaiVe.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnLoaiVe.Name = "btnLoaiVe";
@@ -125,6 +128,9 @@
             // btnHoaDonVe
             // 
             this.btnHoaDonVe.BorderRadius = 12;
+            this.btnHoaDonVe.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnHoaDonVe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnHoaDonVe.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnHoaDonVe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHoaDonVe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHoaDonVe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -132,9 +138,9 @@
             this.btnHoaDonVe.FillColor = System.Drawing.Color.White;
             this.btnHoaDonVe.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDonVe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHoaDonVe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHoaDonVe.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnHoaDonVe.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnHoaDonVe.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHoaDonVe.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnHoaDonVe.Location = new System.Drawing.Point(5, 10);
             this.btnHoaDonVe.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnHoaDonVe.Name = "btnHoaDonVe";

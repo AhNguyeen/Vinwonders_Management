@@ -29,6 +29,7 @@ namespace Vinwonders_Management.QuanLyVe
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cboPhanLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.rtxtMoTa = new System.Windows.Forms.RichTextBox();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
@@ -42,7 +43,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
-            this.cboPhanLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,22 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(650, 500);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // cboPhanLoai
+            // 
+            this.cboPhanLoai.BackColor = System.Drawing.Color.Transparent;
+            this.cboPhanLoai.BorderRadius = 10;
+            this.cboPhanLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboPhanLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPhanLoai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboPhanLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboPhanLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboPhanLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboPhanLoai.ItemHeight = 30;
+            this.cboPhanLoai.Location = new System.Drawing.Point(329, 130);
+            this.cboPhanLoai.Name = "cboPhanLoai";
+            this.cboPhanLoai.Size = new System.Drawing.Size(300, 36);
+            this.cboPhanLoai.TabIndex = 30;
             // 
             // guna2Panel2
             // 
@@ -264,22 +280,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.btnThoat.Text = "x";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // cboPhanLoai
-            // 
-            this.cboPhanLoai.BackColor = System.Drawing.Color.Transparent;
-            this.cboPhanLoai.BorderRadius = 10;
-            this.cboPhanLoai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboPhanLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPhanLoai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboPhanLoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboPhanLoai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboPhanLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboPhanLoai.ItemHeight = 30;
-            this.cboPhanLoai.Location = new System.Drawing.Point(329, 130);
-            this.cboPhanLoai.Name = "cboPhanLoai";
-            this.cboPhanLoai.Size = new System.Drawing.Size(300, 36);
-            this.cboPhanLoai.TabIndex = 30;
-            // 
             // GUI_CapNhatLoaiVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +292,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.MinimumSize = new System.Drawing.Size(650, 500);
             this.Name = "GUI_CapNhatLoaiVe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.GUI_CapNhatLoaiVe_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
