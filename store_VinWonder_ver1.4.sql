@@ -1186,3 +1186,61 @@ BEGIN
     ) AS PivotTable;
 END;
 GO
+-- =================================================================
+-- 18 STORED PROCEDURES: VÉ
+-- =================================================================
+-- 1. Get All Ve
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_GetAll_Ve')
+    DROP PROCEDURE sp_GetAll_Ve;
+GO
+CREATE PROCEDURE sp_GetAll_Ve
+AS
+BEGIN
+    SELECT * FROM Ve;
+END
+GO
+-- 2. Delete Ve
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_Ve')
+    DROP PROCEDURE sp_Delete_Ve;
+GO
+CREATE PROCEDURE sp_Delete_Ve
+    @MaVe NVARCHAR(20)
+AS
+BEGIN
+    DELETE FROM Ve WHERE MaVe = @MaVe;
+END
+GO
+-- 3. Update Ve
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_Ve')
+    DROP PROCEDURE sp_Update_Ve;
+GO
+CREATE PROCEDURE sp_Update_Ve
+    @MaVe NVARCHAR(20),
+    @MaHoaDon NVARCHAR(20),
+    @MaLoaiVe NVARCHAR(20),
+    @DonGia DECIMAL(18,2),
+    @NgaySuDung DATETIME,
+    @DaSuDung BIT
+AS
+BEGIN
+    UPDATE Ve
+    SET MaHoaDon = @MaHoaDon,
+        MaLoaiVe = @MaLoaiVe,
+        DonGia = @DonGia,
+        NgaySuDung = @NgaySuDung,
+        DaSuDung = @DaSuDung
+    WHERE MaVe = @MaVe;
+END
+GO
+-- 4. Search Ve
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Search_Ve')
+    DROP PROCEDURE sp_Search_Ve;
+GO
+CREATE PROCEDURE sp_Search_Ve
+    @TuKhoa NVARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM Ve 
+    WHERE MaVe LIKE '%' + @TuKhoa + '%' OR MaHoaDon LIKE '%' + @TuKhoa + '%';
+END
+GO

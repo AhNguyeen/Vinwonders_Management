@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -69,10 +69,10 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_Ve"; //Chua co store delete
+                string sql = "sp_Delete_Ve";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaVe", ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -116,16 +116,16 @@ namespace DAL_Vinwonders
             return kt;
         }
 
-        public DataTable TimVe(string tenKH = null)
+        public DataTable TimVe(string tuKhoa = null)
         {
             DataTable kt = new DataTable();
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_Ve"; //Chua co store delete
+                string sql = "sp_Search_Ve";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",tenKH),
+                    new SqlParameter("@TuKhoa", tuKhoa),
                 };
                 kt = connectDB.ReadData(sql, sp);
             }
