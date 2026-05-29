@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyVe
+namespace Vinwonders_Management.QuanLyVe
 {
     partial class GUI_HoaDonVe
     {
@@ -644,7 +644,7 @@
             this.dgvVoHang.Location = new System.Drawing.Point(0, 77);
             this.dgvVoHang.MultiSelect = false;
             this.dgvVoHang.Name = "dgvVoHang";
-            this.dgvVoHang.ReadOnly = true;
+            this.dgvVoHang.ReadOnly = false;
             this.dgvVoHang.RowHeadersVisible = false;
             this.dgvVoHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVoHang.Size = new System.Drawing.Size(450, 278);
@@ -660,7 +660,7 @@
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "Số Lượng";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.ReadOnly = false;
             // 
             // dataGridViewTextBoxColumn3
             // 

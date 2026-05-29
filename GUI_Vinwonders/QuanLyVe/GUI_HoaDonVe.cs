@@ -18,15 +18,22 @@ namespace Vinwonders_Management.QuanLyVe
         BUS_KhachHang busKhachHang = new BUS_KhachHang();
         BUS_HangThanhVien busHangThanhVien = new BUS_HangThanhVien();
         BUS_SuKien busSuKien = new BUS_SuKien();
+        BUS_LoaiVe busLoaiVe = new BUS_LoaiVe();
+
+        // Cache danh sách tất cả loại vé
+        private DataTable dtTatCaLoaiVe;
 
         // Sự kiện Load của Form
         public void LoadData()
         {
-
+            LoadDanhSachLoaiVe();
+            LoadComboBoxPhanLoai();
         }
+
         public GUI_HoaDonVe()
         {
             InitializeComponent();
+
             // Khởi tạo trạng thái ban đầu cho các label
             ResetThongTinThanhVien();
             ResetThongTinSuKien();
@@ -36,6 +43,262 @@ namespace Vinwonders_Management.QuanLyVe
         {
             LoadData();
         }
+
+        #region Xử lý pnlDanhMucVe - Danh mục loại vé & Giỏ hàng
+
+        /// <summary>
+        /// Lấy toàn bộ danh sách loại vé từ BUS và cache lại.
+        /// </summary>
+        private void LoadDanhSachLoaiVe()
+        {
+            try
+            {
+                dtTatCaLoaiVe = busLoaiVe.InDanhSach();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách loại vé: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Nạp danh sách phân loại vé (distinct) vào ComboBox cboPhanLoaiVe.
+        /// </summary>
+        private void LoadComboBoxPhanLoai()
+        {
+            try
+            {
+                cboPhanLoaiVe.Items.Clear();
+                cboPhanLoaiVe.Items.Add("-- Tất cả --");
+
+                if (dtTatCaLoaiVe != null && dtTatCaLoaiVe.Rows.Count > 0)
+                {
+                    // Lấy danh sách phân loại không trùng lặp
+                    var danhSachPhanLoai = dtTatCaLoaiVe.AsEnumerable()
+                        .Select(r => r["PhanLoai"].ToString())
+                        .Distinct()
+                        .OrderBy(p => p);
+
+                    foreach (string phanLoai in danhSachPhanLoai)
+                    {
+                        cboPhanLoaiVe.Items.Add(phanLoai);
+                    }
+                }
+
+                cboPhanLoaiVe.SelectedIndex = 0;
+
+                // Gắn sự kiện khi chọn phân loại
+                cboPhanLoaiVe.SelectedIndexChanged += cboPhanLoaiVe_SelectedIndexChanged;
+
+                // Gắn sự kiện double-click trên dgvLoaiVe
+                dgvLoaiVe.CellDoubleClick += dgvLoaiVe_CellDoubleClick;
+
+                // Gắn sự kiện khi chỉnh sửa số lượng trên dgvVoHang
+                dgvVoHang.CellEndEdit += dgvVoHang_CellEndEdit;
+
+                // Gắn sự kiện KeyDown trên dgvVoHang để xóa dòng bằng phím Delete
+                dgvVoHang.KeyDown += dgvVoHang_KeyDown;
+
+                // Hiển thị tất cả loại vé ban đầu
+                HienThiLoaiVeTheoPhanLoai("-- Tất cả --");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải phân loại vé: " + ex.Message, "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Khi chọn phân loại vé từ ComboBox => lọc và hiển thị loại vé tương ứng trên dgvLoaiVe.
+        /// </summary>
+        private void cboPhanLoaiVe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string phanLoaiChon = cboPhanLoaiVe.SelectedItem?.ToString();
+            if (!string.IsNullOrEmpty(phanLoaiChon))
+            {
+                HienThiLoaiVeTheoPhanLoai(phanLoaiChon);
+            }
+        }
+
+        /// <summary>
+        /// Hiển thị loại vé lên dgvLoaiVe theo phân loại được chọn.
+        /// </summary>
+        private void HienThiLoaiVeTheoPhanLoai(string phanLoai)
+        {
+            dgvLoaiVe.Rows.Clear();
+
+            if (dtTatCaLoaiVe == null || dtTatCaLoaiVe.Rows.Count == 0) return;
+
+            DataRow[] ketQua;
+            if (phanLoai == "-- Tất cả --")
+            {
+                ketQua = dtTatCaLoaiVe.Select();
+            }
+            else
+            {
+                ketQua = dtTatCaLoaiVe.Select("PhanLoai = '" + phanLoai.Replace("'", "''") + "'");
+            }
+
+            foreach (DataRow row in ketQua)
+            {
+                string maLoaiVe = row["MaLoaiVe"].ToString();
+                string tenLoaiVe = row["TenLoaiVe"].ToString();
+                string giaVe = Convert.ToDecimal(row["GiaVe"]).ToString("#,##0");
+                string baoGomAnUong = Convert.ToBoolean(row["BaoGomAnUong"]) ? "Có" : "Không";
+
+                dgvLoaiVe.Rows.Add(maLoaiVe, tenLoaiVe, giaVe, baoGomAnUong);
+            }
+        }
+
+        /// <summary>
+        /// Khi nhấn đúp (double-click) vào một dòng trên dgvLoaiVe => thêm loại vé vào giỏ hàng (dgvVoHang).
+        /// Nếu loại vé đã tồn tại trong giỏ hàng => tăng số lượng lên 1.
+        /// </summary>
+        private void dgvLoaiVe_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Bỏ qua nếu click vào header
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow rowChon = dgvLoaiVe.Rows[e.RowIndex];
+            string tenVe = rowChon.Cells["colTenLoaiVe"].Value?.ToString();
+            string maLoaiVe = rowChon.Cells["colMaLoaiVe"].Value?.ToString();
+
+            if (string.IsNullOrEmpty(tenVe)) return;
+
+            // Lấy giá vé từ DataTable gốc (dùng giá trị decimal chính xác)
+            decimal giaVe = 0;
+            if (dtTatCaLoaiVe != null)
+            {
+                DataRow[] rows = dtTatCaLoaiVe.Select("MaLoaiVe = '" + maLoaiVe.Replace("'", "''") + "'");
+                if (rows.Length > 0)
+                {
+                    giaVe = Convert.ToDecimal(rows[0]["GiaVe"]);
+                }
+            }
+
+            // Kiểm tra xem loại vé đã có trong giỏ hàng chưa
+            bool daTonTai = false;
+            foreach (DataGridViewRow row in dgvVoHang.Rows)
+            {
+                // So sánh theo tên vé
+                if (row.Cells["dataGridViewTextBoxColumn1"].Value != null &&
+                    row.Cells["dataGridViewTextBoxColumn1"].Value.ToString() == tenVe)
+                {
+                    // Tăng số lượng lên 1
+                    int soLuongHienTai = Convert.ToInt32(row.Cells["dataGridViewTextBoxColumn2"].Value);
+                    soLuongHienTai++;
+                    row.Cells["dataGridViewTextBoxColumn2"].Value = soLuongHienTai;
+
+                    // Cập nhật tổng tiền cho dòng này
+                    row.Cells["dataGridViewTextBoxColumn3"].Value = (giaVe * soLuongHienTai).ToString("#,##0");
+
+                    // Lưu giá vé gốc vào Tag của dòng
+                    row.Tag = giaVe;
+
+                    daTonTai = true;
+                    break;
+                }
+            }
+
+            if (!daTonTai)
+            {
+                // Thêm dòng mới vào giỏ hàng với số lượng = 1
+                int rowIndex = dgvVoHang.Rows.Add(tenVe, 1, giaVe.ToString("#,##0"));
+                dgvVoHang.Rows[rowIndex].Tag = giaVe; // Lưu giá vé gốc vào Tag
+            }
+
+            // Cập nhật tổng tiền hóa đơn
+            CapNhatTongTien();
+        }
+
+        /// <summary>
+        /// Khi người dùng chỉnh sửa cột "Số Lượng" trên dgvVoHang => cập nhật lại tổng tiền.
+        /// </summary>
+        private void dgvVoHang_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            // Chỉ xử lý khi chỉnh sửa cột "Số Lượng" (index = 1)
+            if (e.ColumnIndex != 1) return;
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dgvVoHang.Rows[e.RowIndex];
+
+            try
+            {
+                int soLuongMoi = Convert.ToInt32(row.Cells["dataGridViewTextBoxColumn2"].Value);
+
+                if (soLuongMoi <= 0)
+                {
+                    // Nếu số lượng <= 0 => xóa dòng khỏi giỏ hàng
+                    dgvVoHang.Rows.RemoveAt(e.RowIndex);
+                }
+                else
+                {
+                    // Lấy giá vé gốc từ Tag
+                    decimal giaVe = row.Tag != null ? Convert.ToDecimal(row.Tag) : 0;
+
+                    // Cập nhật tổng tiền cho dòng
+                    row.Cells["dataGridViewTextBoxColumn3"].Value = (giaVe * soLuongMoi).ToString("#,##0");
+                }
+            }
+            catch
+            {
+                // Nếu nhập không hợp lệ => đặt lại số lượng = 1
+                MessageBox.Show("Vui lòng nhập số lượng hợp lệ (số nguyên dương)!", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                row.Cells["dataGridViewTextBoxColumn2"].Value = 1;
+
+                decimal giaVe = row.Tag != null ? Convert.ToDecimal(row.Tag) : 0;
+                row.Cells["dataGridViewTextBoxColumn3"].Value = giaVe.ToString("#,##0");
+            }
+
+            // Cập nhật tổng tiền hóa đơn
+            CapNhatTongTien();
+        }
+
+        /// <summary>
+        /// Xử lý phím Delete trên dgvVoHang => xóa dòng được chọn khỏi giỏ hàng.
+        /// </summary>
+        private void dgvVoHang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete && dgvVoHang.CurrentRow != null)
+            {
+                DialogResult xacNhan = MessageBox.Show(
+                    "Bạn có muốn xóa vé này khỏi giỏ hàng?", "Xác nhận",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (xacNhan == DialogResult.Yes)
+                {
+                    dgvVoHang.Rows.RemoveAt(dgvVoHang.CurrentRow.Index);
+                    CapNhatTongTien();
+                }
+
+                e.Handled = true;
+            }
+        }
+
+        /// <summary>
+        /// Tính và cập nhật tổng tiền hóa đơn từ giỏ hàng.
+        /// </summary>
+        private void CapNhatTongTien()
+        {
+            decimal tongTien = 0;
+
+            foreach (DataGridViewRow row in dgvVoHang.Rows)
+            {
+                if (row.Tag != null && row.Cells["dataGridViewTextBoxColumn2"].Value != null)
+                {
+                    decimal giaVe = Convert.ToDecimal(row.Tag);
+                    int soLuong = Convert.ToInt32(row.Cells["dataGridViewTextBoxColumn2"].Value);
+                    tongTien += giaVe * soLuong;
+                }
+            }
+
+            lblTongTien.Text = tongTien.ToString("#,##0") + " đ";
+        }
+
+        #endregion
 
         #region Xử lý Checkbox Khách Vãng Lai
 
@@ -248,3 +511,21 @@ namespace Vinwonders_Management.QuanLyVe
         }
     }
 }
+//�n về trạng thái mặc định.
+//        /// </summary>
+//        private void ResetThongTinSuKien()
+//        {
+//            lblTenSuKien.Text = "---";
+//            lblGiamToiDa.Text = "---";
+//            lblNgayBatDau.Text = "---";
+//            lblNgayKetThuc.Text = "---";
+//        }
+
+//        #endregion
+
+//        private void btnThem_Click(object sender, EventArgs e)
+//        {
+
+//        }
+//    }
+//}
