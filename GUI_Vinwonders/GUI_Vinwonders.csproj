@@ -292,12 +292,6 @@
     <Compile Include="QuanLyVe\GUI_LoaiVe.Designer.cs">
       <DependentUpon>GUI_LoaiVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyVe\GUI_ThemHoaDonVe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyVe\GUI_ThemHoaDonVe.Designer.cs">
-      <DependentUpon>GUI_ThemHoaDonVe.cs</DependentUpon>
-    </Compile>
     <Compile Include="QuanLyVe\GUI_ThemLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -425,9 +419,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_LoaiVe.resx">
       <DependentUpon>GUI_LoaiVe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyVe\GUI_ThemHoaDonVe.resx">
-      <DependentUpon>GUI_ThemHoaDonVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_ThemLoaiVe.resx">
       <DependentUpon>GUI_ThemLoaiVe.cs</DependentUpon>
