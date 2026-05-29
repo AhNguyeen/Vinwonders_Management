@@ -19,9 +19,7 @@ namespace Vinwonders_Management.QuanLyVe
         // Sự kiện Load của Form
         public void LoadData()
         {
-            dgvHoaDonVe.AutoGenerateColumns = false;
-            // Gán dữ liệu vào DataGridView
-            dgvHoaDonVe.DataSource = busHoaDonVe.InDanhSach();
+
         }
         public GUI_HoaDonVe()
         {
@@ -35,8 +33,7 @@ namespace Vinwonders_Management.QuanLyVe
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            GUI_ThemHoaDonVe themHoaDonVe = new GUI_ThemHoaDonVe();
-            themHoaDonVe.ShowDialog();
+
         }
     }
 }
