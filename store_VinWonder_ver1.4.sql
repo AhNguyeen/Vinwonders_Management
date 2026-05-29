@@ -253,6 +253,55 @@ BEGIN
 END;
 GO
 
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Delete_HoaDonVe')
+    DROP PROCEDURE sp_Delete_HoaDonVe;
+GO
+CREATE PROCEDURE sp_Delete_HoaDonVe
+    @MaHoaDon NVARCHAR(20)
+AS
+BEGIN
+    DELETE FROM HoaDonVe WHERE MaHoaDon = @MaHoaDon;
+END
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_HoaDonVe')
+    DROP PROCEDURE sp_Update_HoaDonVe;
+GO
+CREATE PROCEDURE sp_Update_HoaDonVe
+    @MaHoaDon NVARCHAR(20),
+    @MaKhachHang NVARCHAR(20),
+    @MaNhanVien NVARCHAR(20),
+    @MaSuKien NVARCHAR(20),
+    @ChietKhauDoan DECIMAL(18,2),
+    @TongTien DECIMAL(18,2),
+    @PhuongThucThanhToan NVARCHAR(50),
+    @TrangThai NVARCHAR(50)
+AS
+BEGIN
+    UPDATE HoaDonVe
+    SET MaKhachHang = @MaKhachHang,
+        MaNhanVien = @MaNhanVien,
+        MaSuKien = @MaSuKien,
+        ChietKhauDoan = @ChietKhauDoan,
+        TongTien = @TongTien,
+        PhuongThucThanhToan = @PhuongThucThanhToan,
+        TrangThai = @TrangThai
+    WHERE MaHoaDon = @MaHoaDon;
+END
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Search_HoaDonVe')
+    DROP PROCEDURE sp_Search_HoaDonVe;
+GO
+CREATE PROCEDURE sp_Search_HoaDonVe
+    @TuKhoa NVARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM HoaDonVe 
+    WHERE MaHoaDon LIKE '%' + @TuKhoa + '%' OR MaKhachHang LIKE '%' + @TuKhoa + '%';
+END
+GO
+
 -- 4.2. Thêm từng vé đơn lẻ vào hệ thống (Khi nhấn Thanh toán trên GUI)
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Insert_Ve')
     DROP PROCEDURE sp_Insert_Ve;

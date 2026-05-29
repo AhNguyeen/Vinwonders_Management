@@ -54,7 +54,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -78,7 +78,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -107,7 +107,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -131,7 +131,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {

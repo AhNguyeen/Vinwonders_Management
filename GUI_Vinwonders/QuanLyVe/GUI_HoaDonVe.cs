@@ -631,7 +631,7 @@ namespace Vinwonders_Management.QuanLyVe
 
             try
             {
-                string maKhachHang = "KH000"; // Mặc định khách vãng lai
+                string maKhachHang = "KH01"; // Mặc định khách vãng lai
                 if (!chkBoxKhachVangLai.Checked)
                 {
                     DataTable dtKH = busKhachHang.TimKhachHang(txtTenHoacSDT.Text.Trim());
