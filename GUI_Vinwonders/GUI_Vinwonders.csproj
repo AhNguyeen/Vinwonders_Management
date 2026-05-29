@@ -266,12 +266,6 @@
     <Compile Include="QuanLyTroChoi\GUI_TroChoi.Designer.cs">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyVe\GUI_CapNhatHoaDonVe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyVe\GUI_CapNhatHoaDonVe.Designer.cs">
-      <DependentUpon>GUI_CapNhatHoaDonVe.cs</DependentUpon>
-    </Compile>
     <Compile Include="QuanLyVe\GUI_CapNhatLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,12 +291,6 @@
     </Compile>
     <Compile Include="QuanLyVe\GUI_LoaiVe.Designer.cs">
       <DependentUpon>GUI_LoaiVe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyVe\GUI_ThemHoaDonVe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyVe\GUI_ThemHoaDonVe.Designer.cs">
-      <DependentUpon>GUI_ThemHoaDonVe.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyVe\GUI_ThemLoaiVe.cs">
       <SubType>Form</SubType>
@@ -415,9 +403,6 @@
     <EmbeddedResource Include="QuanLyTroChoi\GUI_TroChoi.resx">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyVe\GUI_CapNhatHoaDonVe.resx">
-      <DependentUpon>GUI_CapNhatHoaDonVe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_CapNhatLoaiVe.resx">
       <DependentUpon>GUI_CapNhatLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,9 +419,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_LoaiVe.resx">
       <DependentUpon>GUI_LoaiVe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyVe\GUI_ThemHoaDonVe.resx">
-      <DependentUpon>GUI_ThemHoaDonVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_ThemLoaiVe.resx">
       <DependentUpon>GUI_ThemLoaiVe.cs</DependentUpon>

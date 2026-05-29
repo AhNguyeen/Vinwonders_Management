@@ -1,4 +1,4 @@
-﻿using DAL_Vinwonders;
+using DAL_Vinwonders;
 using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
@@ -17,9 +17,9 @@ namespace BUS_Vinwonders
         {
             return dalHoaDonVe.InDanhSachHoaDonVe();
         }
-        public DataTable TimHoaDonVe(string ten)
+        public DataTable TimHoaDonVe(string tuKhoa)
         {
-            return dalHoaDonVe.TimHoaDonVe(ten);
+            return dalHoaDonVe.TimHoaDonVe(tuKhoa);
         }
         public bool ThemHoaDonVe(ET_HoaDonVe et)
         {

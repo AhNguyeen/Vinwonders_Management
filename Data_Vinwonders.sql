@@ -65,9 +65,9 @@ INSERT INTO KhachHang (MaKhachHang, MaHang, HoTen, LoaiKhach, NgaySinh, DiaChi, 
 -- 4. DỮ LIỆU LOẠI VÉ (Đúng theo góp ý của giáo viên)
 -- ==========================================================
 INSERT INTO LoaiVe (MaLoaiVe, TenLoaiVe, PhanLoai, GiaVe, BaoGomAnUong, MoTa) VALUES
-('LV01', N'Vé Tham Quan', N'Vé vào cổng', 350000, 0, N'Chỉ qua cổng tham quan, không chơi trò chơi'),
-('LV02', N'Vé Trọn Gói', N'Vé trọn gói', 850000, 0, N'Được chơi tất cả các trò chơi trong khu vực'),
-('LV03', N'Combo Trọn Gói + Buffet', N'Combo ăn trưa', 1200000, 1, N'Vui chơi trọn gói và kèm 1 suất Buffet trưa 10h-12h');
+('LV01', N'Vé Vào Cổng Người Lớn', N'Người lớn', 950000, 0, N'Dành cho khách hàng cao từ 140cm trở lên'),
+('LV02', N'Vé Vào Cổng Trẻ Em', N'Trẻ em', 700000, 0, N'Dành cho khách hàng cao từ 100cm - 140cm'),
+('LV03', N'Vé Vào Cổng Cao Tuổi', N'Người cao tuổi', 700000, 0, N'Dành cho khách hàng từ 60 tuổi trở lên');
 
 -- ==========================================================
 -- 5. DỮ LIỆU TRÒ CHƠI & QUYỀN LỢI VÉ
@@ -142,3 +142,4 @@ INSERT INTO LichLamViec (MaLich, MaNhanVien, MaCa, NgayLamViec, ViTriPhanCong) V
 ('LLV012', 'NV07', 'CA02', '2026-05-29', N'Vệ sinh khu vui chơi'),
 ('LLV013', 'NV08', 'CA02', '2026-05-30', N'Trực Tàu lượn siêu tốc'),
 ('LLV014', 'NV05', 'CA04', '2026-05-31', N'Giám sát chung');
+GO

@@ -24,7 +24,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu cần
+                // X? l� l?i n?u c?n
                 throw ex;
             }
             finally
@@ -47,7 +47,7 @@ namespace DAL_Vinwonders
                     new SqlParameter("@MaKhachHang",et.MaKhachHang),
                     new SqlParameter("@MaNhanVien",et.MaNhanVien),
                     new SqlParameter("@MaSuKien",et.MaSuKien),
-                    new SqlParameter("@NgayMua",et.NgayMua),
+                    
                     new SqlParameter("@ChietKhauDoan",et.ChietKhauDoan),
                     new SqlParameter("@TongTien",et.TongTien),
                     new SqlParameter("@PhuongThucThanhToan",et.PhuongThucThanhToan),
@@ -57,7 +57,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -72,16 +72,16 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_HoaDonVe"; //Chua co store delete
+                string sql = "sp_Delete_HoaDonVe";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaHoaDon",ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -103,7 +103,7 @@ namespace DAL_Vinwonders
                     new SqlParameter("@MaKhachHang",et.MaKhachHang),
                     new SqlParameter("@MaNhanVien",et.MaNhanVien),
                     new SqlParameter("@MaSuKien",et.MaSuKien),
-                    new SqlParameter("@NgayMua",et.NgayMua),
+                    
                     new SqlParameter("@ChietKhauDoan",et.ChietKhauDoan),
                     new SqlParameter("@TongTien",et.TongTien),
                     new SqlParameter("@PhuongThucThanhToan",et.PhuongThucThanhToan),
@@ -113,7 +113,7 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -122,22 +122,22 @@ namespace DAL_Vinwonders
             return kt;
         }
 
-        public DataTable TimHoaDonVe(string tenKH = null)
+        public DataTable TimHoaDonVe(string tuKhoa = null)
         {
             DataTable kt = new DataTable();
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_HoaDonVe"; //Chua co store delete
+                string sql = "sp_Search_HoaDonVe";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",tenKH),
+                    new SqlParameter("@TuKhoa",tuKhoa),
                 };
                 kt = connectDB.ReadData(sql, sp);
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
             finally
             {
@@ -147,3 +147,4 @@ namespace DAL_Vinwonders
         }
     }
 }
+
