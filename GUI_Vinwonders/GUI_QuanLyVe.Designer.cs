@@ -35,6 +35,7 @@
             this.pnlAction = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLoaiVe = new Guna.UI2.WinForms.Guna2Button();
             this.btnHoaDonVe = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLichSuHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTabConTent.SuspendLayout();
             this.pnlFrame.SuspendLayout();
             this.pnlNav.SuspendLayout();
@@ -92,13 +93,14 @@
             this.pnlAction.BorderColor = System.Drawing.Color.Silver;
             this.pnlAction.BorderRadius = 15;
             this.pnlAction.BorderThickness = 1;
+            this.pnlAction.Controls.Add(this.btnLichSuHoaDon);
             this.pnlAction.Controls.Add(this.btnLoaiVe);
             this.pnlAction.Controls.Add(this.btnHoaDonVe);
             this.pnlAction.FillColor = System.Drawing.Color.White;
             this.pnlAction.Location = new System.Drawing.Point(22, 23);
             this.pnlAction.Margin = new System.Windows.Forms.Padding(10);
             this.pnlAction.Name = "pnlAction";
-            this.pnlAction.Size = new System.Drawing.Size(296, 59);
+            this.pnlAction.Size = new System.Drawing.Size(430, 59);
             this.pnlAction.TabIndex = 0;
             // 
             // btnLoaiVe
@@ -117,7 +119,7 @@
             this.btnLoaiVe.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnLoaiVe.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnLoaiVe.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLoaiVe.Location = new System.Drawing.Point(155, 10);
+            this.btnLoaiVe.Location = new System.Drawing.Point(151, 10);
             this.btnLoaiVe.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
             this.btnLoaiVe.Name = "btnLoaiVe";
             this.btnLoaiVe.Size = new System.Drawing.Size(136, 39);
@@ -149,6 +151,30 @@
             this.btnHoaDonVe.Text = "Hóa Đơn Vé";
             this.btnHoaDonVe.Click += new System.EventHandler(this.btnHoaDonVe_Click);
             // 
+            // btnLichSuHoaDon
+            // 
+            this.btnLichSuHoaDon.BorderRadius = 12;
+            this.btnLichSuHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnLichSuHoaDon.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnLichSuHoaDon.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnLichSuHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSuHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSuHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichSuHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLichSuHoaDon.FillColor = System.Drawing.Color.White;
+            this.btnLichSuHoaDon.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSuHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLichSuHoaDon.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnLichSuHoaDon.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnLichSuHoaDon.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLichSuHoaDon.Location = new System.Drawing.Point(289, 10);
+            this.btnLichSuHoaDon.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.btnLichSuHoaDon.Name = "btnLichSuHoaDon";
+            this.btnLichSuHoaDon.Size = new System.Drawing.Size(136, 39);
+            this.btnLichSuHoaDon.TabIndex = 0;
+            this.btnLichSuHoaDon.Text = "Lịch Sử Hóa Đơn";
+            this.btnLichSuHoaDon.Click += new System.EventHandler(this.btnLichSuHoaDon_Click);
+            // 
             // GUI_QuanLyVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,5 +201,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlAction;
         private Guna.UI2.WinForms.Guna2Button btnLoaiVe;
         private Guna.UI2.WinForms.Guna2Button btnHoaDonVe;
+        private Guna.UI2.WinForms.Guna2Button btnLichSuHoaDon;
     }
 }
