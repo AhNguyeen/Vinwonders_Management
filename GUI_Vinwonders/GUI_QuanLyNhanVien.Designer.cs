@@ -107,6 +107,9 @@
             // btnCaLamViec
             // 
             this.btnCaLamViec.BorderRadius = 12;
+            this.btnCaLamViec.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCaLamViec.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(194)))));
+            this.btnCaLamViec.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnCaLamViec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCaLamViec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCaLamViec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -114,9 +117,9 @@
             this.btnCaLamViec.FillColor = System.Drawing.Color.White;
             this.btnCaLamViec.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaLamViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCaLamViec.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCaLamViec.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnCaLamViec.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnCaLamViec.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCaLamViec.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCaLamViec.Location = new System.Drawing.Point(297, 10);
             this.btnCaLamViec.Margin = new System.Windows.Forms.Padding(5);
             this.btnCaLamViec.Name = "btnCaLamViec";
@@ -128,6 +131,9 @@
             // btnLichLamViec
             // 
             this.btnLichLamViec.BorderRadius = 12;
+            this.btnLichLamViec.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnLichLamViec.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(194)))));
+            this.btnLichLamViec.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnLichLamViec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLichLamViec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLichLamViec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -135,9 +141,9 @@
             this.btnLichLamViec.FillColor = System.Drawing.Color.White;
             this.btnLichLamViec.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLichLamViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLichLamViec.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLichLamViec.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnLichLamViec.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnLichLamViec.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLichLamViec.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLichLamViec.Location = new System.Drawing.Point(151, 10);
             this.btnLichLamViec.Margin = new System.Windows.Forms.Padding(5);
             this.btnLichLamViec.Name = "btnLichLamViec";
@@ -149,6 +155,9 @@
             // btnNhanVien
             // 
             this.btnNhanVien.BorderRadius = 12;
+            this.btnNhanVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnNhanVien.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(194)))));
+            this.btnNhanVien.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNhanVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -156,9 +165,9 @@
             this.btnNhanVien.FillColor = System.Drawing.Color.White;
             this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNhanVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnNhanVien.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnNhanVien.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnNhanVien.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnNhanVien.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnNhanVien.Location = new System.Drawing.Point(5, 10);
             this.btnNhanVien.Margin = new System.Windows.Forms.Padding(5);
             this.btnNhanVien.Name = "btnNhanVien";

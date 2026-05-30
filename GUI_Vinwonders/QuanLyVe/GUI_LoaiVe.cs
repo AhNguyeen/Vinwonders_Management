@@ -112,9 +112,15 @@ namespace Vinwonders_Management.QuanLyVe
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Lỗi khi xóa loại vé: " + ex.Message +
-                            "\n\nCó thể loại vé này đang được sử dụng bởi các vé đã phát hành.",
-                            "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (ex.Message.Contains("conflicted with the REFERENCE constraint") || ex.Message.Contains("FK_"))
+                        {
+                            MessageBox.Show("Không thể xóa loại vé này vì đã có các vé được phát hành thuộc loại này.\n\nGiải pháp: Bạn chỉ có thể cập nhật thông tin (như tên, giá vé) hoặc ngưng sử dụng loại vé này thay vì xóa bỏ.", 
+                                "Cảnh báo ràng buộc dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lỗi khi xóa loại vé: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }

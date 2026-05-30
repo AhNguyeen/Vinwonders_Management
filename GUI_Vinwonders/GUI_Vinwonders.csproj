@@ -286,6 +286,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyVe\GUI_LichSuHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_LichSuHoaDon.Designer.cs">
+      <DependentUpon>GUI_LichSuHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyVe\GUI_LoaiVe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -416,6 +422,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe\GUI_LichSuHoaDon.resx">
+      <DependentUpon>GUI_LichSuHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_LoaiVe.resx">
       <DependentUpon>GUI_LoaiVe.cs</DependentUpon>

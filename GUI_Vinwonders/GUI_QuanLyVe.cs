@@ -60,5 +60,10 @@ namespace Vinwonders_Management
         {
             OpenChildUserControl(typeof(QuanLyVe.GUI_LoaiVe));
         }
+
+        private void btnLichSuHoaDon_Click(object sender, EventArgs e)
+        {
+            OpenChildUserControl(typeof(QuanLyVe.GUI_LichSuHoaDon));
+        }
     }
 }

@@ -105,6 +105,9 @@
             // btnKhuVuc
             // 
             this.btnKhuVuc.BorderRadius = 12;
+            this.btnKhuVuc.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKhuVuc.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnKhuVuc.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnKhuVuc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKhuVuc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKhuVuc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -112,9 +115,9 @@
             this.btnKhuVuc.FillColor = System.Drawing.Color.White;
             this.btnKhuVuc.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhuVuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnKhuVuc.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnKhuVuc.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnKhuVuc.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnKhuVuc.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnKhuVuc.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnKhuVuc.Location = new System.Drawing.Point(151, 10);
             this.btnKhuVuc.Margin = new System.Windows.Forms.Padding(5);
             this.btnKhuVuc.Name = "btnKhuVuc";
@@ -126,6 +129,9 @@
             // btnTroChoi
             // 
             this.btnTroChoi.BorderRadius = 12;
+            this.btnTroChoi.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnTroChoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnTroChoi.CheckedState.ForeColor = System.Drawing.Color.Orange;
             this.btnTroChoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTroChoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTroChoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -133,9 +139,9 @@
             this.btnTroChoi.FillColor = System.Drawing.Color.White;
             this.btnTroChoi.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTroChoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTroChoi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTroChoi.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnTroChoi.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnTroChoi.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnTroChoi.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnTroChoi.Location = new System.Drawing.Point(5, 10);
             this.btnTroChoi.Margin = new System.Windows.Forms.Padding(5);
             this.btnTroChoi.Name = "btnTroChoi";
