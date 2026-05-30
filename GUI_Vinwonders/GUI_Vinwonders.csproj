@@ -272,6 +272,12 @@
     <Compile Include="QuanLyVe\GUI_CapNhatLoaiVe.Designer.cs">
       <DependentUpon>GUI_CapNhatLoaiVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyVe\GUI_ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyVe\GUI_HoaDonVe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -411,6 +417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_CapNhatLoaiVe.resx">
       <DependentUpon>GUI_CapNhatLoaiVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe\GUI_ChiTietHoaDon.resx">
+      <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_HoaDonVe.resx">
       <DependentUpon>GUI_HoaDonVe.cs</DependentUpon>

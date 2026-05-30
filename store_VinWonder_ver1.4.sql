@@ -1293,3 +1293,46 @@ BEGIN
     WHERE MaVe LIKE '%' + @TuKhoa + '%' OR MaHoaDon LIKE '%' + @TuKhoa + '%';
 END
 GO
+
+-- =================================================================
+-- 18 STORED PROCEDURES: LẤY THÔNG TIN CHI TIẾT HÓA ĐƠN & VÉ
+-- =================================================================
+CREATE PROCEDURE sp_LayThongTinChiTietHoaDon
+    @MaHoaDon VARCHAR(50) -- Nhớ sửa kiểu dữ liệu này nếu DB của bạn dùng INT hoặc kiểu khác
+AS
+BEGIN
+    -- SET NOCOUNT ON giúp tăng hiệu suất bằng cách chặn thông báo số dòng bị ảnh hưởng
+    SET NOCOUNT ON; 
+
+    SELECT 
+        kh.HoTen AS TenKhachHang, 
+        kh.SoDienThoai,
+        nv.HoTen AS TenNhanVien, 
+        hd.NgayMua, 
+        hd.TongTien 
+    FROM HoaDonVe hd
+    INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
+    INNER JOIN NhanVien nv ON hd.MaNhanVien = nv.MaNhanVien
+    WHERE hd.MaHoaDon = @MaHoaDon;
+END
+GO
+
+CREATE PROCEDURE sp_LayDanhSachVeThuocHoaDon
+    @MaHoaDon VARCHAR(50) -- Giữ nguyên kiểu dữ liệu bạn đang dùng
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        lv.TenLoaiVe, 
+        lv.GiaVe, 
+        COUNT(v.MaVe) AS SoLuong, 
+        (lv.GiaVe * COUNT(v.MaVe)) AS TongTien
+    FROM Ve v
+    INNER JOIN LoaiVe lv ON v.MaLoaiVe = lv.MaLoaiVe
+    WHERE v.MaHoaDon = @MaHoaDon
+    GROUP BY 
+        lv.TenLoaiVe, 
+        lv.GiaVe;
+END
+GO

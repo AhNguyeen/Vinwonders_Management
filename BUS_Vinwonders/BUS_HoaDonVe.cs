@@ -33,5 +33,15 @@ namespace BUS_Vinwonders
         {
             return dalHoaDonVe.SuaHoaDonVe(et);
         }
+
+        public DataTable LayThongTinChiTietHoaDon(string maHoaDon)
+        {
+            return dalHoaDonVe.LayThongTinChiTietHoaDon(maHoaDon);
+        }
+
+        public DataTable LayDanhSachVeThuocHoaDon(string maHoaDon)
+        {
+            return dalHoaDonVe.LayDanhSachVeThuocHoaDon(maHoaDon);
+        }
     }
 }

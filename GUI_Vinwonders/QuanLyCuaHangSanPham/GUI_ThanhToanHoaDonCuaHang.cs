@@ -66,6 +66,16 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
                 string maSP = dgvSanPham.Rows[e.RowIndex].Cells["colMaSanPham"].Value?.ToString() ?? "";
                 string tenSP = dgvSanPham.Rows[e.RowIndex].Cells["colTenSanPham"].Value?.ToString() ?? "";
                 string maCuaHang = dgvSanPham.Rows[e.RowIndex].Cells["colMaCuaHang"].Value?.ToString() ?? ""; // Lấy MaCuaHang
+                string trangThai = dgvSanPham.Rows[e.RowIndex].Cells["colTrangThaiBan"].Value?.ToString() ?? "";
+                
+                // Chuẩn hóa chuỗi: Chữ thường, xóa khoảng trắng thừa, xóa dấu cách để so sánh an toàn tuyệt đối
+                string t = trangThai.ToLower().Replace(" ", "").Trim();
+                
+                if (t.Contains("hếthàng") || t.Contains("ngưngbán") || t.Contains("ngừngbán") || t.Contains("hethang") || t.Contains("ngungban") || t.Contains("hết") || t.Contains("ngưng"))
+                {
+                    MessageBox.Show($"Sản phẩm này đang ở trạng thái '{trangThai}' nên không thể thêm vào giỏ hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 
                 decimal giaBan = 0;
                 var giaBanValue = dgvSanPham.Rows[e.RowIndex].Cells["colGiaBan"].Value;
