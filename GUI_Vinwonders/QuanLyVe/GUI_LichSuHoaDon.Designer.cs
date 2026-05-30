@@ -29,14 +29,14 @@ namespace Vinwonders_Management.QuanLyVe
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpNgayLoc = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvLichSu = new System.Windows.Forms.DataGridView();
             this.colMaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,19 +79,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2Panel2.Size = new System.Drawing.Size(857, 67);
             this.guna2Panel2.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(19, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 28);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Lịch Sử Hóa Đơn";
-            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -113,6 +100,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.Size = new System.Drawing.Size(215, 30);
             this.txtTimKiem.TabIndex = 6;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.TxtTimKiem_TextChanged);
             // 
             // dtpNgayLoc
             // 
@@ -129,6 +117,20 @@ namespace Vinwonders_Management.QuanLyVe
             this.dtpNgayLoc.Size = new System.Drawing.Size(162, 30);
             this.dtpNgayLoc.TabIndex = 5;
             this.dtpNgayLoc.Value = new System.DateTime(2023, 10, 24, 0, 0, 0, 0);
+            this.dtpNgayLoc.ValueChanged += new System.EventHandler(this.DtpNgayLoc_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(19, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 28);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Lịch Sử Hóa Đơn";
             // 
             // dgvLichSu
             // 
@@ -173,13 +175,16 @@ namespace Vinwonders_Management.QuanLyVe
             this.dgvLichSu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLichSu.Size = new System.Drawing.Size(857, 441);
             this.dgvLichSu.TabIndex = 20;
+            this.dgvLichSu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLichSu_CellContentClick);
             // 
             // colMaHoaDon
             // 
+            this.colMaHoaDon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colMaHoaDon.DataPropertyName = "MaHoaDon";
             this.colMaHoaDon.HeaderText = "Mã HĐ";
             this.colMaHoaDon.Name = "colMaHoaDon";
             this.colMaHoaDon.ReadOnly = true;
+            this.colMaHoaDon.Width = 80;
             // 
             // colKhachHang
             // 
@@ -245,6 +250,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.Controls.Add(this.guna2Panel1);
             this.Name = "GUI_LichSuHoaDon";
             this.Size = new System.Drawing.Size(857, 518);
+            this.Load += new System.EventHandler(this.GUI_LichSuHoaDon_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

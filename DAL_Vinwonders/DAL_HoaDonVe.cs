@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -24,7 +24,6 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-                // X? l� l?i n?u c?n
                 throw ex;
             }
             finally
@@ -144,6 +143,56 @@ namespace DAL_Vinwonders
                 connectDB.CloseConnect();
             }
             return kt;
+        }
+
+        public DataTable LayThongTinChiTietHoaDon(string maHoaDon)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                connectDB.OpenConnect();
+                string sql = "sp_LayThongTinChiTietHoaDon";
+
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@MaHoaDon", maHoaDon)
+                };
+                dt = connectDB.ReadData(sql, sp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return dt;
+        }
+
+        public DataTable LayDanhSachVeThuocHoaDon(string maHoaDon)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                connectDB.OpenConnect();
+                string sql = "sp_LayDanhSachVeThuocHoaDon";
+
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@MaHoaDon", maHoaDon)
+                };
+                dt = connectDB.ReadData(sql, sp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return dt;
         }
     }
 }
