@@ -757,6 +757,7 @@
             this.cboCacThang.Name = "cboCacThang";
             this.cboCacThang.Size = new System.Drawing.Size(209, 36);
             this.cboCacThang.TabIndex = 3;
+            this.cboCacThang.SelectedIndexChanged += new System.EventHandler(this.cboCacThang_SelectedIndexChanged);
             // 
             // GUI_Dashboard
             // 
@@ -838,3 +839,5 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboCacThang;
     }
 }
+
+

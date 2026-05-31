@@ -1336,3 +1336,174 @@ BEGIN
         lv.GiaVe;
 END
 GO
+
+-- =================================================================
+-- 19 STORED PROCEDURES: DASHBOARD (THỐNG KÊ)
+-- =================================================================
+
+-- Lấy 4 chỉ số tổng quan
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetStats') DROP PROCEDURE sp_Dashboard_GetStats;
+GO
+CREATE PROCEDURE sp_Dashboard_GetStats
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @TongVeBan INT = (SELECT ISNULL(SUM(SoLuong), 0) FROM HoaDonVe);
+    DECLARE @KhachHangMoi INT = (SELECT COUNT(*) FROM KhachHang);
+    DECLARE @DoanhThuVe DECIMAL(18,2) = (SELECT ISNULL(SUM(TongTien), 0) FROM HoaDonVe);
+    DECLARE @DoanhThuCuaHang DECIMAL(18,2) = (SELECT ISNULL(SUM(TongTien), 0) FROM HoaDonCuaHang);
+    
+    SELECT 
+        @TongVeBan AS TongVeBan, 
+        @KhachHangMoi AS KhachHangMoi, 
+        @DoanhThuVe AS DoanhThuVe, 
+        @DoanhThuCuaHang AS DoanhThuCuaHang;
+END;
+GO
+
+-- Lấy doanh thu theo ngày trong 1 tháng (Line Chart)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetRevenueByMonth') DROP PROCEDURE sp_Dashboard_GetRevenueByMonth;
+GO
+CREATE PROCEDURE sp_Dashboard_GetRevenueByMonth
+    @Thang INT,
+    @Nam INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    -- Tính doanh thu gộp từ vé và cửa hàng theo từng ngày
+    SELECT 
+        DAY(Ngay) AS Ngay,
+        SUM(TongDoanhThu) AS DoanhThu
+    FROM (
+        SELECT NgayMua AS Ngay, TongTien AS TongDoanhThu FROM HoaDonVe WHERE MONTH(NgayMua) = @Thang AND YEAR(NgayMua) = @Nam
+        UNION ALL
+        SELECT NgayTao AS Ngay, TongTien AS TongDoanhThu FROM HoaDonCuaHang WHERE MONTH(NgayTao) = @Thang AND YEAR(NgayTao) = @Nam
+    ) AS DoanhThuGop
+    GROUP BY DAY(Ngay)
+    ORDER BY DAY(Ngay);
+END;
+GO
+
+-- Lấy thống kê loại vé bán ra trong tháng (Donut Chart)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetTicketTypes') DROP PROCEDURE sp_Dashboard_GetTicketTypes;
+GO
+CREATE PROCEDURE sp_Dashboard_GetTicketTypes
+    @Thang INT,
+    @Nam INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT 
+        lv.TenLoaiVe, 
+        COUNT(v.MaVe) AS SoLuong
+    FROM Ve v
+    INNER JOIN LoaiVe lv ON v.MaLoaiVe = lv.MaLoaiVe
+    INNER JOIN HoaDonVe hd ON v.MaHoaDon = hd.MaHoaDon
+    WHERE MONTH(hd.NgayMua) = @Thang AND YEAR(hd.NgayMua) = @Nam
+    GROUP BY lv.TenLoaiVe;
+END;
+GO
+
+-- Lấy hóa đơn gần đây (15 hóa đơn mới nhất)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetRecentInvoices') DROP PROCEDURE sp_Dashboard_GetRecentInvoices;
+GO
+CREATE PROCEDURE sp_Dashboard_GetRecentInvoices
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT TOP 15
+        hd.MaHoaDon AS MaHD,
+        kh.HoTen AS KhachHang,
+        hd.SoLuong AS SoVe,
+        hd.TongTien,
+        hd.TrangThai
+    FROM HoaDonVe hd
+    INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
+    ORDER BY hd.NgayMua DESC;
+END;
+GO
+-- =================================================================
+-- 19 STORED PROCEDURES: DASHBOARD (THỐNG KÊ)
+-- =================================================================
+
+-- Lấy 4 chỉ số tổng quan
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetStats') DROP PROCEDURE sp_Dashboard_GetStats;
+GO
+CREATE PROCEDURE sp_Dashboard_GetStats
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @TongVeBan INT = (SELECT ISNULL(SUM(SoLuong), 0) FROM HoaDonVe);
+    DECLARE @KhachHangMoi INT = (SELECT COUNT(*) FROM KhachHang);
+    DECLARE @DoanhThuVe DECIMAL(18,2) = (SELECT ISNULL(SUM(TongTien), 0) FROM HoaDonVe);
+    DECLARE @DoanhThuCuaHang DECIMAL(18,2) = (SELECT ISNULL(SUM(TongTien), 0) FROM HoaDonCuaHang);
+    
+    SELECT 
+        @TongVeBan AS TongVeBan, 
+        @KhachHangMoi AS KhachHangMoi, 
+        @DoanhThuVe AS DoanhThuVe, 
+        @DoanhThuCuaHang AS DoanhThuCuaHang;
+END;
+GO
+
+-- Lấy doanh thu theo ngày trong 1 tháng (Line Chart)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetRevenueByMonth') DROP PROCEDURE sp_Dashboard_GetRevenueByMonth;
+GO
+CREATE PROCEDURE sp_Dashboard_GetRevenueByMonth
+    @Thang INT,
+    @Nam INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    -- Tính doanh thu gộp từ vé và cửa hàng theo từng ngày
+    SELECT 
+        DAY(Ngay) AS Ngay,
+        SUM(TongDoanhThu) AS DoanhThu
+    FROM (
+        SELECT NgayMua AS Ngay, TongTien AS TongDoanhThu FROM HoaDonVe WHERE MONTH(NgayMua) = @Thang AND YEAR(NgayMua) = @Nam
+        UNION ALL
+        SELECT NgayTao AS Ngay, TongTien AS TongDoanhThu FROM HoaDonCuaHang WHERE MONTH(NgayTao) = @Thang AND YEAR(NgayTao) = @Nam
+    ) AS DoanhThuGop
+    GROUP BY DAY(Ngay)
+    ORDER BY DAY(Ngay);
+END;
+GO
+
+-- Lấy thống kê loại vé bán ra trong tháng (Donut Chart)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetTicketTypes') DROP PROCEDURE sp_Dashboard_GetTicketTypes;
+GO
+CREATE PROCEDURE sp_Dashboard_GetTicketTypes
+    @Thang INT,
+    @Nam INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT 
+        lv.TenLoaiVe, 
+        COUNT(v.MaVe) AS SoLuong
+    FROM Ve v
+    INNER JOIN LoaiVe lv ON v.MaLoaiVe = lv.MaLoaiVe
+    INNER JOIN HoaDonVe hd ON v.MaHoaDon = hd.MaHoaDon
+    WHERE MONTH(hd.NgayMua) = @Thang AND YEAR(hd.NgayMua) = @Nam
+    GROUP BY lv.TenLoaiVe;
+END;
+GO
+
+-- Lấy hóa đơn gần đây (15 hóa đơn mới nhất)
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Dashboard_GetRecentInvoices') DROP PROCEDURE sp_Dashboard_GetRecentInvoices;
+GO
+CREATE PROCEDURE sp_Dashboard_GetRecentInvoices
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT TOP 15
+        hd.MaHoaDon AS MaHD,
+        kh.HoTen AS KhachHang,
+        hd.SoLuong AS SoVe,
+        hd.TongTien,
+        hd.TrangThai
+    FROM HoaDonVe hd
+    INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
+    ORDER BY hd.NgayMua DESC;
+END;
+GO
