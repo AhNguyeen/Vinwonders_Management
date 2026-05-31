@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS_Vinwonders;
 
 namespace Vinwonders_Management
 {
     public partial class GUI_BaoTri : UserControl
     {
+        BUS_BaoTriTroChoi busBaoTri = new BUS_BaoTriTroChoi();
+        DataTable dtBaoTri;
+
         public GUI_BaoTri()
         {
             InitializeComponent();
@@ -19,32 +23,136 @@ namespace Vinwonders_Management
 
         private void GUI_BaoTri_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
 
+        private void LoadData()
+        {
+            try
+            {
+                dtBaoTri = busBaoTri.InDanhSach();
+                dgvBaoTri.AutoGenerateColumns = false; 
+                if(dgvBaoTri.Columns.Contains("colBtnSua"))
+                dgvBaoTri.Columns["colBtnSua"].DisplayIndex = dgvBaoTri.Columns.Count - 1;
+                if (dgvBaoTri.Columns.Contains("colBtnXoa"))
+                dgvBaoTri.Columns["colBtnXoa"].DisplayIndex = dgvBaoTri.Columns.Count - 1;
+
+                dgvBaoTri.DataSource = dtBaoTri;
+
+                // Cập nhật thống kê
+                CalculateStatistics();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải danh sách bảo trì: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CalculateStatistics()
+        {
+            if (dtBaoTri == null) return;
+
+            int tongPhieu = dtBaoTri.Rows.Count;
+            int dangKiemTra = 0;
+            int dangSuaChua = 0;
+            decimal tongChiPhi = 0;
+
+            foreach (DataRow row in dtBaoTri.Rows)
+            {
+                string trangThai = row["TrangThai"]?.ToString()?.Trim() ?? "";
+
+                if (trangThai.IndexOf("kiểm tra", StringComparison.OrdinalIgnoreCase) >= 0)
+                    dangKiemTra++;
+                else if (trangThai.IndexOf("sửa chữa", StringComparison.OrdinalIgnoreCase) >= 0)
+                    dangSuaChua++;
+
+                if (row["ChiPhiBaoTri"] != DBNull.Value)
+                    tongChiPhi += Convert.ToDecimal(row["ChiPhiBaoTri"]);
+            }
+
+            if (lblTongPhieu != null) lblTongPhieu.Text = tongPhieu.ToString();
+            if (lblDangKiemTra != null) lblDangKiemTra.Text = dangKiemTra.ToString();
+            if (lblDangSuaChua != null) lblDangSuaChua.Text = dangSuaChua.ToString();
+
+            // Hiển thị tổng chi phí dạng rút gọn (VD: 4.5M đ)
+            if (lblTongChiPhi != null)
+            {
+                if (tongChiPhi >= 1000000)
+                    lblTongChiPhi.Text = string.Format("{0:0.#}M đ", tongChiPhi / 1000000);
+                else if (tongChiPhi >= 1000)
+                    lblTongChiPhi.Text = string.Format("{0:N0} đ", tongChiPhi);
+                else
+                    lblTongChiPhi.Text = "0 đ";
+            }
+        }
+
+        private void FilterByStatus(string trangThai)
+        {
+            if (dtBaoTri == null) return;
+
+            try
+            {
+                if (string.IsNullOrEmpty(trangThai))
+                {
+                    // Tất cả
+                    dgvBaoTri.DataSource = dtBaoTri;
+                }
+                else
+                {
+                    DataView dv = dtBaoTri.DefaultView;
+                    dv.RowFilter = string.Format("TrangThai LIKE '%{0}%'", trangThai.Replace("'", "''"));
+                    dgvBaoTri.DataSource = dv.ToTable();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi lọc dữ liệu: " + ex.Message);
+            }
+        }
+
+        private void SetActiveButton(Guna.UI2.WinForms.Guna2Button activeBtn)
+        {
+            // Reset tất cả button về trạng thái bình thường
+            Guna.UI2.WinForms.Guna2Button[] allBtns = { btnTatCa, btnDangKiemTra, btnDangSuaChu, btnDaHoanHanh };
+            foreach (var btn in allBtns)
+            {
+                btn.FillColor = Color.White;
+                btn.ForeColor = Color.Black;
+            }
+
+            // Highlight button đang được chọn
+            activeBtn.FillColor = Color.FromArgb(255, 90, 0); // Cam
+            activeBtn.ForeColor = Color.White;
         }
 
         private void btnTatCa_Click(object sender, EventArgs e)
         {
-
+            SetActiveButton(btnTatCa);
+            FilterByStatus(""); // Hiển thị tất cả
         }
 
         private void btnDangKiemTra_Click(object sender, EventArgs e)
         {
-
+            SetActiveButton(btnDangKiemTra);
+            FilterByStatus("Đang kiểm tra");
         }
 
         private void btnDaHoanHanh_Click(object sender, EventArgs e)
         {
-
+            SetActiveButton(btnDaHoanHanh);
+            FilterByStatus("Đã hoàn thành");
         }
 
         private void btnDangSuaChu_Click(object sender, EventArgs e)
         {
-
+            SetActiveButton(btnDangSuaChu);
+            FilterByStatus("Đang sửa chữa");
         }
 
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
-
+            // TODO: Mở form tạo phiếu bảo trì mới
+            MessageBox.Show("Chức năng tạo phiếu bảo trì đang được phát triển.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
