@@ -25,7 +25,7 @@ namespace Vinwonders_Management.QuanLySuKien
 
         private void GUI_ThemSuKien_Load(object sender, EventArgs e)
         {
-            btnTaoSuKien.Click += btnTaoSuKien_Click;
+            // Designer đã đăng ký sự kiện click cho btnTaoSuKien, nên không cần gán lại ở đây
             btnThoat.Click += btnThoat_Click;
             
             // Xử lý chỉ cho nhập số vào các ô Phần Trăm và Giảm Tối Đa
@@ -77,9 +77,9 @@ namespace Vinwonders_Management.QuanLySuKien
                 txtTenSuKien.Focus();
                 return false;
             }
-            if (txtMaGiamGia.Text.Trim().Length > 50)
+            if (txtMaGiamGia.Text.Trim().Length > 20)
             {
-                MessageBox.Show("Mã giảm giá không được vượt quá 50 ký tự!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mã giảm giá không được vượt quá 20 ký tự!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtMaGiamGia.Focus();
                 return false;
             }
@@ -142,14 +142,28 @@ namespace Vinwonders_Management.QuanLySuKien
                 TrangThai = true // Mặc định là true (đang hoạt động)
             };
 
-            if (busSuKien.ThemSuKien(et))
+            try
             {
-                MessageBox.Show("Thêm sự kiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close(); // Đóng form sau khi thêm thành công
+                if (busSuKien.ThemSuKien(et))
+                {
+                    MessageBox.Show("Thêm sự kiện thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close(); // Đóng form sau khi thêm thành công
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sự kiện thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Thêm sự kiện thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Message.Contains("UNIQUE KEY constraint") || ex.Message.Contains("duplicate key"))
+                {
+                    MessageBox.Show("Mã giảm giá đã tồn tại! Vui lòng nhập mã giảm giá khác.", "Cảnh báo trùng lặp", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
