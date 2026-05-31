@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI_BaoTri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_BaoTri.Designer.cs">
+      <DependentUpon>GUI_BaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -316,6 +322,9 @@
     <Compile Include="QuanLyVe\GUI_ThemLoaiVe.Designer.cs">
       <DependentUpon>GUI_ThemLoaiVe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI_BaoTri.resx">
+      <DependentUpon>GUI_BaoTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </EmbeddedResource>

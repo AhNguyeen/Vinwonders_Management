@@ -75,19 +75,17 @@
             this.pnSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSidebar.FillColor = System.Drawing.Color.White;
             this.pnSidebar.Location = new System.Drawing.Point(0, 0);
-            this.pnSidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnSidebar.Name = "pnSidebar";
-            this.pnSidebar.Size = new System.Drawing.Size(333, 887);
+            this.pnSidebar.Size = new System.Drawing.Size(250, 721);
             this.pnSidebar.TabIndex = 0;
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 722);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 587);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(333, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(250, 10);
             this.guna2Separator1.TabIndex = 2;
             // 
             // guna2Button1
@@ -109,10 +107,9 @@
             this.guna2Button1.Image = global::Vinwonders_Management.Properties.Resources.setting;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(16, 742);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Location = new System.Drawing.Point(12, 603);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(307, 62);
+            this.guna2Button1.Size = new System.Drawing.Size(230, 50);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Cài Đặt";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -137,10 +134,9 @@
             this.btnDangXuat.Image = global::Vinwonders_Management.Properties.Resources.logout;
             this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDangXuat.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnDangXuat.Location = new System.Drawing.Point(16, 811);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDangXuat.Location = new System.Drawing.Point(12, 659);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(307, 62);
+            this.btnDangXuat.Size = new System.Drawing.Size(230, 50);
             this.btnDangXuat.TabIndex = 1;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -167,10 +163,9 @@
             this.btnQuanLyVe.Image = global::Vinwonders_Management.Properties.Resources.ticket;
             this.btnQuanLyVe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyVe.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnQuanLyVe.Location = new System.Drawing.Point(16, 220);
-            this.btnQuanLyVe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyVe.Location = new System.Drawing.Point(12, 179);
             this.btnQuanLyVe.Name = "btnQuanLyVe";
-            this.btnQuanLyVe.Size = new System.Drawing.Size(307, 55);
+            this.btnQuanLyVe.Size = new System.Drawing.Size(230, 45);
             this.btnQuanLyVe.TabIndex = 1;
             this.btnQuanLyVe.Text = "Quản Lý Vé";
             this.btnQuanLyVe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -197,10 +192,9 @@
             this.btnCuaHang.Image = global::Vinwonders_Management.Properties.Resources.shops;
             this.btnCuaHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCuaHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCuaHang.Location = new System.Drawing.Point(16, 471);
-            this.btnCuaHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCuaHang.Location = new System.Drawing.Point(12, 383);
             this.btnCuaHang.Name = "btnCuaHang";
-            this.btnCuaHang.Size = new System.Drawing.Size(307, 55);
+            this.btnCuaHang.Size = new System.Drawing.Size(230, 45);
             this.btnCuaHang.TabIndex = 1;
             this.btnCuaHang.Text = "Cửa Hàng && SP";
             this.btnCuaHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -227,10 +221,9 @@
             this.btnQuanLyNhanVien.Image = global::Vinwonders_Management.Properties.Resources.employees;
             this.btnQuanLyNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyNhanVien.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(16, 346);
-            this.btnQuanLyNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(12, 281);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
-            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(307, 55);
+            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(230, 45);
             this.btnQuanLyNhanVien.TabIndex = 1;
             this.btnQuanLyNhanVien.Text = "Nhân Viên";
             this.btnQuanLyNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -257,10 +250,9 @@
             this.btnKhachHang.Image = global::Vinwonders_Management.Properties.Resources.customers;
             this.btnKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhachHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhachHang.Location = new System.Drawing.Point(16, 283);
-            this.btnKhachHang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKhachHang.Location = new System.Drawing.Point(12, 230);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(307, 55);
+            this.btnKhachHang.Size = new System.Drawing.Size(230, 45);
             this.btnKhachHang.TabIndex = 1;
             this.btnKhachHang.Text = "Khách Hàng";
             this.btnKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -287,10 +279,9 @@
             this.btnDashboard.Image = global::Vinwonders_Management.Properties.Resources.dashboard;
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnDashboard.Location = new System.Drawing.Point(16, 158);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDashboard.Location = new System.Drawing.Point(12, 128);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(307, 55);
+            this.btnDashboard.Size = new System.Drawing.Size(230, 45);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -317,10 +308,9 @@
             this.btnKhuVuiChoi.Image = global::Vinwonders_Management.Properties.Resources.spin_show;
             this.btnKhuVuiChoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhuVuiChoi.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhuVuiChoi.Location = new System.Drawing.Point(16, 409);
-            this.btnKhuVuiChoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKhuVuiChoi.Location = new System.Drawing.Point(12, 332);
             this.btnKhuVuiChoi.Name = "btnKhuVuiChoi";
-            this.btnKhuVuiChoi.Size = new System.Drawing.Size(307, 55);
+            this.btnKhuVuiChoi.Size = new System.Drawing.Size(230, 45);
             this.btnKhuVuiChoi.TabIndex = 1;
             this.btnKhuVuiChoi.Text = "Trò Chơi && Show";
             this.btnKhuVuiChoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -347,10 +337,9 @@
             this.btnSuKien.Image = global::Vinwonders_Management.Properties.Resources._event;
             this.btnSuKien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSuKien.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnSuKien.Location = new System.Drawing.Point(16, 534);
-            this.btnSuKien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuKien.Location = new System.Drawing.Point(12, 434);
             this.btnSuKien.Name = "btnSuKien";
-            this.btnSuKien.Size = new System.Drawing.Size(307, 55);
+            this.btnSuKien.Size = new System.Drawing.Size(230, 45);
             this.btnSuKien.TabIndex = 1;
             this.btnSuKien.Text = "Sự Kiện";
             this.btnSuKien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -377,14 +366,14 @@
             this.btnBaoTri.Image = global::Vinwonders_Management.Properties.Resources.maintenance;
             this.btnBaoTri.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoTri.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnBaoTri.Location = new System.Drawing.Point(16, 597);
-            this.btnBaoTri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBaoTri.Location = new System.Drawing.Point(12, 485);
             this.btnBaoTri.Name = "btnBaoTri";
-            this.btnBaoTri.Size = new System.Drawing.Size(307, 55);
+            this.btnBaoTri.Size = new System.Drawing.Size(230, 45);
             this.btnBaoTri.TabIndex = 1;
             this.btnBaoTri.Text = "Bảo Trì";
             this.btnBaoTri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoTri.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnBaoTri.Click += new System.EventHandler(this.btnBaoTri_Click);
             // 
             // pnLogo
             // 
@@ -394,9 +383,8 @@
             this.pnLogo.Controls.Add(this.sepLineLogo);
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(333, 148);
+            this.pnLogo.Size = new System.Drawing.Size(250, 120);
             this.pnLogo.TabIndex = 0;
             // 
             // picLogo
@@ -406,10 +394,9 @@
             this.picLogo.BorderRadius = 10;
             this.picLogo.Image = global::Vinwonders_Management.Properties.Resources.logo_Vinwonders;
             this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(33, 38);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picLogo.Location = new System.Drawing.Point(25, 31);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(63, 58);
+            this.picLogo.Size = new System.Drawing.Size(47, 47);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
@@ -421,10 +408,9 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(104, 38);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTitle.Location = new System.Drawing.Point(78, 31);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(147, 37);
+            this.lblTitle.Size = new System.Drawing.Size(118, 30);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "VinWonders";
             // 
@@ -435,10 +421,9 @@
             this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
             this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtitle.ForeColor = System.Drawing.Color.Silver;
-            this.lblSubtitle.Location = new System.Drawing.Point(104, 78);
-            this.lblSubtitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblSubtitle.Location = new System.Drawing.Point(78, 63);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(117, 21);
+            this.lblSubtitle.Size = new System.Drawing.Size(94, 15);
             this.lblSubtitle.TabIndex = 1;
             this.lblSubtitle.Text = "Quản lý hệ thống";
             // 
@@ -446,10 +431,9 @@
             // 
             this.sepLineLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.sepLineLogo.FillColor = System.Drawing.Color.Black;
-            this.sepLineLogo.Location = new System.Drawing.Point(0, 136);
-            this.sepLineLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sepLineLogo.Location = new System.Drawing.Point(0, 110);
             this.sepLineLogo.Name = "sepLineLogo";
-            this.sepLineLogo.Size = new System.Drawing.Size(333, 12);
+            this.sepLineLogo.Size = new System.Drawing.Size(250, 10);
             this.sepLineLogo.TabIndex = 2;
             // 
             // guna2Panel1
@@ -458,10 +442,9 @@
             this.guna2Panel1.Controls.Add(this.lblDateTimeNow);
             this.guna2Panel1.Controls.Add(this.lblGUI);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(333, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1308, 75);
+            this.guna2Panel1.Size = new System.Drawing.Size(981, 61);
             this.guna2Panel1.TabIndex = 2;
             // 
             // lblDateTimeNow
@@ -469,10 +452,9 @@
             this.lblDateTimeNow.BackColor = System.Drawing.Color.Transparent;
             this.lblDateTimeNow.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTimeNow.ForeColor = System.Drawing.Color.Gray;
-            this.lblDateTimeNow.Location = new System.Drawing.Point(95, 38);
-            this.lblDateTimeNow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblDateTimeNow.Location = new System.Drawing.Point(71, 31);
             this.lblDateTimeNow.Name = "lblDateTimeNow";
-            this.lblDateTimeNow.Size = new System.Drawing.Size(113, 21);
+            this.lblDateTimeNow.Size = new System.Drawing.Size(92, 15);
             this.lblDateTimeNow.TabIndex = 1;
             this.lblDateTimeNow.Text = "[ Date Time Now ]";
             // 
@@ -481,33 +463,32 @@
             this.lblGUI.BackColor = System.Drawing.Color.Transparent;
             this.lblGUI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblGUI.Location = new System.Drawing.Point(95, 9);
-            this.lblGUI.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.lblGUI.Location = new System.Drawing.Point(71, 7);
+            this.lblGUI.Margin = new System.Windows.Forms.Padding(7);
             this.lblGUI.Name = "lblGUI";
-            this.lblGUI.Size = new System.Drawing.Size(126, 34);
+            this.lblGUI.Size = new System.Drawing.Size(99, 27);
             this.lblGUI.TabIndex = 0;
             this.lblGUI.Text = "[ Ten GUI ]";
             // 
             // pnMainContent
             // 
             this.pnMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMainContent.Location = new System.Drawing.Point(333, 75);
+            this.pnMainContent.Location = new System.Drawing.Point(250, 61);
+            this.pnMainContent.Margin = new System.Windows.Forms.Padding(2);
             this.pnMainContent.Name = "pnMainContent";
-            this.pnMainContent.Size = new System.Drawing.Size(1308, 812);
+            this.pnMainContent.Size = new System.Drawing.Size(981, 660);
             this.pnMainContent.TabIndex = 4;
-            this.pnMainContent.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // GUI_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1641, 887);
+            this.ClientSize = new System.Drawing.Size(1231, 721);
             this.ControlBox = false;
             this.Controls.Add(this.pnMainContent);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnSidebar);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GUI_Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GUI_Menu_Load);

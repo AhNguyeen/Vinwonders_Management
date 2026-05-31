@@ -122,9 +122,10 @@ namespace Vinwonders_Management
             lblGUI.Text = "Quản Lý Sự Kiện";
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        private void btnBaoTri_Click(object sender, EventArgs e)
         {
-
+            OpenChildUserControl(typeof(GUI_BaoTri));
+            lblGUI.Text = "Quản Lý Bảo Trì";
         }
     }
 }
