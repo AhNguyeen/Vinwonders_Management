@@ -87,25 +87,25 @@ namespace Vinwonders_Management
             try
             {
                 DataTable dtInvoices = busDashboard.GetRecentInvoices();
-                guna2DataGridView1.DataSource = dtInvoices;
+                dgvHoaDonGanDay.DataSource = dtInvoices;
 
                 // Ẩn cột tự sinh nếu có
-                guna2DataGridView1.AutoGenerateColumns = false;
+                dgvHoaDonGanDay.AutoGenerateColumns = false;
 
                 // Ánh xạ cột (đảm bảo DataPropertyName khớp với tên cột trả về từ SP)
-                if (guna2DataGridView1.Columns.Contains("colMaHD"))
-                    guna2DataGridView1.Columns["colMaHD"].DataPropertyName = "MaHD";
-                if (guna2DataGridView1.Columns.Contains("colKhachHang"))
-                    guna2DataGridView1.Columns["colKhachHang"].DataPropertyName = "KhachHang";
-                if (guna2DataGridView1.Columns.Contains("colSoVe"))
-                    guna2DataGridView1.Columns["colSoVe"].DataPropertyName = "SoVe";
-                if (guna2DataGridView1.Columns.Contains("colTongTien"))
+                if (dgvHoaDonGanDay.Columns.Contains("colMaHD"))
+                    dgvHoaDonGanDay.Columns["colMaHD"].DataPropertyName = "MaHD";
+                if (dgvHoaDonGanDay.Columns.Contains("colKhachHang"))
+                    dgvHoaDonGanDay.Columns["colKhachHang"].DataPropertyName = "KhachHang";
+                if (dgvHoaDonGanDay.Columns.Contains("colSoVe"))
+                    dgvHoaDonGanDay.Columns["colSoVe"].DataPropertyName = "SoVe";
+                if (dgvHoaDonGanDay.Columns.Contains("colTongTien"))
                 {
-                    guna2DataGridView1.Columns["colTongTien"].DataPropertyName = "TongTien";
-                    guna2DataGridView1.Columns["colTongTien"].DefaultCellStyle.Format = "N0";
+                    dgvHoaDonGanDay.Columns["colTongTien"].DataPropertyName = "TongTien";
+                    dgvHoaDonGanDay.Columns["colTongTien"].DefaultCellStyle.Format = "N0";
                 }
-                if (guna2DataGridView1.Columns.Contains("colTrangThai"))
-                    guna2DataGridView1.Columns["colTrangThai"].DataPropertyName = "TrangThai";
+                if (dgvHoaDonGanDay.Columns.Contains("colTrangThai"))
+                    dgvHoaDonGanDay.Columns["colTrangThai"].DataPropertyName = "TrangThai";
 
             }
             catch (Exception ex)
@@ -130,7 +130,7 @@ namespace Vinwonders_Management
             {
                 DataTable dtLine = busDashboard.GetRevenueByMonth(thang, nam);
                 
-                gunaChart1.Datasets.Clear();
+                chrtTheoThang.Datasets.Clear();
                 var dataset = new GunaSplineDataset();
                 dataset.Label = "Doanh Thu";
 
@@ -141,8 +141,8 @@ namespace Vinwonders_Management
                     dataset.DataPoints.Add(dayLabel, value);
                 }
 
-                gunaChart1.Datasets.Add(dataset);
-                gunaChart1.Update();
+                chrtTheoThang.Datasets.Add(dataset);
+                chrtTheoThang.Update();
             }
             catch (Exception ex)
             {
@@ -156,7 +156,7 @@ namespace Vinwonders_Management
             {
                 DataTable dtDonut = busDashboard.GetTicketTypes(thang, nam);
 
-                gunaChart2.Datasets.Clear();
+                chrtLoaiVe.Datasets.Clear();
                 var dataset = new GunaDoughnutDataset();
                 dataset.Label = "Loại Vé Bán Ra";
 
@@ -167,8 +167,8 @@ namespace Vinwonders_Management
                     dataset.DataPoints.Add(label, value);
                 }
 
-                gunaChart2.Datasets.Add(dataset);
-                gunaChart2.Update();
+                chrtLoaiVe.Datasets.Add(dataset);
+                chrtLoaiVe.Update();
             }
             catch (Exception ex)
             {
