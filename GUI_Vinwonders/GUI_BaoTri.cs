@@ -121,8 +121,8 @@ namespace Vinwonders_Management
             }
 
             // Highlight button đang được chọn
-            activeBtn.FillColor = Color.FromArgb(255, 90, 0); // Cam
-            activeBtn.ForeColor = Color.White;
+            activeBtn.FillColor = Color.FromArgb(255, 224, 192); // Cam
+            activeBtn.ForeColor = Color.Orange;
         }
 
         private void btnTatCa_Click(object sender, EventArgs e)
@@ -151,8 +151,9 @@ namespace Vinwonders_Management
 
         private void btnTaoPhieu_Click(object sender, EventArgs e)
         {
-            // TODO: Mở form tạo phiếu bảo trì mới
-            MessageBox.Show("Chức năng tạo phiếu bảo trì đang được phát triển.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            QuanLyBaoTri.GUI_ThemThietBiBaoTri themPhieuBaoTri = new QuanLyBaoTri.GUI_ThemThietBiBaoTri();
+            themPhieuBaoTri.ShowDialog();
+            LoadData(); // Tải lại dữ liệu sau khi thêm mới
         }
     }
 }

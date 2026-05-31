@@ -104,6 +104,12 @@
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
+      <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +352,9 @@
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
+      <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,5 +542,6 @@
       <Name>ET_Vinwonders</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
