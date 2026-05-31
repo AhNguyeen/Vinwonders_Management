@@ -1038,7 +1038,7 @@ CREATE PROCEDURE sp_GetAll_HoaDonCuaHang
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT hd.*, kh.HoTen AS TenKhachHang, nv.HoTen AS TenNhanVien,
+    SELECT hd.*, kh.HoTen AS TenKhachHang, nv.HoTen AS TenNhanVien
     FROM HoaDonCuaHang hd
     INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
     INNER JOIN NhanVien nv ON hd.MaNhanVien = nv.MaNhanVien

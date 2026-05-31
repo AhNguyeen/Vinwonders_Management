@@ -767,6 +767,7 @@
             this.Controls.Add(this.pnMainContent);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GUI_Dashboard";
+            this.Load += new System.EventHandler(this.GUI_Dashboard_Load);
             this.Size = new System.Drawing.Size(1291, 820);
             this.pnMainContent.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -840,5 +841,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboCacThang;
     }
 }
+
+
 
 

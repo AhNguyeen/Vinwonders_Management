@@ -88,6 +88,7 @@ namespace Vinwonders_Management
         private void GUI_Menu_Load(object sender, EventArgs e)
         {
             OpenChildUserControl(typeof(GUI_Dashboard));
+            btnDashboard.FillColor = Color.FromArgb(255, 224, 192);
             lblGUI.Text = "Dashboard";
             lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
         }
