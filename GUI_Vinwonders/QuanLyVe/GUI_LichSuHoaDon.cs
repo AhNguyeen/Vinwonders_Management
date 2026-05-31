@@ -26,6 +26,7 @@ namespace Vinwonders_Management.QuanLyVe
         private void GUI_LichSuHoaDon_Load(object sender, EventArgs e)
         {
             dtpNgayLoc.Value = DateTime.Now;
+            dtpNgayLoc.Checked = false;
             LoadData();
         }
 
@@ -41,13 +42,19 @@ namespace Vinwonders_Management.QuanLyVe
 
             string keyword = txtTimKiem.Text.Trim();
             DateTime selectedDate = dtpNgayLoc.Value.Date;
+            bool isDateSelected = dtpNgayLoc.Checked;
 
             try 
             {
                 DataView dv = dtLichSu.DefaultView;
-                string rowFilter = string.Format("NgayMua >= '{0}' AND NgayMua < '{1}'", 
-                    selectedDate.ToString("yyyy-MM-dd"), 
-                    selectedDate.AddDays(1).ToString("yyyy-MM-dd"));
+                string rowFilter = "1=1";
+                
+                if (isDateSelected)
+                {
+                    rowFilter += string.Format(" AND NgayMua >= '{0}' AND NgayMua < '{1}'", 
+                        selectedDate.ToString("yyyy-MM-dd"), 
+                        selectedDate.AddDays(1).ToString("yyyy-MM-dd"));
+                }
 
                 if (!string.IsNullOrEmpty(keyword))
                 {
