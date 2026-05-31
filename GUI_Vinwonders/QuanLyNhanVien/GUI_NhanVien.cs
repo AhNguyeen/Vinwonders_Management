@@ -104,7 +104,7 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 else
                 {
                     // Lọc theo Họ tên, Mã nhân viên hoặc Số điện thoại
-                    dt.DefaultView.RowFilter = $"HoTen LIKE '%{searchValue}%' OR MaNhanVien LIKE '%{searchValue}%' OR SoDienThoai LIKE '%{searchValue}%'";
+                    dt.DefaultView.RowFilter = $"HoTen LIKE '%{searchValue}%' OR MaNhanVien LIKE '%{searchValue}%' OR SoDienThoai LIKE '%{searchValue}%' OR ViTri LIKE '%{searchValue}%'";
                 }
             }
         }
