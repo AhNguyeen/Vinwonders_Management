@@ -1,4 +1,4 @@
-using ET_Vinwonders;
+﻿using ET_Vinwonders;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,12 +15,12 @@ namespace DAL_Vinwonders
             DataTable dt = new DataTable();
             try
             {
-                string sql = "sp_GetAll_BaoTriTroChoi"; //Chua co store GetAll
+                string sql = "sp_GetAll_BaoTriTroChoi";
                 dt = connectDB.ReadData(sql);
             }
             catch (Exception ex)
             {
-                // X? l� l?i n?u c?n
+                // X? lý l?i n?u c?n
                 throw ex;
             }
             finally
@@ -36,7 +36,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Insert_BaoTriTroChoi";    //Chua co store Insert
+                string sql = "sp_Insert_BaoTriTroChoi";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaBaoTri", et.MaBaoTri),
@@ -67,10 +67,10 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_BaoTriTroChoi"; //Chua co store delete
+                string sql = "sp_Delete_BaoTriTroChoi";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaBaoTri", ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -91,7 +91,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Update_BaoTriTroChoi";//Chua co store update
+                string sql = "sp_Update_BaoTriTroChoi";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaBaoTri", et.MaBaoTri),
@@ -122,10 +122,10 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_BaoTriTroChoi"; //Chua co store delete
+                string sql = "SELECT * FROM BaoTriTroChoi WHERE MoTaLoi LIKE '%' + @TuKhoa + '%'";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",tenKH),
+                    new SqlParameter("@TuKhoa", tenKH ?? ""),
                 };
                 kt = connectDB.ReadData(sql, sp);
             }
@@ -141,3 +141,5 @@ namespace DAL_Vinwonders
         }
     }
 }
+
+

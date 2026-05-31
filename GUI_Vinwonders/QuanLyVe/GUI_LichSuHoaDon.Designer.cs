@@ -114,6 +114,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.dtpNgayLoc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayLoc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayLoc.Name = "dtpNgayLoc";
+            this.dtpNgayLoc.ShowCheckBox = true;
             this.dtpNgayLoc.Size = new System.Drawing.Size(162, 30);
             this.dtpNgayLoc.TabIndex = 5;
             this.dtpNgayLoc.Value = new System.DateTime(2023, 10, 24, 0, 0, 0, 0);

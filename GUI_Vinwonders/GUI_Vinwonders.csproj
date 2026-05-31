@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI_BaoTri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_BaoTri.Designer.cs">
+      <DependentUpon>GUI_BaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
+      <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.cs">
       <SubType>Form</SubType>
@@ -230,6 +242,12 @@
     <Compile Include="QuanLyNhanVien\GUI_NhanVien.Designer.cs">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLySuKien\GUI_ThemSuKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLySuKien\GUI_ThemSuKien.Designer.cs">
+      <DependentUpon>GUI_ThemSuKien.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTroChoi\GUI_CapNhatKhuVuc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +328,9 @@
     <Compile Include="QuanLyVe\GUI_ThemLoaiVe.Designer.cs">
       <DependentUpon>GUI_ThemLoaiVe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI_BaoTri.resx">
+      <DependentUpon>GUI_BaoTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
+      <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
@@ -396,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNhanVien\GUI_NhanVien.resx">
       <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLySuKien\GUI_ThemSuKien.resx">
+      <DependentUpon>GUI_ThemSuKien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTroChoi\GUI_CapNhatKhuVuc.resx">
       <DependentUpon>GUI_CapNhatKhuVuc.cs</DependentUpon>
@@ -515,5 +542,6 @@
       <Name>ET_Vinwonders</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

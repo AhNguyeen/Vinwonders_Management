@@ -54,11 +54,8 @@ namespace Vinwonders_Management.QuanLyVe
                         lblNgayTaoDon.Text = ngayMua.ToString("dd/MM/yyyy HH:mm");
                     }
                     
-                    if (row["TongTien"] != DBNull.Value)
-                    {
-                        decimal tongTien = Convert.ToDecimal(row["TongTien"]);
-                        lblTongTien.Text = tongTien.ToString("N0") + " VNĐ";
-                    }
+                    // Tổng tiền sẽ được tính lại dựa trên danh sách chi tiết vé để đảm bảo chính xác
+                    // (xóa phần gán lblTongTien ở đây)
                 }
             }
             catch (Exception ex)
@@ -77,6 +74,17 @@ namespace Vinwonders_Management.QuanLyVe
                 // Đổ dữ liệu vào DataGridView
                 dgvChiTietVe.DataSource = dt;
                 
+                // Tính toán lại Tổng tiền dựa trên chi tiết hiển thị
+                decimal tongTienThucTe = 0;
+                foreach (DataRow r in dt.Rows)
+                {
+                    if (r["TongTien"] != DBNull.Value)
+                    {
+                        tongTienThucTe += Convert.ToDecimal(r["TongTien"]);
+                    }
+                }
+                lblTongTien.Text = tongTienThucTe.ToString("N0") + " VNĐ";
+
                 // Chỉnh lại Tiêu đề (HeaderText) cho thân thiện và Format tiền tệ
                 if (dgvChiTietVe.Columns != null && dgvChiTietVe.Columns.Count > 0)
                 {
@@ -96,7 +104,10 @@ namespace Vinwonders_Management.QuanLyVe
                         dgvChiTietVe.Columns["SoLuong"].HeaderText = "Số Lượng";
 
                     if (dgvChiTietVe.Columns.Contains("TongTien"))
+                    {
                         dgvChiTietVe.Columns["TongTien"].HeaderText = "Tổng Tiền";
+                        dgvChiTietVe.Columns["TongTien"].DefaultCellStyle.Format = "N0";
+                    }
                     
                     if (dgvChiTietVe.Columns.Contains("TrangThai"))
                         dgvChiTietVe.Columns["TrangThai"].HeaderText = "Trạng Thái";

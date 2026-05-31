@@ -1,4 +1,4 @@
-using ET_Vinwonders;
+﻿using ET_Vinwonders;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -19,12 +19,12 @@ namespace DAL_Vinwonders
             DataTable dt = new DataTable();
             try
             {
-                string sql = "sp_GetAll_SuKien"; //Chua co store GetAll
+                string sql = "sp_GetAll_SuKien"; 
                 dt = connectDB.ReadData(sql);
             }
             catch (Exception ex)
             {
-                // X? l� l?i n?u c?n
+                // X? lý l?i n?u c?n
                 throw ex;
             }
             finally
@@ -40,7 +40,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Insert_SuKien";    //Chua co store Insert
+                string sql = "sp_Insert_SuKien";    
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaSuKien", et.MaSuKien),
@@ -72,10 +72,10 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Delete_SuKien"; //Chua co store delete
+                string sql = "sp_Delete_SuKien"; 
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",ma),
+                    new SqlParameter("@MaSuKien", ma),
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
@@ -96,7 +96,7 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_Update_SuKien";//Chua co store update
+                string sql = "sp_Update_SuKien";
                 SqlParameter[] sp = new SqlParameter[]
                 {
                     new SqlParameter("@MaSuKien", et.MaSuKien),
@@ -128,10 +128,10 @@ namespace DAL_Vinwonders
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_SuKien"; //Chua co store delete
+                string sql = "SELECT * FROM SuKien WHERE TenSuKien LIKE '%' + @TenSuKien + '%'";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",tenKH),
+                    new SqlParameter("@TenSuKien", tenKH ?? ""),
                 };
                 kt = connectDB.ReadData(sql, sp);
             }
@@ -147,3 +147,5 @@ namespace DAL_Vinwonders
         }
     }
 }
+
+
