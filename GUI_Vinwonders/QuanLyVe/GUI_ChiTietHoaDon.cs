@@ -1,3 +1,5 @@
+using BUS_Vinwonders; // Gọi tầng BUS thay vì DAL/Connection trực tiếp
+using GUI_Vinwonders.QuanLyVe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUS_Vinwonders; // Gọi tầng BUS thay vì DAL/Connection trực tiếp
 
 namespace Vinwonders_Management.QuanLyVe
 {
@@ -117,6 +118,20 @@ namespace Vinwonders_Management.QuanLyVe
             {
                 MessageBox.Show("Lỗi tải danh sách vé chi tiết: " + ex.Message, "Lỗi Database", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnInVe_Click(object sender, EventArgs e)
+        {
+            // Giả sử mã hóa đơn đang được chọn lưu trong biến maHoaDon
+            string maHoaDon = lblMaHoaDon.Text;
+            if (string.IsNullOrEmpty(maHoaDon))
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn cần in!");
+                return;
+            }
+
+            GUI_InHoaDonVe frmIn = new GUI_InHoaDonVe(maHoaDon);
+            frmIn.ShowDialog();
         }
     }
 }
