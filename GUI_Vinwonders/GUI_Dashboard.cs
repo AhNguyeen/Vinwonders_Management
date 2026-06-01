@@ -21,6 +21,10 @@ namespace Vinwonders_Management
             // Khởi tạo ComboBox chọn tháng
             InitComboBox();
 
+            // Ẩn trục X và Y của biểu đồ loại vé để cố định hình tròn và ẩn nhãn dưới cùng
+            chrtLoaiVe.XAxes.Display = false;
+            chrtLoaiVe.YAxes.Display = false;
+
             // Load 4 thẻ tổng quan
             LoadStats();
 

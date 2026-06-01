@@ -111,18 +111,18 @@ namespace DAL_Vinwonders
             return kt;
         }
 
-        public DataTable TimChiTietHDCH(string tenKH = null)
+        public DataTable GetChiTiet_ByHDCH(string maHDCH)
         {
-            DataTable kt = new DataTable();
+            DataTable dt = new DataTable();
             try
             {
                 connectDB.OpenConnect();
-                string sql = "sp_GetAll_ChiTietHDCH"; //Chua co store delete
+                string sql = "sp_GetChiTiet_ByHDCH";
                 SqlParameter[] sp = new SqlParameter[]
                 {
-                    new SqlParameter("@",tenKH),
+                    new SqlParameter("@MaHDCH", maHDCH)
                 };
-                kt = connectDB.ReadData(sql, sp);
+                dt = connectDB.ReadData(sql, sp);
             }
             catch (Exception ex)
             {
@@ -132,7 +132,7 @@ namespace DAL_Vinwonders
             {
                 connectDB.CloseConnect();
             }
-            return kt;
+            return dt;
         }
     }
 }

@@ -21,7 +21,6 @@ namespace Vinwonders_Management.QuanLyBaoTri
         public GUI_ThemThietBiBaoTri()
         {
             InitializeComponent();
-            this.Load += GUI_ThemThietBiBaoTri_Load;
         }
 
         private void GUI_ThemThietBiBaoTri_Load(object sender, EventArgs e)
@@ -35,7 +34,11 @@ namespace Vinwonders_Management.QuanLyBaoTri
             try
             {
                 DataTable dtTroChoi = busTroChoi.InDanhSach();
-                cboTroChoi.DataSource = dtTroChoi;
+                // Chỉ lấy những trò chơi đang có trạng thái 'Bảo trì'
+                DataView dv = dtTroChoi.DefaultView;
+                dv.RowFilter = "TrangThai = 'Bảo trì'";
+                
+                cboTroChoi.DataSource = dv.ToTable();
                 cboTroChoi.DisplayMember = "TenTroChoi";
                 cboTroChoi.ValueMember = "MaTroChoi";
                 cboTroChoi.SelectedIndex = -1;

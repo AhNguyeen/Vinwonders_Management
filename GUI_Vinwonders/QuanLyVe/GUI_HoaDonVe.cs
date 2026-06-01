@@ -1,5 +1,6 @@
 using BUS_Vinwonders;
 using ET_Vinwonders;
+using GUI_Vinwonders.QuanLyVe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -713,6 +714,7 @@ namespace Vinwonders_Management.QuanLyVe
                     ResetThongTinThanhVien();
                     ResetThongTinSuKien();
                     CapNhatTongTien();
+                    InHoaDon(maHoaDon);
                 }
                 else
                 {
@@ -726,5 +728,18 @@ namespace Vinwonders_Management.QuanLyVe
         }
 
         #endregion
+
+        private void InHoaDon(string maHoaDon)
+        {
+            // Giả sử mã hóa đơn đang được chọn lưu trong biến maHoaDon
+            if (string.IsNullOrEmpty(maHoaDon))
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn cần in!");
+                return;
+            }
+
+            GUI_InHoaDonVe frmIn = new GUI_InHoaDonVe(maHoaDon);
+            frmIn.ShowDialog();
+        }
     }
 }

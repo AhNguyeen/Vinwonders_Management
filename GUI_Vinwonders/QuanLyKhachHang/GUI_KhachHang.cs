@@ -19,7 +19,6 @@ namespace Vinwonders_Management.QuanLyKhachHang
         public GUI_KhachHang()
         {
             InitializeComponent();
-            dgvKhachHang.CellClick += dgvKhachHang_CellClick;
         }
 
         private void GUI_KhachHang_Load(object sender, EventArgs e)
@@ -27,10 +26,13 @@ namespace Vinwonders_Management.QuanLyKhachHang
             LoadKhachHang();
         }
 
+        private DataTable dtKhachHang;
+
         private void LoadKhachHang()
         {
             dgvKhachHang.AutoGenerateColumns = false;
-            dgvKhachHang.DataSource = busKhachHang.InDanhSach();
+            dtKhachHang = busKhachHang.InDanhSach();
+            dgvKhachHang.DataSource = dtKhachHang;
             
             // Đẩy cột Sửa và Xóa xuống cuối cùng (để sau các cột được AutoGenerate nếu có)
             if (dgvKhachHang.Columns.Contains("colBtnSua"))
@@ -55,7 +57,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             if (e.RowIndex < 0) return;
 
             // Xử lý nút Sửa
-            if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colSua")
+            if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colBtnSua")
             {
                 string maKhachHang = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value?.ToString() ?? "";
                 string maHang = dgvKhachHang.Rows[e.RowIndex].Cells["colMaHang"].Value?.ToString() ?? "";
@@ -92,7 +94,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
                 LoadKhachHang(); // Reload sau khi cập nhật
             }
             // Xử lý nút Xóa
-            else if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colXoa")
+            else if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colBtnXoa")
             {
                 string maKhachHang = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value?.ToString() ?? "";
                 string hoTen = dgvKhachHang.Rows[e.RowIndex].Cells["colHoTen"].Value?.ToString() ?? "";
@@ -115,6 +117,31 @@ namespace Vinwonders_Management.QuanLyKhachHang
                         MessageBox.Show("Xóa khách hàng thất bại! Khách hàng này có thể đang có hóa đơn liên quan.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (dtKhachHang == null) return;
+            string keyword = txtTimKiem.Text.Trim();
+
+            try
+            {
+                DataView dv = dtKhachHang.DefaultView;
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    // Lọc theo SĐT hoặc Họ Tên
+                    dv.RowFilter = string.Format("SoDienThoai LIKE '%{0}%' OR HoTen LIKE '%{0}%'", keyword.Replace("'", "''"));
+                }
+                else
+                {
+                    dv.RowFilter = "";
+                }
+                dgvKhachHang.DataSource = dv.ToTable();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi tìm kiếm: " + ex.Message);
             }
         }
     }

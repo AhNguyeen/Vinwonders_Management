@@ -34,6 +34,7 @@
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlButton = new Guna.UI2.WinForms.Guna2Panel();
             this.btnHoaDonCH = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btnSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
             this.pnlTabConTent.SuspendLayout();
@@ -95,13 +96,15 @@
             this.pnlButton.BorderRadius = 15;
             this.pnlButton.BorderThickness = 1;
             this.pnlButton.Controls.Add(this.btnHoaDonCH);
+            this.pnlButton.Controls.Add(this.btnThanhToan);
             this.pnlButton.Controls.Add(this.btnSanPham);
             this.pnlButton.Controls.Add(this.btnCuaHang);
             this.pnlButton.FillColor = System.Drawing.Color.White;
             this.pnlButton.Location = new System.Drawing.Point(22, 23);
             this.pnlButton.Margin = new System.Windows.Forms.Padding(10);
             this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(439, 59);
+            this.pnlButton.Padding = new System.Windows.Forms.Padding(3);
+            this.pnlButton.Size = new System.Drawing.Size(587, 59);
             this.pnlButton.TabIndex = 0;
             // 
             // btnHoaDonCH
@@ -120,13 +123,37 @@
             this.btnHoaDonCH.HoverState.FillColor = System.Drawing.Color.Silver;
             this.btnHoaDonCH.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnHoaDonCH.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHoaDonCH.Location = new System.Drawing.Point(297, 10);
+            this.btnHoaDonCH.Location = new System.Drawing.Point(443, 10);
             this.btnHoaDonCH.Margin = new System.Windows.Forms.Padding(5);
             this.btnHoaDonCH.Name = "btnHoaDonCH";
             this.btnHoaDonCH.Size = new System.Drawing.Size(136, 39);
             this.btnHoaDonCH.TabIndex = 0;
-            this.btnHoaDonCH.Text = "Hóa đơn CH";
+            this.btnHoaDonCH.Text = "Hóa Đơn CH";
             this.btnHoaDonCH.Click += new System.EventHandler(this.btnHoaDonCH_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BorderRadius = 12;
+            this.btnThanhToan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThanhToan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(194)))));
+            this.btnThanhToan.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThanhToan.FillColor = System.Drawing.Color.White;
+            this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThanhToan.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnThanhToan.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnThanhToan.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThanhToan.Location = new System.Drawing.Point(297, 10);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(5);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(136, 39);
+            this.btnThanhToan.TabIndex = 0;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnSanPham
             // 
@@ -200,8 +227,9 @@
         private Guna.UI2.WinForms.Guna2Panel pnMainContent;
         private Guna.UI2.WinForms.Guna2Panel pnlNav;
         private Guna.UI2.WinForms.Guna2Panel pnlButton;
-        private Guna.UI2.WinForms.Guna2Button btnHoaDonCH;
+        private Guna.UI2.WinForms.Guna2Button btnThanhToan;
         private Guna.UI2.WinForms.Guna2Button btnSanPham;
         private Guna.UI2.WinForms.Guna2Button btnCuaHang;
+        private Guna.UI2.WinForms.Guna2Button btnHoaDonCH;
     }
 }

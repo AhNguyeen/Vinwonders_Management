@@ -285,6 +285,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.btnInVe.Size = new System.Drawing.Size(150, 36);
             this.btnInVe.TabIndex = 1;
             this.btnInVe.Text = "In Lại Vé";
+            this.btnInVe.Click += new System.EventHandler(this.btnInVe_Click);
             // 
             // GUI_ChiTietHoaDon
             // 

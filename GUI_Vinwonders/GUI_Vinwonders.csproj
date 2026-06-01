@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.1.0\lib\net472\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
@@ -45,6 +49,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,6 +109,12 @@
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.Designer.cs">
+      <DependentUpon>GUI_CapNhatThietBiBaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,11 +139,23 @@
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.Designer.cs">
       <DependentUpon>GUI_CapNhatSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.Designer.cs">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_LichSuHoaDonCuaHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_LichSuHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_LichSuHoaDonCuaHang.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_ThanhToanHoaDonCuaHang.cs">
       <SubType>UserControl</SubType>
@@ -284,6 +307,20 @@
     <Compile Include="QuanLyTroChoi\GUI_TroChoi.Designer.cs">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyVe\CR_HoaDonVe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_HoaDonVe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe\DataSet_HoaDonVe.cs">
+      <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyVe\DataSet_HoaDonVe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyVe\GUI_CapNhatLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +347,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyVe\GUI_InHoaDonVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe\GUI_InHoaDonVe.Designer.cs">
+      <DependentUpon>GUI_InHoaDonVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyVe\GUI_LichSuHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -352,6 +395,9 @@
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.resx">
+      <DependentUpon>GUI_CapNhatThietBiBaoTri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,8 +410,14 @@
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatSanPham.resx">
       <DependentUpon>GUI_CapNhatSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.resx">
+      <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_LichSuHoaDonCuaHang.resx">
+      <DependentUpon>GUI_LichSuHoaDonCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThanhToanHoaDonCuaHang.resx">
       <DependentUpon>GUI_ThanhToanHoaDonCuaHang.cs</DependentUpon>
@@ -442,6 +494,10 @@
     <EmbeddedResource Include="QuanLyTroChoi\GUI_TroChoi.resx">
       <DependentUpon>GUI_TroChoi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe\CR_HoaDonVe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_HoaDonVe.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_CapNhatLoaiVe.resx">
       <DependentUpon>GUI_CapNhatLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,6 +514,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe\GUI_InHoaDonVe.resx">
+      <DependentUpon>GUI_InHoaDonVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyVe\GUI_LichSuHoaDon.resx">
       <DependentUpon>GUI_LichSuHoaDon.cs</DependentUpon>
@@ -488,6 +547,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyVe\DataSet_HoaDonVe.xsc">
+      <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyVe\DataSet_HoaDonVe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_HoaDonVe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyVe\DataSet_HoaDonVe.xss">
+      <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
+    </None>
     <None Include="Resources\logo_Vinwonders.png" />
   </ItemGroup>
   <ItemGroup>
@@ -542,6 +612,8 @@
       <Name>ET_Vinwonders</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

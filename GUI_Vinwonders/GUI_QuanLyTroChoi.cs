@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +55,7 @@ namespace Vinwonders_Management
         private void GUI_QuanLyTroChoi_Load(object sender, EventArgs e)
         {
             OpenChildUserControl(typeof(GUI_TroChoi));
+            btnTroChoi.Checked = true;
         }
 
         private void btnKhuVuc_Click(object sender, EventArgs e)

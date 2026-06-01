@@ -1,4 +1,4 @@
-﻿using DAL_Vinwonders;
+using DAL_Vinwonders;
 using ET_Vinwonders;
 using System.Data;
 
@@ -12,9 +12,9 @@ namespace BUS_Vinwonders
         {
             return dalChiTietHDCH.InDanhSachChiTietHDCH();
         }
-        public DataTable TimChiTietHDCH(string ten)
+        public DataTable GetChiTiet_ByHDCH(string maHDCH)
         {
-            return dalChiTietHDCH.TimChiTietHDCH(ten);
+            return dalChiTietHDCH.GetChiTiet_ByHDCH(maHDCH);
         }
         public bool ThemChiTietHDCH(ET_ChiTietHDCH et)
         {
