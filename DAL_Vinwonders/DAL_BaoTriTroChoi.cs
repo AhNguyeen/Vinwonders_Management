@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,7 +20,35 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-                // X? lý l?i n?u c?n
+                throw ex;
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return dt;
+        }
+
+        public DataTable InDanhSachBaoTriTroChoiTheoNgay(DateTime tuNgay, DateTime denNgay)
+        {
+            connectDB.OpenConnect();
+            DataTable dt = new DataTable();
+            try
+            {
+                string sql = @"SELECT b.MaBaoTri, t.TenTroChoi, n.HoTen AS TenNhanVien, b.NgayBatDau, b.NgayDuKienXong, b.MoTaLoi, b.ChiPhiBaoTri, b.TrangThai
+                               FROM BaoTriTroChoi b
+                               JOIN TroChoi t ON b.MaTroChoi = t.MaTroChoi
+                               JOIN NhanVien n ON b.MaNhanVien = n.MaNhanVien
+                               WHERE b.NgayBatDau >= @TuNgay AND b.NgayBatDau <= @DenNgay";
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@TuNgay", tuNgay),
+                    new SqlParameter("@DenNgay", denNgay)
+                };
+                dt = connectDB.ReadData(sql, sp);
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally
@@ -141,5 +169,3 @@ namespace DAL_Vinwonders
         }
     }
 }
-
-
