@@ -139,6 +139,12 @@
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.Designer.cs">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_LichSuHoaDonCuaHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_LichSuHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_LichSuHoaDonCuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_ThanhToanHoaDonCuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_LichSuHoaDonCuaHang.resx">
+      <DependentUpon>GUI_LichSuHoaDonCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ThanhToanHoaDonCuaHang.resx">
       <DependentUpon>GUI_ThanhToanHoaDonCuaHang.cs</DependentUpon>

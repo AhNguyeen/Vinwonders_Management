@@ -1011,6 +1011,7 @@ AS BEGIN
     INSERT INTO HoaDonCuaHang (MaHDCH, MaCuaHang, MaKhachHang, MaNhanVien, TongTien)
     VALUES (@MaHDCH, @MaCuaHang, @MaKhachHang, @MaNhanVien, @TongTien);
 END;
+GO
 
 -- Cập nhật Hóa Đơn Cửa Hàng
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_Update_HoaDonCuaHang') DROP PROCEDURE sp_Update_HoaDonCuaHang;
@@ -1049,7 +1050,7 @@ CREATE PROCEDURE sp_GetAll_HoaDonCuaHang
 AS
 BEGIN
     SET NOCOUNT ON;
-    SELECT hd.*, kh.HoTen AS TenKhachHang, nv.HoTen AS TenNhanVien
+    SELECT hd.*, kh.HoTen AS TenKhachHang, kh.SoDienThoai, nv.HoTen AS TenNhanVien
     FROM HoaDonCuaHang hd
     INNER JOIN KhachHang kh ON hd.MaKhachHang = kh.MaKhachHang
     INNER JOIN NhanVien nv ON hd.MaNhanVien = nv.MaNhanVien
@@ -1308,6 +1309,9 @@ GO
 -- =================================================================
 -- 18 STORED PROCEDURES: LẤY THÔNG TIN CHI TIẾT HÓA ĐƠN & VÉ
 -- =================================================================
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_LayThongTinChiTietHoaDon')
+    DROP PROCEDURE sp_LayThongTinChiTietHoaDon;
+GO
 CREATE PROCEDURE sp_LayThongTinChiTietHoaDon
     @MaHoaDon VARCHAR(50) -- Nhớ sửa kiểu dữ liệu này nếu DB của bạn dùng INT hoặc kiểu khác
 AS
@@ -1328,6 +1332,9 @@ BEGIN
 END
 GO
 
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'sp_LayDanhSachVeThuocHoaDon')
+    DROP PROCEDURE sp_LayDanhSachVeThuocHoaDon;
+GO
 CREATE PROCEDURE sp_LayDanhSachVeThuocHoaDon
     @MaHoaDon VARCHAR(50) -- Giữ nguyên kiểu dữ liệu bạn đang dùng
 AS

@@ -1,0 +1,94 @@
+using BUS_Vinwonders;
+using System;
+using System.Data;
+using System.Windows.Forms;
+
+namespace Vinwonders_Management.QuanLyCuaHangSanPham
+{
+    public partial class GUI_LichSuHoaDonCuaHang : UserControl
+    {
+        BUS_HoaDonCuaHang busHDCH = new BUS_HoaDonCuaHang();
+        DataTable dtHDCH;
+
+        public GUI_LichSuHoaDonCuaHang()
+        {
+            InitializeComponent();
+        }
+
+        private void GUI_LichSuHoaDonCuaHang_Load(object sender, EventArgs e)
+        {
+            // Fix lại các cột bị sai do copy từ Hóa Đơn Vé sang
+            colMaHoaDon.DataPropertyName = "MaHDCH";
+            colNgayTao.DataPropertyName = "NgayTao";
+           
+            dgvLichSu.AutoGenerateColumns = false; // Đảm bảo không tự động tạo cột
+            if(dgvLichSu.Columns.Contains("colChiTiet"))
+                dgvLichSu.Columns["colChiTiet"].DisplayIndex = dgvLichSu.Columns.Count - 1; // Đẩy cột Xem chi tiết xuống cuối cùng
+
+
+            LoadDanhSach();
+        }
+
+        private void LoadDanhSach()
+        {
+            try
+            {
+                dtHDCH = busHDCH.InDanhSach();
+                dgvLichSu.DataSource = dtHDCH;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải danh sách hóa đơn cửa hàng: " + ex.Message);
+            }
+        }
+
+        private void FilterData()
+        {
+            if (dtHDCH == null) return;
+            DataView dv = dtHDCH.DefaultView;
+            string keyword = txtTimKiem.Text.Trim();
+            
+            string filter = "";
+            
+            // 1. Lọc theo tên KH hoặc Mã HĐ hoặc SDT
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                filter += $"(TenKhachHang LIKE '%{keyword}%' OR MaHDCH LIKE '%{keyword}%' OR SoDienThoai LIKE '%{keyword}%')";
+            }
+
+            // 2. Lọc theo ngày (nếu DateTimePicker được check)
+            if (dtpNgayLoc.Checked)
+            {
+                DateTime selectedDate = dtpNgayLoc.Value.Date;
+                if (!string.IsNullOrEmpty(filter)) filter += " AND ";
+                
+                // Lọc trong khoảng thời gian từ 00:00:00 đến 23:59:59 của ngày được chọn
+                filter += $"(NgayTao >= '{selectedDate:yyyy-MM-dd} 00:00:00' AND NgayTao <= '{selectedDate:yyyy-MM-dd} 23:59:59')";
+            }
+
+            dv.RowFilter = filter;
+            dgvLichSu.DataSource = dv;
+        }
+
+        private void TxtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            FilterData();
+        }
+
+        private void DtpNgayLoc_ValueChanged(object sender, EventArgs e)
+        {
+            FilterData();
+        }
+
+        private void DgvLichSu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Xử lý nút Xem chi tiết
+            if (e.RowIndex >= 0 && dgvLichSu.Columns[e.ColumnIndex].Name == "colChiTiet")
+            {
+                string maHDCH = dgvLichSu.Rows[e.RowIndex].Cells["colMaHoaDon"].Value.ToString();
+                // TODO: Mở form GUI_ChiTietHoaDonCuaHang và truyền mã vào
+                MessageBox.Show("Chức năng xem chi tiết hóa đơn cửa hàng: " + maHDCH + " đang được phát triển.");
+            }
+        }
+    }
+}

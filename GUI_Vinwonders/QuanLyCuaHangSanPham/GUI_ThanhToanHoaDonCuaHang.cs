@@ -31,11 +31,27 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             dgvSanPham.DataSource = busSanPham.InDanhSach();
         }
 
-        private void LoadCboKhachHang()
+        private DataTable dtKhachHang;
+
+        private void LoadKhachHangAutoComplete()
         {
-            cboKhachHang.DataSource = busKhachHang.InDanhSach();
-            cboKhachHang.DisplayMember = "SoDienThoai";
-            cboKhachHang.ValueMember = "MaKhachHang";
+            dtKhachHang = busKhachHang.InDanhSach();
+            AutoCompleteStringCollection acsc = new AutoCompleteStringCollection();
+            if (dtKhachHang != null)
+            {
+                foreach (DataRow row in dtKhachHang.Rows)
+                {
+                    string hoTen = row["HoTen"].ToString();
+                    string sdt = row["SoDienThoai"].ToString();
+                    if (!string.IsNullOrEmpty(sdt))
+                        acsc.Add($"{sdt} - {hoTen}");
+                    else
+                        acsc.Add(hoTen);
+                }
+            }
+            txtKhachHang.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtKhachHang.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtKhachHang.AutoCompleteCustomSource = acsc;
         }
 
         private void InitGioHang()
@@ -55,7 +71,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
         private void GUI_HoaDonCuaHang_Load(object sender, EventArgs e)
         {
             LoadDanhSachSanPham();
-            LoadCboKhachHang();
+            LoadKhachHangAutoComplete();
             InitGioHang();
         }
 
@@ -136,15 +152,48 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
                 return;
             }
 
-            if (cboKhachHang.SelectedValue == null)
+            if (string.IsNullOrWhiteSpace(txtKhachHang.Text))
             {
-                MessageBox.Show("Vui lòng chọn khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                string maKhachHang = cboKhachHang.SelectedValue.ToString();
+                string inputKH = txtKhachHang.Text.Trim();
+                string maKhachHang = "";
+
+                // Tìm kiếm khách hàng trong danh sách
+                if (dtKhachHang != null)
+                {
+                    foreach (DataRow row in dtKhachHang.Rows)
+                    {
+                        string hoTen = row["HoTen"].ToString();
+                        string sdt = row["SoDienThoai"].ToString();
+                        string format1 = $"{sdt} - {hoTen}";
+                        if (inputKH == format1 || inputKH == hoTen)
+                        {
+                            maKhachHang = row["MaKhachHang"].ToString();
+                            break;
+                        }
+                    }
+                }
+
+                // Nếu khách hàng chưa đăng ký thành viên (không tìm thấy) -> lưu tên
+                if (string.IsNullOrEmpty(maKhachHang))
+                {
+                    maKhachHang = "KH" + DateTime.Now.Ticks.ToString().Substring(DateTime.Now.Ticks.ToString().Length - 8);
+                    ET_Vinwonders.ET_KhachHang khNew = new ET_Vinwonders.ET_KhachHang(maKhachHang, "HTV01", inputKH, "Cá nhân", new DateTime(1990, 1, 1), "", "", "", 0);
+                    
+                    if (!busKhachHang.ThemKhachHang(khNew))
+                    {
+                        MessageBox.Show("Không thể tạo thông tin khách hàng mới!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    // Load lại dữ liệu gợi ý
+                    LoadKhachHangAutoComplete();
+                }
+
                 string maNhanVien = "NV01"; // Để tạm, sau này lấy từ tài khoản đăng nhập
                 string maHDCH = "HDCH" + DateTime.Now.Ticks.ToString().Substring(DateTime.Now.Ticks.ToString().Length - 6);
                 string maCuaHang = dtGioHang.Rows[0]["MaCuaHang"].ToString(); // Lấy mã cửa hàng từ sản phẩm đầu tiên

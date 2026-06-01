@@ -34,7 +34,6 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.cboKhachHang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
@@ -58,6 +57,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.colLoaiSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTrangThaiBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtKhachHang = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -86,7 +86,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.cboKhachHang);
+            this.guna2Panel2.Controls.Add(this.txtKhachHang);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel2.Controls.Add(this.guna2TextBox1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
@@ -95,24 +95,6 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(857, 67);
             this.guna2Panel2.TabIndex = 1;
-            // 
-            // cboKhachHang
-            // 
-            this.cboKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.cboKhachHang.BorderRadius = 10;
-            this.cboKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboKhachHang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cboKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboKhachHang.ItemHeight = 30;
-            this.cboKhachHang.Location = new System.Drawing.Point(647, 18);
-            this.cboKhachHang.Margin = new System.Windows.Forms.Padding(10);
-            this.cboKhachHang.Name = "cboKhachHang";
-            this.cboKhachHang.Size = new System.Drawing.Size(200, 36);
-            this.cboKhachHang.TabIndex = 4;
             // 
             // guna2HtmlLabel1
             // 
@@ -423,6 +405,27 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.colTrangThaiBan.Name = "colTrangThaiBan";
             this.colTrangThaiBan.ReadOnly = true;
             // 
+            // txtKhachHang
+            // 
+            this.txtKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.txtKhachHang.BorderRadius = 10;
+            this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKhachHang.DefaultText = "";
+            this.txtKhachHang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtKhachHang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtKhachHang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKhachHang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtKhachHang.Location = new System.Drawing.Point(640, 18);
+            this.txtKhachHang.Name = "txtKhachHang";
+            this.txtKhachHang.PlaceholderText = "";
+            this.txtKhachHang.SelectedText = "";
+            this.txtKhachHang.Size = new System.Drawing.Size(200, 36);
+            this.txtKhachHang.TabIndex = 5;
+            // 
             // GUI_ThanhToanHoaDonCuaHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,7 +474,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong_Ban;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaBan_Ban;
         private System.Windows.Forms.DataGridViewButtonColumn colBtnXoa;
-        private Guna.UI2.WinForms.Guna2ComboBox cboKhachHang;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2TextBox txtKhachHang;
     }
 }
