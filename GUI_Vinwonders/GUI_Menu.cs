@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,9 +23,13 @@ namespace Vinwonders_Management
         // 2. Chỉnh lại Nút Đăng Xuất
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            isLogout = true;                         // Bật cờ hiệu Đăng xuất lên
-            //this.DialogResult = DialogResult.Yes;    // Bắn tín hiệu "Đăng xuất" về cho GUI_Login
-            this.Close();                            // Đóng form Menu
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                ET_Vinwonders.Session.Clear();
+                isLogout = true; // Để bỏ qua hộp thoại xác nhận khi FormClosing
+                Application.Restart();
+            }
         }
 
         // 3. Chỉnh lại hàm FormClosing của Menu
@@ -91,6 +95,12 @@ namespace Vinwonders_Management
             btnDashboard.Checked = true;
             lblGUI.Text = "Dashboard";
             lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
+            
+            // Hien thi ten nguoi dung
+            if (ET_Vinwonders.Session.IsLoggedIn())
+            {
+                lblRole.Text = ET_Vinwonders.Session.QuyenTruyCap + " | " + ET_Vinwonders.Session.HoTenNhanVien;
+            }
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)

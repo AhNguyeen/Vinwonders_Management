@@ -16,7 +16,7 @@ namespace Vinwonders_Management
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI_Menu());
+            Application.Run(new GUI_Login());
         }
     }
 }

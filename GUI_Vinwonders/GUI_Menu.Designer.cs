@@ -30,7 +30,6 @@
         {
             this.pnSidebar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLyVe = new Guna.UI2.WinForms.Guna2Button();
             this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
@@ -49,6 +48,7 @@
             this.lblDateTimeNow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblGUI = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnMainContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnSidebar.SuspendLayout();
             this.pnLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -61,7 +61,6 @@
             this.pnSidebar.BorderColor = System.Drawing.Color.Silver;
             this.pnSidebar.BorderThickness = 1;
             this.pnSidebar.Controls.Add(this.guna2Separator1);
-            this.pnSidebar.Controls.Add(this.guna2Button1);
             this.pnSidebar.Controls.Add(this.btnDangXuat);
             this.pnSidebar.Controls.Add(this.btnQuanLyVe);
             this.pnSidebar.Controls.Add(this.btnCuaHang);
@@ -83,37 +82,10 @@
             // 
             this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 587);
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 643);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(250, 10);
             this.guna2Separator1.TabIndex = 2;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.Orange;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.Silver;
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button1.Image = global::Vinwonders_Management.Properties.Resources.setting;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(15, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(12, 603);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(230, 50);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Cài Đặt";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(20, 0);
             // 
             // btnDangXuat
             // 
@@ -440,6 +412,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.Controls.Add(this.lblDateTimeNow);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.lblGUI);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
@@ -478,6 +451,18 @@
             this.pnMainContent.Name = "pnMainContent";
             this.pnMainContent.Size = new System.Drawing.Size(981, 660);
             this.pnMainContent.TabIndex = 4;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(866, 7);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(7);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(99, 27);
+            this.guna2HtmlLabel1.TabIndex = 0;
+            this.guna2HtmlLabel1.Text = "[ Ten GUI ]";
             // 
             // GUI_Menu
             // 
@@ -520,11 +505,11 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGUI;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btnQuanLyNhanVien;
         private Guna.UI2.WinForms.Guna2Button btnSuKien;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDateTimeNow;
         private Guna.UI2.WinForms.Guna2Panel pnMainContent;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
 

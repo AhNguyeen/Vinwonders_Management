@@ -129,13 +129,13 @@ namespace Vinwonders_Management
             {
                 BUS_SuKien busSuKien = new BUS_SuKien();
                 DataTable dtSuKien = busSuKien.InDanhSach();
-
+                
                 if (dtSuKien != null)
                 {
                     DataView dv = dtSuKien.DefaultView;
                     // Lọc các sự kiện có ngày kết thúc lớn hơn hoặc bằng ngày hiện tại
                     dv.RowFilter = string.Format("NgayKetThuc >= '{0}'", DateTime.Now.ToString("yyyy-MM-dd"));
-
+                    
                     dgvSuKien.DataSource = dv.ToTable();
                 }
             }
