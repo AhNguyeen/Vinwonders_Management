@@ -94,7 +94,6 @@ namespace Vinwonders_Management
                 DataTable dtInvoices = busDashboard.GetRecentInvoices();
                 // Ẩn cột tự sinh nếu có
                 dgvHoaDonGanDay.AutoGenerateColumns = false;
-                dgvHoaDonGanDay.DataSource = dtInvoices;
 
                 // Ánh xạ cột (đảm bảo DataPropertyName khớp với tên cột trả về từ SP)
                 if (dgvHoaDonGanDay.Columns.Contains("colMaHD"))
@@ -110,6 +109,9 @@ namespace Vinwonders_Management
                 }
                 if (dgvHoaDonGanDay.Columns.Contains("colTrangThai"))
                     dgvHoaDonGanDay.Columns["colTrangThai"].DataPropertyName = "TrangThai";
+
+                // Gán dữ liệu SAU KHI đã map cột
+                dgvHoaDonGanDay.DataSource = dtInvoices;
 
             }
             catch (Exception ex)

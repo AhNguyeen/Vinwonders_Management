@@ -103,17 +103,25 @@ namespace Vinwonders_Management.QuanLyTroChoi
             }
 
             // Kiểm tra định dạng giờ mở/đóng cửa
-            DateTime tempTime;
-            if (string.IsNullOrWhiteSpace(txtGioMoCua.Text) || !DateTime.TryParse(txtGioMoCua.Text.Trim(), out tempTime))
+            DateTime moCua;
+            if (string.IsNullOrWhiteSpace(txtGioMoCua.Text) || !DateTime.TryParse(txtGioMoCua.Text.Trim(), out moCua))
             {
                 MessageBox.Show("Vui lòng nhập đúng định dạng giờ mở cửa (VD: 8:00)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtGioMoCua.Focus();
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtGioDongCua.Text) || !DateTime.TryParse(txtGioDongCua.Text.Trim(), out tempTime))
+            DateTime dongCua;
+            if (string.IsNullOrWhiteSpace(txtGioDongCua.Text) || !DateTime.TryParse(txtGioDongCua.Text.Trim(), out dongCua))
             {
                 MessageBox.Show("Vui lòng nhập đúng định dạng giờ đóng cửa (VD: 18:00)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGioDongCua.Focus();
+                return false;
+            }
+
+            if (moCua >= dongCua)
+            {
+                MessageBox.Show("Giờ mở cửa phải nhỏ hơn giờ đóng cửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtGioDongCua.Focus();
                 return false;
             }

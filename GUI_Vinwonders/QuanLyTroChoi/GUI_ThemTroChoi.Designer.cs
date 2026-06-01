@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbokhuVuc = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboPhanLoai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.txtChieuCao = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDoTuoi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhanLoai = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTrangThai = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTenTroChoi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,8 +45,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cbokhuVuc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,13 +54,13 @@
             this.pnlContent.BackColor = System.Drawing.Color.White;
             this.pnlContent.BorderColor = System.Drawing.Color.Silver;
             this.pnlContent.BorderThickness = 1;
+            this.pnlContent.Controls.Add(this.cboTrangThai);
             this.pnlContent.Controls.Add(this.cbokhuVuc);
             this.pnlContent.Controls.Add(this.cboPhanLoai);
             this.pnlContent.Controls.Add(this.btnThem);
             this.pnlContent.Controls.Add(this.txtChieuCao);
             this.pnlContent.Controls.Add(this.txtDoTuoi);
             this.pnlContent.Controls.Add(this.txtPhanLoai);
-            this.pnlContent.Controls.Add(this.txtTrangThai);
             this.pnlContent.Controls.Add(this.txtTenTroChoi);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel5);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel4);
@@ -76,6 +76,23 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(650, 500);
             this.pnlContent.TabIndex = 1;
+            // 
+            // cbokhuVuc
+            // 
+            this.cbokhuVuc.BackColor = System.Drawing.Color.Transparent;
+            this.cbokhuVuc.BorderRadius = 10;
+            this.cbokhuVuc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbokhuVuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbokhuVuc.FillColor = System.Drawing.SystemColors.Control;
+            this.cbokhuVuc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbokhuVuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbokhuVuc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbokhuVuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbokhuVuc.ItemHeight = 30;
+            this.cbokhuVuc.Location = new System.Drawing.Point(16, 354);
+            this.cbokhuVuc.Name = "cbokhuVuc";
+            this.cbokhuVuc.Size = new System.Drawing.Size(303, 36);
+            this.cbokhuVuc.TabIndex = 74;
             // 
             // cboPhanLoai
             // 
@@ -176,27 +193,6 @@
             this.txtPhanLoai.Size = new System.Drawing.Size(303, 36);
             this.txtPhanLoai.TabIndex = 64;
             // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.BorderRadius = 10;
-            this.txtTrangThai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTrangThai.DefaultText = "";
-            this.txtTrangThai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTrangThai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTrangThai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTrangThai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTrangThai.FillColor = System.Drawing.SystemColors.Control;
-            this.txtTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTrangThai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTrangThai.Location = new System.Drawing.Point(329, 281);
-            this.txtTrangThai.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.PlaceholderText = "";
-            this.txtTrangThai.SelectedText = "";
-            this.txtTrangThai.Size = new System.Drawing.Size(302, 36);
-            this.txtTrangThai.TabIndex = 61;
-            // 
             // txtTenTroChoi
             // 
             this.txtTenTroChoi.BorderRadius = 10;
@@ -228,6 +224,16 @@
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(103, 19);
             this.guna2HtmlLabel5.TabIndex = 57;
             this.guna2HtmlLabel5.Text = "Độ tuổi tối thiểu";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 329);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(52, 19);
+            this.guna2HtmlLabel4.TabIndex = 55;
+            this.guna2HtmlLabel4.Text = "Khu vực";
             // 
             // guna2HtmlLabel7
             // 
@@ -313,32 +319,22 @@
             this.btnThoat.Text = "x";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // guna2HtmlLabel4
+            // cboTrangThai
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(16, 329);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(52, 19);
-            this.guna2HtmlLabel4.TabIndex = 55;
-            this.guna2HtmlLabel4.Text = "Khu vực";
-            // 
-            // cbokhuVuc
-            // 
-            this.cbokhuVuc.BackColor = System.Drawing.Color.Transparent;
-            this.cbokhuVuc.BorderRadius = 10;
-            this.cbokhuVuc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbokhuVuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbokhuVuc.FillColor = System.Drawing.SystemColors.Control;
-            this.cbokhuVuc.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbokhuVuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbokhuVuc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbokhuVuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbokhuVuc.ItemHeight = 30;
-            this.cbokhuVuc.Location = new System.Drawing.Point(16, 354);
-            this.cbokhuVuc.Name = "cbokhuVuc";
-            this.cbokhuVuc.Size = new System.Drawing.Size(303, 36);
-            this.cbokhuVuc.TabIndex = 74;
+            this.cboTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cboTrangThai.BorderRadius = 10;
+            this.cboTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTrangThai.FillColor = System.Drawing.SystemColors.Control;
+            this.cboTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboTrangThai.ItemHeight = 30;
+            this.cboTrangThai.Location = new System.Drawing.Point(329, 281);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(302, 36);
+            this.cboTrangThai.TabIndex = 74;
             // 
             // GUI_ThemTroChoi
             // 
@@ -365,7 +361,6 @@
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2TextBox txtDoTuoi;
         private Guna.UI2.WinForms.Guna2TextBox txtPhanLoai;
-        private Guna.UI2.WinForms.Guna2TextBox txtTrangThai;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTroChoi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -378,5 +373,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtChieuCao;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2ComboBox cbokhuVuc;
+        private Guna.UI2.WinForms.Guna2ComboBox cboTrangThai;
     }
 }

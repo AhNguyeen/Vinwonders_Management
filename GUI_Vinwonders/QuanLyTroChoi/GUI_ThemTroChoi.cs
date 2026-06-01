@@ -23,6 +23,16 @@ namespace Vinwonders_Management.QuanLyTroChoi
             InitializeComponent();
             LoadCboPhanLoai();
             LoadCboKhuVuc();
+            LoadCboTrangThai();
+        }
+
+        private void LoadCboTrangThai()
+        {
+            cboTrangThai.Items.Clear();
+            cboTrangThai.Items.Add("Đang hoạt động");
+            cboTrangThai.Items.Add("Bảo trì");
+            cboTrangThai.Items.Add("Ngưng sử dụng");
+            cboTrangThai.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -75,7 +85,7 @@ namespace Vinwonders_Management.QuanLyTroChoi
             int sucChua = 0;
             int.TryParse(txtPhanLoai.Text.Trim(), out sucChua);
 
-            string trangThai = txtTrangThai.Text.Trim();
+            string trangThai = cboTrangThai.SelectedItem.ToString();
 
             // Sinh mã trò chơi tự động
             string maTroChoi = "TC" + DateTime.Now.Ticks.ToString().Substring(DateTime.Now.Ticks.ToString().Length - 6);
@@ -206,19 +216,10 @@ namespace Vinwonders_Management.QuanLyTroChoi
             }
 
             // 9. Kiểm tra trạng thái
-            string trangThai = txtTrangThai.Text.Trim();
-            if (string.IsNullOrWhiteSpace(trangThai))
+            if (cboTrangThai.SelectedIndex < 0)
             {
-                MessageBox.Show("Vui lòng nhập trạng thái!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTrangThai.Focus();
-                return false;
-            }
-
-            // 10. Kiểm tra trạng thái không chứa ký tự đặc biệt
-            if (!Regex.IsMatch(trangThai, @"^[\p{L}0-9\s]+$"))
-            {
-                MessageBox.Show("Trạng thái không được chứa ký tự đặc biệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTrangThai.Focus();
+                MessageBox.Show("Vui lòng chọn trạng thái!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboTrangThai.Focus();
                 return false;
             }
 
