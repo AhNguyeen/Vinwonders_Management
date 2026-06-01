@@ -577,6 +577,12 @@
     <None Include="QuanLyBaoTri\DataSet_BaoTri.xss">
       <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
     </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsc">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xss">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xsc">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
     </None>
@@ -590,10 +596,16 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet_BaoTri.Designer.cs</LastGenOutput>
     </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsc">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet_HoaDonCuaHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xss">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
     </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xss">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
