@@ -252,24 +252,28 @@ BEGIN
     VALUES (@MaHoaDon, @MaKhachHang, @MaNhanVien, @MaSuKien, GETDATE(), @ChietKhauDoan, @TongTien, @PhuongThucThanhToan, @TrangThai);
     
     -- Cập nhật điểm tích lũy cho khách hàng (10k = 1đ)
+    -- Yêu cầu: Khách hàng phải có số điện thoại mới được tích điểm
     IF @MaKhachHang IS NOT NULL AND @MaKhachHang <> ''
     BEGIN
-        DECLARE @DiemCong INT;
-        SET @DiemCong = CAST((@TongTien / 10000) AS INT);
-        
-        UPDATE KhachHang
-        SET DiemTichLuy = ISNULL(DiemTichLuy, 0) + @DiemCong
-        WHERE MaKhachHang = @MaKhachHang;
-        
-        -- Cập nhật Hạng Thành Viên dựa trên điểm tích lũy mới
-        UPDATE KhachHang
-        SET MaHang = (
-            SELECT TOP 1 MaHang 
-            FROM HangThanhVien 
-            WHERE DiemToiThieu <= KhachHang.DiemTichLuy 
-            ORDER BY DiemToiThieu DESC
-        )
-        WHERE MaKhachHang = @MaKhachHang;
+        IF EXISTS (SELECT 1 FROM KhachHang WHERE MaKhachHang = @MaKhachHang AND SoDienThoai IS NOT NULL AND LTRIM(RTRIM(SoDienThoai)) <> '')
+        BEGIN
+            DECLARE @DiemCong INT;
+            SET @DiemCong = CAST((@TongTien / 10000) AS INT);
+            
+            UPDATE KhachHang
+            SET DiemTichLuy = ISNULL(DiemTichLuy, 0) + @DiemCong
+            WHERE MaKhachHang = @MaKhachHang;
+            
+            -- Cập nhật Hạng Thành Viên dựa trên điểm tích lũy mới
+            UPDATE KhachHang
+            SET MaHang = (
+                SELECT TOP 1 MaHang 
+                FROM HangThanhVien 
+                WHERE DiemToiThieu <= KhachHang.DiemTichLuy 
+                ORDER BY DiemToiThieu DESC
+            )
+            WHERE MaKhachHang = @MaKhachHang;
+        END
     END
 END;
 GO
