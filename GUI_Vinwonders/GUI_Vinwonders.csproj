@@ -115,6 +115,11 @@
       <DependentUpon>CR_BaoCaoChiPhiBaoTri.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="QuanLyBaoTri\DataSet_BaoTri.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -566,6 +571,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyBaoTri\DataSet_BaoTri.xsc">
+      <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBaoTri\DataSet_BaoTri.xss">
+      <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xsc">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
     </None>
