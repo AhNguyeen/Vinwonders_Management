@@ -100,6 +100,51 @@ namespace Vinwonders_Management
             if (ET_Vinwonders.Session.IsLoggedIn())
             {
                 lblRole.Text = ET_Vinwonders.Session.QuyenTruyCap + " | " + ET_Vinwonders.Session.HoTenNhanVien;
+                ApplyRoleBasedAccessControl();
+            }
+        }
+
+        private void ApplyRoleBasedAccessControl()
+        {
+            string role = ET_Vinwonders.Session.QuyenTruyCap;
+
+            if (role == "Admin")
+            {
+                // Admin xem dc het
+                btnDashboard.Visible = true;
+                btnQuanLyVe.Visible = true;
+                btnKhachHang.Visible = true;
+                btnCuaHang.Visible = true;
+                btnKhuVuiChoi.Visible = true;
+                btnBaoTri.Visible = true;
+                btnQuanLyNhanVien.Visible = true;
+                btnSuKien.Visible = true;
+            }
+            else if (role == "ThuNgan")
+            {
+                btnDashboard.Visible = true;
+                btnQuanLyVe.Visible = true;
+                btnKhachHang.Visible = true;
+                btnCuaHang.Visible = true;
+                
+                // An cac chuc nang khac
+                btnKhuVuiChoi.Visible = false;
+                btnBaoTri.Visible = false;
+                btnQuanLyNhanVien.Visible = false;
+                btnSuKien.Visible = false;
+            }
+            else if (role == "QuanLy")
+            {
+                btnDashboard.Visible = true;
+                btnSuKien.Visible = true;
+                btnBaoTri.Visible = true;
+                btnQuanLyNhanVien.Visible = true;
+                btnKhachHang.Visible = true;
+                
+                // An cac chuc nang khac
+                btnQuanLyVe.Visible = false;
+                btnCuaHang.Visible = false;
+                btnKhuVuiChoi.Visible = false;
             }
         }
 

@@ -50,10 +50,12 @@
             this.btnSuKien = new Guna.UI2.WinForms.Guna2Button();
             this.btnBaoTri = new Guna.UI2.WinForms.Guna2Button();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnSidebar.SuspendLayout();
             this.pnLogo.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnSidebar
@@ -61,17 +63,10 @@
             this.pnSidebar.BackColor = System.Drawing.Color.Transparent;
             this.pnSidebar.BorderColor = System.Drawing.Color.Silver;
             this.pnSidebar.BorderThickness = 1;
+            this.pnSidebar.Controls.Add(this.flowLayoutPanel1);
             this.pnSidebar.Controls.Add(this.guna2Separator1);
             this.pnSidebar.Controls.Add(this.btnThoat);
             this.pnSidebar.Controls.Add(this.btnDangXuat);
-            this.pnSidebar.Controls.Add(this.btnQuanLyVe);
-            this.pnSidebar.Controls.Add(this.btnCuaHang);
-            this.pnSidebar.Controls.Add(this.btnQuanLyNhanVien);
-            this.pnSidebar.Controls.Add(this.btnKhachHang);
-            this.pnSidebar.Controls.Add(this.btnDashboard);
-            this.pnSidebar.Controls.Add(this.btnKhuVuiChoi);
-            this.pnSidebar.Controls.Add(this.btnSuKien);
-            this.pnSidebar.Controls.Add(this.btnBaoTri);
             this.pnSidebar.Controls.Add(this.pnLogo);
             this.pnSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnSidebar.FillColor = System.Drawing.Color.White;
@@ -173,7 +168,9 @@
             // 
             // pnMainContent
             // 
-            this.pnMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMainContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnMainContent.Location = new System.Drawing.Point(250, 61);
             this.pnMainContent.Margin = new System.Windows.Forms.Padding(2);
             this.pnMainContent.Name = "pnMainContent";
@@ -271,7 +268,8 @@
             this.btnQuanLyVe.Image = global::Vinwonders_Management.Properties.Resources.ticket;
             this.btnQuanLyVe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyVe.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnQuanLyVe.Location = new System.Drawing.Point(12, 179);
+            this.btnQuanLyVe.Location = new System.Drawing.Point(10, 250);
+            this.btnQuanLyVe.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnQuanLyVe.Name = "btnQuanLyVe";
             this.btnQuanLyVe.Size = new System.Drawing.Size(230, 45);
             this.btnQuanLyVe.TabIndex = 1;
@@ -300,7 +298,8 @@
             this.btnCuaHang.Image = global::Vinwonders_Management.Properties.Resources.shops;
             this.btnCuaHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCuaHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCuaHang.Location = new System.Drawing.Point(12, 383);
+            this.btnCuaHang.Location = new System.Drawing.Point(10, 190);
+            this.btnCuaHang.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnCuaHang.Name = "btnCuaHang";
             this.btnCuaHang.Size = new System.Drawing.Size(230, 45);
             this.btnCuaHang.TabIndex = 1;
@@ -329,7 +328,8 @@
             this.btnQuanLyNhanVien.Image = global::Vinwonders_Management.Properties.Resources.employees;
             this.btnQuanLyNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyNhanVien.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(12, 281);
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(10, 70);
+            this.btnQuanLyNhanVien.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
             this.btnQuanLyNhanVien.Size = new System.Drawing.Size(230, 45);
             this.btnQuanLyNhanVien.TabIndex = 1;
@@ -358,7 +358,8 @@
             this.btnKhachHang.Image = global::Vinwonders_Management.Properties.Resources.customers;
             this.btnKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhachHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhachHang.Location = new System.Drawing.Point(12, 230);
+            this.btnKhachHang.Location = new System.Drawing.Point(10, 430);
+            this.btnKhachHang.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(230, 45);
             this.btnKhachHang.TabIndex = 1;
@@ -387,7 +388,8 @@
             this.btnDashboard.Image = global::Vinwonders_Management.Properties.Resources.dashboard;
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnDashboard.Location = new System.Drawing.Point(12, 128);
+            this.btnDashboard.Location = new System.Drawing.Point(10, 130);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(230, 45);
             this.btnDashboard.TabIndex = 1;
@@ -416,7 +418,8 @@
             this.btnKhuVuiChoi.Image = global::Vinwonders_Management.Properties.Resources.spin_show;
             this.btnKhuVuiChoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhuVuiChoi.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhuVuiChoi.Location = new System.Drawing.Point(12, 332);
+            this.btnKhuVuiChoi.Location = new System.Drawing.Point(10, 10);
+            this.btnKhuVuiChoi.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnKhuVuiChoi.Name = "btnKhuVuiChoi";
             this.btnKhuVuiChoi.Size = new System.Drawing.Size(230, 45);
             this.btnKhuVuiChoi.TabIndex = 1;
@@ -445,7 +448,8 @@
             this.btnSuKien.Image = global::Vinwonders_Management.Properties.Resources._event;
             this.btnSuKien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSuKien.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnSuKien.Location = new System.Drawing.Point(12, 434);
+            this.btnSuKien.Location = new System.Drawing.Point(10, 310);
+            this.btnSuKien.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnSuKien.Name = "btnSuKien";
             this.btnSuKien.Size = new System.Drawing.Size(230, 45);
             this.btnSuKien.TabIndex = 1;
@@ -474,7 +478,8 @@
             this.btnBaoTri.Image = global::Vinwonders_Management.Properties.Resources.maintenance;
             this.btnBaoTri.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoTri.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnBaoTri.Location = new System.Drawing.Point(12, 485);
+            this.btnBaoTri.Location = new System.Drawing.Point(10, 370);
+            this.btnBaoTri.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnBaoTri.Name = "btnBaoTri";
             this.btnBaoTri.Size = new System.Drawing.Size(230, 45);
             this.btnBaoTri.TabIndex = 1;
@@ -497,6 +502,24 @@
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.btnKhuVuiChoi);
+            this.flowLayoutPanel1.Controls.Add(this.btnQuanLyNhanVien);
+            this.flowLayoutPanel1.Controls.Add(this.btnDashboard);
+            this.flowLayoutPanel1.Controls.Add(this.btnCuaHang);
+            this.flowLayoutPanel1.Controls.Add(this.btnQuanLyVe);
+            this.flowLayoutPanel1.Controls.Add(this.btnSuKien);
+            this.flowLayoutPanel1.Controls.Add(this.btnBaoTri);
+            this.flowLayoutPanel1.Controls.Add(this.btnKhachHang);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 125);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 456);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
             // GUI_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,6 +539,7 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -544,6 +568,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnMainContent;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRole;
         private Guna.UI2.WinForms.Guna2Button btnThoat;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
