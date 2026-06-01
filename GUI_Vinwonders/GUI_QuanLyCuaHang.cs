@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +54,7 @@ namespace Vinwonders_Management
         private void GUI_QuanLyCuaHangSanPham_Load(object sender, EventArgs e)
         {
             OpenChildUserControl(typeof(GUI_CuaHang));
+            btnCuaHang.Checked = true;
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)

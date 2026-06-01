@@ -142,19 +142,21 @@ namespace Vinwonders_Management.QuanLyKhachHang
                 return false;
             }
 
+            // Kiểm tra ngày sinh (không được lớn hơn ngày hiện tại)
+            if (dtpNgaySinh.Value > DateTime.Now)
+            {
+                MessageBox.Show("Ngày sinh không thể lớn hơn ngày hiện tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpNgaySinh.Focus();
+                return false;
+            }
+
             // Kiểm tra email (nếu có nhập)
             if (!string.IsNullOrWhiteSpace(txtEmail.Text))
             {
-                if (!txtEmail.Text.Trim().Contains("@"))
+                string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtEmail.Text.Trim(), emailPattern))
                 {
-                    MessageBox.Show("Email không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtEmail.Focus();
-                    return false;
-                }
-                // Kiểm tra cuối cùng có phải @gmail.com hay không (nếu có)
-                else if (!txtEmail.Text.Trim().EndsWith("@gmail.com"))
-                {
-                    MessageBox.Show("Email phải kết thúc bằng @gmail.com!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Email không hợp lệ (VD: example@gmail.com)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtEmail.Focus();
                     return false;
                 }

@@ -20,6 +20,10 @@ namespace Vinwonders_Management.QuanLyKhachHang
         {
             InitializeComponent();
             dgvKhachHang.CellClick += dgvKhachHang_CellClick;
+            if (txtTimKiem != null)
+            {
+                txtTimKiem.TextChanged += txtTimKiem_TextChanged;
+            }
         }
 
         private void GUI_KhachHang_Load(object sender, EventArgs e)
@@ -27,10 +31,13 @@ namespace Vinwonders_Management.QuanLyKhachHang
             LoadKhachHang();
         }
 
+        private DataTable dtKhachHang;
+
         private void LoadKhachHang()
         {
             dgvKhachHang.AutoGenerateColumns = false;
-            dgvKhachHang.DataSource = busKhachHang.InDanhSach();
+            dtKhachHang = busKhachHang.InDanhSach();
+            dgvKhachHang.DataSource = dtKhachHang;
             
             // Đẩy cột Sửa và Xóa xuống cuối cùng (để sau các cột được AutoGenerate nếu có)
             if (dgvKhachHang.Columns.Contains("colBtnSua"))
@@ -115,6 +122,31 @@ namespace Vinwonders_Management.QuanLyKhachHang
                         MessageBox.Show("Xóa khách hàng thất bại! Khách hàng này có thể đang có hóa đơn liên quan.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (dtKhachHang == null) return;
+            string keyword = txtTimKiem.Text.Trim();
+
+            try
+            {
+                DataView dv = dtKhachHang.DefaultView;
+                if (!string.IsNullOrEmpty(keyword))
+                {
+                    // Lọc theo SĐT hoặc Họ Tên
+                    dv.RowFilter = string.Format("SoDienThoai LIKE '%{0}%' OR HoTen LIKE '%{0}%'", keyword.Replace("'", "''"));
+                }
+                else
+                {
+                    dv.RowFilter = "";
+                }
+                dgvKhachHang.DataSource = dv.ToTable();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi tìm kiếm: " + ex.Message);
             }
         }
     }

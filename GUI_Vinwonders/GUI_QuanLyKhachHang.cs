@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +55,7 @@ namespace Vinwonders_Management
         private void GUI_QuanLyKhachHang_Load(object sender, EventArgs e)
         {
             OpenChildUserControl(typeof(QuanLyKhachHang.GUI_KhachHang));
+            btnKhachHang.Checked = true;
         }
 
         private void btnHangThanhVien_Click(object sender, EventArgs e)

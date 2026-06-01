@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +49,7 @@ namespace Vinwonders_Management
         private void GUI_QuanLyVe_Load(object sender, EventArgs e)
         {
             OpenChildUserControl(typeof(QuanLyVe.GUI_HoaDonVe));
+            btnHoaDonVe.Checked = true;
         }
 
         private void btnHoaDonVe_Click(object sender, EventArgs e)

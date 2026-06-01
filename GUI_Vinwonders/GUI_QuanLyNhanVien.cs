@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +56,7 @@ namespace Vinwonders_Management
         private void GUI_QuanLyNhanVien_Load(object sender, EventArgs e)
         {
             OpenChildUserControl(typeof(QuanLyNhanVien.GUI_NhanVien));
+            btnNhanVien.Checked = true;
         }
 
         private void btnLichLamViec_Click(object sender, EventArgs e)

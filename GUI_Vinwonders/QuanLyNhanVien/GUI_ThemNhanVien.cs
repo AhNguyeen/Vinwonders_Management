@@ -135,11 +135,15 @@ namespace Vinwonders_Management.QuanLyNhanVien
                 txtEmail.Focus();
                 return false;
             }
-            else if (!txtEmail.Text.Trim().EndsWith("@gmail.com"))
+            else 
             {
-                MessageBox.Show("Email phải có đuôi @gmail.com!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtEmail.Focus();
-                return false;
+                string emailPattern = @"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtEmail.Text.Trim(), emailPattern))
+                {
+                    MessageBox.Show("Email không hợp lệ (VD: example@gmail.com)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEmail.Focus();
+                    return false;
+                }
             }
 
             if (string.IsNullOrWhiteSpace(txtChucVu.Text))
