@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management
+namespace Vinwonders_Management
 {
     partial class GUI_BaoTri
     {
@@ -394,6 +394,7 @@
             this.dgvBaoTri.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBaoTri.Size = new System.Drawing.Size(829, 226);
             this.dgvBaoTri.TabIndex = 20;
+            this.dgvBaoTri.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBaoTri_CellClick);
             // 
             // lblTongChiPhi
             // 

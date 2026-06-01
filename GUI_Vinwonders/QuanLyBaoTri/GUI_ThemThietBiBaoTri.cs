@@ -21,7 +21,6 @@ namespace Vinwonders_Management.QuanLyBaoTri
         public GUI_ThemThietBiBaoTri()
         {
             InitializeComponent();
-            this.Load += GUI_ThemThietBiBaoTri_Load;
         }
 
         private void GUI_ThemThietBiBaoTri_Load(object sender, EventArgs e)

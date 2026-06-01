@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyBaoTri
+namespace Vinwonders_Management.QuanLyBaoTri
 {
     partial class GUI_ThemThietBiBaoTri
     {
@@ -342,6 +342,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "GUI_ThemThietBiBaoTri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.GUI_ThemThietBiBaoTri_Load);
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

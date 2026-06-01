@@ -109,6 +109,12 @@
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.Designer.cs">
+      <DependentUpon>GUI_CapNhatThietBiBaoTri.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.resx">
+      <DependentUpon>GUI_CapNhatThietBiBaoTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>

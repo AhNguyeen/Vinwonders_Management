@@ -120,6 +120,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhachHang.Size = new System.Drawing.Size(857, 405);
             this.dgvKhachHang.TabIndex = 10;
+            this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
             // colMaKhachHang
             // 

@@ -21,6 +21,46 @@ namespace Vinwonders_Management
             InitializeComponent();
         }
 
+        private void dgvBaoTri_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            if (dgvBaoTri.Columns[e.ColumnIndex].Name == "colBtnSua")
+            {
+                ET_Vinwonders.ET_BaoTriTroChoi et = new ET_Vinwonders.ET_BaoTriTroChoi()
+                {
+                    MaBaoTri = dgvBaoTri.Rows[e.RowIndex].Cells["colMaBaoTri"].Value.ToString(),
+                    MaTroChoi = dgvBaoTri.Rows[e.RowIndex].Cells["colMaTroChoi"].Value.ToString(),
+                    MaNhanVien = dgvBaoTri.Rows[e.RowIndex].Cells["colMaNhanVien"].Value.ToString(),
+                    NgayBatDau = Convert.ToDateTime(dgvBaoTri.Rows[e.RowIndex].Cells["colNgayBatDau"].Value),
+                    NgayDuKienXong = dgvBaoTri.Rows[e.RowIndex].Cells["colNgayDuKienXong"].Value != DBNull.Value ? Convert.ToDateTime(dgvBaoTri.Rows[e.RowIndex].Cells["colNgayDuKienXong"].Value) : DateTime.Now,
+                    MoTaLoi = dgvBaoTri.Rows[e.RowIndex].Cells["colMoTaLoi"].Value?.ToString() ?? "",
+                    ChiPhiBaoTri = dgvBaoTri.Rows[e.RowIndex].Cells["colChiPhiBaoHanh"].Value != DBNull.Value ? Convert.ToDecimal(dgvBaoTri.Rows[e.RowIndex].Cells["colChiPhiBaoHanh"].Value) : 0,
+                    TrangThai = dgvBaoTri.Rows[e.RowIndex].Cells["colTrangThai"].Value?.ToString() ?? ""
+                };
+
+                QuanLyBaoTri.GUI_CapNhatThietBiBaoTri capNhatForm = new QuanLyBaoTri.GUI_CapNhatThietBiBaoTri(et);
+                capNhatForm.ShowDialog();
+                LoadData();
+            }
+            else if (dgvBaoTri.Columns[e.ColumnIndex].Name == "colBtnXoa")
+            {
+                string maBaoTri = dgvBaoTri.Rows[e.RowIndex].Cells["colMaBaoTri"].Value.ToString();
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu bảo trì này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (busBaoTri.XoaBaoTriTroChoi(maBaoTri))
+                    {
+                        MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
         private void GUI_BaoTri_Load(object sender, EventArgs e)
         {
             LoadData();

@@ -19,11 +19,6 @@ namespace Vinwonders_Management.QuanLyKhachHang
         public GUI_KhachHang()
         {
             InitializeComponent();
-            dgvKhachHang.CellClick += dgvKhachHang_CellClick;
-            if (txtTimKiem != null)
-            {
-                txtTimKiem.TextChanged += txtTimKiem_TextChanged;
-            }
         }
 
         private void GUI_KhachHang_Load(object sender, EventArgs e)

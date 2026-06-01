@@ -576,3 +576,9 @@ INSERT INTO BaoTriTroChoi (MaBaoTri, MaTroChoi, MaNhanVien, NgayBatDau, NgayDuKi
 ('BT002', 'TC23220014', 'NV02', '2026-05-20', '2026-06-05', N'Thay thế vòng bi và cáp treo', 8500000, N'Đang kiểm tra'),
 ('BT003', 'TC23220025', 'NV03', '2026-05-25', '2026-06-10', N'Kiểm tra và sửa chữa hệ thống phanh thủy lực', 12000000, N'Đang kiểm tra');
 GO
+
+-- ==========================================================
+-- 7. XÓA BẢN GHI BẢO TRÌ (Mẫu Test Data Xóa Dữ Liệu Bảo Trì)
+-- ==========================================================
+-- DELETE FROM BaoTriTroChoi WHERE MaBaoTri = 'BT001';
+-- GO
