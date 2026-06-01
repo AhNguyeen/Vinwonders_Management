@@ -173,6 +173,12 @@
     <Compile Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.Designer.cs">
       <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_BaoCaoHoaDonCuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -451,6 +457,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.resx">
       <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.resx">
+      <DependentUpon>GUI_BaoCaoHoaDonCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>

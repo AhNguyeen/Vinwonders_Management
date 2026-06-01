@@ -260,6 +260,16 @@ BEGIN
         UPDATE KhachHang
         SET DiemTichLuy = ISNULL(DiemTichLuy, 0) + @DiemCong
         WHERE MaKhachHang = @MaKhachHang;
+        
+        -- Cập nhật Hạng Thành Viên dựa trên điểm tích lũy mới
+        UPDATE KhachHang
+        SET MaHang = (
+            SELECT TOP 1 MaHang 
+            FROM HangThanhVien 
+            WHERE DiemToiThieu <= KhachHang.DiemTichLuy 
+            ORDER BY DiemToiThieu DESC
+        )
+        WHERE MaKhachHang = @MaKhachHang;
     END
 END;
 GO

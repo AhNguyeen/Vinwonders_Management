@@ -79,9 +79,10 @@ namespace DAL_Vinwonders
                 };
                 kt = connectDB.ChangeData(sql, sp);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                // Thay vì throw exception gây crash, trả về false để GUI hiển thị thông báo lỗi (VD: Dính khóa ngoại Hóa Đơn)
+                return false;
             }
             finally
             {
