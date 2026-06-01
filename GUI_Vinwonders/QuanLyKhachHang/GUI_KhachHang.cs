@@ -55,7 +55,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
             if (e.RowIndex < 0) return;
 
             // Xử lý nút Sửa
-            if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colSua")
+            if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colBtnSua")
             {
                 string maKhachHang = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value?.ToString() ?? "";
                 string maHang = dgvKhachHang.Rows[e.RowIndex].Cells["colMaHang"].Value?.ToString() ?? "";
@@ -92,7 +92,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
                 LoadKhachHang(); // Reload sau khi cập nhật
             }
             // Xử lý nút Xóa
-            else if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colXoa")
+            else if (dgvKhachHang.Columns[e.ColumnIndex].Name == "colBtnXoa")
             {
                 string maKhachHang = dgvKhachHang.Rows[e.RowIndex].Cells["colMaKhachHang"].Value?.ToString() ?? "";
                 string hoTen = dgvKhachHang.Rows[e.RowIndex].Cells["colHoTen"].Value?.ToString() ?? "";
