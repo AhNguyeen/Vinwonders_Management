@@ -34,7 +34,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlMain = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlDanhMucVe = new Guna.UI2.WinForms.Guna2Panel();
@@ -66,6 +65,9 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlChiTietHoaDon = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvVoHang = new System.Windows.Forms.DataGridView();
+            this.colTenVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeaderChiTiet = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlFooterChiTiet = new Guna.UI2.WinForms.Guna2Panel();
@@ -74,9 +76,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.cboThanhToan = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.colTenVe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -109,7 +108,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.btnThem);
-            this.guna2Panel2.Controls.Add(this.guna2Button2);
             this.guna2Panel2.Controls.Add(this.guna2TextBox1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 5);
@@ -154,30 +152,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.btnThem.TextOffset = new System.Drawing.Point(5, 0);
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button2.BackColor = System.Drawing.SystemColors.Window;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2Button2.BorderRadius = 6;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Image = global::Vinwonders_Management.Properties.Resources.download;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(815, 18);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(10);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(90, 30);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "Xuất";
-            this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -192,7 +166,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = global::Vinwonders_Management.Properties.Resources.Search;
-            this.guna2TextBox1.Location = new System.Drawing.Point(595, 18);
+            this.guna2TextBox1.Location = new System.Drawing.Point(705, 18);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(10);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -629,6 +603,23 @@ namespace Vinwonders_Management.QuanLyVe
             this.dgvVoHang.Size = new System.Drawing.Size(450, 278);
             this.dgvVoHang.TabIndex = 0;
             // 
+            // colTenVe
+            // 
+            this.colTenVe.HeaderText = "Tên Vé";
+            this.colTenVe.Name = "colTenVe";
+            this.colTenVe.ReadOnly = true;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.HeaderText = "Số Lượng";
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // colTongTien
+            // 
+            this.colTongTien.HeaderText = "Tổng Tiền";
+            this.colTongTien.Name = "colTongTien";
+            this.colTongTien.ReadOnly = true;
+            // 
             // pnlHeaderChiTiet
             // 
             this.pnlHeaderChiTiet.BackColor = System.Drawing.Color.Transparent;
@@ -739,23 +730,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.lblTongTien.TabIndex = 2;
             this.lblTongTien.Text = "[ Tong Tien ]";
             // 
-            // colTenVe
-            // 
-            this.colTenVe.HeaderText = "Tên Vé";
-            this.colTenVe.Name = "colTenVe";
-            this.colTenVe.ReadOnly = true;
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.HeaderText = "Số Lượng";
-            this.colSoLuong.Name = "colSoLuong";
-            // 
-            // colTongTien
-            // 
-            this.colTongTien.HeaderText = "Tổng Tiền";
-            this.colTongTien.Name = "colTongTien";
-            this.colTongTien.ReadOnly = true;
-            // 
             // GUI_HoaDonVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -789,7 +763,6 @@ namespace Vinwonders_Management.QuanLyVe
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnThem;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Panel pnlMain;
         private Guna.UI2.WinForms.Guna2Panel pnlDanhMucVe;

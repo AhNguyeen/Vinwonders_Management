@@ -250,6 +250,17 @@ BEGIN
     SET NOCOUNT ON;
     INSERT INTO HoaDonVe (MaHoaDon, MaKhachHang, MaNhanVien, MaSuKien, NgayMua, ChietKhauDoan, TongTien, PhuongThucThanhToan, TrangThai)
     VALUES (@MaHoaDon, @MaKhachHang, @MaNhanVien, @MaSuKien, GETDATE(), @ChietKhauDoan, @TongTien, @PhuongThucThanhToan, @TrangThai);
+    
+    -- Cập nhật điểm tích lũy cho khách hàng (10k = 1đ)
+    IF @MaKhachHang IS NOT NULL AND @MaKhachHang <> ''
+    BEGIN
+        DECLARE @DiemCong INT;
+        SET @DiemCong = CAST((@TongTien / 10000) AS INT);
+        
+        UPDATE KhachHang
+        SET DiemTichLuy = ISNULL(DiemTichLuy, 0) + @DiemCong
+        WHERE MaKhachHang = @MaKhachHang;
+    END
 END;
 GO
 
