@@ -85,9 +85,25 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             // Xử lý nút Xem chi tiết
             if (e.RowIndex >= 0 && dgvLichSu.Columns[e.ColumnIndex].Name == "colChiTiet")
             {
-                string maHDCH = dgvLichSu.Rows[e.RowIndex].Cells["colMaHoaDon"].Value.ToString();
-                // TODO: Mở form GUI_ChiTietHoaDonCuaHang và truyền mã vào
-                MessageBox.Show("Chức năng xem chi tiết hóa đơn cửa hàng: " + maHDCH + " đang được phát triển.");
+                string maHDCH = dgvLichSu.Rows[e.RowIndex].Cells["colMaHoaDon"].Value?.ToString() ?? "";
+                string tenKhachHang = dgvLichSu.Rows[e.RowIndex].Cells["colKhachHang"].Value?.ToString() ?? "";
+                string tenNhanVien = dgvLichSu.Rows[e.RowIndex].Cells["colThuNgan"].Value?.ToString() ?? "";
+                string soDienThoai = dgvLichSu.Rows[e.RowIndex].Cells["colSoDienThoai"].Value?.ToString() ?? "";
+                
+                string ngayTao = "";
+                if (dgvLichSu.Rows[e.RowIndex].Cells["colNgayTao"].Value != null)
+                {
+                    ngayTao = Convert.ToDateTime(dgvLichSu.Rows[e.RowIndex].Cells["colNgayTao"].Value).ToString("dd/MM/yyyy HH:mm");
+                }
+                
+                string tongTien = "0";
+                if (dgvLichSu.Rows[e.RowIndex].Cells["colTongTien"].Value != null)
+                {
+                    tongTien = Convert.ToDecimal(dgvLichSu.Rows[e.RowIndex].Cells["colTongTien"].Value).ToString("N0");
+                }
+
+                GUI_ChiTietHoaDon frm = new GUI_ChiTietHoaDon(maHDCH, tenNhanVien, tenKhachHang, soDienThoai, ngayTao, tongTien);
+                frm.ShowDialog();
             }
         }
     }

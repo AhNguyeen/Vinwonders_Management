@@ -1,4 +1,4 @@
-﻿namespace Vinwonders_Management.QuanLyCuaHangSanPham
+namespace Vinwonders_Management.QuanLyCuaHangSanPham
 {
     partial class GUI_ChiTietHoaDon
     {
@@ -300,6 +300,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Hóa Đơn Sản Phẩm";
+            this.Load += new System.EventHandler(this.GUI_ChiTietHoaDon_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
