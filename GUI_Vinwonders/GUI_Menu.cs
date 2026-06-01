@@ -138,5 +138,14 @@ namespace Vinwonders_Management
             OpenChildUserControl(typeof(GUI_BaoTri));
             lblGUI.Text = "Quản Lý Bảo Trì";
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

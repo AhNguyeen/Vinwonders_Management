@@ -53,7 +53,7 @@ namespace Vinwonders_Management.QuanLyBaoTri
                 cboNguoiPhuTrach.DisplayMember = "HoTen";
                 cboNguoiPhuTrach.ValueMember = "MaNhanVien";
                     cboNguoiPhuTrach.SelectedIndex = -1;
-                }
+                
             }
             catch { }
 

@@ -30,6 +30,16 @@
         {
             this.pnSidebar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.pnLogo = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblSubtitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.sepLineLogo = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblDateTimeNow = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblGUI = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pnMainContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblRole = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLyVe = new Guna.UI2.WinForms.Guna2Button();
             this.btnCuaHang = new Guna.UI2.WinForms.Guna2Button();
@@ -39,20 +49,11 @@
             this.btnKhuVuiChoi = new Guna.UI2.WinForms.Guna2Button();
             this.btnSuKien = new Guna.UI2.WinForms.Guna2Button();
             this.btnBaoTri = new Guna.UI2.WinForms.Guna2Button();
-            this.pnLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblSubtitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.sepLineLogo = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblDateTimeNow = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblGUI = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pnMainContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnSidebar.SuspendLayout();
             this.pnLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnSidebar
@@ -61,6 +62,7 @@
             this.pnSidebar.BorderColor = System.Drawing.Color.Silver;
             this.pnSidebar.BorderThickness = 1;
             this.pnSidebar.Controls.Add(this.guna2Separator1);
+            this.pnSidebar.Controls.Add(this.btnThoat);
             this.pnSidebar.Controls.Add(this.btnDangXuat);
             this.pnSidebar.Controls.Add(this.btnQuanLyVe);
             this.pnSidebar.Controls.Add(this.btnCuaHang);
@@ -82,10 +84,144 @@
             // 
             this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.guna2Separator1.FillColor = System.Drawing.Color.Black;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 643);
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 587);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(250, 10);
             this.guna2Separator1.TabIndex = 2;
+            // 
+            // pnLogo
+            // 
+            this.pnLogo.Controls.Add(this.picLogo);
+            this.pnLogo.Controls.Add(this.lblTitle);
+            this.pnLogo.Controls.Add(this.lblSubtitle);
+            this.pnLogo.Controls.Add(this.sepLineLogo);
+            this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnLogo.Name = "pnLogo";
+            this.pnLogo.Size = new System.Drawing.Size(250, 120);
+            this.pnLogo.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTitle.Location = new System.Drawing.Point(78, 31);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(118, 30);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "VinWonders";
+            // 
+            // lblSubtitle
+            // 
+            this.lblSubtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtitle.ForeColor = System.Drawing.Color.Silver;
+            this.lblSubtitle.Location = new System.Drawing.Point(78, 63);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(94, 15);
+            this.lblSubtitle.TabIndex = 1;
+            this.lblSubtitle.Text = "Quản lý hệ thống";
+            // 
+            // sepLineLogo
+            // 
+            this.sepLineLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.sepLineLogo.FillColor = System.Drawing.Color.Black;
+            this.sepLineLogo.Location = new System.Drawing.Point(0, 110);
+            this.sepLineLogo.Name = "sepLineLogo";
+            this.sepLineLogo.Size = new System.Drawing.Size(250, 10);
+            this.sepLineLogo.TabIndex = 2;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.lblDateTimeNow);
+            this.guna2Panel1.Controls.Add(this.lblRole);
+            this.guna2Panel1.Controls.Add(this.lblGUI);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(981, 61);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // lblDateTimeNow
+            // 
+            this.lblDateTimeNow.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTimeNow.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTimeNow.ForeColor = System.Drawing.Color.Gray;
+            this.lblDateTimeNow.Location = new System.Drawing.Point(71, 31);
+            this.lblDateTimeNow.Name = "lblDateTimeNow";
+            this.lblDateTimeNow.Size = new System.Drawing.Size(92, 15);
+            this.lblDateTimeNow.TabIndex = 1;
+            this.lblDateTimeNow.Text = "[ Date Time Now ]";
+            // 
+            // lblGUI
+            // 
+            this.lblGUI.BackColor = System.Drawing.Color.Transparent;
+            this.lblGUI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblGUI.Location = new System.Drawing.Point(71, 7);
+            this.lblGUI.Margin = new System.Windows.Forms.Padding(7);
+            this.lblGUI.Name = "lblGUI";
+            this.lblGUI.Size = new System.Drawing.Size(99, 27);
+            this.lblGUI.TabIndex = 0;
+            this.lblGUI.Text = "[ Ten GUI ]";
+            // 
+            // pnMainContent
+            // 
+            this.pnMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnMainContent.Location = new System.Drawing.Point(250, 61);
+            this.pnMainContent.Margin = new System.Windows.Forms.Padding(2);
+            this.pnMainContent.Name = "pnMainContent";
+            this.pnMainContent.Size = new System.Drawing.Size(981, 660);
+            this.pnMainContent.TabIndex = 4;
+            // 
+            // lblRole
+            // 
+            this.lblRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRole.AutoSize = false;
+            this.lblRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblRole.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblRole.Location = new System.Drawing.Point(692, 16);
+            this.lblRole.Margin = new System.Windows.Forms.Padding(7);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(273, 27);
+            this.lblRole.TabIndex = 0;
+            this.lblRole.Text = "[ Ten User ]";
+            this.lblRole.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThoat.BorderRadius = 10;
+            this.btnThoat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThoat.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnThoat.CheckedState.ForeColor = System.Drawing.Color.Orange;
+            this.btnThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThoat.FillColor = System.Drawing.Color.White;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnThoat.HoverState.FillColor = System.Drawing.Color.Silver;
+            this.btnThoat.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnThoat.Image = global::Vinwonders_Management.Properties.Resources.exit;
+            this.btnThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThoat.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnThoat.Location = new System.Drawing.Point(12, 603);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(230, 50);
+            this.btnThoat.TabIndex = 1;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnThoat.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangXuat
             // 
@@ -347,18 +483,6 @@
             this.btnBaoTri.TextOffset = new System.Drawing.Point(20, 0);
             this.btnBaoTri.Click += new System.EventHandler(this.btnBaoTri_Click);
             // 
-            // pnLogo
-            // 
-            this.pnLogo.Controls.Add(this.picLogo);
-            this.pnLogo.Controls.Add(this.lblTitle);
-            this.pnLogo.Controls.Add(this.lblSubtitle);
-            this.pnLogo.Controls.Add(this.sepLineLogo);
-            this.pnLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(250, 120);
-            this.pnLogo.TabIndex = 0;
-            // 
             // picLogo
             // 
             this.picLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -372,97 +496,6 @@
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(78, 31);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(118, 30);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "VinWonders";
-            // 
-            // lblSubtitle
-            // 
-            this.lblSubtitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitle.ForeColor = System.Drawing.Color.Silver;
-            this.lblSubtitle.Location = new System.Drawing.Point(78, 63);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(94, 15);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "Quản lý hệ thống";
-            // 
-            // sepLineLogo
-            // 
-            this.sepLineLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.sepLineLogo.FillColor = System.Drawing.Color.Black;
-            this.sepLineLogo.Location = new System.Drawing.Point(0, 110);
-            this.sepLineLogo.Name = "sepLineLogo";
-            this.sepLineLogo.Size = new System.Drawing.Size(250, 10);
-            this.sepLineLogo.TabIndex = 2;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.lblDateTimeNow);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Controls.Add(this.lblGUI);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(250, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(981, 61);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // lblDateTimeNow
-            // 
-            this.lblDateTimeNow.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateTimeNow.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTimeNow.ForeColor = System.Drawing.Color.Gray;
-            this.lblDateTimeNow.Location = new System.Drawing.Point(71, 31);
-            this.lblDateTimeNow.Name = "lblDateTimeNow";
-            this.lblDateTimeNow.Size = new System.Drawing.Size(92, 15);
-            this.lblDateTimeNow.TabIndex = 1;
-            this.lblDateTimeNow.Text = "[ Date Time Now ]";
-            // 
-            // lblGUI
-            // 
-            this.lblGUI.BackColor = System.Drawing.Color.Transparent;
-            this.lblGUI.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGUI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblGUI.Location = new System.Drawing.Point(71, 7);
-            this.lblGUI.Margin = new System.Windows.Forms.Padding(7);
-            this.lblGUI.Name = "lblGUI";
-            this.lblGUI.Size = new System.Drawing.Size(99, 27);
-            this.lblGUI.TabIndex = 0;
-            this.lblGUI.Text = "[ Ten GUI ]";
-            // 
-            // pnMainContent
-            // 
-            this.pnMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnMainContent.Location = new System.Drawing.Point(250, 61);
-            this.pnMainContent.Margin = new System.Windows.Forms.Padding(2);
-            this.pnMainContent.Name = "pnMainContent";
-            this.pnMainContent.Size = new System.Drawing.Size(981, 660);
-            this.pnMainContent.TabIndex = 4;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(866, 7);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(7);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(99, 27);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "[ Ten GUI ]";
             // 
             // GUI_Menu
             // 
@@ -480,9 +513,9 @@
             this.pnSidebar.ResumeLayout(false);
             this.pnLogo.ResumeLayout(false);
             this.pnLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -509,7 +542,8 @@
         private Guna.UI2.WinForms.Guna2Button btnSuKien;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDateTimeNow;
         private Guna.UI2.WinForms.Guna2Panel pnMainContent;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblRole;
+        private Guna.UI2.WinForms.Guna2Button btnThoat;
     }
 }
 

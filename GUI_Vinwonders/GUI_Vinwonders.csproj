@@ -703,5 +703,8 @@
   <ItemGroup>
     <None Include="Resources\vinwonders_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
