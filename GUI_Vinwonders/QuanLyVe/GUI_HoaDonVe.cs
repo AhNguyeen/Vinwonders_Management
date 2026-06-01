@@ -661,7 +661,7 @@ namespace Vinwonders_Management.QuanLyVe
                     if (rows.Length > 0) maSuKien = rows[0]["MaSuKien"].ToString();
                 }
 
-                string maNhanVien = "NV01"; // Cần 1 mã NV cố định hoặc từ login
+                string maNhanVien = ET_Vinwonders.Session.MaNhanVien; // Lấy từ tài khoản đăng nhập
                 string maHoaDon = "HDV" + DateTime.Now.ToString("HHmmss");
 
                 // Lấy chiết khấu đoàn để lưu vào DB (nếu cần thiết lưu riêng số % hoặc tiền giảm)

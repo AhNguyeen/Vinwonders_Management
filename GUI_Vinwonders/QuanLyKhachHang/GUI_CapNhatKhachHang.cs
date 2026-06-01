@@ -115,7 +115,7 @@ namespace Vinwonders_Management.QuanLyKhachHang
                 txtHoTen.Focus();
                 return false;
             }
-            else if (!System.Text.RegularExpressions.Regex.IsMatch(txtHoTen.Text.Trim(), @"^[a-zA-Z\s]+$"))
+            else if (!System.Text.RegularExpressions.Regex.IsMatch(txtHoTen.Text.Trim(), @"^[\p{L}\s]+$"))
             {
                 MessageBox.Show("Họ tên chỉ được chứa chữ cái và khoảng trắng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtHoTen.Focus();

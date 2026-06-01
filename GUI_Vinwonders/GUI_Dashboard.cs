@@ -32,6 +32,9 @@ namespace Vinwonders_Management
             // Load danh sách hóa đơn gần đây
             LoadRecentInvoices();
 
+            // Load danh sách sự kiện đang hoạt động
+            LoadActiveEvents();
+
             // Mặc định chọn tháng hiện tại
             int currentMonth = DateTime.Now.Month;
             cboCacThang.SelectedValue = currentMonth;
@@ -117,6 +120,28 @@ namespace Vinwonders_Management
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi load hóa đơn gần đây: " + ex.Message);
+            }
+        }
+
+        private void LoadActiveEvents()
+        {
+            try
+            {
+                BUS_SuKien busSuKien = new BUS_SuKien();
+                DataTable dtSuKien = busSuKien.InDanhSach();
+                
+                if (dtSuKien != null)
+                {
+                    DataView dv = dtSuKien.DefaultView;
+                    // Lọc các sự kiện có ngày kết thúc lớn hơn hoặc bằng ngày hiện tại
+                    dv.RowFilter = string.Format("NgayKetThuc >= '{0}'", DateTime.Now.ToString("yyyy-MM-dd"));
+                    
+                    dgvSuKien.DataSource = dv.ToTable();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi load sự kiện đang hoạt động: " + ex.Message);
             }
         }
 

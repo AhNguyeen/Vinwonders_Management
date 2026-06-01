@@ -194,7 +194,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
                     LoadKhachHangAutoComplete();
                 }
 
-                string maNhanVien = "NV01"; // Để tạm, sau này lấy từ tài khoản đăng nhập
+                string maNhanVien = ET_Vinwonders.Session.MaNhanVien; // Lấy từ tài khoản đăng nhập
                 string maHDCH = "HDCH" + DateTime.Now.Ticks.ToString().Substring(DateTime.Now.Ticks.ToString().Length - 6);
                 string maCuaHang = dtGioHang.Rows[0]["MaCuaHang"].ToString(); // Lấy mã cửa hàng từ sản phẩm đầu tiên
                 

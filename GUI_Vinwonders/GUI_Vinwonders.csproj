@@ -32,6 +32,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -72,6 +92,12 @@
     </Compile>
     <Compile Include="GUI_Dashboard.Designer.cs">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Login.Designer.cs">
+      <DependentUpon>GUI_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QuanLyVe.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +164,12 @@
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\CR_HoaDonCuaHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_HoaDonCuaHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +198,12 @@
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.Designer.cs">
       <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_BaoCaoHoaDonCuaHang.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>UserControl</SubType>
@@ -399,6 +437,9 @@
     <EmbeddedResource Include="GUI_Dashboard.resx">
       <DependentUpon>GUI_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Login.resx">
+      <DependentUpon>GUI_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_QuanLyVe.resx">
       <DependentUpon>GUI_QuanLyVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.resx">
       <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.resx">
+      <DependentUpon>GUI_BaoCaoHoaDonCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CuaHang.resx">
       <DependentUpon>GUI_CuaHang.cs</DependentUpon>
@@ -675,6 +719,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vinwonders_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

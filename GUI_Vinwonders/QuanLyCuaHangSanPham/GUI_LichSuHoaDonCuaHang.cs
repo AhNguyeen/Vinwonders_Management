@@ -106,5 +106,39 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
                 frm.ShowDialog();
             }
         }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            if (dgvLichSu.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn một hóa đơn để xuất báo cáo!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataTable dtSelected = new DataTable();
+            
+            // Lấy dữ liệu dòng đang chọn trên dgvLichSu
+            if (dgvLichSu.DataSource is DataView dv)
+            {
+                dtSelected = dv.Table.Clone(); // Copy cấu trúc cột
+                DataRowView rowView = dgvLichSu.CurrentRow.DataBoundItem as DataRowView;
+                if (rowView != null)
+                {
+                    dtSelected.ImportRow(rowView.Row);
+                }
+            }
+            else if (dgvLichSu.DataSource is DataTable dt)
+            {
+                dtSelected = dt.Clone();
+                DataRowView rowView = dgvLichSu.CurrentRow.DataBoundItem as DataRowView;
+                if (rowView != null)
+                {
+                    dtSelected.ImportRow(rowView.Row);
+                }
+            }
+
+            GUI_BaoCaoHoaDonCuaHang guiBaoCaoHoaDon = new GUI_BaoCaoHoaDonCuaHang(dtSelected);
+            guiBaoCaoHoaDon.ShowDialog();
+        }
     }
 }

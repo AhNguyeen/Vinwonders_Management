@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,9 +23,13 @@ namespace Vinwonders_Management
         // 2. Chỉnh lại Nút Đăng Xuất
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            isLogout = true;                         // Bật cờ hiệu Đăng xuất lên
-            //this.DialogResult = DialogResult.Yes;    // Bắn tín hiệu "Đăng xuất" về cho GUI_Login
-            this.Close();                            // Đóng form Menu
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                ET_Vinwonders.Session.Clear();
+                isLogout = true; // Để bỏ qua hộp thoại xác nhận khi FormClosing
+                Application.Restart();
+            }
         }
 
         // 3. Chỉnh lại hàm FormClosing của Menu
@@ -91,6 +95,57 @@ namespace Vinwonders_Management
             btnDashboard.Checked = true;
             lblGUI.Text = "Dashboard";
             lblDateTimeNow.Text = DateTime.Now.ToString("dddd, d MMMM yyyy");
+            
+            // Hien thi ten nguoi dung
+            if (ET_Vinwonders.Session.IsLoggedIn())
+            {
+                lblRole.Text = ET_Vinwonders.Session.QuyenTruyCap + " | " + ET_Vinwonders.Session.HoTenNhanVien;
+                ApplyRoleBasedAccessControl();
+            }
+        }
+
+        private void ApplyRoleBasedAccessControl()
+        {
+            string role = ET_Vinwonders.Session.QuyenTruyCap;
+
+            if (role == "Admin")
+            {
+                // Admin xem dc het
+                btnDashboard.Enabled = true;
+                btnQuanLyVe.Enabled = true;
+                btnKhachHang.Enabled = true;
+                btnCuaHang.Enabled = true;
+                btnKhuVuiChoi.Enabled = true;
+                btnBaoTri.Enabled = true;
+                btnQuanLyNhanVien.Enabled = true;
+                btnSuKien.Enabled = true;
+            }
+            else if (role == "ThuNgan")
+            {
+                btnDashboard.Enabled = true;
+                btnQuanLyVe.Enabled = true;
+                btnKhachHang.Enabled = true;
+                btnCuaHang.Enabled = true;
+                
+                // An cac chuc nang khac
+                btnKhuVuiChoi.Enabled = false;
+                btnBaoTri.Enabled = false;
+                btnQuanLyNhanVien.Enabled = false;
+                btnSuKien.Enabled = false;
+            }
+            else if (role == "QuanLy")
+            {
+                btnDashboard.Enabled = true;
+                btnSuKien.Enabled = true;
+                btnBaoTri.Enabled = true;
+                btnQuanLyNhanVien.Enabled = true;
+                btnKhachHang.Enabled = true;
+                
+                // An cac chuc nang khac
+                btnQuanLyVe.Enabled = false;
+                btnCuaHang.Enabled = false;
+                btnKhuVuiChoi.Enabled = false;
+            }
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
@@ -127,6 +182,15 @@ namespace Vinwonders_Management
         {
             OpenChildUserControl(typeof(GUI_BaoTri));
             lblGUI.Text = "Quản Lý Bảo Trì";
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

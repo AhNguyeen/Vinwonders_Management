@@ -104,6 +104,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             this.btnXuat.TabIndex = 7;
             this.btnXuat.Text = "Xuất";
             this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // txtTimKiem
             // 
