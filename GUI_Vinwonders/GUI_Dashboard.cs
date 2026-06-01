@@ -24,6 +24,7 @@ namespace Vinwonders_Management
             // Ẩn trục X và Y của biểu đồ loại vé để cố định hình tròn và ẩn nhãn dưới cùng
             chrtLoaiVe.XAxes.Display = false;
             chrtLoaiVe.YAxes.Display = false;
+            chrtLoaiVe.Legend.Display = false;
 
             // Load 4 thẻ tổng quan
             LoadStats();
@@ -91,10 +92,9 @@ namespace Vinwonders_Management
             try
             {
                 DataTable dtInvoices = busDashboard.GetRecentInvoices();
-                dgvHoaDonGanDay.DataSource = dtInvoices;
-
                 // Ẩn cột tự sinh nếu có
                 dgvHoaDonGanDay.AutoGenerateColumns = false;
+                dgvHoaDonGanDay.DataSource = dtInvoices;
 
                 // Ánh xạ cột (đảm bảo DataPropertyName khớp với tên cột trả về từ SP)
                 if (dgvHoaDonGanDay.Columns.Contains("colMaHD"))

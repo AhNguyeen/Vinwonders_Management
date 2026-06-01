@@ -195,5 +195,26 @@ namespace Vinwonders_Management
             themPhieuBaoTri.ShowDialog();
             LoadData(); // Tải lại dữ liệu sau khi thêm mới
         }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInBaoCao_Click(object sender, EventArgs e)
+        {
+            DateTime tuNgay = dtpTuNgay.Value.Date;
+            DateTime denNgay = dtpDenNgay.Value.Date;
+
+            if (tuNgay > denNgay)
+            {
+                MessageBox.Show("Từ ngày phải nhỏ hơn hoặc bằng Đến ngày!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Gọi form in báo cáo
+            QuanLyBaoTri.GUI_InBaoCaoBaoTri inBaoCao = new QuanLyBaoTri.GUI_InBaoCaoBaoTri(tuNgay, denNgay);
+            inBaoCao.ShowDialog();
+        }
     }
 }

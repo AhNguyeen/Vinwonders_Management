@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -109,11 +109,28 @@
     <Compile Include="GUI_SuKien.Designer.cs">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyBaoTri\CR_BaoCaoChiPhiBaoTri.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BaoCaoChiPhiBaoTri.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\DataSet_BaoTri.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.Designer.cs">
       <DependentUpon>GUI_CapNhatThietBiBaoTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_InBaoCaoBaoTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoTri\GUI_InBaoCaoBaoTri.Designer.cs">
+      <DependentUpon>GUI_InBaoCaoBaoTri.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.cs">
       <SubType>Form</SubType>
@@ -395,8 +412,15 @@
     <EmbeddedResource Include="GUI_SuKien.resx">
       <DependentUpon>GUI_SuKien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoTri\CR_BaoCaoChiPhiBaoTri.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BaoCaoChiPhiBaoTri.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyBaoTri\GUI_CapNhatThietBiBaoTri.resx">
       <DependentUpon>GUI_CapNhatThietBiBaoTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoTri\GUI_InBaoCaoBaoTri.resx">
+      <DependentUpon>GUI_InBaoCaoBaoTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
@@ -547,6 +571,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyBaoTri\DataSet_BaoTri.xsc">
+      <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyBaoTri\DataSet_BaoTri.xss">
+      <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xsc">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
     </None>
@@ -554,6 +584,16 @@
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet_HoaDonVe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyBaoTri\DataSet_BaoTri.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_BaoTri.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_HoaDonCuaHang.Designer.cs</LastGenOutput>
     </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xss">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>

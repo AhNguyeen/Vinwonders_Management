@@ -1,5 +1,6 @@
-﻿using DAL_Vinwonders;
+using DAL_Vinwonders;
 using ET_Vinwonders;
+using System;
 using System.Data;
 
 namespace BUS_Vinwonders
@@ -11,6 +12,10 @@ namespace BUS_Vinwonders
         public DataTable InDanhSach()
         {
             return dalBaoTriTroChoi.InDanhSachBaoTriTroChoi();
+        }
+        public DataTable InDanhSachTheoNgay(DateTime tuNgay, DateTime denNgay)
+        {
+            return dalBaoTriTroChoi.InDanhSachBaoTriTroChoiTheoNgay(tuNgay, denNgay);
         }
         public DataTable TimBaoTriTroChoi(string ten)
         {

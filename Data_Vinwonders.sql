@@ -580,5 +580,25 @@ GO
 -- ==========================================================
 -- 7. XÓA BẢN GHI BẢO TRÌ (Mẫu Test Data Xóa Dữ Liệu Bảo Trì)
 -- ==========================================================
--- DELETE FROM BaoTriTroChoi WHERE MaBaoTri = 'BT001';
+-- DELETE FROM BaoTriTroChoi WHERE MaBaoTri = 'BT003';
 -- GO
+
+-- ==========================================================
+-- 8. THÊM STORED PROCEDURE CHO BÁO CÁO CHI PHÍ BẢO TRÌ
+-- ==========================================================
+IF OBJECT_ID('sp_GetBaoTriTroChoiTheoNgay', 'P') IS NOT NULL
+    DROP PROCEDURE sp_GetBaoTriTroChoiTheoNgay;
+GO
+
+CREATE PROCEDURE sp_GetBaoTriTroChoiTheoNgay
+    @TuNgay DATETIME,
+    @DenNgay DATETIME
+AS
+BEGIN
+    SELECT b.MaBaoTri, t.TenTroChoi, n.HoTen AS TenNhanVien, b.NgayBatDau, b.NgayDuKienXong, b.MoTaLoi, b.ChiPhiBaoTri, b.TrangThai
+    FROM BaoTriTroChoi b
+    JOIN TroChoi t ON b.MaTroChoi = t.MaTroChoi
+    JOIN NhanVien n ON b.MaNhanVien = n.MaNhanVien
+    WHERE b.NgayBatDau >= @TuNgay AND b.NgayBatDau <= @DenNgay
+END
+GO

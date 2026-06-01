@@ -1,4 +1,4 @@
-﻿using ET_Vinwonders;
+using ET_Vinwonders;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,7 +20,31 @@ namespace DAL_Vinwonders
             }
             catch (Exception ex)
             {
-                // X? lý l?i n?u c?n
+                throw ex;
+            }
+            finally
+            {
+                connectDB.CloseConnect();
+            }
+            return dt;
+        }
+
+        public DataTable InDanhSachBaoTriTroChoiTheoNgay(DateTime tuNgay, DateTime denNgay)
+        {
+            connectDB.OpenConnect();
+            DataTable dt = new DataTable();
+            try
+            {
+                string sql = "sp_GetBaoTriTroChoiTheoNgay";
+                SqlParameter[] sp = new SqlParameter[]
+                {
+                    new SqlParameter("@TuNgay", tuNgay),
+                    new SqlParameter("@DenNgay", denNgay)
+                };
+                dt = connectDB.ReadData(sql, sp);
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally
@@ -141,5 +165,3 @@ namespace DAL_Vinwonders
         }
     }
 }
-
-
