@@ -28,17 +28,17 @@ namespace Vinwonders_Management
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNav = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTaoPhieu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInBaoCao = new Guna.UI2.WinForms.Guna2Button();
+            this.dtpDenNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpTuNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.labelDenNgay = new System.Windows.Forms.Label();
+            this.labelTuNgay = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dtpTuNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpDenNgay = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.btnInBaoCao = new Guna.UI2.WinForms.Guna2Button();
-            this.labelTuNgay = new System.Windows.Forms.Label();
-            this.labelDenNgay = new System.Windows.Forms.Label();
             this.pnlTabConTent = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
@@ -72,7 +72,6 @@ namespace Vinwonders_Management
             this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBtnSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colBtnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXuat = new Guna.UI2.WinForms.Guna2Button();
             this.pnlNav.SuspendLayout();
             this.pnlTabConTent.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -87,7 +86,6 @@ namespace Vinwonders_Management
             // 
             // pnlNav
             // 
-            this.pnlNav.Controls.Add(this.btnXuat);
             this.pnlNav.Controls.Add(this.btnTaoPhieu);
             this.pnlNav.Controls.Add(this.btnInBaoCao);
             this.pnlNav.Controls.Add(this.dtpDenNgay);
@@ -120,6 +118,72 @@ namespace Vinwonders_Management
             this.btnTaoPhieu.Text = "Tạo phiếu bảo trì";
             this.btnTaoPhieu.Click += new System.EventHandler(this.btnTaoPhieu_Click);
             // 
+            // btnInBaoCao
+            // 
+            this.btnInBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInBaoCao.BorderRadius = 6;
+            this.btnInBaoCao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnInBaoCao.ForeColor = System.Drawing.Color.White;
+            this.btnInBaoCao.Location = new System.Drawing.Point(574, 24);
+            this.btnInBaoCao.Name = "btnInBaoCao";
+            this.btnInBaoCao.Size = new System.Drawing.Size(110, 30);
+            this.btnInBaoCao.TabIndex = 13;
+            this.btnInBaoCao.Text = "In Báo Cáo";
+            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
+            // 
+            // dtpDenNgay
+            // 
+            this.dtpDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDenNgay.BorderRadius = 6;
+            this.dtpDenNgay.Checked = true;
+            this.dtpDenNgay.FillColor = System.Drawing.Color.White;
+            this.dtpDenNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDenNgay.Location = new System.Drawing.Point(448, 26);
+            this.dtpDenNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpDenNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpDenNgay.Name = "dtpDenNgay";
+            this.dtpDenNgay.Size = new System.Drawing.Size(120, 30);
+            this.dtpDenNgay.TabIndex = 12;
+            this.dtpDenNgay.Value = new System.DateTime(2026, 12, 31, 0, 0, 0, 0);
+            // 
+            // dtpTuNgay
+            // 
+            this.dtpTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpTuNgay.BorderRadius = 6;
+            this.dtpTuNgay.Checked = true;
+            this.dtpTuNgay.FillColor = System.Drawing.Color.White;
+            this.dtpTuNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTuNgay.Location = new System.Drawing.Point(322, 26);
+            this.dtpTuNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpTuNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpTuNgay.Name = "dtpTuNgay";
+            this.dtpTuNgay.Size = new System.Drawing.Size(120, 30);
+            this.dtpTuNgay.TabIndex = 10;
+            this.dtpTuNgay.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            // 
+            // labelDenNgay
+            // 
+            this.labelDenNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDenNgay.AutoSize = true;
+            this.labelDenNgay.Location = new System.Drawing.Point(445, 10);
+            this.labelDenNgay.Name = "labelDenNgay";
+            this.labelDenNgay.Size = new System.Drawing.Size(56, 13);
+            this.labelDenNgay.TabIndex = 11;
+            this.labelDenNgay.Text = "Đến ngày:";
+            // 
+            // labelTuNgay
+            // 
+            this.labelTuNgay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTuNgay.AutoSize = true;
+            this.labelTuNgay.Location = new System.Drawing.Point(319, 12);
+            this.labelTuNgay.Name = "labelTuNgay";
+            this.labelTuNgay.Size = new System.Drawing.Size(49, 13);
+            this.labelTuNgay.TabIndex = 9;
+            this.labelTuNgay.Text = "Từ ngày:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -140,67 +204,6 @@ namespace Vinwonders_Management
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(150, 30);
             this.guna2HtmlLabel1.TabIndex = 4;
             this.guna2HtmlLabel1.Text = "Quản lý bảo trì";
-            // 
-            // labelTuNgay
-            // 
-            this.labelTuNgay.AutoSize = true;
-            this.labelTuNgay.Location = new System.Drawing.Point(180, 10);
-            this.labelTuNgay.Name = "labelTuNgay";
-            this.labelTuNgay.Size = new System.Drawing.Size(49, 13);
-            this.labelTuNgay.TabIndex = 9;
-            this.labelTuNgay.Text = "Từ ngày:";
-            // 
-            // dtpTuNgay
-            // 
-            this.dtpTuNgay.BorderRadius = 6;
-            this.dtpTuNgay.Checked = true;
-            this.dtpTuNgay.FillColor = System.Drawing.Color.White;
-            this.dtpTuNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTuNgay.Location = new System.Drawing.Point(180, 26);
-            this.dtpTuNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpTuNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpTuNgay.Name = "dtpTuNgay";
-            this.dtpTuNgay.Size = new System.Drawing.Size(120, 30);
-            this.dtpTuNgay.TabIndex = 10;
-            this.dtpTuNgay.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            // 
-            // labelDenNgay
-            // 
-            this.labelDenNgay.AutoSize = true;
-            this.labelDenNgay.Location = new System.Drawing.Point(310, 10);
-            this.labelDenNgay.Name = "labelDenNgay";
-            this.labelDenNgay.Size = new System.Drawing.Size(56, 13);
-            this.labelDenNgay.TabIndex = 11;
-            this.labelDenNgay.Text = "Đến ngày:";
-            // 
-            // dtpDenNgay
-            // 
-            this.dtpDenNgay.BorderRadius = 6;
-            this.dtpDenNgay.Checked = true;
-            this.dtpDenNgay.FillColor = System.Drawing.Color.White;
-            this.dtpDenNgay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDenNgay.Location = new System.Drawing.Point(310, 26);
-            this.dtpDenNgay.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpDenNgay.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpDenNgay.Name = "dtpDenNgay";
-            this.dtpDenNgay.Size = new System.Drawing.Size(120, 30);
-            this.dtpDenNgay.TabIndex = 12;
-            this.dtpDenNgay.Value = new System.DateTime(2026, 12, 31, 0, 0, 0, 0);
-            // 
-            // btnInBaoCao
-            // 
-            this.btnInBaoCao.BorderRadius = 6;
-            this.btnInBaoCao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnInBaoCao.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnInBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnInBaoCao.Location = new System.Drawing.Point(440, 26);
-            this.btnInBaoCao.Name = "btnInBaoCao";
-            this.btnInBaoCao.Size = new System.Drawing.Size(110, 30);
-            this.btnInBaoCao.TabIndex = 13;
-            this.btnInBaoCao.Text = "In Báo Cáo";
-            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
             // 
             // pnlTabConTent
             // 
@@ -518,14 +521,14 @@ namespace Vinwonders_Management
             this.dgvBaoTri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBaoTri.BackgroundColor = System.Drawing.Color.White;
             this.dgvBaoTri.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBaoTri.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBaoTri.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBaoTri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBaoTri.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaBaoTri,
@@ -540,14 +543,14 @@ namespace Vinwonders_Management
             this.colTrangThai,
             this.colBtnSua,
             this.colBtnXoa});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBaoTri.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBaoTri.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBaoTri.EnableHeadersVisualStyles = false;
             this.dgvBaoTri.Location = new System.Drawing.Point(5, 3);
             this.dgvBaoTri.MultiSelect = false;
@@ -660,31 +663,6 @@ namespace Vinwonders_Management
             this.colBtnXoa.UseColumnTextForButtonValue = true;
             this.colBtnXoa.Width = 80;
             // 
-            // btnXuat
-            // 
-            this.btnXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXuat.BackColor = System.Drawing.SystemColors.Window;
-            this.btnXuat.BorderColor = System.Drawing.Color.Silver;
-            this.btnXuat.BorderRadius = 6;
-            this.btnXuat.BorderThickness = 1;
-            this.btnXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXuat.FillColor = System.Drawing.Color.White;
-            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnXuat.Image = global::Vinwonders_Management.Properties.Resources.download;
-            this.btnXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXuat.Location = new System.Drawing.Point(587, 24);
-            this.btnXuat.Margin = new System.Windows.Forms.Padding(10);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(90, 30);
-            this.btnXuat.TabIndex = 8;
-            this.btnXuat.Text = "Xuất";
-            this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
-            // 
             // GUI_BaoTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -753,7 +731,6 @@ namespace Vinwonders_Management
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
         private System.Windows.Forms.DataGridViewButtonColumn colBtnSua;
         private System.Windows.Forms.DataGridViewButtonColumn colBtnXoa;
-        private Guna.UI2.WinForms.Guna2Button btnXuat;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpTuNgay;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDenNgay;
         private Guna.UI2.WinForms.Guna2Button btnInBaoCao;

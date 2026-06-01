@@ -29,22 +29,20 @@ namespace Vinwonders_Management.QuanLyBaoTri
             try
             {
                 DataTable dt = busBaoTri.InDanhSachTheoNgay(tuNgay, denNgay);
-                
+
                 // Sau khi bạn tạo file CR_BaoCaoChiPhiBaoTri.rpt bằng giao diện thiết kế:
                 // Uncomment và chỉnh sửa đoạn code dưới đây để load báo cáo.
 
-                /*
                 CR_BaoCaoChiPhiBaoTri report = new CR_BaoCaoChiPhiBaoTri();
                 report.SetDataSource(dt);
-                // Truyền tham số thời gian cho report nếu bạn có tạo Parameter Field "TuNgay", "DenNgay"
+                
+                // Nếu bạn ĐÃ TẠO 2 Parameter Fields tên là "TuNgay" và "DenNgay" trong file rpt
+                // thì mới BỎ COMMENT 2 dòng dưới đây. Ngược lại thì để comment để không bị lỗi "Invalid index".
                 // report.SetParameterValue("TuNgay", tuNgay.ToString("dd/MM/yyyy"));
                 // report.SetParameterValue("DenNgay", denNgay.ToString("dd/MM/yyyy"));
-                
+
                 crvBaoTri.ReportSource = report;
                 crvBaoTri.Refresh();
-                */
-
-                MessageBox.Show("Dữ liệu đã được lấy thành công (" + dt.Rows.Count + " dòng). Vui lòng thiết kế file Crystal Report (CR_BaoCaoChiPhiBaoTri.rpt) và bỏ comment code để hiển thị.", "Hướng dẫn", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
