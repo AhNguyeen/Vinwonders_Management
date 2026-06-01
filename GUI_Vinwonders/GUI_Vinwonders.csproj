@@ -138,6 +138,11 @@
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\CR_HoaDonCuaHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_HoaDonCuaHang.rpt</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +171,12 @@
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_ChiTietHoaDon.Designer.cs">
       <DependentUpon>GUI_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\GUI_BaoCaoHoaDonCuaHang.Designer.cs">
+      <DependentUpon>GUI_BaoCaoHoaDonCuaHang.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CuaHang.cs">
       <SubType>UserControl</SubType>
