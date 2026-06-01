@@ -106,5 +106,10 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
                 frm.ShowDialog();
             }
         }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
