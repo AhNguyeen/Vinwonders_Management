@@ -430,6 +430,10 @@
     <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\CR_HoaDonCuaHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_HoaDonCuaHang.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
     </EmbeddedResource>
