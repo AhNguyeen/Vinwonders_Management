@@ -75,7 +75,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
                 return;
             }
 
-            string tenSanPham = txtTenCuaHang.Text.Trim();
+            string tenSanPham = txtTenSanPham.Text.Trim();
             string maCuaHang = cboCuaHang.SelectedValue.ToString();
             string loaiSanPham = cboLoaiSanPham.SelectedItem.ToString();
             string trangThaiBan = cboTrangThaiBan.SelectedItem.ToString();
@@ -119,13 +119,13 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
         /// </summary>
         private bool ValidateInput()
         {
-            string tenSP = txtTenCuaHang.Text.Trim();
+            string tenSP = txtTenSanPham.Text.Trim();
 
             // 1. Kiểm tra tên sản phẩm trống
             if (string.IsNullOrWhiteSpace(tenSP))
             {
                 MessageBox.Show("Vui lòng nhập tên sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTenCuaHang.Focus();
+                txtTenSanPham.Focus();
                 return false;
             }
 
@@ -133,7 +133,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             if (tenSP.Length < 2 || tenSP.Length > 100)
             {
                 MessageBox.Show("Tên sản phẩm phải từ 2 đến 100 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTenCuaHang.Focus();
+                txtTenSanPham.Focus();
                 return false;
             }
 
@@ -141,7 +141,7 @@ namespace Vinwonders_Management.QuanLyCuaHangSanPham
             if (!Regex.IsMatch(tenSP, @"^[\p{L}0-9\s]+$"))
             {
                 MessageBox.Show("Tên sản phẩm không được chứa ký tự đặc biệt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTenCuaHang.Focus();
+                txtTenSanPham.Focus();
                 return false;
             }
 

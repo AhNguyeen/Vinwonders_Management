@@ -138,6 +138,11 @@
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
