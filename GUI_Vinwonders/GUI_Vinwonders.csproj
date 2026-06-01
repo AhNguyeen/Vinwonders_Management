@@ -138,12 +138,6 @@
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyCuaHangSanPham\CR_HoaDonCuaHang.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CR_HoaDonCuaHang.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -611,10 +605,16 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet_BaoTri.Designer.cs</LastGenOutput>
     </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsc">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </None>
     <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet_HoaDonCuaHang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xss">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
     </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xss">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
