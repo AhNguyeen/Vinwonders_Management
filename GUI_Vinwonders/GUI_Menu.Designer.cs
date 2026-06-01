@@ -268,7 +268,7 @@
             this.btnQuanLyVe.Image = global::Vinwonders_Management.Properties.Resources.ticket;
             this.btnQuanLyVe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyVe.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnQuanLyVe.Location = new System.Drawing.Point(10, 250);
+            this.btnQuanLyVe.Location = new System.Drawing.Point(10, 70);
             this.btnQuanLyVe.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnQuanLyVe.Name = "btnQuanLyVe";
             this.btnQuanLyVe.Size = new System.Drawing.Size(230, 45);
@@ -298,7 +298,7 @@
             this.btnCuaHang.Image = global::Vinwonders_Management.Properties.Resources.shops;
             this.btnCuaHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCuaHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCuaHang.Location = new System.Drawing.Point(10, 190);
+            this.btnCuaHang.Location = new System.Drawing.Point(10, 310);
             this.btnCuaHang.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnCuaHang.Name = "btnCuaHang";
             this.btnCuaHang.Size = new System.Drawing.Size(230, 45);
@@ -328,7 +328,7 @@
             this.btnQuanLyNhanVien.Image = global::Vinwonders_Management.Properties.Resources.employees;
             this.btnQuanLyNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnQuanLyNhanVien.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(10, 70);
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(10, 130);
             this.btnQuanLyNhanVien.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
             this.btnQuanLyNhanVien.Size = new System.Drawing.Size(230, 45);
@@ -358,7 +358,7 @@
             this.btnKhachHang.Image = global::Vinwonders_Management.Properties.Resources.customers;
             this.btnKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhachHang.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhachHang.Location = new System.Drawing.Point(10, 430);
+            this.btnKhachHang.Location = new System.Drawing.Point(10, 190);
             this.btnKhachHang.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.Size = new System.Drawing.Size(230, 45);
@@ -388,7 +388,7 @@
             this.btnDashboard.Image = global::Vinwonders_Management.Properties.Resources.dashboard;
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnDashboard.Location = new System.Drawing.Point(10, 130);
+            this.btnDashboard.Location = new System.Drawing.Point(10, 10);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(230, 45);
@@ -418,7 +418,7 @@
             this.btnKhuVuiChoi.Image = global::Vinwonders_Management.Properties.Resources.spin_show;
             this.btnKhuVuiChoi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhuVuiChoi.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnKhuVuiChoi.Location = new System.Drawing.Point(10, 10);
+            this.btnKhuVuiChoi.Location = new System.Drawing.Point(10, 250);
             this.btnKhuVuiChoi.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnKhuVuiChoi.Name = "btnKhuVuiChoi";
             this.btnKhuVuiChoi.Size = new System.Drawing.Size(230, 45);
@@ -448,7 +448,7 @@
             this.btnSuKien.Image = global::Vinwonders_Management.Properties.Resources._event;
             this.btnSuKien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSuKien.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnSuKien.Location = new System.Drawing.Point(10, 310);
+            this.btnSuKien.Location = new System.Drawing.Point(10, 370);
             this.btnSuKien.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnSuKien.Name = "btnSuKien";
             this.btnSuKien.Size = new System.Drawing.Size(230, 45);
@@ -478,7 +478,7 @@
             this.btnBaoTri.Image = global::Vinwonders_Management.Properties.Resources.maintenance;
             this.btnBaoTri.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBaoTri.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnBaoTri.Location = new System.Drawing.Point(10, 370);
+            this.btnBaoTri.Location = new System.Drawing.Point(10, 430);
             this.btnBaoTri.Margin = new System.Windows.Forms.Padding(10, 10, 5, 5);
             this.btnBaoTri.Name = "btnBaoTri";
             this.btnBaoTri.Size = new System.Drawing.Size(230, 45);
@@ -507,14 +507,14 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.btnKhuVuiChoi);
-            this.flowLayoutPanel1.Controls.Add(this.btnQuanLyNhanVien);
             this.flowLayoutPanel1.Controls.Add(this.btnDashboard);
-            this.flowLayoutPanel1.Controls.Add(this.btnCuaHang);
             this.flowLayoutPanel1.Controls.Add(this.btnQuanLyVe);
+            this.flowLayoutPanel1.Controls.Add(this.btnQuanLyNhanVien);
+            this.flowLayoutPanel1.Controls.Add(this.btnKhachHang);
+            this.flowLayoutPanel1.Controls.Add(this.btnKhuVuiChoi);
+            this.flowLayoutPanel1.Controls.Add(this.btnCuaHang);
             this.flowLayoutPanel1.Controls.Add(this.btnSuKien);
             this.flowLayoutPanel1.Controls.Add(this.btnBaoTri);
-            this.flowLayoutPanel1.Controls.Add(this.btnKhachHang);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 125);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 456);

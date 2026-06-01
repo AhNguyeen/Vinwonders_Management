@@ -111,40 +111,40 @@ namespace Vinwonders_Management
             if (role == "Admin")
             {
                 // Admin xem dc het
-                btnDashboard.Visible = true;
-                btnQuanLyVe.Visible = true;
-                btnKhachHang.Visible = true;
-                btnCuaHang.Visible = true;
-                btnKhuVuiChoi.Visible = true;
-                btnBaoTri.Visible = true;
-                btnQuanLyNhanVien.Visible = true;
-                btnSuKien.Visible = true;
+                btnDashboard.Enabled = true;
+                btnQuanLyVe.Enabled = true;
+                btnKhachHang.Enabled = true;
+                btnCuaHang.Enabled = true;
+                btnKhuVuiChoi.Enabled = true;
+                btnBaoTri.Enabled = true;
+                btnQuanLyNhanVien.Enabled = true;
+                btnSuKien.Enabled = true;
             }
             else if (role == "ThuNgan")
             {
-                btnDashboard.Visible = true;
-                btnQuanLyVe.Visible = true;
-                btnKhachHang.Visible = true;
-                btnCuaHang.Visible = true;
+                btnDashboard.Enabled = true;
+                btnQuanLyVe.Enabled = true;
+                btnKhachHang.Enabled = true;
+                btnCuaHang.Enabled = true;
                 
                 // An cac chuc nang khac
-                btnKhuVuiChoi.Visible = false;
-                btnBaoTri.Visible = false;
-                btnQuanLyNhanVien.Visible = false;
-                btnSuKien.Visible = false;
+                btnKhuVuiChoi.Enabled = false;
+                btnBaoTri.Enabled = false;
+                btnQuanLyNhanVien.Enabled = false;
+                btnSuKien.Enabled = false;
             }
             else if (role == "QuanLy")
             {
-                btnDashboard.Visible = true;
-                btnSuKien.Visible = true;
-                btnBaoTri.Visible = true;
-                btnQuanLyNhanVien.Visible = true;
-                btnKhachHang.Visible = true;
+                btnDashboard.Enabled = true;
+                btnSuKien.Enabled = true;
+                btnBaoTri.Enabled = true;
+                btnQuanLyNhanVien.Enabled = true;
+                btnKhachHang.Enabled = true;
                 
                 // An cac chuc nang khac
-                btnQuanLyVe.Visible = false;
-                btnCuaHang.Visible = false;
-                btnKhuVuiChoi.Visible = false;
+                btnQuanLyVe.Enabled = false;
+                btnCuaHang.Enabled = false;
+                btnKhuVuiChoi.Enabled = false;
             }
         }
 
