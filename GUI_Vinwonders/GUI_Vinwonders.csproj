@@ -138,6 +138,17 @@
     <Compile Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.Designer.cs">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\CR_HoaDonCuaHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_HoaDonCuaHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -425,6 +436,10 @@
     <EmbeddedResource Include="QuanLyBaoTri\GUI_ThemThietBiBaoTri.resx">
       <DependentUpon>GUI_ThemThietBiBaoTri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCuaHangSanPham\CR_HoaDonCuaHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_HoaDonCuaHang.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyCuaHangSanPham\GUI_CapNhatCuaHang.resx">
       <DependentUpon>GUI_CapNhatCuaHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -576,6 +591,12 @@
     </None>
     <None Include="QuanLyBaoTri\DataSet_BaoTri.xss">
       <DependentUpon>DataSet_BaoTri.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xsc">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyCuaHangSanPham\DataSet_HoaDonCuaHang.xss">
+      <DependentUpon>DataSet_HoaDonCuaHang.xsd</DependentUpon>
     </None>
     <None Include="QuanLyVe\DataSet_HoaDonVe.xsc">
       <DependentUpon>DataSet_HoaDonVe.xsd</DependentUpon>
