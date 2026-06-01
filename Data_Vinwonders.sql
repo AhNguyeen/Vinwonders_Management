@@ -567,3 +567,12 @@ INSERT INTO LichLamViec (MaLich, MaNhanVien, MaCa, NgayLamViec, ViTriPhanCong) V
 ('LLV013', 'NV08', 'CA02', '2026-05-30', N'Trực Tàu lượn siêu tốc'),
 ('LLV014', 'NV05', 'CA04', '2026-05-31', N'Giám sát chung');
 GO
+
+-- ==========================================================
+-- 6. THÊM DỮ LIỆU BẢO TRÌ TRÒ CHƠI
+-- ==========================================================
+INSERT INTO BaoTriTroChoi (MaBaoTri, MaTroChoi, MaNhanVien, NgayBatDau, NgayDuKienXong, MoTaLoi, ChiPhiBaoTri, TrangThai) VALUES
+('BT001', 'TC23220005', 'NV01', '2026-05-15', '2026-06-15', N'Bảo dưỡng định kỳ hệ thống ray trượt', 15000000, N'Đang kiểm tra'),
+('BT002', 'TC23220014', 'NV02', '2026-05-20', '2026-06-05', N'Thay thế vòng bi và cáp treo', 8500000, N'Đang kiểm tra'),
+('BT003', 'TC23220025', 'NV03', '2026-05-25', '2026-06-10', N'Kiểm tra và sửa chữa hệ thống phanh thủy lực', 12000000, N'Đang kiểm tra');
+GO

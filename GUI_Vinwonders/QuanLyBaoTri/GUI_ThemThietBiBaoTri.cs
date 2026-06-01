@@ -35,7 +35,11 @@ namespace Vinwonders_Management.QuanLyBaoTri
             try
             {
                 DataTable dtTroChoi = busTroChoi.InDanhSach();
-                cboTroChoi.DataSource = dtTroChoi;
+                // Chỉ lấy những trò chơi đang có trạng thái 'Bảo trì'
+                DataView dv = dtTroChoi.DefaultView;
+                dv.RowFilter = "TrangThai = 'Bảo trì'";
+                
+                cboTroChoi.DataSource = dv.ToTable();
                 cboTroChoi.DisplayMember = "TenTroChoi";
                 cboTroChoi.ValueMember = "MaTroChoi";
                 cboTroChoi.SelectedIndex = -1;
