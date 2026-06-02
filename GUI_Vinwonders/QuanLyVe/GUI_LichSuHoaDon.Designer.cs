@@ -46,7 +46,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.colThanhToan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colChiTiet = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXuat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
@@ -70,7 +69,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.BorderThickness = 1;
-            this.guna2Panel2.Controls.Add(this.btnXuat);
             this.guna2Panel2.Controls.Add(this.txtTimKiem);
             this.guna2Panel2.Controls.Add(this.dtpNgayLoc);
             this.guna2Panel2.Controls.Add(this.label1);
@@ -112,7 +110,7 @@ namespace Vinwonders_Management.QuanLyVe
             this.dtpNgayLoc.FillColor = System.Drawing.Color.White;
             this.dtpNgayLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNgayLoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayLoc.Location = new System.Drawing.Point(338, 18);
+            this.dtpNgayLoc.Location = new System.Drawing.Point(448, 18);
             this.dtpNgayLoc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgayLoc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNgayLoc.Name = "dtpNgayLoc";
@@ -245,30 +243,6 @@ namespace Vinwonders_Management.QuanLyVe
             this.colChiTiet.UseColumnTextForButtonValue = true;
             this.colChiTiet.Width = 120;
             // 
-            // btnXuat
-            // 
-            this.btnXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXuat.BackColor = System.Drawing.SystemColors.Window;
-            this.btnXuat.BorderColor = System.Drawing.Color.Silver;
-            this.btnXuat.BorderRadius = 6;
-            this.btnXuat.BorderThickness = 1;
-            this.btnXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnXuat.FillColor = System.Drawing.Color.White;
-            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnXuat.ForeColor = System.Drawing.Color.Black;
-            this.btnXuat.Image = global::Vinwonders_Management.Properties.Resources.download;
-            this.btnXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXuat.Location = new System.Drawing.Point(513, 18);
-            this.btnXuat.Margin = new System.Windows.Forms.Padding(10);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(90, 30);
-            this.btnXuat.TabIndex = 7;
-            this.btnXuat.Text = "Xuất";
-            this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // GUI_LichSuHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +276,5 @@ namespace Vinwonders_Management.QuanLyVe
         private System.Windows.Forms.DataGridViewTextBoxColumn colThanhToan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
         private System.Windows.Forms.DataGridViewButtonColumn colChiTiet;
-        private Guna.UI2.WinForms.Guna2Button btnXuat;
     }
 }
