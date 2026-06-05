@@ -223,6 +223,16 @@ namespace Vinwonders_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap trend {
+            get {
+                object obj = ResourceManager.GetObject("trend", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap vinwonders_logo {
             get {
                 object obj = ResourceManager.GetObject("vinwonders_logo", resourceCulture);
