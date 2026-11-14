@@ -36,11 +36,13 @@
 
 | Màn hình Đăng nhập | Bảng điều khiển (Dashboard) |
 | :---: | :---: |
-| ![Login](https://via.placeholder.com/400x250?text=Login+Screen) | ![Dashboard](https://via.placeholder.com/400x250?text=Dashboard+Screen) |
+| ![Login](<img width="1920" height="1080" alt="Screenshot (392)" src="https://github.com/user-attachments/assets/107b8f7f-3e0b-4dec-affa-411569495fce" />) 
+| ![Dashboard](<img width="1920" height="1080" alt="Screenshot (393)" src="https://github.com/user-attachments/assets/e9adf640-ae07-4ba9-a551-6d2f0893d338" />) |
 
 | Quản lý Bán vé | Thống kê Doanh thu |
 | :---: | :---: |
-| ![Ticket](https://via.placeholder.com/400x250?text=Ticket+Management) | ![Report](https://via.placeholder.com/400x250?text=Revenue+Report) |
+| ![Ticket](<img width="1920" height="1080" alt="Screenshot (394)" src="https://github.com/user-attachments/assets/7ec72008-b8f2-4736-80a6-7da1e07e67b1" />) 
+| ![Employee](<img width="1920" height="1080" alt="Screenshot (395)" src="https://github.com/user-attachments/assets/cea3af1b-8899-4a84-b0d8-49185ae74895" />) |
 
 ---
 
