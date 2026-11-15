@@ -40,4 +40,4 @@
 ### 2. Các bước cài đặt
 1. **Clone repository về máy:**
    ```bash
-   git clone [https://github.com/AhNguyeen/](https://github.com/AhNguyeen/)<Ten-Repo-VinWonders-Cua-Ban>.git
+   git clone https://github.com/AhNguyeen/Vinwonders_Management.git
